@@ -607,9 +607,7 @@ Attention:
 * 逐个或并行上传分片(UploadPart)
 * 完成分片上传(CompleteMultipartUpload)或者取消分片上传(AbortMultipartUpload)
 下面通过一个完整的示例说明了如何通过原始的api接口一步一步的进行分片上传操作，如果用户需要做断点续传等高级操作，可以参考下面代码:
-
-   
-
+<pre><code>
      <?php
         /**
          * 使用基本的api分阶段进行分片上传
@@ -686,6 +684,8 @@ Attention:
             }
             printf(__FUNCTION__ . ": completeMultipartUpload OK\n");
         }
+
+</code></pre>
 
 Attention:
 1. 上面程序一共分为三个步骤：1. initiate 2. uploadPart 3. complete
