@@ -379,47 +379,48 @@ EndPoint 是NOS各个区域的地址，目前支持以下形式
 ### 下载文件
 
 以下源代码实现下载文件到内存中:
-
-    import nos
-    
-    access_key = "你的accessKeyId"
-    secret_key = "你的accessKeySecret"
-    end_point = "建桶时选择的的区域域名"
-    bucket = "使用的桶名，注意命名规则"
-    object = "使用的对象名，注意命名规则"
-    
-    client = nos.Client(access_key, secret_key, end_point)
-    
-    try:
-        result = client.get_object(bucket, object)
-        fp = result.get("body")
-        object_str = fp.read()
-        print "object content: ", object_str
-    except nos.exceptions.ServiceException as e:
-        print (
-            "ServiceException: %s\n"
-            "status_code: %s\n"
-            "error_type: %s\n"
-            "error_code: %s\n"
-            "request_id: %s\n"
-            "message: %s\n"
-        ) % (
-            e,
-            e.status_code,  # 错误http状态码
-            e.error_type,   # NOS服务器定义错误类型
-            e.error_code,   # NOS服务器定义错误码
-            e.request_id,   # 请求ID，有利于nos开发人员跟踪异常请求的错误原因
-            e.message       # 错误描述信息
-        )
-    except nos.exceptions.ClientException as e:
-        print (
-            "ClientException: %s\n"
-            "message: %s\n"
-        ) % (
-            e,
-            e.message       # 客户端错误信息
-        )
-    *下载内容也可以存储到文件中
+<pre><code>
+        import nos
+        
+        access_key = "你的accessKeyId"
+        secret_key = "你的accessKeySecret"
+        end_point = "建桶时选择的的区域域名"
+        bucket = "使用的桶名，注意命名规则"
+        object = "使用的对象名，注意命名规则"
+        
+        client = nos.Client(access_key, secret_key, end_point)
+        
+        try:
+            result = client.get_object(bucket, object)
+            fp = result.get("body")
+            object_str = fp.read()
+            print "object content: ", object_str
+        except nos.exceptions.ServiceException as e:
+            print (
+                "ServiceException: %s\n"
+                "status_code: %s\n"
+                "error_type: %s\n"
+                "error_code: %s\n"
+                "request_id: %s\n"
+                "message: %s\n"
+            ) % (
+                e,
+                e.status_code,  # 错误http状态码
+                e.error_type,   # NOS服务器定义错误类型
+                e.error_code,   # NOS服务器定义错误码
+                e.request_id,   # 请求ID，有利于nos开发人员跟踪异常请求的错误原因
+                e.message       # 错误描述信息
+            )
+        except nos.exceptions.ClientException as e:
+            print (
+                "ClientException: %s\n"
+                "message: %s\n"
+            ) % (
+                e,
+                e.message       # 客户端错误信息
+            )
+</code></pre>
+*下载内容也可以存储到文件中
 
 ## 文件管理
 
@@ -561,7 +562,7 @@ list_objects可以指定的可选参数如下所示:
 ### 拷贝文件
 
 你可以使用copy_object拷贝文件:
-
+<pre><code>
     import nos
     
     access_key = "你的accessKeyId"
@@ -599,50 +600,58 @@ list_objects可以指定的可选参数如下所示:
             e,
             e.message       # 客户端错误信息
         )
-    *支持跨桶的文件copy
+            
+</code></pre>
+   
+*支持跨桶的文件copy
 
 ### 移动文件
 
 你可以使用move_object移动文件:
 
+  
+
+  
+
     import nos
+        
+        access_key = "你的accessKeyId"
+        secret_key = "你的accessKeySecret"
+        end_point = "建桶时选择的的区域域名"
+        bucket = "使用的桶名，注意命名规则"
+        src_object = "移动来源的对象名，注意命名规则"
+        dst_object = "移动目的的对象名，注意命名规则"
+        
+        client = nos.Client(access_key, secret_key, end_point)
+        
+        try:
+            client.move_object(bucket, src_object, bucket, dst_object)
+        except nos.exceptions.ServiceException as e:
+            print (
+                "ServiceException: %s\n"
+                "status_code: %s\n"
+                "error_type: %s\n"
+                "error_code: %s\n"
+                "request_id: %s\n"
+                "message: %s\n"
+            ) % (
+                e,
+                e.status_code,  # 错误http状态码
+                e.error_type,   # NOS服务器定义错误类型
+                e.error_code,   # NOS服务器定义错误码
+                e.request_id,   # 请求ID，有利于nos开发人员跟踪异常请求的错误原因
+                e.message       # 错误描述信息
+            )
+        except nos.exceptions.ClientException as e:
+            print (
+                "ClientException: %s\n"
+                "message: %s\n"
+            ) % (
+                e,
+                e.message       # 客户端错误信息
+            )
     
-    access_key = "你的accessKeyId"
-    secret_key = "你的accessKeySecret"
-    end_point = "建桶时选择的的区域域名"
-    bucket = "使用的桶名，注意命名规则"
-    src_object = "移动来源的对象名，注意命名规则"
-    dst_object = "移动目的的对象名，注意命名规则"
-    
-    client = nos.Client(access_key, secret_key, end_point)
-    
-    try:
-        client.move_object(bucket, src_object, bucket, dst_object)
-    except nos.exceptions.ServiceException as e:
-        print (
-            "ServiceException: %s\n"
-            "status_code: %s\n"
-            "error_type: %s\n"
-            "error_code: %s\n"
-            "request_id: %s\n"
-            "message: %s\n"
-        ) % (
-            e,
-            e.status_code,  # 错误http状态码
-            e.error_type,   # NOS服务器定义错误类型
-            e.error_code,   # NOS服务器定义错误码
-            e.request_id,   # 请求ID，有利于nos开发人员跟踪异常请求的错误原因
-            e.message       # 错误描述信息
-        )
-    except nos.exceptions.ClientException as e:
-        print (
-            "ClientException: %s\n"
-            "message: %s\n"
-        ) % (
-            e,
-            e.message       # 客户端错误信息
-        )
-    *暂时不支持跨桶的文件move
+*暂时不支持跨桶的文件move
 
 ## 错误处理
 
