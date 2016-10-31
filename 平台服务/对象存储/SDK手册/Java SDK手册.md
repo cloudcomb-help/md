@@ -20,6 +20,7 @@ JDK 6 及以上版本
 * 将解压后文件夹下 lib 文件夹中的 nos-sdk-java-publiccloud-0.0.1.jar 以及 third-party 文件夹下的所有 jar 文件拷贝到你的项目中；
 * 在 Eclipse 中选择你的工程，右击 -> Properties -> Java Build Path -> Add JARs；
 * 选中你在第三步拷贝的所有 JAR 文件；
+
 ### **前言**
 
 Java SDK 提供的接口都在 NosClient 中实现，并以成员方法的方式对外提供调用。因此使用 Java SDK 前必须实例化一个 NosClient 对象。
@@ -134,6 +135,7 @@ NosClient中的方法一般都提供两种参数传入方式：
     //设置桶的权限，如果不设置，默认为Private
     request.setCannedAcl(CannedAccessControlList.PublicRead);
     nosClient.createBucket(request);
+    
 **注意**：
 
 1. 桶的命名规范参见 API 文档
@@ -148,10 +150,12 @@ NosClient中的方法一般都提供两种参数传入方式：
     for (Bucket bucket : nosClient.listBuckets()) {
          System.out.println(" - " + bucket.getName());
     }
+    
 #### **删除桶**
 你可以通过 NosClient.deleteBucket 删除指定的桶。示例代码如下：
 
 nosClient.deleteBucket(bucketName);
+
 **注意**：
 
 如果指定的桶不为空（桶中有文件或者未完成的分块上传），则桶无法删除；
@@ -194,7 +198,9 @@ NOS Java SDK 提供了丰富的文件上传接口与功能，主要有：
 * 支持上传文件时设置文件元数据信息
 * 流式上传
 * 分块上传
+
 #### **本地文件普通上传**
+
 对于小对象可以使用 putObject 接口进行上传，putObject 上传支持的最大文件大小为100M，如果上传大于100M的文件需要使用分块上传。本地文件普通上传的示例代码如下：\
 
     //要上传文件的路径
@@ -288,6 +294,7 @@ NOS Java SDK 提供了丰富的文件上传接口与功能，主要有：
        }
     }
 </code></pre>
+
 * 完成分块上传
    
 
@@ -303,6 +310,7 @@ NOS Java SDK 提供了丰富的文件上传接口与功能，主要有：
 * 下载到本地文件
 * Range下载
 * 指定If-Modified-Since进行下载
+
 #### **流式下载**
   
 
@@ -407,6 +415,7 @@ NosClient.getObjec t获取的流一定要显式的 close，否则会造成资源
 * 文件重命名(move)
 * 列举桶内文件
 * 生成私有对象可下载的URL连接
+
 #### **判断文件是否存在**
 你可以通过 NosClient.doesObjectExist 判断文件是否存在。
 
@@ -498,6 +507,7 @@ NOSClient.listObjects 接口提供两种调用方式：简单列举、通过 Lis
 |setDelimiter(String delimiter)|	是一个用于对 Object 名字进行分组的字符。所有名字包含指定的前缀且第一次出现 delimiter 字符之间的 object作为一组元素—— CommonPrefixes|
 |setMarker(String marker)|	字典序的起始标记，只列出该标记之后的部分|
 |setMaxKeys(Integer maxKeys)|	限定返回的数量，返回的结果小于或等于该值(默认值为100)|
+
 **分页列举桶内的所有文件**
 
    
