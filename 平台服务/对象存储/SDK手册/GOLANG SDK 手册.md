@@ -42,7 +42,7 @@ sdk会安装到GOPATH目录下
 
 #### 配置秘钥
 
-要接入NOS服务，您需要一对有效的AccessKey（包括AccessKeyId与AccessKeySecret）来进行 签名验证，开通服务与AccessKey请参考 [访问控制}(https://github.com/cloudcomb-help/md/blob/master/%E5%B9%B3%E5%8F%B0%E6%9C%8D%E5%8A%A1/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/API%E6%89%8B%E5%86%8C/%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6.md) :
+要接入NOS服务，您需要一对有效的AccessKey（包括AccessKeyId与AccessKeySecret）来进行 签名验证，开通服务与AccessKey请参考 [访问控制](https://github.com/cloudcomb-help/md/blob/master/%E5%B9%B3%E5%8F%B0%E6%9C%8D%E5%8A%A1/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/API%E6%89%8B%E5%86%8C/%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6.md) :
 
 在获取到AccessKeyId与AccessKeySecret之后，可以按照以下的步骤进行初始化
 
