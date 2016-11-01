@@ -164,6 +164,9 @@ Content-Type:application/json
 |repo_name	|镜像仓库名称	|string	|必填|
 |tag|	镜像 tag|	string|	必填|
 ### 响应
-成功响应
+* 成功响应
+
+<pre><code>
 200 Ok
+</code></pre>
 * 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
