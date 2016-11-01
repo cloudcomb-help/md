@@ -55,7 +55,7 @@ Content-Type:application/json
 |min_machine_spec	|最小机器规格	|int|
 ## **创建容器**
 
-## 请求 header
+### 请求 header
 <pre><code>
 POST /api/v1/containers
 </code></pre>
@@ -111,6 +111,7 @@ Content-Type:application/json
 |------------|-----------------------|--------|
 |id|	容器id|	long|
 * 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
+
 ## **修改容器**
 
 ### 请求 header
@@ -121,7 +122,8 @@ PUT /api/v1/containers/{containerId}
 Authorization:Token xxxxxxxxxxxxxx
 Content-Type:application/json
 </code></pre>
-请求 payload
+
+### 请求 payload
 
     {
       "charge_type":1,
@@ -137,15 +139,18 @@ Content-Type:application/json
 |desc	|容器描述	|string	|可填|
 |network_charge_type|	1 (按带宽) / 2 (按流量)	|int|	按需计费且使用公网必填|
 |bandwidth|	带宽大小，单位 Mbps，(0,100]，针对按需计费，使用公网并且按照带宽计费|int|	按需计费，使用公网并且按照带宽计费必填|
+
 ### 响应
+
 * 成功响应
 <pre><code>
     200 OK
 </code></pre>
 * 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
+
 ## **容器列表**
 
-## 请求 header
+### 请求 header
 <pre><code>
 GET /api/v1/containers
 </code></pre>
@@ -153,6 +158,7 @@ GET /api/v1/containers
 Authorization:Token xxxxxxxxxxxxxx
 Content-Type:application/json
 </code></pre>
+
 ### 请求参数
 
     limit=20&offset=0
@@ -162,6 +168,7 @@ Content-Type:application/json
 |limit	|大于 0 小于等于 30，默认 20	|int	|可填|
 |offset|	偏移量，大于等于 0，默认 0|	int|	可填|
 ### 响应
+
 * 成功响应
 
    
@@ -216,6 +223,7 @@ Content-Type:application/json
 |private_ip	|内网 ip	|string|
 |public_ip|	外网 ip|	string|
 * 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
+
 ## **查看容器**
 
 ### 请求 header
@@ -229,7 +237,9 @@ Content-Type:application/json
 |**参数说明**| **描述** |**类型**|**是否必填**|
 |------------|----------|--------|------------|
 |containerId|	容器 id|	long|	必填|
+
 ### 响应
+
 * 成功响应
 
     200 Ok
@@ -330,6 +340,7 @@ POST /api/v1/containers/{containerId}/tag
 Authorization: token xxxxxxxxxxxxxx
 Content-Type: application/json
 </code></pre>
+
 ### 请求 payload
 
     {
