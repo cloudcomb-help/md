@@ -3,28 +3,20 @@
 ### **配置镜像加速**
 
 #### **Ubuntu | Debian | Centos**
-<pre><code>
-$ sudo echo "DOCKER_OPTS=\"\$DOCKER_OPTS --registry-mirror=http://hub-mirror.c.163.com\"" >> /etc/default/docker
-$ service docker restart
-</code></pre>
+<pre>$ sudo echo "DOCKER_OPTS=\"\$DOCKER_OPTS --registry-mirror=http://hub-mirror.c.163.com\"" >> /etc/default/docker
+$ service docker restart</pre>
 
 #### **Windows**
 
 启动 Boot2docker Start Shell：
-<pre><code>
-$ sudo "sh -c \"echo EXTRA_ARGS=\'--registry-mirror=http://hub-mirror.c.163.com\' >>/var/lib/boot2docker/profile\""
-</code></pre>
+<pre>$ sudo "sh -c \"echo EXTRA_ARGS=\'--registry-mirror=http://hub-mirror.c.163.com\' >>/var/lib/boot2docker/profile\""</pre>
 重新启动 Boot2Docker。
 
 #### **Mac**
-<pre><code>
-$ boot2docker ssh sudo "sh -c \"echo EXTRA_ARGS=\'--registry-mirror=http://hub-mirror.c.163.com\' >>/var/lib/boot2docker/profile\""
-$ boot2docker restart
-</code></pre>
+<pre>$ boot2docker ssh sudo "sh -c \"echo EXTRA_ARGS=\'--registry-mirror=http://hub-mirror.c.163.com\' >>/var/lib/boot2docker/profile\""
+$ boot2docker restart</pre>
 
 ### **使用**
 
 配置完成后，直接使用以下命令，即可通过蜂巢的加速代理网络来下载 DockerHub 官方镜像：
-<pre><code>
-docker pull nginx
-</code></pre>
+<pre>docker pull nginx</pre>
