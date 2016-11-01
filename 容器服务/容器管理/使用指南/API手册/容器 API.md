@@ -110,7 +110,7 @@ Content-Type:application/json
 |**参数说明**|	     **描述**        |**类型**|
 |------------|-----------------------|--------|
 |id|	容器id|	long|
-* 失败响应 详情请参见 错误返回码。
+* 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
 ## **修改容器**
 
 ### 请求 header
@@ -142,7 +142,7 @@ Content-Type:application/json
 <pre><code>
     200 OK
 </code></pre>
-* 失败响应 详情请参见 错误返回码。
+* 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
 ## **容器列表**
 
 ## 请求 header
@@ -215,7 +215,7 @@ Content-Type:application/json
 |status|	容器状态，一共 create、update、resize、delete 四种操作，每种对应着 ing (创建中) / succ (创建成功) / fail (创建失败) / timeout (超时)四种状态。|	string|
 |private_ip	|内网 ip	|string|
 |public_ip|	外网 ip|	string|
-* 失败响应 详情请参见 错误返回码。
+* 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
 ## **查看容器**
 
 ### 请求 header
@@ -273,7 +273,7 @@ Content-Type:application/json
 |status|	容器状态，creating (创建中) / create_succ (创建成功) / create_fail (创建失败)	|string|
 |public_ip|	外网 ip	|string|
 |private_ip	|内网 ip	|string|
-* 失败响应 详情请参见 错误返回码。
+* 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
 
 ## 删除容器
 
@@ -295,7 +295,7 @@ Content-Type:application/json
 <pre><code>
 200 Ok
 </code></pre>
-* 失败响应 详情请参见 见错误返回码。
+* 失败响应 详情请参见 见[错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
 
 ## **重启容器**
 
@@ -317,7 +317,7 @@ Content-Type: application/json
 <pre><code>
 200 Ok
 </code></pre>
-* 失败响应 详情请参见 错误返回码。
+* 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
 
 ## **容器保存为镜像**
 
@@ -355,7 +355,7 @@ Content-Type: application/json
 |**参数说明**|	   **描述**     |**类型**|
 |------------|------------------|--------|
 |image_id	|容器转为的镜像的镜像Id	|string|
-* 失败响应 详情请参见 错误返回码。
+* 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
 
 ## **获取容器流量数据**
 
@@ -392,4 +392,4 @@ Content-Type: application/json
 |------------|--------------------|--------|
 |container_up_flow	|容器使用的上行流量	|string|
 |container_down_flow|	容器使用的下行流量|	string|
-* 失败响应 详情请参见 错误返回码。
+* 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。

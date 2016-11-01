@@ -70,7 +70,7 @@ Content-Type:application/json
      "desc":"desc",
      "domain":"www.abc.com",
      "image_type":1,
-     "image_id":3,   //可参考 查看集群镜像列表 获取
+     "image_id":3,   //可参考 查看[集群镜像列表](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/%E9%9B%86%E7%BE%A4API.md) 获取
      "spec_id": 1,
      "replicas":2,
      "env_var":{"key":"value"},
@@ -125,7 +125,7 @@ Content-Type:application/json
 |------------|---------------------------|--------|
 |id	|集群 id	|long|
 |url|	集群 web hook url，当有代码提交时，可嵌入此 url 进行持续部署发布。	|string|
-* 失败响应 详情请参见 错误返回码。
+* 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
 
 ## **修改集群**
 
@@ -179,7 +179,7 @@ Content-Type:application/json
 200 Ok
 </code></pre>
 
-* 失败响应 详情请参见 错误返回码。
+* 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
 
 ## **集群列表**
 
@@ -293,7 +293,7 @@ limit=20&offset=0
 |container_id|	容器 id|	long|
 |env_var|	环境变量	|json|
 |web_hook_url|	web hook url|	string|
-* 失败响应 详情请参见 错误返回码。
+* 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
 
 ## **查看集群**
 
@@ -397,7 +397,7 @@ Content-Type:application/json
 |env_var	|环境变量	|json|
 |web_hook_url|	web hook url|	string|
 
-* 失败响应 详情请参见 错误返回码。
+* 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
 
 ## **删除集群**
 <pre><code>
@@ -420,7 +420,7 @@ Authorization:Token xxxxxxxxxxxxxx
 200 Ok
 </code></pre>
 
-* 失败响应 详情请参见 错误返回码。
+* 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
 
 
 ## **集群扩容**
@@ -448,7 +448,7 @@ Content-Type:application/json
 200 Ok
 </code></pre>
 
-* 失败响应 详情请参见 错误返回码。
+* 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
 
 ## **监听**
 
@@ -485,4 +485,4 @@ Content-Type:application/json
 |containers	|容器实例列表	|json|
 |private_ip|	容器私有网 ip|	string|
 |container_id	|容器 id	|long|
-* 失败响应 详情请参见 错误返回码。
+* 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。

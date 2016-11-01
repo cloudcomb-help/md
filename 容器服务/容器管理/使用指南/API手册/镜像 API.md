@@ -53,7 +53,7 @@ repo_name	|镜像仓库名	|string|
 |created_at|	创建时间，使用 UTC（世界标准时间）时间，用 ISO8601 进行格式化|	string|
 |updated_at	|修改时间，使用 UTC（世界标准时间）时间，用 ISO8601 进行格式化	|string|
 
-* 失败响应 详情请参见 错误返回码。
+* 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
 
 ## **查看镜像仓库**
 
@@ -116,7 +116,7 @@ Content-Type:application/json
 |name|	镜像 tag|	string|
 |size	|镜像大小，单位 B	|long|
 |status|	镜像状态，0 (初始化) / 1 (构建中) / 2 (构建成功) / 3 (构建失败)|	int|
-* 失败响应 详情请参见错误返回码。
+* 失败响应 详情请参见[错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
 
 ## **构建镜像**
 
@@ -146,7 +146,7 @@ docker_file:docker file 文件
 <pre><code>
 200 Ok
 </code></pre>
-* 失败响应 详情请参见 错误返回码。
+* 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
 
 ## **删除镜像**
 
@@ -166,4 +166,4 @@ Content-Type:application/json
 ### 响应
 成功响应
 200 Ok
-* 失败响应 详情请参见 错误返回码。
+* 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。

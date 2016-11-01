@@ -44,7 +44,7 @@
 |created_at	|创建时间，使用 UTC（世界标准时间）时间，用 ISO8601 进行格式化	|string|
 
 
-* 失败响应 详情请参见 [错误返回码](./OpenAPI错误响应.md)。
+* 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
 
 ### 获取私钥文件
 
@@ -71,7 +71,7 @@
     [私钥文件内容]
 
 
-* 失败响应 详情请参见 [错误返回码](./OpenAPI错误响应.md)。
+* 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
 
 ### 密钥列表
 
@@ -110,7 +110,7 @@
 
 
 
-* 失败响应 详情请参见 [错误返回码](./OpenAPI错误响应.md)。
+* 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
 
 ### 删除密钥
 

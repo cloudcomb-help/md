@@ -2,7 +2,7 @@
 
 蜂巢 API 提供更灵活的资源控制方式，满足你的定制化需求，如自动化部署，持续集成等功能。
 
-蜂巢 API 需要使用 API Token 来发起 API 请求。 请到 https://c.163.com 页面登录到你的账户，查看你的 Access Key 和 Access Secret，然后调用 生成 API token 接口 来获取 token。
+蜂巢 API 需要使用 API Token 来发起 API 请求。 请到 https://c.163.com 页面登录到你的账户，查看你的 Access Key 和 Access Secret，然后调用 [生成 API token 接口](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/%E7%94%A8%E6%88%B7API.md) 来获取 token。
 
 API 访问 https://open.c.163.com 。API 采用 Restful API 风格，支持内省，支持 API 访问频率限制。
 
@@ -22,7 +22,7 @@ API 访问 https://open.c.163.com 。API 采用 Restful API 风格，支持内�
 Access Key： 用于标识客户身份，在网络请求中会以某种形式传输
 Access Secret ： 作为私钥形式存储于客户方本地， 不在网络传递，它的作用是对客户方发起的请求进行数字签名，保证该请求是来自指定客户的请求，并且是合法的有效的，
 使用 Access Key 进行身份识别，加上 Access Secret 进行数字签名，即可完成应用接入与认证授权.
-你可以在 Access Key 中创建、下载、删除、禁用你的 Access Key。
+你可以在 [Access Key](https://c.163.com/dashboard#/m/account/accesskey/) 中创建、下载、删除、禁用你的 Access Key。
 蜂巢支持多Access Key、Access Secret，保障你的应用安全。
 
 ## OpenAPI 接口设计风格
