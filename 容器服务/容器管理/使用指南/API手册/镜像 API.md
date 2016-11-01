@@ -71,7 +71,7 @@ Content-Type:application/json
 |id	|镜像仓库 id	|long	|必填|
 ### 响应
 
-*成功响应
+* 成功响应
 
 <pre><code>
 200 Ok
