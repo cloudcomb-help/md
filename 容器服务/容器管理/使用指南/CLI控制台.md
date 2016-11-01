@@ -28,6 +28,7 @@
 ### 使用说明
 
 **帮助文档**
+
 执行 comb 或 comb -h 可以查看到文档
 
     NAME:
@@ -57,6 +58,7 @@
        --version, -v                print the version
 
 **鉴权**
+
 在使用前，需要先使用 Access Key 和 Access Secret 来获取 Token，Token 有效期为 24 小时。
 
 执行命令 **comb auth [Access Key] [Access Secret]** （或执行命令 **comb auth**，跟随提示输入 Access Key 和 Access Secret）即可获取 Token。
@@ -64,6 +66,7 @@
 Access Key 和 Access Secret 请在「网易蜂巢控制台」的 [API菜单栏][4] 下获取。
 
 **容器操作**
+
 完成鉴权，获取Token后，即可执行容器操作
 
 * **查看所有容器 comb container -a 或 comb co -a 或 comb co**
