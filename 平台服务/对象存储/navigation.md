@@ -27,6 +27,7 @@
   * [音频操作](平台服务/对象存储/富媒体手册/音频操作.md)
 
 [API 手册]()
+
   * [REST API](平台服务/对象存储/API 手册/REST API.md)
   * [大对象分块接口](平台服务/对象存储/API 手册/大对象分块接口.md)
   * [对象操作](平台服务/对象存储/API 手册/对象操作.md)
@@ -35,13 +36,14 @@
   * [数据中心和域名](平台服务/对象存储/API 手册/数据中心和域名.md)
   * [桶的操作](平台服务/对象存储/API 手册/桶的操作.md)
 
-[SDK 手册]()  
-  * [.NET SDK 手册](平台服务/对象存储/SDK 手册/.NET SDK手册.md)
-  * [GOLANG SDK 手册](平台服务/对象存储/SDK 手册/GOLANG SDK手册.md)
-  * [Java SDK 手册](平台服务/对象存储/SDK 手册/Java SDK手册.md)
-  * [Node.js SDK 手册](平台服务/对象存储/SDK 手册/Node.js SDK手册.md)
-  * [PHP SDK 手册](平台服务/对象存储/SDK 手册/PHP SDK手册.md)
-  * [Python SDK 手册](平台服务/对象存储/SDK 手册/Python SDK手册.md)
+[SDK 手册]()
+
+  * [.NET SDK 手册](平台服务/对象存储/SDK 手册/.NET SDK 手册.md)
+  * [GOLANG SDK 手册](平台服务/对象存储/SDK 手册/GOLANG SDK 手册.md)
+  * [Java SDK 手册](平台服务/对象存储/SDK 手册/Java SDK 手册.md)
+  * [Node.js SDK 手册](平台服务/对象存储/SDK 手册/Node.js SDK 手册.md)
+  * [PHP SDK 手册](平台服务/对象存储/SDK 手册/PHP SDK 手册.md)
+  * [Python SDK 手册](平台服务/对象存储/SDK 手册/Python SDK 手册.md)
 
 [小工具手册](平台服务/对象存储/小工具手册.md)
  
@@ -51,5 +53,6 @@
 
 [匿名限制](平台服务/对象存储/匿名限制.md)
 
-[常见问题]()  
+[常见问题]()
+
   * [对象存储常见问题](平台服务/对象存储/产品简介/对象存储常见问题.md)
