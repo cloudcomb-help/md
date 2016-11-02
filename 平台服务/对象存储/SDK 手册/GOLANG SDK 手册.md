@@ -33,18 +33,18 @@ sdk会安装到GOPATH目录下
 
 #### 确定EndPoint
 
-[EndPoint](https://github.com/cloudcomb-help/md/blob/master/%E5%B9%B3%E5%8F%B0%E6%9C%8D%E5%8A%A1/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/API%E6%89%8B%E5%86%8C/%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E5%92%8C%E5%9F%9F%E5%90%8D.md) 是NOS各个区域的地址，目前支持以下形式
+[EndPoint](http://support.c.163.com/md.html#!平台服务/对象存储/API 手册/数据中心和域名.md) 是NOS各个区域的地址，目前支持以下形式
 
 |**EndPoint类型**|	               **备注**                   |
 |----------------|--------------------------------------------|
 |NOS区域域名地址|	使用桶所在的区域的NOS域名地址|
 ### NOS区域域名地址
 
-进入NOS控制台，在桶的 [属性](https://github.com/cloudcomb-help/md/blob/master/%E5%B9%B3%E5%8F%B0%E6%9C%8D%E5%8A%A1/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/%E6%8E%A7%E5%88%B6%E5%8F%B0%E6%89%8B%E5%86%8C/%E7%AE%A1%E7%90%86%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4.md) 中可以查找到当前桶所在的区域及域名，桶的域名的后缀部分为 该桶的公网域名，例如:test-logging.nos-eastchina1.126.net中的nos-eastchina1.126.net 为该桶的公网EndPoint。
+进入NOS控制台，在桶的 [属性](http://support.c.163.com/md.html#!平台服务/对象存储/控制台手册/管理存储空间.md) 中可以查找到当前桶所在的区域及域名，桶的域名的后缀部分为 该桶的公网域名，例如:test-logging.nos-eastchina1.126.net中的nos-eastchina1.126.net 为该桶的公网EndPoint。
 
 #### 配置秘钥
 
-要接入NOS服务，您需要一对有效的AccessKey（包括AccessKeyId与AccessKeySecret）来进行 签名验证，开通服务与AccessKey请参考 [访问控制](https://github.com/cloudcomb-help/md/blob/master/%E5%B9%B3%E5%8F%B0%E6%9C%8D%E5%8A%A1/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/API%E6%89%8B%E5%86%8C/%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6.md) :
+要接入NOS服务，您需要一对有效的AccessKey（包括AccessKeyId与AccessKeySecret）来进行 签名验证，开通服务与AccessKey请参考 [访问控制](http://support.c.163.com/md.html#!平台服务/对象存储/API 手册/访问控制.md):
 
 在获取到AccessKeyId与AccessKeySecret之后，可以按照以下的步骤进行初始化
 
@@ -124,8 +124,7 @@ NosClient中的方法采用对象方式进行传参：
     }
 
 Attention:
-
-     1. 后面的示例代码默认您已经实例化了所需的NosClient对象, 不再赘述,后续的代码示例均需要将实例化的代码写入main函数
+后面的示例代码默认您已经实例化了所需的NosClient对象, 不再赘述,后续的代码示例均需要将实例化的代码写入main函数
 
 ## 快速入门
 
@@ -181,10 +180,7 @@ Attention:
     }
 
 Attention:
-
- 
-
-    1. 对象命名规则请参见 [API 手册 对象](https://github.com/cloudcomb-help/md/blob/master/%E5%B9%B3%E5%8F%B0%E6%9C%8D%E5%8A%A1/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/API%E6%89%8B%E5%86%8C/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.md)
+对象命名规则请参见 [API 手册 对象](https://github.com/cloudcomb-help/md/blob/master/%E5%B9%B3%E5%8F%B0%E6%9C%8D%E5%8A%A1/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/API%E6%89%8B%E5%86%8C/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.md)
 
 更多的上传文件信息，请参见 NOS-GOLANG-SDK 上传文件
 
@@ -240,10 +236,7 @@ Attention:
     }
 
 Note:
-
- 
-
-    1. 上面的代码默认列举100个object
+上面的代码默认列举100个object
 
 更多的管理文件信息，请参见 [NOS-GOLANG-SDK 文件管理](https://github.com/cloudcomb-help/md/blob/master/%E5%B9%B3%E5%8F%B0%E6%9C%8D%E5%8A%A1/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/SDK%E6%89%8B%E5%86%8C/GOLANG%20SDK%20%E6%89%8B%E5%86%8C.md)
 
@@ -327,10 +320,7 @@ Note:
     }
 
 Attention:
-
- 
-
-    1. 上传的字符串内容不超过100M
+上传的字符串内容不超过100M
 
 #### 本地文件上传
 
@@ -370,10 +360,7 @@ Attention:
     }
 
 Attention:
-
- 
-
-    1. 上传的文件内容不超过100M
+上传的文件内容不超过100M
 
 #### 分片上传
 
@@ -752,10 +739,7 @@ PartNumberMarker	分块号的界限，只有更大的分块号会被列出来
     }
 
 Attention:
-
- 
-
-    1 .支持跨桶的文件copy
+支持跨桶的文件copy
 
 #### 移动文件
 
@@ -784,8 +768,7 @@ Attention:
     }
 
 Attention:
-
-     1.暂时不支持跨桶的文件move
+暂时不支持跨桶的文件move
 
 #### 获取文件的文件元信息
 

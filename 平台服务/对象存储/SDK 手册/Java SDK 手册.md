@@ -8,13 +8,11 @@ JDK 6 及以上版本
 #### **Maven项目中使用**
 在 Maven 工程中使用 NOS Java SDK 只需在 pom.xml 中加入相应依赖即可
 
-   
-
     <dependency>
-         <groupId>com.netease.cloud</groupId>
-         <artifactId>nos-sdk-java-publiccloud</artifactId>
-         <version>0.0.1</version>
-       </dependency>
+      <groupId>com.netease.cloud</groupId>
+      <artifactId>nos-sdk-java-publiccloud</artifactId>
+      <version>0.0.1</version>
+    </dependency>
 
 #### **工程中直接引用jar**
 * 下载包含Java SDK及其依赖的开发包： nos-sdk-java-publiccloud-0.0.1.tar.gz；
@@ -32,16 +30,13 @@ NosClient中的方法一般都提供两种参数传入方式：
 
 * 普通传参方式
 
-   
+        nosClient.createBucket(bucketName)
 
-     nosClient.createBucket(bucketName);
+* request对象传参方式 
 
-* request对象传参方式
- 
-
-    CreateBucketRequest request = new CreateBucketRequest(bucketName);
-     request.setCannedAcl(cannedAcl);
-     nosClient.createBucket(request);
+        CreateBucketRequest request = new CreateBucketRequest(bucketName);
+        request.setCannedAcl(cannedAcl);
+        nosClient.createBucket(request);
 
 后面的使用指南只以其中的一种传参方式作为例子。
 
@@ -64,34 +59,27 @@ NosClient中的方法一般都提供两种参数传入方式：
 
 ### **初始化**
 
-1.确定 Endpoint
+1. 确定 Endpoint
 
     目前有效的Endpoint为：nos-eastchina1.126.net
 
-2.获取密钥对
-
-使用 NOS-Java-SDK 前，你需要拥有一个有效的 Access Key (包括 Access Key 和 Access Secret )用来进行签名认证。可以通过如下步骤获得：
-
-    1）登录 https://c.163.com/ 注册用户
-
-    2）注册后，蜂巢会颁发 Access Key 和 Secret Key 给客户，你可以在蜂巢“用户中心”的“Access Key”查看并管理你的Access Key
+2. 获取密钥对：使用 NOS-Java-SDK 前，你需要拥有一个有效的 Access Key (包括 Access Key 和 Access Secret )用来进行签名认证。可以通过如下步骤获得：
+    1. 登录 https://c.163.com/ 注册用户
+    2. 注册后，蜂巢会颁发 Access Key 和 Secret Key 给客户，你可以在蜂巢“用户中心”的“Access Key”查看并管理你的Access Key
 
 3. 在代码中实例化 NosClient
 
-   
-
-     import com.netease.cloud.ClientConfiguration;
+        import com.netease.cloud.ClientConfiguration;
         import com.netease.cloud.auth.BasicCredentials;
         import com.netease.cloud.auth.Credentials;
         import com.netease.cloud.services.nos.NosClient;
-     
         String accessKey = "your-accesskey";
         String secretKey = "your-secretKey ";
         Credentials credentials = new BasicCredentials(accessKey, secretKey);
         NosClient nosClient = new NosClient(credentials);
         nosClient.setEndpoint(endPoint);
-
-注：NosClient是线程安全的，可以并发使用
+Note:
+NosClient是线程安全的，可以并发使用
 
 4. 配置 NosClient 如果你需要修改 NosClient 的默认参数，可以在实例化 NosClient 时传入 ClientConfiguration 实例。 ClientConfiguration 是 NosClient 的配置类，可配置连接超时、最大连接数等参数。通过 ClientConfiguration 可以设置的参数见下表：
 
@@ -100,7 +88,6 @@ NosClient中的方法一般都提供两种参数传入方式：
 |connectionTimeout|	请求失败后最大的重试次数 默认：3次|	setConnectionTimeout|
 |maxConnections|	允许打开的最大HTTP连接数 默认：50|	setMaxConnections|
 |socketTimeout|	Socket层传输数据超时时间（单位：毫秒） 默认：50000毫秒|	setSocketTimeout|
-|
 
         maxErrorRetry|	请求失败后最大的重试次数 默认：3次|	setMaxErrorRetry|
         带 ClientConfiguration 参数实例化 NosClient 的示例代码：
@@ -118,14 +105,13 @@ NosClient中的方法一般都提供两种参数传入方式：
         conf.setMaxConnections(200);
         // 设置socket超时时间
         conf.setSocketTimeout(10000);
-        // 设置失败请求重试次
-    
-    数
-    conf.setMaxErrorRetry(2);
-    NosClient nosClient = new NosClient(credentials,conf);
-    nosClient.setEndpoint(endPoint);
+        // 设置失败请求重试次数
+        conf.setMaxErrorRetry(2);
+        NosClient nosClient = new NosClient(credentials,conf);
+        nosClient.setEndpoint(endPoint);
 
-注意：后面的示例代码默认你已经实例化了所需的NosClient对象
+Note:
+后面的示例代码默认你已经实例化了所需的NosClient对象
 
 ### **桶管理**
 
@@ -138,13 +124,10 @@ NosClient中的方法一般都提供两种参数传入方式：
     request.setCannedAcl(CannedAccessControlList.PublicRead);
     nosClient.createBucket(request);
     
-**注意**：
-
-1. 桶的命名规范参见 API 文档
-
-2. NOS 中的桶名是全局唯一的，你或者他人已经创建了同名桶，你无法再创建该名称的桶
-
-3. 目前通过 SDK 创建桶可能会有 5 分钟缓存时间
+Attention:
+1.桶的命名规范参见 API 文档
+2.NOS 中的桶名是全局唯一的，你或者他人已经创建了同名桶，你无法再创建该名称的桶
+3.目前通过 SDK 创建桶可能会有 5 分钟缓存时间
 
 #### **列举桶**
 你可以通过 NosClient.listBuckets 列举出当前用户拥有的所有桶。示例代码如下：
@@ -156,18 +139,17 @@ NosClient中的方法一般都提供两种参数传入方式：
 #### **删除桶**
 你可以通过 NosClient.deleteBucket 删除指定的桶。示例代码如下：
 
-nosClient.deleteBucket(bucketName);
+    nosClient.deleteBucket(bucketName);
 
-**注意**：
-
+Attention:
 如果指定的桶不为空（桶中有文件或者未完成的分块上传），则桶无法删除；
 
-查看桶是否存在[编辑]
+#### **查看桶是否存在**
 你可以通过 NosClient.doesBucketExist 查看指定的桶是否存在。示例代码如下：
 
-boolean exists = nosClient.doesBucketExist(bucketName);
-注意：
+    boolean exists = nosClient.doesBucketExist(bucketName);
 
+Attention:
 你或者他人已经创建了指定名称的桶，doesBucketExist 都会返回 true。否则返回 false
 
 #### **设置桶的ACL**
@@ -177,6 +159,7 @@ boolean exists = nosClient.doesBucketExist(bucketName);
 |--------|-----------------------------------|
 |私有|	CannedAccessControlList.Private|
 |公共读私有写	|CannedAccessControlList.PublicRead|
+
 示例代码如下：
 
     nosClient.setBucketAcl(bucketName, CannedAccessControlList.Private);
@@ -203,7 +186,7 @@ NOS Java SDK 提供了丰富的文件上传接口与功能，主要有：
 
 #### **本地文件普通上传**
 
-对于小对象可以使用 putObject 接口进行上传，putObject 上传支持的最大文件大小为100M，如果上传大于100M的文件需要使用分块上传。本地文件普通上传的示例代码如下：\
+对于小对象可以使用 putObject 接口进行上传，putObject 上传支持的最大文件大小为100M，如果上传大于100M的文件需要使用分块上传。本地文件普通上传的示例代码如下：
 
     //要上传文件的路径
     String filePath = "your-local-file-path";
@@ -216,19 +199,17 @@ NOS Java SDK 提供了丰富的文件上传接口与功能，主要有：
 #### **上传文件时设置文件元数据信息**
 你可以在上传文件时设置文件元数据信息。可以设置的元数据主要有文件的Content-Type和用户自定义元数据信息。 这里以普通上传为例：
 
-   
-
     String filePath = "your-local-file-path";
-       ObjectMetadata objectMetadata = new ObjectMetadata();
-       //设置Content-Type
-       objectMetadata.setContentType("application/xml");
-       //设置用户自定义元数据信息
-       Map<String, String> userMeta = new HashMap<String, String>();
-       userMeta.put("ud", "test");
-       objectMetadata.setUserMetadata(userMeta);
-       PutObjectRequest putObjectRequest = new PutObjectRequest("your-bucketname","your-objectname", new File(filePath));
-       putObjectRequest.setMetadata(objectMetadata);
-       nosClient.putObject(putObjectRequest);
+    ObjectMetadata objectMetadata = new ObjectMetadata();
+    //设置Content-Type
+    objectMetadata.setContentType("application/xml");
+    //设置用户自定义元数据信息
+    Map<String, String> userMeta = new HashMap<String, String>();
+    userMeta.put("ud", "test");
+    objectMetadata.setUserMetadata(userMeta);
+    PutObjectRequest putObjectRequest = new PutObjectRequest("your-bucketname","your-objectname", new File(filePath));
+    putObjectRequest.setMetadata(objectMetadata);
+    nosClient.putObject(putObjectRequest);
 
 #### **流式上传**
    
@@ -247,7 +228,6 @@ NOS Java SDK 提供了丰富的文件上传接口与功能，主要有：
 
 * 初始化分块上传
 
-
     //初始化一个分块上传，获取分块上传ID，桶名 + 对像名 + 分块上传ID 唯一确定一个分块上传
     is = new FileInputStream("youFilePath");
     InitiateMultipartUploadRequest  initRequest = new InitiateMultipartUploadRequest("your-bucketname", "your-objectname");
@@ -261,8 +241,6 @@ NOS Java SDK 提供了丰富的文件上传接口与功能，主要有：
 * 进行分块上传
 下面是顺序上传所有分块的示例，你也可以进行并发上传。
 
- 
-
     //分块上传的最小单位为16K，最后一块可以小于16K，每个分块都得标识一个唯一的分块partIndex
      while ((readLen = is.read(buffer, 0, buffSize)) != -1 ){
        InputStream partStream = new ByteArrayInputStream(buffer);
@@ -273,15 +251,14 @@ NOS Java SDK 提供了丰富的文件上传接口与功能，主要有：
      }
 
 * 列出所有分块
-  <pre><code>
+  
     //这里可以检查分块是否全部上传，分块MD5是否与本地计算相符，如果不符或者缺少可以重新上传
     
     List<PartETag> partETags = new ArrayList<PartETag>();
     
     int nextMarker = 0;
     while (true) {
-       ListPartsRequest listPartsRequest = new ListPartsRequest("your-bucketname", 
-                                                     "your-objectname", uploadId);
+       ListPartsRequest listPartsRequest = new ListPartsRequest("your-bucketname", "your-objectname", uploadId);
        listPartsRequest.setPartNumberMarker(nextMarker);
     
        PartListing partList = nosClient.listParts(listPartsRequest);
@@ -295,14 +272,12 @@ NOS Java SDK 提供了丰富的文件上传接口与功能，主要有：
            break;
        }
     }
-</code></pre>
 
 * 完成分块上传
    
 
-    CompleteMultipartUploadRequest completeRequest =  new CompleteMultipartUploadRequest(
-                                 "your-bucketname","your-objectname", uploadId, partETags);
-       CompleteMultipartUploadResult completeResult = nosClient.completeMultipartUpload(completeRequest);
+    CompleteMultipartUploadRequest completeRequest =  new CompleteMultipartUploadRequest("your-bucketname","your-objectname", uploadId, partETags);
+    CompleteMultipartUploadResult completeResult = nosClient.completeMultipartUpload(completeRequest);
 
 ### **文件下载**
 
@@ -313,8 +288,7 @@ NOS Java SDK 提供了丰富的文件上传接口与功能，主要有：
 * Range下载
 * 指定If-Modified-Since进行下载
 
-#### **流式下载**
-  
+#### **流式下载**  
 
      NOSObject nosObject = nosClient.getObject("your-bucketname","your-objectname");
        //可以通过NOSObject对象的getObjectMetadata方法获取对象的ContentType等元数据信息
@@ -338,20 +312,18 @@ NOS Java SDK 提供了丰富的文件上传接口与功能，主要有：
          e.printStackTrace();
        }
 
-**注意**：
-
+Attention:
 NosClient.getObjec t获取的流一定要显式的 close，否则会造成资源泄露。
 
 #### **下载到本地文件**
-你可以通过调用 NOS Java SDK 的 getObject 接口直接将 NOS 中的对象下载到本地文件
-
-   
+你可以通过调用 NOS Java SDK 的 getObject 接口直接将 NOS 中的对象下载到本地文件   
 
     String destinationFile = "your-local-filepath";
-       GetObjectRequest getObjectRequest = new GetObjectRequest("your-bucketname","your-objectname");
-       ObjectMetadata objectMetadata = nosClient.getObject(getObjectRequest, new File(destinationFile));
-    Range 下载[编辑]
-    NOS Java SDK 支持范围( Range )下载，即下载指定对象的指定范围的数据。
+    GetObjectRequest getObjectRequest = new GetObjectRequest("your-bucketname","your-objectname");
+    ObjectMetadata objectMetadata = nosClient.getObject(getObjectRequest, new File(destinationFile));
+
+#### **Range 下载**
+NOS Java SDK 支持范围(Range)下载，即下载指定对象的指定范围的数据。
     
        GetObjectRequest getObjectRequest = new GetObjectRequest("your-bucketname","your-objectname");
        getObjectRequest.setRange(0, 100);
@@ -376,9 +348,7 @@ NosClient.getObjec t获取的流一定要显式的 close，否则会造成资源
 #### **指定 If-Modified-Since 进行下载**
 下载文件时，你可以指定 If-Modified-Since 参数，满足文件的最后修改时间小于等于 If-Modified-Since 参数指定的时间，则不进行下载，否则正常下载文件。
 
-   
-
-    //假设需要下载的文件的最后修改时间为: Date lastModified;
+       //假设需要下载的文件的最后修改时间为: Date lastModified;
        //lastModified小于等于指定If-Modified-Since参数
        GetObjectRequest getObjectRequest = new GetObjectRequest("your-bucketname","your-objectname");
        Date afterTime = new Date(lastModified.getTime() + 1000);
@@ -421,14 +391,14 @@ NosClient.getObjec t获取的流一定要显式的 close，否则会造成资源
 #### **判断文件是否存在**
 你可以通过 NosClient.doesObjectExist 判断文件是否存在。
 
-   
-
     boolean isExist = nosClient.doesObjectExist("your-bucketname","your-objectname");
-    文件删除[编辑]
-    你可以通过 NOSClient.deleteObject 删除单个文件
+
+#### **文件删除**
+你可以通过 NOSClient.deleteObject 删除单个文件
     
-       nosClient.deleteObject("your-bucketname","your-objectname");
-    你还可以通过 NOSClient.deleteObjects 一次删除多个文件
+    nosClient.deleteObject("your-bucketname","your-objectname");
+
+你还可以通过 NOSClient.deleteObjects 一次删除多个文件
     
        try {
            DeleteObjectsResult result = nosClient.deleteObjects(deleteObjectsRequest);
@@ -452,22 +422,16 @@ NosClient.getObjec t获取的流一定要显式的 close，否则会造成资源
 #### **获取文件元数据信息**
 你可以通过 NOSClient.getObjectMetadata 获取文件元数据信息
 
-   
-
     nosClient.getObjectMetadata("your-bucketname","your-objectname");
 
 #### **文件复制（copy）**
 你可以通过 NOSClient.copyObject 接口实现文件拷贝功能。 NOS 支持桶内 copy 以及相同用户的跨桶 copy 。
 
-   
-
     nosClient.copyObject("source-bucket", "source-object", "dst-bucket", "dst-object");
 
 #### **文件重命名（move）**
-你可以通过 NOSClient.moveObject 接口实现文件重命名功能。 NOS 仅支持桶内 move 。
-
-   
-
+你可以通过 NOSClient.moveObject 接口实现文件重命名功能。 NOS 仅支持桶内 move。
+    
     nosClient.moveObject("bucket-name", "source-object-key", "bucket-name", "dst-object-key");
 
 #### **列举桶内文件**
@@ -489,9 +453,7 @@ NOSClient.listObjects 接口提供两种调用方式：简单列举、通过 Lis
 
 **简单列举**
 
-简单列举只需指定需要列举的桶名，最多返回100条对象记录，建议桶内对象数较少时（小于100）使用。
-
-   
+简单列举只需指定需要列举的桶名，最多返回100条对象记录，建议桶内对象数较少时（小于100）使用。   
 
     ObjectListing objectListing = nosClient.listObjects("your-bucketname");
        List<NOSObjectSummary> sums = objectListing.getObjectSummaries();
@@ -568,75 +530,66 @@ a/b/
 #### **生成私有对象可下载的URL链接**
 NOS Java SDK 支持生成可下载私有对象的 URL 连接，你可以将该链接提供给第三方进行文件下载：
 
-   
-
     Credentials credentials;
-       credentials = new BasicCredentials(accessKey, secretKey);
-       NosClient client = new NosClient(credentials);
-       // 配置client
-       String bucketName = "your-bucketname";
-       String key = "object-name";
-       GeneratePresignedUrlRequest generatePresignedUrlRequest = new GeneratePresignedUrlRequest(bucketName, key);
-       generatePresignedUrlRequest.setExpiration(new Date(System.currentTimeMillis()+3600*1000*24));
-       // 设置可下载URL的过期时间为1天后
-       URL url = nosClient.generatePresignedUrl(generatePresignedUrlRequest);
-       System.out.println(url);
+    credentials = new BasicCredentials(accessKey, secretKey);
+    NosClient client = new NosClient(credentials);
+    // 配置client
+    String bucketName = "your-bucketname";
+    String key = "object-name";
+    GeneratePresignedUrlRequest generatePresignedUrlRequest = new GeneratePresignedUrlRequest(bucketName, key);
+    generatePresignedUrlRequest.setExpiration(new Date(System.currentTimeMillis()+3600*1000*24));
+    // 设置可下载URL的过期时间为1天后
+    URL url = nosClient.generatePresignedUrl(generatePresignedUrlRequest);
+    System.out.println(url);
 
 ### **文件上传下载工具类：TransferManager**
 
 前文提到的是 NOS Java SDK 提供的基础接口，为方便用户进行文件上传下载，NOS Java SDK 提供了封装更好、使用更方便的工具类：TransferManager。
 
 #### **TransferManager的初始化**
-   
 
     //先实例化一个NosClient
-       String accessKey = "your-accesskey";
-       String secretKey = "your-secretKey ";
-       Credentials credentials = new BasicCredentials(accessKey, secretKey);
-       NosClient nosClient = new NosClient(credentials);
-       nosClient.setEndpoint(endPoint);
-       //然后通过nosClient对象来初始化TransferManager
-       TransferManager transferManager = new TransferManager(nosClient);
+    String accessKey = "your-accesskey";
+    String secretKey = "your-secretKey ";
+    Credentials credentials = new BasicCredentials(accessKey, secretKey);
+    NosClient nosClient = new NosClient(credentials);
+    nosClient.setEndpoint(endPoint);
+    //然后通过nosClient对象来初始化TransferManager
+    TransferManager transferManager = new TransferManager(nosClient);
 
 #### **使用TransferManager进行文件上传**
-TransferManager 会根据文件大小，选择是否进行分块上传。当文件小于等于 16M 时，TransferManager 会自动调用 PutObject 接口，否则 TransferManager 会自动对文件进行分块上传。 1、上传本地文件：
+TransferManager 会根据文件大小，选择是否进行分块上传。当文件小于等于 16M 时，TransferManager 会自动调用 PutObject 接口，否则 TransferManager 会自动对文件进行分块上传。 
+
+1、上传本地文件
 
 如果指定上传的本地文件大于 16M，TransferManager 会自动对文件进行分块，并发调用分块上传接口进行上传，大大提高上传文件的速度。
-
-  
 
      //上传文件
        Upload upload = transferManager.upload("your-bucketname", "your-objectname", new File("your-file"));
        UploadResult  result = upload.waitForUploadResult();
 
-2、流式上传：
+2、流式上传
 
 你也可以使用 TransferManager 进行流式上传，但是相比本地文件上传，流式上传无法做到多个分块并发上传，只能一个分块一个分块顺序上传。
 
 **注意**: 如果你调用 TransferManager 流式上传的文件大于 100M，必须指定对象的 ContentLength
 
-   
-
     //流式上传文件
-       ObjectMetadata objectMetadata = new ObjectMetadata();
-       objectMetadata.setContentLength(file.length());
-       Upload upload = transferManager.upload("your-bucketname", "your-objectname", inputStream, objectMetadata);
-       UploadResult  result = upload.waitForUploadResult();
+    ObjectMetadata objectMetadata = new ObjectMetadata();
+    objectMetadata.setContentLength(file.length());
+    Upload upload = transferManager.upload("your-bucketname", "your-objectname", inputStream, objectMetadata);
+    UploadResult  result = upload.waitForUploadResult();
 
 3、上传目录
 
-你可以使用 TransferManager 将某个目录下的文件全部上传到 NOS ,对象名即文件名，不支持多级目录
-
-   
+你可以使用 TransferManager 将某个目录下的文件全部上传到 NOS ,对象名即文件名，不支持多级目录   
 
     MultipleFileUpload result = transferManager.uploadDirectory("your-buckename", null, new File("dirPath"), false);
        result.waitForCompletion();
 
-4、下载文件
+4、下载文件 
 
-  
-
-     File file = new  File("your-destFile");
-       Download download = transferManager.download("your-bucketname", "your-objectname", file);
-       download.waitForCompletion();
+    File file = new  File("your-destFile");
+    Download download = transferManager.download("your-bucketname", "your-objectname", file);
+    download.waitForCompletion();
 
