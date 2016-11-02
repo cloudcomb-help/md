@@ -228,54 +228,52 @@ NOS Java SDK 提供了丰富的文件上传接口与功能，主要有：
 
 * 初始化分块上传
 
-    //初始化一个分块上传，获取分块上传ID，桶名 + 对像名 + 分块上传ID 唯一确定一个分块上传
-    is = new FileInputStream("youFilePath");
-    InitiateMultipartUploadRequest  initRequest = new InitiateMultipartUploadRequest("your-bucketname", "your-objectname");
-    //你还可以在初始化分块上传时，设置文件的Content-Type
-    ObjectMetadata objectMetadata = new ObjectMetadata();
-    objectMetadata.setContentType("application/xml");
-    initRequest.setObjectMetadata(objectMetadata);
-    InitiateMultipartUploadResult initResult = nosClient.initiateMultipartUpload(initRequest);
-    String uploadId = initResult.getUploadId();
+<pre>//初始化一个分块上传，获取分块上传ID，桶名 + 对像名 + 分块上传ID 唯一确定一个分块上传
+is = new FileInputStream("youFilePath");
+InitiateMultipartUploadRequest  initRequest = new InitiateMultipartUploadRequest("your-bucketname", "your-objectname");
+//你还可以在初始化分块上传时，设置文件的Content-Type
+ObjectMetadata objectMetadata = new ObjectMetadata();
+objectMetadata.setContentType("application/xml");
+initRequest.setObjectMetadata(objectMetadata);
+InitiateMultipartUploadResult initResult = nosClient.initiateMultipartUpload(initRequest);
+String uploadId = initResult.getUploadId();</pre>
 
 * 进行分块上传
 下面是顺序上传所有分块的示例，你也可以进行并发上传。
 
-    //分块上传的最小单位为16K，最后一块可以小于16K，每个分块都得标识一个唯一的分块partIndex
-     while ((readLen = is.read(buffer, 0, buffSize)) != -1 ){
-       InputStream partStream = new ByteArrayInputStream(buffer);
-       nosClient.uploadPart(new UploadPartRequest().withBucketName("your-bucketname")
-                .withUploadId(uploadId).withInputStream(partStream)
-                .withKey("you-objectname").withPartSize(readLen).withPartNumber(partIndex));
-       partIndex++;
-     }
+<pre>//分块上传的最小单位为16K，最后一块可以小于16K，每个分块都得标识一个唯一的分块partIndex
+ while ((readLen = is.read(buffer, 0, buffSize)) != -1 ){
+   InputStream partStream = new ByteArrayInputStream(buffer);
+   nosClient.uploadPart(new UploadPartRequest().withBucketName("your-bucketname")
+            .withUploadId(uploadId).withInputStream(partStream)
+            .withKey("you-objectname").withPartSize(readLen).withPartNumber(partIndex));
+   partIndex++;
+ }</pre>
 
 * 列出所有分块
   
-    //这里可以检查分块是否全部上传，分块MD5是否与本地计算相符，如果不符或者缺少可以重新上传
-    
-    List<PartETag> partETags = new ArrayList<PartETag>();
-    
-    int nextMarker = 0;
-    while (true) {
-       ListPartsRequest listPartsRequest = new ListPartsRequest("your-bucketname", "your-objectname", uploadId);
-       listPartsRequest.setPartNumberMarker(nextMarker);
-    
-       PartListing partList = nosClient.listParts(listPartsRequest);
-    
-       for (PartSummary ps : partList.getParts()) {
-           nextMarker++;
-           partETags.add(new PartETag(ps.getPartNumber(), ps.getETag()));
-       }
-    
-       if (!partList.isTruncated()) {
-           break;
-       }
-    }
+<pre>//这里可以检查分块是否全部上传，分块MD5是否与本地计算相符，如果不符或者缺少可以重新上传    
+List<PartETag> partETags = new ArrayList<PartETag>();
+
+int nextMarker = 0;
+while (true) {
+   ListPartsRequest listPartsRequest = new ListPartsRequest("your-bucketname", "your-objectname", uploadId);
+   listPartsRequest.setPartNumberMarker(nextMarker);
+
+   PartListing partList = nosClient.listParts(listPartsRequest);
+
+   for (PartSummary ps : partList.getParts()) {
+       nextMarker++;
+       partETags.add(new PartETag(ps.getPartNumber(), ps.getETag()));
+   }
+
+   if (!partList.isTruncated()) {
+       break;
+   }
+}</pre>
 
 * 完成分块上传
    
-
     CompleteMultipartUploadRequest completeRequest =  new CompleteMultipartUploadRequest("your-bucketname","your-objectname", uploadId, partETags);
     CompleteMultipartUploadResult completeResult = nosClient.completeMultipartUpload(completeRequest);
 
