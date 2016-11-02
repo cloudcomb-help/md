@@ -77,6 +77,7 @@ Windows下用户，请参考 Windows下使用NOS PHP SDK
 4. 修改 NOS_TEST_BUCKET, 您要用来运行 sample 使用的 bucket，sample 程序会在这个bucket中创建一些文件,注意不能用生产环境的 bucket，以 免污染用户数据
 
 * 到 samples 目录中执行 php RunAll.php， 也可以单个运行某个 Sample 文件
+
 ## 初始化
 
 ### 确定 EndPoint
@@ -124,10 +125,11 @@ EndPoint 是 NOS 各个区域的地址，目前支持以下形式
     $nosClient->setTimeout(3600 /* seconds */);
     $nosClient->setConnectTimeout(10 /* seconds */);
 
-其中:
+其中：
 
 * setTimeout 设置请求超时时间，单位秒，默认是 5184000 秒, 这里建议不要设置太小，如果上传文件很大，消耗的时间会比较长
 * setConnectTimeout 设置连接超时时间，单位秒，默认是10秒
+
 ## 快速入门
 
 请确认您已经熟悉 NOS 的基本概念，如 Bucket、Object 、EndPoint 、AccessKeyId 和 AccessKeySecret 等。 本节您将看到如何快速的使用 NOS PHP SDK ,完成常用的操作，创建桶、上传文件、下载文件等。
@@ -159,13 +161,8 @@ EndPoint 是 NOS 各个区域的地址，目前支持以下形式
     } catch(NosException e){
             print e->getMessage();
     }
-    Attention:
 
- 
-
-    桶名命名规则请参见 API 手册桶命名规范
-
-更多的关于bucket的操作的信息，请参见 NOS-PHP-SDK Bucket管理
+Attention:桶名命名规则请参见 [API 手册桶命名规范](http://support.c.163.com/md.html#!平台服务/对象存储/API 手册/基本概念.md)
 
 #### 上传文件
 
@@ -188,9 +185,7 @@ EndPoint 是 NOS 各个区域的地址，目前支持以下形式
             print e->getMessage();
     }
 
-Attention: 对象命名规则请参见 API 手册 对象
-
-更多的上传文件信息，请参见 NOS-PHP-SDK 上传文件
+Attention: 对象命名规则请参见 [API 手册 对象](http://support.c.163.com/md.html#!平台服务/对象存储/API 手册/对象操作.md)
 
 #### 下载文件
 
@@ -239,10 +234,8 @@ Attention: 对象命名规则请参见 API 手册 对象
             print e->getMessage();
     }
 
-Note;
-
- 上面的代码默认列举100个object
-更多的管理文件信息，请参见NOS-PHP-SDK 文件管理
+Note:
+上面的代码默认列举100个object
 
 #### 删除文件
 
@@ -273,12 +266,12 @@ NosClient中的接口对应返回数据分为两类:
 * Get，List 类接口返回对应的数据，如果没有 NosException，即可认为操作成功
 例如:
 
-    <?php
+<pre><?php
     $bucketListInfo = $nosClient->listBuckets();
     $bucketList = $bucketListInfo->getBucketList();
     foreach($bucketList as $bucket) {
         print($bucket->getLocation() . "\t" . $bucket->getName() . "\t" . $bucket->getCreatedate() . "\n");
-    }
+    }</pre>
 
 上面代码中的 $bucketListInfo 的数据类型是 NOS\Model\BucketListInfo
 
