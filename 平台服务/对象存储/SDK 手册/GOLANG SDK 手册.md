@@ -180,7 +180,7 @@ Attention:
     }
 
 Attention:
-对象命名规则请参见 [API 手册 对象](https://github.com/cloudcomb-help/md/blob/master/%E5%B9%B3%E5%8F%B0%E6%9C%8D%E5%8A%A1/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/API%E6%89%8B%E5%86%8C/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.md)
+对象命名规则请参见 [API 手册 对象](http://support.c.163.com/md.html#!平台服务/对象存储/API 手册/基本概念.md)
 
 更多的上传文件信息，请参见 NOS-GOLANG-SDK 上传文件
 
@@ -206,8 +206,6 @@ Attention:
                 fmt.Println(err.Error())
         }
     }
-
-更多的下载文件信息，请参见 [NOS-GOLANG-SDK 下载文件](https://github.com/cloudcomb-help/md/blob/master/%E5%B9%B3%E5%8F%B0%E6%9C%8D%E5%8A%A1/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/SDK%E6%89%8B%E5%86%8C/GOLANG%20SDK%20%E6%89%8B%E5%86%8C.md)
 
 ### 列举文件
 
@@ -238,7 +236,6 @@ Attention:
 Note:
 上面的代码默认列举100个object
 
-更多的管理文件信息，请参见 [NOS-GOLANG-SDK 文件管理](https://github.com/cloudcomb-help/md/blob/master/%E5%B9%B3%E5%8F%B0%E6%9C%8D%E5%8A%A1/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/SDK%E6%89%8B%E5%86%8C/GOLANG%20SDK%20%E6%89%8B%E5%86%8C.md)
 
 ### 删除文件
 

@@ -70,7 +70,7 @@
      "desc":"desc",
      "domain":"www.abc.com",
      "image_type":1,
-     "image_id":3,   //可参考 查看[集群镜像列表](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/%E9%9B%86%E7%BE%A4API.md) 获取
+     "image_id":3,   //可参考 查看[集群镜像列表]获取
      "spec_id": 1,
      "replicas":2,
      "env_var":{"key":"value"},

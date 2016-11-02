@@ -20,7 +20,7 @@ SDK 下载地址: [cloudcomb-go-sdk](https://github.com/bingoHuang/cloudcomb-go-
 
 Version 1.0.0 (2016.07.21)
 
-支持蜂巢全部OpenAPI [OpenAPI文档](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E4%BB%8B%E7%BB%8D.md)
+支持蜂巢全部OpenAPI
 添加openapi函数(包含26个测试函数)
 
 
