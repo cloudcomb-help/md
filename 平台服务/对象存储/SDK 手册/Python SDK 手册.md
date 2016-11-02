@@ -690,14 +690,14 @@ Attention:
 
 ClientException包含SDK客户端的异常。比如，上传对象时对象名为空，就会抛出该异常。 ClientException类下有如下子类，用于细分客户端异常：
 
-|**类名**|	                  **抛出异常的原因**                   |
-|InvalidBucketName|	传入的桶名为空|
-|InvalidObjectName	|传入的对象名为空|
-|FileOpenModeError|	出入的对象为文件且没有使用二进制文件方式打开|
-|XmlParseError	|解析服务端响应的XML内容失败|
-|SerializationError|	上传对象序列化失败|
-|ConnectionError	|连接服务端异常|
-|ConnectionTimeout|	连接服务端超时|
+| **类名**           | **抛出异常的原因**                           |
+| InvalidBucketName  | 传入的桶名为空                               |
+| InvalidObjectName  | 传入的对象名为空                             |
+| FileOpenModeError  | 出入的对象为文件且没有使用二进制文件方式打开 |
+| XmlParseError      | 解析服务端响应的XML内容失败                  |
+| SerializationError | 上传对象序列化失败                           |
+| ConnectionError    | 连接服务端异常                               |
+| ConnectionTimeout  | 连接服务端超时                               |
 
 #### ServiceException
 
