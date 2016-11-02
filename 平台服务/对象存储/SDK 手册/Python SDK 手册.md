@@ -6,6 +6,7 @@
 
 * github地址: https://github.com/NetEase-Object-Storage/nos-python-sdk
 * pypi地址: https://pypi.python.org/pypi/nos-python-sdk/
+
 ### 环境要求
 
 此版本的 Python SDK 适用于 Python 2.7 版本。首先请根据 Python官网 的引导安装合适的 Python 版本。
@@ -22,27 +23,25 @@
 
 使用SDK源码安装，可以克隆github上SDK项目的master分支，或者到pypi上下载相应版本的源码包并解压，最后执行安装命令:
 
- 
-
     sudo python setup.py install
 
- 
 ## 初始化
 
 ### 确定EndPoint
 
-EndPoint 是NOS各个区域的地址，目前支持以下形式
+[EndPoint](http://support.c.163.com/md.html#!平台服务/对象存储/API 手册/数据中心和域名.md) 是 NOS 各个区域的地址，目前支持以下形式
 
 |**EndPoint类型**|	            **备注**              |
 |----------------|------------------------------------|
 |NOS区域域名地址|	使用桶所在的区域的NOS域名地址|
+
 #### NOS区域域名地址
 
-进入NOS控制台，在桶的 [属性](https://github.com/cloudcomb-help/md/blob/master/%E5%B9%B3%E5%8F%B0%E6%9C%8D%E5%8A%A1/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/%E6%8E%A7%E5%88%B6%E5%8F%B0%E6%89%8B%E5%86%8C/%E7%AE%A1%E7%90%86%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4.md) 中可以查找到当前桶所在的区域及域名，桶的域名的后缀部分为 该桶的公网域名，例如:test-logging.nos-eastchina1.126.net中的nos-eastchina1.126.net 为该桶的公网EndPoint。
+进入NOS控制台，在桶的 [属性](http://support.c.163.com/md.html#!平台服务/对象存储/控制台手册/管理存储空间.md) 中可以查找到当前桶所在的区域及域名，桶的域名的后缀部分为 该桶的公网域名，例如:test-logging.nos-eastchina1.126.net中的nos-eastchina1.126.net 为该桶的公网EndPoint。
 
 ### 配置密钥
 
-要接入NOS服务，你需要一对有效的AccessKey（包括AccessKeyId与AccessKeySecret）来进行 签名验证，开通服务与AccessKey请参考 [访问控制](https://github.com/cloudcomb-help/md/blob/master/%E5%B9%B3%E5%8F%B0%E6%9C%8D%E5%8A%A1/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/API%E6%89%8B%E5%86%8C/%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6.md) :
+要接入NOS服务，你需要一对有效的AccessKey（包括AccessKeyId与AccessKeySecret）来进行 签名验证，开通服务与AccessKey请参考 [访问控制](http://support.c.163.com/md.html#!平台服务/对象存储/API 手册/访问控制.md)
 
 在获取到AccessKeyId与AccessKeySecret之后，可以按照以下的步骤进行初始化
 
@@ -140,9 +139,7 @@ EndPoint 是NOS各个区域的地址，目前支持以下形式
             e.message       # 客户端错误信息
         )
 
-对象命名规则请参见 [API 手册 对象](https://github.com/cloudcomb-help/md/blob/master/%E5%B9%B3%E5%8F%B0%E6%9C%8D%E5%8A%A1/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/API%E6%89%8B%E5%86%8C/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.md)
-
-更多的上传文件信息，请参见 [NOS-PYTHON-SDK上传文件](https://github.com/cloudcomb-help/md/blob/master/%E5%B9%B3%E5%8F%B0%E6%9C%8D%E5%8A%A1/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/SDK%E6%89%8B%E5%86%8C/Python%20SDK%20%E6%89%8B%E5%86%8C.md)
+对象命名规则请参见 [API 手册 对象](http://support.c.163.com/md.html#!平台服务/对象存储/API 手册/对象操作.md)
 
 #### 下载文件
 
@@ -188,7 +185,6 @@ EndPoint 是NOS各个区域的地址，目前支持以下形式
             e.message       # 客户端错误信息
         )
 
-更多的下载文件信息，请参见 [NOS-PYTHON-SDK下载文件](https://github.com/cloudcomb-help/md/blob/master/%E5%B9%B3%E5%8F%B0%E6%9C%8D%E5%8A%A1/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/SDK%E6%89%8B%E5%86%8C/Python%20SDK%20%E6%89%8B%E5%86%8C.md)
 
 #### 列举文件
 
@@ -231,8 +227,6 @@ EndPoint 是NOS各个区域的地址，目前支持以下形式
             e,
             e.message       # 客户端错误信息
         )
-
-更多的管理文件信息，请参见 [NOS-PYTHON-SDK 文件管理](https://github.com/cloudcomb-help/md/blob/master/%E5%B9%B3%E5%8F%B0%E6%9C%8D%E5%8A%A1/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/SDK%E6%89%8B%E5%86%8C/Python%20SDK%20%E6%89%8B%E5%86%8C.md)
 
 #### 删除文件
 
@@ -316,6 +310,7 @@ EndPoint 是NOS各个区域的地址，目前支持以下形式
 * 上传超过100M的文件
 * 网络条件较差，经常和NOS服务器断开连接
 * 上传文件之前无法确定文件的大小
+
 #### 原始接口分片上传
 
 * 初始化一个分片上传任务(create_multipart_upload)
@@ -353,17 +348,15 @@ EndPoint 是NOS各个区域的地址，目前支持以下形式
         partETags.append({"part_num":k.find("PartNumber").text,"etag":k.find("ETag").text})
     
     client.complete_multipart_upload(bucket, object, upload_id, partETags)
-    *1.上面程序一共分为三个步骤：a. create_multipart_upload b. upload_part c. complete_multipart_upload
 
-    *2.upload_part 方法要求除最后一个Part以外，其他的Part大小都要大于或等于16K。但是upload_part接口并不会立即校验上传Part的大小（因为不知道是否为最后一块），只有当complete_multipart_upload的时候才会校验。
 
-    *3.Part号码的范围是1~10000。如果超出这个范围，NOS将返回InvalidArgument的错误码。
-
-    *4.Part的大小为16K到100M
-
-    *5.分片上传任务初始化或上传部分分片后，可以使用abort_multipart_upload接口中止分片上传事件。当分片上传事件被中止后，就不能再使用这个upload_id做任何操作，已经上传的分片数据也会被删除。
-
-    *6.在完成上传时，需要在参数中提供上传块的ETag与块编号（PartNumber）的组合信息，具体操作参考上面代码。
+Attention: 
+1.上面程序一共分为三个步骤：a. create_multipart_upload b. upload_part c. complete_multipart_upload
+2.upload_part 方法要求除最后一个Part以外，其他的Part大小都要大于或等于16K。但是upload_part接口并不会立即校验上传Part的大小（因为不知道是否为最后一块），只有当complete_multipart_upload的时候才会校验。
+3.Part号码的范围是1~10000。如果超出这个范围，NOS将返回InvalidArgument的错误码。
+4.Part的大小为16K到100M
+5.分片上传任务初始化或上传部分分片后，可以使用abort_multipart_upload接口中止分片上传事件。当分片上传事件被中止后，就不能再使用这个upload_id做任何操作，已经上传的分片数据也会被删除。
+6.在完成上传时，需要在参数中提供上传块的ETag与块编号（PartNumber）的组合信息，具体操作参考上面代码。
 
 #### 查看已经上传的分片
 
@@ -378,10 +371,11 @@ EndPoint 是NOS各个区域的地址，目前支持以下形式
 用户可以通过以下方式从NOS获取文件:
 
 * 下载文件
+
 ### 下载文件
 
 以下源代码实现下载文件到内存中:
-<pre><code>
+
         import nos
         
         access_key = "你的accessKeyId"
@@ -421,8 +415,9 @@ EndPoint 是NOS各个区域的地址，目前支持以下形式
                 e,
                 e.message       # 客户端错误信息
             )
-</code></pre>
-*下载内容也可以存储到文件中
+
+Attention:
+下载内容也可以存储到文件中
 
 ## 文件管理
 
@@ -564,7 +559,7 @@ list_objects可以指定的可选参数如下所示:
 ### 拷贝文件
 
 你可以使用copy_object拷贝文件:
-<pre><code>
+
     import nos
     
     access_key = "你的accessKeyId"
@@ -603,19 +598,15 @@ list_objects可以指定的可选参数如下所示:
             e.message       # 客户端错误信息
         )
             
-</code></pre>
    
-*支持跨桶的文件copy
+Attention:
+支持跨桶的文件copy
 
 ### 移动文件
 
 你可以使用move_object移动文件:
 
-  
-
-  
-
-    import nos
+        import nos
         
         access_key = "你的accessKeyId"
         secret_key = "你的accessKeySecret"
@@ -653,7 +644,8 @@ list_objects可以指定的可选参数如下所示:
                 e.message       # 客户端错误信息
             )
     
-*暂时不支持跨桶的文件move
+Attention:
+暂时不支持跨桶的文件move
 
 ## 错误处理
 
@@ -706,6 +698,7 @@ ClientException包含SDK客户端的异常。比如，上传对象时对象名�
 |SerializationError|	上传对象序列化失败|
 |ConnectionError	|连接服务端异常|
 |ConnectionTimeout|	连接服务端超时|
+
 #### ServiceException
 
 ServiceException包含NOS服务器返回的异常。当NOS服务器返回4xx或5xx的HTTP错误码时，PYTHON SDK会将NOS Server的响应转换为ServiceException。 ServiceException类下有如下子类，用于细分NOS服务器返回的异常：
