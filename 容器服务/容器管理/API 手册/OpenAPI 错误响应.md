@@ -1,3 +1,5 @@
+# OpenAPI 错误响应
+
 错误响应消息
 
     http_status_code http_reason_phrase
