@@ -50,3 +50,5 @@
 #### **示例**
 
 效果图：http://img-sample.nos-eastchina1.126.net/gif.json?gifGen
+
+![](http://img-sample.nos-eastchina1.126.net/gif.json?gifGen)
