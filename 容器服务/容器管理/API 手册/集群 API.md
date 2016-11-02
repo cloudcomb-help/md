@@ -3,13 +3,12 @@
 ## **查看集群镜像列表**
 
 ### 请求 header
-<pre><code>
-GET /api/v1/apps/images
-</code></pre>
-<pre><code>
-Authorization:Token xxxxxxxxxxxxxx
-Content-Type:application/json
-</code></pre>
+
+    GET /api/v1/apps/images    
+
+    Authorization:Token xxxxxxxxxxxxxx
+    Content-Type:application/json
+
 ### 返回
 
     {
@@ -58,13 +57,12 @@ Content-Type:application/json
 ## **创建集群**
 
 ### 请求 header
-<pre><code>
-POST /api/v1/apps
-</code></pre>
-<pre><code>
-Authorization:Token xxxxxxxxxxxxxx
-Content-Type:application/json
-</code></pre>
+
+    POST /api/v1/apps    
+
+    Authorization:Token xxxxxxxxxxxxxx
+    Content-Type:application/json
+
 ### 请求 payload
 
     {
@@ -111,52 +109,52 @@ Content-Type:application/json
 |docker_file_type|	docker 文件类型，1 (自动生成) / 2 (自定义)|	int|	可填|
 |custom_docker_file	|自定义 docker file 在源码中的路径	|string	|可填|
 |log_dirs|	日志目录	|json|	可填|
+
 ### 响应
 
-* 成功响应
+#### 成功响应
 
-<pre><code>
-200 Ok
-{
-    "id":1000,
-    "url":"https://open.c.163.com/api/v1/hooks/app/44684185834f47f5bf6b3902b8fb939b"
-}
-</code></pre>
+    200 Ok
+    {
+        "id":1000,
+        "url":"https://open.c.163.com/api/v1/hooks/app/44684185834f47f5bf6b3902b8fb939b"
+    }
 
 |**参数说明**|	       **描述**          |**类型**|
 |------------|---------------------------|--------|
 |id	|集群 id	|long|
 |url|	集群 web hook url，当有代码提交时，可嵌入此 url 进行持续部署发布。	|string|
-* 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
+
+#### 失败响应
+详情请参见 [错误返回码](http://support.c.163.com/md.html#!容器服务/容器管理/API 手册/OpenAPI 错误响应.md)。
 
 ## **修改集群**
 
 ### 请求 header
-<pre><code>
-PUT /api/v1/apps/{id}
-</code></pre>
-<pre><code>
-Authorization:Token xxxxxxxxxxxxxx
-Content-Type:application/json
-</code></pre>
+
+    PUT /api/v1/apps/{id}    
+
+    Authorization:Token xxxxxxxxxxxxxx
+    Content-Type:application/json
+
 ### 请求 payload
-<pre><code>
-{
-"desc":"appdesc",
-"env_var":{"key":"value"},
-"version_control":{
-  "type":"git",
-  "path":"http://www.github.com/example/test.git",
-  "subdir":"tomcat",
-  "branch":"online",
-  "version":"xxxx",
-  "account":"example@163.com",
-  "password":"xxxx"
-},
-"custom_docker_file":"dockfile",
-"log_dirs":["dir1","dir2"]
-} 
-</code></pre>
+
+    {
+    "desc":"appdesc",
+    "env_var":{"key":"value"},
+    "version_control":{
+      "type":"git",
+      "path":"http://www.github.com/example/test.git",
+      "subdir":"tomcat",
+      "branch":"online",
+      "version":"xxxx",
+      "account":"example@163.com",
+      "password":"xxxx"
+    },
+    "custom_docker_file":"dockfile",
+    "log_dirs":["dir1","dir2"]
+    } 
+
 
 |**参数说明**|	      **描述**        |**类型**|**是否必填**|
 |------------|------------------------|--------|------------|
@@ -174,94 +172,93 @@ Content-Type:application/json
 |docker_file_type|	docker 文件类型，1 (自动生成) / 2 (自定义)|	int|	可填|
 |custom_docker_file	|自定义 docker file 在源码中的路径	|string	|可填|
 |log_dirs|	日志目录|	json|	可填|
+
 ### 响应
 
-* 成功响应
-<pre><code>
-200 Ok
-</code></pre>
+#### 成功响应
 
-* 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
+    200 Ok
+
+#### 失败响应
+详情请参见 [错误返回码](http://support.c.163.com/md.html#!容器服务/容器管理/API 手册/OpenAPI 错误响应.md)。
 
 ## **集群列表**
 
 ### 请求 header
-<pre><code>
-GET /api/v1/apps
-</code></pre>
-<pre><code>
-Authorization:Token xxxxxxxxxxxxxx
-Content-Type:application/json
-</code></pre>
+
+    GET /api/v1/apps    
+
+    Authorization:Token xxxxxxxxxxxxxx
+    Content-Type:application/json
 
 ### 请求参数
-<pre><code>
-limit=20&offset=0
-</code></pre>
+
+    limit=20&offset=0
+
 
 |**参数说明**|	    **描述**     |**类型**|**是否必填**|
 |------------|-------------------|--------|------------|
 |limit	|大于 0 小于等于 30，默认 20	|int	|可填|
 |offset|	偏移量，大于等于 0，默认 0|	int|	可填|
+
 ### 响应
 
-* 成功响应
+#### 成功响应
 
-<pre><code>
-200 Ok
-{
-    "total": 1,
-    "apps": [
-          {
-            "id": 10702,
-            "name": "ape2",
-            "desc": "appdesc",
-            "domain": "www.abc.com",
-            "status": "create_fail",
-            "replicas": 2,
-            "volumes": [
-                {
-                    "name": "f9eb1b4428064f15b8aa95aad31e1bc4",
-                    "mount_path": "dir1",
-                    "readonly": false
+
+    200 Ok
+    {
+        "total": 1,
+        "apps": [
+              {
+                "id": 10702,
+                "name": "ape2",
+                "desc": "appdesc",
+                "domain": "www.abc.com",
+                "status": "create_fail",
+                "replicas": 2,
+                "volumes": [
+                    {
+                        "name": "f9eb1b4428064f15b8aa95aad31e1bc4",
+                        "mount_path": "dir1",
+                        "readonly": false
+                    },
+                    {
+                        "name": "a439b16783cd469cb66f17254503c72d",
+                        "mount_path": "dir2",
+                        "readonly": false
+                    }
+                ],
+                "charge_type": 2,
+                "spec_id": 1,
+                "created_at": "2016-03-25T04:57:48Z",
+                "updated_at": "2016-03-25T04:57:48Z",
+                "public_ip": null,
+                "private_ip": null,
+                "version_control": {
+                    "type": "git",
+                    "path": "http://www.github.com/example/test.git",
+                    "subdir": "tomcat",
+                    "branch": "online",
+                    "version": "xxxx",
+                    "account": "example@163.com",
+                    "password": "bec55f12a60bf849"
                 },
-                {
-                    "name": "a439b16783cd469cb66f17254503c72d",
-                    "mount_path": "dir2",
-                    "readonly": false
-                }
-            ],
-            "charge_type": 2,
-            "spec_id": 1,
-            "created_at": "2016-03-25T04:57:48Z",
-            "updated_at": "2016-03-25T04:57:48Z",
-            "public_ip": null,
-            "private_ip": null,
-            "version_control": {
-                "type": "git",
-                "path": "http://www.github.com/example/test.git",
-                "subdir": "tomcat",
-                "branch": "online",
-                "version": "xxxx",
-                "account": "example@163.com",
-                "password": "bec55f12a60bf849"
-            },
-            "custom_docker_file": "dockfile",
-            "image_id": 3,
-            "containers": [
-                {
-                    "private_ip": "10.180.194.16",
-                    "container_id": 5ae7bfa878b335311434f6aeef60fcfdb55bd8c51c11ed2912b64ad95061efae"
-                }
-            ],           
-            "env_var": {
-                "key": "value"
-            },
-            "web_hook_url": https://open.c.163.com/api/v1/hooks/app/e9c80ebe17464f6d90d3e22f6ac77bad"
-        }
-     ]
-}
-</code></pre>
+                "custom_docker_file": "dockfile",
+                "image_id": 3,
+                "containers": [
+                    {
+                        "private_ip": "10.180.194.16",
+                        "container_id": 5ae7bfa878b335311434f6aeef60fcfdb55bd8c51c11ed2912b64ad95061efae"
+                    }
+                ],           
+                "env_var": {
+                    "key": "value"
+                },
+                "web_hook_url": https://open.c.163.com/api/v1/hooks/app/e9c80ebe17464f6d90d3e22f6ac77bad"
+            }
+         ]
+    }
 
 |**参数说明**|	    **描述**      |**类型**|
 |------------|--------------------|--------|
@@ -295,76 +292,76 @@ limit=20&offset=0
 |container_id|	容器 id|	long|
 |env_var|	环境变量	|json|
 |web_hook_url|	web hook url|	string|
-* 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
+
+#### 失败响应
+详情请参见 [错误返回码](http://support.c.163.com/md.html#!容器服务/容器管理/API 手册/OpenAPI 错误响应.md)。
 
 ## **查看集群**
 
 ### 请求 header
-<pre><code>
-GET /api/v1/apps/{id}
-</code></pre>
-<pre><code>
-Authorization:Token xxxxxxxxxxxxxx
-Content-Type:application/json
-</code></pre>
+
+    GET /api/v1/apps/{id}   
+
+    Authorization:Token xxxxxxxxxxxxxx
+    Content-Type:application/json
+
 
 |**参数说明**|	    **描述**      |**类型**|**是否必填**|
 |------------|--------------------|--------|------------|
 |id|	集群 id	|long	|必填|
+
 ### 响应
 
-* 成功响应
+#### 成功响应
 
-<pre><code>
-200 Ok
-{
-    "id": 10702,
-    "name": "name",
-    "desc": "desc",
-    "domain": "www.abc.com",
-    "status": "creating",
-    "replicas": 2,
-    "volumes": [
-        {
-            "name": "f9eb1b4428064f15b8aa95aad31e1bc4",
-            "mount_path": "dir1",
-            "readonly": false
+    200 Ok
+    {
+        "id": 10702,
+        "name": "name",
+        "desc": "desc",
+        "domain": "www.abc.com",
+        "status": "creating",
+        "replicas": 2,
+        "volumes": [
+            {
+                "name": "f9eb1b4428064f15b8aa95aad31e1bc4",
+                "mount_path": "dir1",
+                "readonly": false
+            },
+            {
+                "name": "a439b16783cd469cb66f17254503c72d",
+                "mount_path": "dir2",
+                "readonly": false
+            }
+        ],
+        "charge_type": 2,
+        "spec_id": 1,
+        "created_at": "2016-03-25T04:57:48Z",
+        "updated_at": "2016-03-25T04:57:48Z",
+        "public_ip": null,
+        "private_ip": null,
+        "version_control": {
+            "type": "git",
+            "path": "http://www.github.com/example/test.git",
+            "subdir": "tomcat",
+            "branch": "online",
+            "version": "xxxx",
+            "account": "example@163.com",
+            "password": "bec55f12a60bf849"
         },
-        {
-            "name": "a439b16783cd469cb66f17254503c72d",
-            "mount_path": "dir2",
-            "readonly": false
-        }
-    ],
-    "charge_type": 2,
-    "spec_id": 1,
-    "created_at": "2016-03-25T04:57:48Z",
-    "updated_at": "2016-03-25T04:57:48Z",
-    "public_ip": null,
-    "private_ip": null,
-    "version_control": {
-        "type": "git",
-        "path": "http://www.github.com/example/test.git",
-        "subdir": "tomcat",
-        "branch": "online",
-        "version": "xxxx",
-        "account": "example@163.com",
-        "password": "bec55f12a60bf849"
-    },
-    "custom_docker_file": "dockfile",
-    "image_id": 3,
-    "containers": [
-        {
-            "private_ip": "10.180.194.16",
-            "container_id": 5ae7bfa878b335311434f6aeef60fcfdb55bd8c51c11ed2912b64ad95061efae"
-        }
-    ],   
-    "env_var": {
-        "key": "value"
-    },
-    "web_hook_url": "https://open.c.163.com/api/v1/hooks/app/e9c80ebe17464f6d90d3e22f6ac77bad"
-}
-</code></pre>
+        "custom_docker_file": "dockfile",
+        "image_id": 3,
+        "containers": [
+            {
+                "private_ip": "10.180.194.16",
+                "container_id": 5ae7bfa878b335311434f6aeef60fcfdb55bd8c51c11ed2912b64ad95061efae"
+            }
+        ],   
+        "env_var": {
+            "key": "value"
+        },
+        "web_hook_url": "https://open.c.163.com/api/v1/hooks/app/e9c80ebe17464f6d90d3e22f6ac77bad"
+    }
 
 |**参数说明**|	       **描述**           |**类型**|
 |------------|----------------------------|--------|
@@ -399,43 +396,40 @@ Content-Type:application/json
 |env_var	|环境变量	|json|
 |web_hook_url|	web hook url|	string|
 
-* 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
+#### 失败响应
+详情请参见 [错误返回码](http://support.c.163.com/md.html#!容器服务/容器管理/API 手册/OpenAPI 错误响应.md)。
 
 ## **删除集群**
-<pre><code>
-DELETE /api/v1/apps/{id}
-</code></pre>
+
+    DELETE /api/v1/apps/{id}
 
 ### 请求 header
-<pre><code>
-Authorization:Token xxxxxxxxxxxxxx
-</code></pre>
+
+    Authorization:Token xxxxxxxxxxxxxx
+
 
 |**参数说明**|	     **描述**        |**类型**|**是否必填**|
 |------------|-----------------------|--------|------------|
 |id	|集群 id	|long	|必填|
+
 ### 响应
 
-* 成功响应
+#### 成功响应
 
-<pre><code>
-200 Ok
-</code></pre>
+    200 OK
 
-* 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
-
+#### 失败响应
+详情请参见 [错误返回码](http://support.c.163.com/md.html#!容器服务/容器管理/API 手册/OpenAPI 错误响应.md)。
 
 ## **集群扩容**
 
 ### 请求 header
 
-<pre><code>
-PUT /api/v1/apps/{id}/replications/{replicas}/actions/resize
-</code></pre>
-<pre><code>
-Authorization:Token xxxxxxxxxxxxxx
-Content-Type:application/json
-</code></pre>
+    PUT /api/v1/apps/{id}/replications/{replicas}/actions/resize    
+
+    Authorization:Token xxxxxxxxxxxxxx
+    Content-Type:application/json
+
 
 |**参数说明**|	    **描述**       |**类型**|**是否必填**|
 |------------|---------------------|--------|------------|
@@ -444,47 +438,45 @@ Content-Type:application/json
 
 ### 响应
 
-* 成功响应
+#### 成功响应
 
-<pre><code>
-200 Ok
-</code></pre>
+    200 Ok
 
-* 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
+#### 失败响应
+详情请参见 [错误返回码](http://support.c.163.com/md.html#!容器服务/容器管理/API 手册/OpenAPI 错误响应.md)。
 
 ## **监听**
 
 支持长连接，超时或者对后端容器实例进行修改操作（创建、更新、回滚、重启、删除、扩缩容等）后即时返回。
 
 ### 请求 header
-<pre><code>
-GET /api/v1/watch/apps/{id}
-</code></pre>
-<pre><code>
-Authorization:Token xxxxxxxxxxxxxx
-Content-Type:application/json
-</code></pre>
+
+    GET /api/v1/watch/apps/{id}
+
+    Authorization:Token xxxxxxxxxxxxxx
+    Content-Type:application/json
 
 |**参数说明**|	      **描述**         |**类型**|**是否必填**|
 |------------|-------------------------|--------|------------|
 |id	|集群 id	|long	|必填|
 
 ### 响应
-* 成功响应
+#### 成功响应
 
-<pre><code>
-200 Ok
-{    
-    {
-        "private_ip": "10.180.194.16",
-        "container_id": "5ae7bfa878b335311434f6aeef60fcfdb55bd8c51c11ed2912b64ad95061efae"
+    200 Ok
+    {    
+        {
+            "private_ip": "10.180.194.16",
+            "container_id": "5ae7bfa878b335311434f6aeef60fcfdb55bd8c51c11ed2912b64ad95061efae"
+        }
     }
-}
-</code></pre>
+
 
 |**参数说明**|	    **描述**       |**类型**|
 |------------|---------------------|--------|
 |containers	|容器实例列表	|json|
 |private_ip|	容器私有网 ip|	string|
 |container_id	|容器 id	|long|
-* 失败响应 详情请参见 [错误返回码](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/OpenAPI%E9%94%99%E8%AF%AF%E5%93%8D%E5%BA%94.md)。
+
+#### 失败响应
+详情请参见 [错误返回码](http://support.c.163.com/md.html#!容器服务/容器管理/API 手册/OpenAPI 错误响应.md)。
