@@ -16,6 +16,7 @@ API 访问 https://open.c.163.com 。API 采用 Restful API 风格，支持内�
   * 所有 API 均采用 Https。
 * 频率限制
   * 针对授权接口，支持基于用户的频率限制，频率值根据用户的等级级别设置；针对非授权接口，支持基于 IP 的频率限制。
+
 ## Access Key
 
 注册后，蜂巢会颁发 Access Key 和 Access Secret 给客户 。
@@ -73,5 +74,5 @@ OpenAPI 的使用主要分为三步：
 
 3、 带上2中得到的 Token，便可以访问 OpenAPI 中的全部接口服务。如果请求没有 Token，OpenAPI 的安全机制将会视其为对服务（除了获取 Token 服务和 WebHook 服务）的未授权访问操作，进而会拦截。
 
-**注：OpenAPI 中内置了流控机制，对于恶意攻击 OpenAPI 服务的行为，会采取限制措施。**
-
+Attention:
+OpenAPI 中内置了流控机制，对于恶意攻击 OpenAPI 服务的行为，会采取限制措施。
