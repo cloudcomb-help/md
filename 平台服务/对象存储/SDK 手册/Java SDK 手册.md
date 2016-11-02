@@ -274,8 +274,8 @@ while (true) {
 
 * 完成分块上传
    
-    CompleteMultipartUploadRequest completeRequest =  new CompleteMultipartUploadRequest("your-bucketname","your-objectname", uploadId, partETags);
-    CompleteMultipartUploadResult completeResult = nosClient.completeMultipartUpload(completeRequest);
+<pre>CompleteMultipartUploadRequest completeRequest =  new CompleteMultipartUploadRequest("your-bucketname","your-objectname", uploadId, partETags);
+CompleteMultipartUploadResult completeResult = nosClient.completeMultipartUpload(completeRequest);</pre>
 
 ### **文件下载**
 
