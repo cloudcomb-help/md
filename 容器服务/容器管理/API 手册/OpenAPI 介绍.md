@@ -74,5 +74,5 @@ OpenAPI 的使用主要分为三步：
 
 3、 带上2中得到的 Token，便可以访问 OpenAPI 中的全部接口服务。如果请求没有 Token，OpenAPI 的安全机制将会视其为对服务（除了获取 Token 服务和 WebHook 服务）的未授权访问操作，进而会拦截。
 
-Attention:
-OpenAPI 中内置了流控机制，对于恶意攻击 OpenAPI 服务的行为，会采取限制措施。
+<span>Attention:</span><div class="alertContent">
+OpenAPI 中内置了流控机制，对于恶意攻击 OpenAPI 服务的行为，会采取限制措施。</div>

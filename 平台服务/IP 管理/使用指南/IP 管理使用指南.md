@@ -22,4 +22,4 @@
 
 ![](../image/IP管理使用指南-释放公网IP提示.png)
 
-Attention:释放的 IP 无法找回。
+<span>Attention:</span><div class="alertContent">释放的 IP 无法找回。</div>

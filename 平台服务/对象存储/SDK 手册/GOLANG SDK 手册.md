@@ -123,8 +123,8 @@ NosClient中的方法采用对象方式进行传参：
          }
     }
 
-Attention:
-后面的示例代码默认您已经实例化了所需的NosClient对象, 不再赘述,后续的代码示例均需要将实例化的代码写入main函数
+<span>Attention:</span><div class="alertContent">
+后面的示例代码默认您已经实例化了所需的NosClient对象, 不再赘述,后续的代码示例均需要将实例化的代码写入main函数</div>
 
 ## 快速入门
 
