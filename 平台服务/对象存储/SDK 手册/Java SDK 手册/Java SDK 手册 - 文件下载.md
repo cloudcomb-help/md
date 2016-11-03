@@ -33,8 +33,7 @@
          e.printStackTrace();
        }
 
-Attention:
-NosClient.getObjec t获取的流一定要显式的 close，否则会造成资源泄露。
+<span>Attention:</span><div class="alertContent">NosClient.getObjec t获取的流一定要显式的 close，否则会造成资源泄露。</div>
 
 ### 下载到本地文件
 你可以通过调用 NOS Java SDK 的 getObject 接口直接将 NOS 中的对象下载到本地文件   

@@ -11,7 +11,7 @@
     request.setCannedAcl(CannedAccessControlList.PublicRead);
     nosClient.createBucket(request);
     
-Attention:
+<span>Attention:</span>
 1.桶的命名规范参见 API 文档
 2.NOS 中的桶名是全局唯一的，你或者他人已经创建了同名桶，你无法再创建该名称的桶
 3.目前通过 SDK 创建桶可能会有 5 分钟缓存时间
@@ -28,16 +28,14 @@ Attention:
 
     nosClient.deleteBucket(bucketName);
 
-Attention:
-如果指定的桶不为空（桶中有文件或者未完成的分块上传），则桶无法删除；
+<span>Attention:</span><div class="alertContent">如果指定的桶不为空（桶中有文件或者未完成的分块上传），则桶无法删除</div>
 
 ### 查看桶是否存在
 你可以通过 NosClient.doesBucketExist 查看指定的桶是否存在。示例代码如下：
 
     boolean exists = nosClient.doesBucketExist(bucketName);
 
-Attention:
-你或者他人已经创建了指定名称的桶，doesBucketExist 都会返回 true。否则返回 false
+<span>Attention:</span><div class="alertContent">你或者他人已经创建了指定名称的桶，doesBucketExist 都会返回 true。否则返回 false</div>
 
 ### 设置桶的ACL
 桶的 ACL 包含两类：Private（私有）, PublicRead（公共读私有写）。你可以通过 NosClient.setBucketAcl 设置桶的权限。
