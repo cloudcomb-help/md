@@ -28,7 +28,8 @@
 [SDK 手册]()
 
   * [Java-SDK 手册]()
-    * [Java SDK 手册 - 安装](平台服务/对象存储/SDK 手册/Java SDK 手册/Java SDK 手册 - 安装.md)
+    * [安装](平台服务/对象存储/SDK 手册/Java SDK 手册/Java SDK 手册 - 安装.md)
+    * [前言](平台服务/对象存储/SDK 手册/Java SDK 手册/Java SDK 手册 - 前言.md)
 
   * [Python SDK 手册](平台服务/对象存储/SDK 手册/Python SDK 手册.md)
   * [GOLANG SDK 手册](平台服务/对象存储/SDK 手册/GOLANG SDK 手册.md)
