@@ -57,8 +57,8 @@ NosClient中的方法一般都提供两种参数传入方式：
         Credentials credentials = new BasicCredentials(accessKey, secretKey);
         NosClient nosClient = new NosClient(credentials);
         nosClient.setEndpoint(endPoint);
-Note:
-NosClient是线程安全的，可以并发使用
+
+<span>Note:</span><div class="alertContent">NosClient是线程安全的，可以并发使用</div>
 
 4. 配置 NosClient 如果你需要修改 NosClient 的默认参数，可以在实例化 NosClient 时传入 ClientConfiguration 实例。 ClientConfiguration 是 NosClient 的配置类，可配置连接超时、最大连接数等参数。通过 ClientConfiguration 可以设置的参数见下表：
 
@@ -91,5 +91,4 @@ NosClient是线程安全的，可以并发使用
         NosClient nosClient = new NosClient(credentials,conf);
         nosClient.setEndpoint(endPoint);
 
-Note:
-后面的示例代码默认你已经实例化了所需的 NosClient 对象
+<span>Note:</span><div class="alertContent">后面的示例代码默认你已经实例化了所需的 NosClient 对象</div>

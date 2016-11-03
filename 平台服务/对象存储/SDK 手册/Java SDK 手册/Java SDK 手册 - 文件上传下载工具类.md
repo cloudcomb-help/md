@@ -30,8 +30,7 @@ TransferManager 会根据文件大小，选择是否进行分块上传。当文�
 
 你也可以使用 TransferManager 进行流式上传，但是相比本地文件上传，流式上传无法做到多个分块并发上传，只能一个分块一个分块顺序上传。
 
-Attention:
-如果你调用 TransferManager 流式上传的文件大于 100M，必须指定对象的 ContentLength
+<span>Attention:</span><div class="alertContent">如果你调用 TransferManager 流式上传的文件大于 100M，必须指定对象的 ContentLength</div>
 
     //流式上传文件
     ObjectMetadata objectMetadata = new ObjectMetadata();
