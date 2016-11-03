@@ -1,4 +1,4 @@
-# Java SDK 手册 - 前言
+# Java SDK 手册
 
 ## 前言
 
@@ -61,6 +61,7 @@ Note:
 NosClient是线程安全的，可以并发使用
 
 4. 配置 NosClient 如果你需要修改 NosClient 的默认参数，可以在实例化 NosClient 时传入 ClientConfiguration 实例。 ClientConfiguration 是 NosClient 的配置类，可配置连接超时、最大连接数等参数。通过 ClientConfiguration 可以设置的参数见下表：
+
 |**参数**|	         **描述**     	  |**调用方法**|
 |--------|----------------------------|------------|
 |connectionTimeout|	请求失败后最大的重试次数 默认：3次|	setConnectionTimeout|
@@ -69,7 +70,7 @@ NosClient是线程安全的，可以并发使用
 
 带 ClientConfiguration 参数实例化 NosClient 的示例代码：
 
-        maxErrorRetry |	请求失败后最大的重试次数 默认：3次 | setMaxErrorRetry |
+        maxErrorRetry | 请求失败后最大的重试次数 默认：3次 | setMaxErrorRetry |
         带 ClientConfiguration 参数实例化 NosClient 的示例代码：
         
         import com.netease.cloud.ClientConfiguration;

@@ -1,4 +1,4 @@
-# Java SDK 手册 - 安装
+# Java SDK 手册
 
 ## 安装
 
