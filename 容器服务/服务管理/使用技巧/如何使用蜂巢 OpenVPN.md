@@ -33,10 +33,11 @@ OpenVPN 是一个功能齐全的 SSL VPN，它使用行业标准的 SSL/TLS 协�
 ## Linux 环境使用 OpenVPN
 以 Ubuntu 14.04 为例：
 
-1. 更新源：<pre>sudo apt-get update</pre>
-2. Ubuntu 需使用 root 账号安装 OpenVPN：<pre>sudo apt-get install openvpn</pre>
-3. 切换至下载的配置文件所在目录，启动 OpenVPN：<pre>openvpn hello.ovpn</pre>
-4. 运行 <code>ip a</code> 命令，可以看到运行结果和添加的网络设备：
+1.更新源：<pre>sudo apt-get update</pre>
+2.Ubuntu 需使用 root 账号安装 OpenVPN：<pre>sudo apt-get install openvpn</pre>
+3.切换至下载的配置文件所在目录，启动 OpenVPN：<pre>openvpn hello.ovpn</pre>
+4.运行 <code>ip a</code> 命令，可以看到运行结果和添加的网络设备：
+
 ![](../image/如何使用蜂巢OpenVPN-Ubuntu.png)
-5. 最后通过 ping 各服务提供的私有 IP，即可和使用本地的网络一样直接通过私有网进行数据传输和操作。
+5.最后通过 ping 各服务提供的私有 IP，即可和使用本地的网络一样直接通过私有网进行数据传输和操作。
 
