@@ -183,10 +183,10 @@
             }
             printf(__FUNCTION__ . ": completeMultipartUpload OK\n");
         }
-
 </code></pre>
+
 <span>Attention:</span>
-上面程序一共分为三个步骤：1. initiate 2. uploadPart 3. complete
+上面程序一共分为三个步骤：initiate ;uploadPart ;complete
 UploadPart 方法要求除最后一个Part以外，其他的Part大小都要大于或等于5M。但是Upload Part接口并不会立即校验上传Part的大小（因为不知道是否为最后一块）；只有当Complete Multipart Upload的时候才会校验。
 Part号码的范围是1~10000。如果超出这个范围，NOS 将返回InvalidArgument的错误码。
 每次上传Part时都要把流定位到此次上传块开头所对应的位置。
