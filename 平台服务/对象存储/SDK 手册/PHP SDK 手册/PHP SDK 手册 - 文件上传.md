@@ -183,21 +183,15 @@
             }
             printf(__FUNCTION__ . ": completeMultipartUpload OK\n");
         }
-
 </code></pre>
 
 <span>Attention:</span>
-1. 上面程序一共分为三个步骤：1. initiate 2. uploadPart 3. complete
-
-2. UploadPart 方法要求除最后一个Part以外，其他的Part大小都要大于或等于5M。但是Upload Part接口并不会立即校验上传Part的大小（因为不知道是否为最后一块）；只有当Complete Multipart Upload的时候才会校验。
-
-3. Part号码的范围是1~10000。如果超出这个范围，NOS 将返回InvalidArgument的错误码。
-
-4. 每次上传Part时都要把流定位到此次上传块开头所对应的位置。
-
-5. 分片上传任务初始化或上传部分分片后，可以使用abortMultipartUpload接口中止分片上传事件。当分片上传事件被中止后，就不能再使用这个Upload ID做任何操作，已经上传的分片数据也会被删除。
-
-6. 每次上传Part之后，NOS 的返回结果会包含一个 PartETag 对象，它是上传块的ETag与块编号（PartNumber）的组合。在后续完成分片上传的步骤中会用到它，因此我们需要将其保存起来，然后在第三步complete的时候使用，具体操作参考上面代码。
+上面程序一共分为三个步骤：initiate ;uploadPart ;complete
+UploadPart 方法要求除最后一个Part以外，其他的Part大小都要大于或等于5M。但是Upload Part接口并不会立即校验上传Part的大小（因为不知道是否为最后一块）；只有当Complete Multipart Upload的时候才会校验。
+Part号码的范围是1~10000。如果超出这个范围，NOS 将返回InvalidArgument的错误码。
+每次上传Part时都要把流定位到此次上传块开头所对应的位置。
+分片上传任务初始化或上传部分分片后，可以使用abortMultipartUpload接口中止分片上传事件。当分片上传事件被中止后，就不能再使用这个Upload ID做任何操作，已经上传的分片数据也会被删除。
+每次上传Part之后，NOS 的返回结果会包含一个 PartETag 对象，它是上传块的ETag与块编号（PartNumber）的组合。在后续完成分片上传的步骤中会用到它，因此我们需要将其保存起来，然后在第三步complete的时候使用，具体操作参考上面代码。
 
 #### 查看已经上传的分片
 

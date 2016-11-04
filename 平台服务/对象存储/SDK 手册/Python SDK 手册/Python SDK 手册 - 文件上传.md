@@ -82,12 +82,12 @@
 
 
 <span>Attention:</span>
-1.上面程序一共分为三个步骤：a. create_multipart_upload b. upload_part c. complete_multipart_upload
-2.upload_part 方法要求除最后一个Part以外，其他的Part大小都要大于或等于16K。但是upload_part接口并不会立即校验上传Part的大小（因为不知道是否为最后一块），只有当complete_multipart_upload的时候才会校验。
-3.Part号码的范围是1~10000。如果超出这个范围，NOS将返回InvalidArgument的错误码。
-4.Part的大小为16K到100M
-5.分片上传任务初始化或上传部分分片后，可以使用abort_multipart_upload接口中止分片上传事件。当分片上传事件被中止后，就不能再使用这个upload_id做任何操作，已经上传的分片数据也会被删除。
-6.在完成上传时，需要在参数中提供上传块的ETag与块编号（PartNumber）的组合信息，具体操作参考上面代码。
+上面程序一共分为三个步骤：a. create_multipart_upload b. upload_part c. complete_multipart_upload
+upload_part 方法要求除最后一个Part以外，其他的Part大小都要大于或等于16K。但是upload_part接口并不会立即校验上传Part的大小（因为不知道是否为最后一块），只有当complete_multipart_upload的时候才会校验。
+Part号码的范围是1~10000。如果超出这个范围，NOS将返回InvalidArgument的错误码。
+Part的大小为16K到100M
+分片上传任务初始化或上传部分分片后，可以使用abort_multipart_upload接口中止分片上传事件。当分片上传事件被中止后，就不能再使用这个upload_id做任何操作，已经上传的分片数据也会被删除。
+在完成上传时，需要在参数中提供上传块的ETag与块编号（PartNumber）的组合信息，具体操作参考上面代码。
 
 #### 查看已经上传的分片
 
