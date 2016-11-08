@@ -19,11 +19,48 @@
 
   * [基本概念](平台服务/对象存储/API 手册/基本概念.md)
   * [数据中心和域名](平台服务/对象存储/API 手册/数据中心和域名.md)
-  * [访问控制](平台服务/对象存储/API 手册/访问控制.md)
-  * [REST API](平台服务/对象存储/API 手册/REST API.md)
-  * [桶的操作](平台服务/对象存储/API 手册/桶的操作.md)
-  * [对象操作](平台服务/对象存储/API 手册/对象操作.md)
-  * [大对象分块接口](平台服务/对象存储/API 手册/大对象分块接口.md)
+  * [访问控制](平台服务/对象存储/API 手册/访问控制.md)  
+
+  * [REST API]()  
+
+    * [通用请求头](平台服务/对象存储/API 手册/REST API/REST API - 通用请求头.md)
+    * [通用响应头](平台服务/对象存储/API 手册/REST API/REST API - 通用响应头.md)
+    * [错误码定义](平台服务/对象存储/API 手册/REST API/REST API - 错误码定义.md)
+    * [错误响应格式](平台服务/对象存储/API 手册/REST API/REST API - 错误响应格式.md)
+    * [文档约定](平台服务/对象存储/API 手册/REST API/REST API - 文档约定.md)
+
+  * [桶的操作]()  
+
+    * [DELETE Bucket](平台服务/对象存储/API 手册/桶的操作/桶的操作 - DELETE Bucket.md)
+    * [List Object](平台服务/对象存储/API 手册/桶的操作/桶的操作 - List Object.md)
+    * [GET Bucket acl](平台服务/对象存储/API 手册/桶的操作/桶的操作 - GET Bucket acl.md)
+    * [GET Bucket location](平台服务/对象存储/API 手册/桶的操作/桶的操作 - GET Bucket location.md)
+    * [HEAD Bucket](平台服务/对象存储/API 手册/桶的操作/桶的操作 - HEAD Bucket.md)
+    * [List Bucket](平台服务/对象存储/API 手册/桶的操作/桶的操作 - List Bucket.md)
+    * [PUT Bucket](平台服务/对象存储/API 手册/桶的操作/桶的操作 - PUT Bucket.md)  
+    * [PUT Bucket acl](平台服务/对象存储/API 手册/桶的操作/桶的操作 - PUT Bucket acl.md)  
+    * [PUT Bucket Deafult 404](平台服务/对象存储/API 手册/桶的操作/桶的操作 - PUT Bucket Deafult 404.md)  
+    * [GET Bucket Default 404](平台服务/对象存储/API 手册/桶的操作/桶的操作 - GET Bucket Default 404.md)  
+
+  * [对象操作]()  
+
+    * [DELETE Object](平台服务/对象存储/API 手册/对象操作/对象操作 - DELETE Object.md)
+    * [DELETE Multiple Objects](平台服务/对象存储/API 手册/对象操作/对象操作 - DELETE Multiple Objects.md)
+    * [GET Object](平台服务/对象存储/API 手册/对象操作/对象操作 - GET Object.md)
+    * [HEAD Object](平台服务/对象存储/API 手册/对象操作/对象操作 - HEAD Object.md)
+    * [PUT Object](平台服务/对象存储/API 手册/对象操作/对象操作 - PUT Object.md)
+    * [PUT Object Copy](平台服务/对象存储/API 手册/对象操作/对象操作 - PUT Object Copy.md)
+    * [PUT Object Move](平台服务/对象存储/API 手册/对象操作/对象操作 - PUT Object Move.md)
+    * [PUT Obejct Meta](平台服务/对象存储/API 手册/对象操作/对象操作 - PUT Obejct Meta.md)
+
+  * [大对象分块接口]()  
+
+    * [Initiate Multipart Upload](平台服务/对象存储/API 手册/大对象分块接口/大对象分块接口 - Initiate Multipart Upload.md)
+    * [Upload part](平台服务/对象存储/API 手册/大对象分块接口/大对象分块接口 - Upload part.md)
+    * [Complete Multipart Upload](平台服务/对象存储/API 手册/大对象分块接口/大对象分块接口 - Complete Multipart Upload.md)
+    * [Abort Multipart Upload](平台服务/对象存储/API 手册/大对象分块接口/大对象分块接口 - Abort Multipart Upload.md)
+    * [List Parts](平台服务/对象存储/API 手册/大对象分块接口/大对象分块接口 - List Parts.md)
+    * [List Multipart Uploads](平台服务/对象存储/API 手册/大对象分块接口/大对象分块接口 - List Multipart Uploads.md)
 
 [SDK 手册]()
 
