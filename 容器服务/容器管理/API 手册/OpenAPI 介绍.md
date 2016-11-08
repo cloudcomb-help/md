@@ -4,7 +4,7 @@
 
 蜂巢 API 提供更灵活的资源控制方式，满足你的定制化需求，如自动化部署，持续集成等功能。
 
-蜂巢 API 需要使用 API Token 来发起 API 请求。 请到 https://c.163.com 页面登录到你的账户，查看你的 Access Key 和 Access Secret，然后调用 [生成 API token 接口](https://github.com/cloudcomb-help/md/blob/master/%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1/%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/API%E6%89%8B%E5%86%8C/%E7%94%A8%E6%88%B7API.md) 来获取 token。
+蜂巢 API 需要使用 API Token 来发起 API 请求。 请到 https://c.163.com 页面登录到你的账户，查看你的 Access Key 和 Access Secret，然后调用 [生成 API token 接口](http://support.c.163.com/md.html#!容器服务/容器管理/API 手册/用户 API.md) 来获取 token。
 
 API 访问 https://open.c.163.com 。API 采用 Restful API 风格，支持内省，支持 API 访问频率限制。
 
