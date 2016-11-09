@@ -4,7 +4,7 @@
 
 蜂巢 API 提供更灵活的资源控制方式，满足你的定制化需求，如自动化部署，持续集成等功能。
 
-蜂巢 API 需要使用 API Token 来发起 API 请求。 请到 https://c.163.com 页面登录到你的账户，查看你的 Access Key 和 Access Secret，然后调用 [生成 API token 接口](http://support.c.163.com/md.html#!容器服务/镜像仓库/API 手册/用户 API.md) 来获取 token。
+蜂巢 API 需要使用 API Token 来发起 API 请求。 请到 https://c.163.com 页面登录到你的账户，查看你的 Access Key 和 Access Secret，然后调用 [生成 API token 接口](http://support.c.163.com/md.html#!容器服务/服务管理/API 手册/用户 API.md) 来获取 token。
 
 API 访问 https://open.c.163.com 。API 采用 Restful API 风格，支持内省，支持 API 访问频率限制。
 
