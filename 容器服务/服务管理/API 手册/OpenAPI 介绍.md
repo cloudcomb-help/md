@@ -25,6 +25,7 @@ API 访问 https://open.c.163.com 。API 采用 Restful API 风格，支持内�
 说明：
 * Access Key： 用于标识客户身份，在网络请求中会以某种形式传输
 * Access Secret ： 作为私钥形式存储于客户方本地， 不在网络传递，它的作用是对客户方发起的请求进行数字签名，保证该请求是来自指定客户的请求，并且是合法的有效的。
+
 使用 Access Key 进行身份识别，加上 Access Secret 进行数字签名，即可完成应用接入与认证授权。
 你可以在 [Access Key](https://c.163.com/dashboard#/m/account/accesskey/) 中创建、下载、删除、禁用你的 Access Key。
 蜂巢支持多 Access Key、Access Secret，保障你的应用安全。
