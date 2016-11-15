@@ -15,22 +15,22 @@
 
 ### 响应示例
 
-    HTTP/1.1 403 Forbidden
-    Content-Type: application/json
-    Content-Length: <PayloadSizeBytes>
-    {
-      "code": 40301,
-      "message": "Request Time Too Skewed",
-      "request_id": "bbffc270-1a77-4548-b995-ce729c105ba2"
-    }
+	HTTP/1.1 403 Forbidden
+	Content-Type: application/json
+	Content-Length: <PayloadSizeBytes>
+	{
+		"code": 40301,
+		"message": "Request Time Too Skewed",
+		"request_id": "bbffc270-1a77-4548-b995-ce729c105ba2"
+	}
     
 ### 响应元素
 
-|    名称    |                                描述                                |  类型  |
-|------------|--------------------------------------------------------------------|--------|
-| code       | 日志订阅内部错误码，通常用于定位具体的错误。                       | int    |
-| message    | 请求错误原因，用于助于人类理解。                                   | string |
-| request_id | 用于定位唯一请求ID，它能为我们提供一种机制来跟踪、诊断和调试请求。 | string |
+|    名称    |                                描述                                |  类型  |                示例值                |
+|------------|--------------------------------------------------------------------|--------|--------------------------------------|
+| code       | 日志订阅内部错误码，通常用于定位具体的错误。                       | int    | 40301                                |
+| message    | 请求错误原因，用于助于人类理解。                                   | string | Request Time Too Skewed              |
+| request_id | 用于定位唯一请求ID，它能为我们提供一种机制来跟踪、诊断和调试请求。 | string | bbffc270-1a77-4548-b995-ce729c105ba2 |
 
 ## 错误码
 
