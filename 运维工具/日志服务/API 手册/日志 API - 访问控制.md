@@ -2,7 +2,7 @@
 
 ## 用户签名验证（Authentication）
 
-日志订阅通过使用访问凭证 ID ( AccessKey )/访问凭证密钥( SecretKey )非对称加密的方法来验证某个请求的发送者身份。AccessKey 用于标识用户，SecretKey 是用户用于加密签名字符串和日志订阅 用来验证签名字符串的密钥，其中 SecretKey 必须保密，只有用户和日志订阅知道。每个访问凭证对都有 active/inactive 两种状态
+日志订阅通过使用访问凭证 ID ( AccessKey )和访问凭证密钥( SecretKey )非对称加密的方法来验证某个请求的发送者身份。AccessKey 用于标识用户，SecretKey 是用户用于加密签名字符串和日志订阅 用来验证签名字符串的密钥，其中 SecretKey 必须保密，只有用户和日志订阅知道。每个访问凭证对都有 active/inactive 两种状态
 
 * active 表明用户可以用此 ID 对签名验证请求
 * inactive 表明用户暂停此 ID 对签名验证的功能
