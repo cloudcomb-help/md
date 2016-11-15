@@ -1,6 +1,6 @@
 # 服务入口
 
-日志订阅服务通用访问入口为：**\<subscription_name\>**.log.c.163.com
+日志订阅服务通用访问入口为：**<\subscription_name>**.log.c.163.com
 
 其中 subscription_name 为**订阅的名称**，可以在日志订阅页面中找到。
 
