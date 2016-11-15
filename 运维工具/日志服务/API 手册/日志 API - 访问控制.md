@@ -30,7 +30,7 @@
 * CanonicalizedHeaders 表示请求中其他重要的 HTTP 头（目前暂时为空）。
 * CanonicalizedResource 表示用户想要访问的日志订阅资源。
 
-其中，Date 和 CanonicalizedResource 不能为空，其余字段如为空，用空字符串""代替；如果请求中的 Date 时间和日志订阅服务器的时间差正负15分钟以上，日志订阅服务器将拒绝该服务 ，并返回错误码：40301 - "Request Time Too Skewed"（具体请参看 `通用错误码` 章节）。
+其中，Date 和 CanonicalizedResource 不能为空，其余字段如为空，用空字符串""代替；如果请求中的 Date 时间和日志订阅服务器的时间差正负15分钟以上，日志订阅服务器将拒绝该服务 ，并返回错误码：40301 - "Request Time Too Skewed"（具体请参看 [错误响应](http://support.c.163.com/md.html#!运维工具/日志服务/API 手册/日志 API - 错误响应.md) 章节）。
 
 ## 构建 CanonicalizedHeaders 的方法
 
