@@ -47,7 +47,7 @@
         "position":"dGVzdF90b3BpYzo0MDM3NDAyNzQ="
     }
 
-#### 响应元素
+#### 响应参数
 |   名称   |  类型  |          描述          |            示例值            |
 |----------|--------|------------------------|------------------------------|
 | position | string | 获取到的具体位置信息。 | dGVzdF90b3BpYzo0MDM3NDAyNzQ= |
@@ -56,4 +56,4 @@
 
 #### 失败响应
 
-请参考 [错误响应](http://support.c.163.com/md.html#!运维工具/日志服务/API 手册/日志 API - 错误响应.md) 章节。
+详情请参见 [错误响应](http://support.c.163.com/md.html#!运维工具/日志服务/API 手册/日志 API - 错误响应.md)。
