@@ -1,9 +1,10 @@
 # 服务入口
 
-日志订阅服务通用访问入口为：**<subscription_name>**.log.c.163.com
+日志订阅服务通用访问入口为：<subscription_name>.log.c.163.com
 
-其中 subscription_name 为**订阅的名称**，可以在日志订阅页面中找到。(此处配图)
+其中 subscription_name 为**订阅的名称**，可以在日志订阅页面中找到。
 
-例如，你有一个订阅，订阅名称为 myservice.default-username 服务的日志订阅入口地址通常为：(可以在配图中展示)
+![](../image/日志API_概览.png)
 
-myservice.default-username.log.c.163.com
+在上例子中，你有一个订阅，订阅内容为 webapp.namespace-pubview。
+那么服务的日志订阅入口地址为：<code>webapp.namespace-pubview.log.c.163.com</code> 。
