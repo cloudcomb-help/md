@@ -1,50 +1,22 @@
-## 订阅日志
+# 订阅日志
 
-### get_subscription_position
+## get_subscription_position
 
 
-#### 描述
+### 描述
 
 获取订阅开始的位置信息
 
 <span>Note:</span><div class="alertContent">此接口每用户每分钟访问次数为 5 次。</div>
 
-
+### 请求
 #### 请求语法
 
     {
-      "position_type": "string"
+        "position_type": "string"
     }
 
-#### 请求参数
-
-position_type
-
-日志订阅的起始位置类型，共有三种类型：
-
-* EARLIEST - 从能获取到的最前面位置开始读取日志（已删除的除外）；
-* LATEST - 从最末尾开始读取日志（最新日志）；
-* STORED - 从保存的位置开始读取日志（上次读取过的位置）。
-
-#### 响应语法
-
-    {
-      "position": "string"
-    }
-    
-#### 响应元素
-
-position
-
-获取到的具体位置信息。
-
-#### 错误码
-
-请参考 `通用错误码` 章节
-
-#### 示例
-
-Request:
+#### 请求示例
 
     POST / HTTP/1.1
     Host: <subscription_name>.log.c.163.com
@@ -55,7 +27,21 @@ Request:
     {
         "position_type":"EARLIEST"
     }
-Response:
+
+#### 请求参数
+
+|      名称     |  类型  | 是否必填 |                                                                                                                     描述                                                                                                                     |  示例值  |
+|---------------|--------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
+| position_type | string | 是       | 日志订阅的起始位置类型，共有三种类型：<ul><li>EARLIEST - 从能获取到的最前面位置开始读取日志（已删除的除外）；</li><li>LATEST - 从最末尾开始读取日志（最新日志）；</li><li>STORED - 从保存的位置开始读取日志（上次读取过的位置）。</li></ul> | EARLIEST |
+
+### 响应
+#### 响应语法
+
+    {
+        "position": "string"
+    }
+    
+#### 响应示例
 
     HTTP/1.1 200 OK
     Content-Type: application/json
@@ -63,3 +49,14 @@ Response:
     {
         "position":"dGVzdF90b3BpYzo0MDM3NDAyNzQ="
     }
+
+### 响应元素
+|   名称   |  类型  |          描述          |            示例值            |
+|----------|--------|------------------------|------------------------------|
+| position | string | 获取到的具体位置信息。 | dGVzdF90b3BpYzo0MDM3NDAyNzQ= |
+
+
+
+#### 失败响应
+
+请参考 [错误响应](http://support.c.163.com/md.html#!运维工具/日志服务/API 手册/日志 API - 错误响应.md) 章节。
