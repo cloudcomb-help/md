@@ -16,7 +16,7 @@
 
 #### 镜像没有设置 ENTRYPOINT 和 CMD 信息，或者设置有误
 
-请正确设定容器启动时具体的执行命令，详见 Dockerfile指令
+请正确设定容器启动时具体的执行命令，详见 [Dockerfile指令](http://support.c.163.com/wiki/md.html#!容器服务/服务管理/使用指南/如何自定义服务启动命令.md)
 
 #### 日志目录设置不正确
 
