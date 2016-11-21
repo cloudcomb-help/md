@@ -40,17 +40,17 @@
         ]
     }
 
-|**参数说明**|	     **描述**        |**类型**|
-|------------|-----------------------|--------|
-|repo_id	|镜像仓库 |id	|long|
-|user_name|	用户名|	string|
-repo_name	|镜像仓库名	|string|
-|open_level|	开放级别，0 (私有 ) / 1 (公有)|	int|
-|base_desc	|基本描述	|string|
-|detail_desc|	详细描述|	string|
-|tag_count	|版本数量	|int|
-|created_at|	创建时间，使用 UTC（世界标准时间）时间，用 ISO8601 进行格式化|	string|
-|updated_at	|修改时间，使用 UTC（世界标准时间）时间，用 ISO8601 进行格式化	|string|
+| **参数说明** |                            **描述**                           | **类型** |
+|--------------|---------------------------------------------------------------|----------|
+| repo_id      | 镜像仓库 id                                                   | long     |
+| user_name    | 用户名                                                        | string   |
+| repo_name    | 镜像仓库名                                                    | string   |
+| open_level   | 开放级别，0 (私有 ) / 1 (公有)                                | int      |
+| base_desc    | 基本描述                                                      | string   |
+| detail_desc  | 详细描述                                                      | string   |
+| tag_count    | 版本数量                                                      | int      |
+| created_at   | 创建时间，使用 UTC（世界标准时间）时间，用 ISO8601 进行格式化 | string   |
+| updated_at   | 修改时间，使用 UTC（世界标准时间）时间，用 ISO8601 进行格式化 | string   |
 
 #### 失败响应
 详情请参见 [错误返回码](http://support.c.163.com/md.html#!容器服务/容器管理/API 手册/OpenAPI 错误响应.md)。
