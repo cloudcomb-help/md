@@ -1,25 +1,25 @@
 # 桶的操作
-### GET Bucket (LIST Object)
+## 列出桶的对象 - GET Bucket (LIST Object)
 
-#### 描述 
+### 描述 
 列出桶的对象，可以根据简单的检索条件，返回对象列表的子集。
 
-#### 语法
+### 语法
 
     GET / HTTP/1.1
     HOST: ${BucketName}.${endpoint}
     Date: ${date}
     Authorization: ${signature}
 
-#### 请求参数
+### 请求参数
 |    参数   |                                                                 描述                                                                |
 |-----------|-------------------------------------------------------------------------------------------------------------------------------------|
-| delimiter | 分界符，用于做groupby操作<br>类型：字符串<br>默认：无                                                                               |
+| delimiter | 分界符，用于做 groupby 操作<br>类型：字符串<br>默认：无                                                                               |
 | marker    | 字典序的起始标记，只列出该标记之后的部分<br>类型：字符串<br>默认：无                                                                |
 | max-keys  | 限定返回的数量，返回的结果小于或等于该值<br>类型：数字<br>默认：100<br>取值范围：[0-1000]                                           |
 | prefix    | 只返回Key以特定前缀开头的那些对象。可以使用前缀把一个桶里面的对象分成不同的组，类似文件系统的目录一样。<br>类型：字符串<br>默认：无 |
 
-#### 响应元素
+### 响应元素
 |      元素      |                                                          描述                                                          |
 |----------------|------------------------------------------------------------------------------------------------------------------------|
 | Contents       | 对象元数据，代表一个对象描述<br>类型：容器<br>父节点：ListBucketObjects<br>子节点：Key，LastModified，Size，Etag       |
@@ -40,7 +40,7 @@
 | Size           | 对象的大小字节数<br>类型：数字<br>父节点：ListBucketObjects.contents                                                   |
 | StorageClasss  | 存储级别<br>类型：字符串<br>父节点：ListBucketObjects.contents                                                         |
 
-#### 示例 
+### 示例 
 Request
 
     GET /?max-keys=2&prefix=user HTTP/1.1
@@ -81,11 +81,11 @@ Response
         </Contents>
     </ListBucketResult>
 
-#### 细节描述
+### 细节描述
 
 1. Object 中用户自定义的 Meta，在 GetBucket 请求时不会返回。
 2. 如果访问的 Bucket 不存在，包括试图访问因为命名不规范无法创建的 Bucket，返回 404 Not Found 错误，错误码：NoSuchBucket。
 3. 如果没有访问该 Bucket 的权限，返回 403 Forbidden 错误，错误码：AccessDenied。
 4. 如果因为 max-keys 的设定无法一次完成 listing，返回结果会附加一个 <NextMarker>，提示继续 listing 可以以此为 marker。NextMarker 中的值仍在 list 结果之中。
 5. 在做条件查询时，即使 marker 实际在列表中不存在，返回也从符合 marker 字母排序的下一个开始打印。如果max-keys 小于0或者大于1000，将返回 400 Bad Request 错误。错误码：InvalidArgument。
-6. 若 prefix，marker，delimiter 参数不符合长度要求，返回 400 Bad Request。错误码：InvalidArgument。prefix，marker，delimiter 用来实现分页显示效果，参数的长度必须小于1000字节。
+6. 若 prefix，marker，delimiter 参数不符合长度要求，返回 400 Bad Request。错误码：InvalidArgument。prefix，marker，delimiter 用来实现分页显示效果，参数的长度必须小于 1000 字节。
