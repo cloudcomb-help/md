@@ -25,7 +25,7 @@
 
   * [桶的操作]()  
 
-    * [PUT Bucket](平台服务/对象存储/API 手册/桶的操作/桶的操作 - PUT Bucket.md)  
+    * [创建新的桶](平台服务/对象存储/API 手册/桶的操作/桶的操作 - PUT Bucket.md)  
     * [DELETE Bucket](平台服务/对象存储/API 手册/桶的操作/桶的操作 - DELETE Bucket.md)
     * [GET Bucket(LIST Object)](平台服务/对象存储/API 手册/桶的操作/桶的操作 - LIST Object.md)
     * [GET Bucket acl](平台服务/对象存储/API 手册/桶的操作/桶的操作 - GET Bucket acl.md)

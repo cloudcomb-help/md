@@ -2,7 +2,7 @@
 
 桶（Bucket）是对象的容器，所有的对象都必须位于桶里面，在整个系统里面桶名称唯一，在桶内部，对象 key 唯一。
 
-## PUT Bucket
+## 创建新的桶 - PUT Bucket
 ### 描述
 创建一个新的桶，桶名称（BucketName）系统全局唯一，如果有重复，则按照该桶是否属于调用者，返回 BucketAlreadyOwnedByYou 或者 BucketAlreadyExist 两种错误码。
 
