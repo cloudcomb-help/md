@@ -26,11 +26,11 @@
   * [桶的操作]()  
 
     * [DELETE Bucket](平台服务/对象存储/API 手册/桶的操作/桶的操作 - DELETE Bucket.md)
-    * [List Object](平台服务/对象存储/API 手册/桶的操作/桶的操作 - List Object.md)
+    * [LIST Object](平台服务/对象存储/API 手册/桶的操作/桶的操作 - LIST Object.md)
     * [GET Bucket acl](平台服务/对象存储/API 手册/桶的操作/桶的操作 - GET Bucket acl.md)
     * [GET Bucket location](平台服务/对象存储/API 手册/桶的操作/桶的操作 - GET Bucket location.md)
     * [HEAD Bucket](平台服务/对象存储/API 手册/桶的操作/桶的操作 - HEAD Bucket.md)
-    * [List Bucket](平台服务/对象存储/API 手册/桶的操作/桶的操作 - List Bucket.md)
+    * [LIST Bucket](平台服务/对象存储/API 手册/桶的操作/桶的操作 - LIST Bucket.md)
     * [PUT Bucket](平台服务/对象存储/API 手册/桶的操作/桶的操作 - PUT Bucket.md)  
     * [PUT Bucket acl](平台服务/对象存储/API 手册/桶的操作/桶的操作 - PUT Bucket acl.md)  
     * [PUT Bucket Deafult 404](平台服务/对象存储/API 手册/桶的操作/桶的操作 - PUT Bucket Deafult 404.md)  

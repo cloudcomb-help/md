@@ -1,5 +1,5 @@
 # 桶的操作
-### GET Bucket (List Object)
+### GET Bucket (LIST Object)
 
 #### 描述 
 列出桶的对象，可以根据简单的检索条件，返回对象列表的子集。
