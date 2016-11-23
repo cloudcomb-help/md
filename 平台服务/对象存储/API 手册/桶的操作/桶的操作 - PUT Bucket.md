@@ -1,11 +1,12 @@
 # 桶的操作
 
-### **PUT Bucket**
+桶（Bucket）是对象的容器，所有的对象都必须位于桶里面，在整个系统里面桶名称唯一，在桶内部，对象 key 唯一。
 
-#### **描述**
-创建一个新的桶，桶名称( BucketName )系统全局唯一，如果有重复，则按照该桶是否属于调 用者，返回 BucketAlreadyOwnedByYou 或者 BucketAlreadyExist 两种错误码。
+## PUT Bucket
+### 描述
+创建一个新的桶，桶名称（BucketName）系统全局唯一，如果有重复，则按照该桶是否属于调用者，返回 BucketAlreadyOwnedByYou 或者 BucketAlreadyExist 两种错误码。
 
-#### **语法**
+### 语法
 
     PUT / HTTP/1.1
     HOST: ${BucketName}.${endpoint}
@@ -13,16 +14,20 @@
     Date: ${date}
     Authorization: ${signature}
 
-#### **请求头**
-|   **Header**   |          **描述**           |**是否必须**|
-|----------------|-----------------------------|------------|
-|x-nos-acl| public-read  默认：private|    No|
-#### **响应元素**
-|       **Header**        |       **描述**        |**是否必须**|
-|-------------------------|-----------------------|------------|
-|CreateBucketConfiguration| 建桶配置 类型：容器  |No|
-|LocationConstraint|    BJ / GZ 默认：HZ|  No|
-#### **示例**
+### 请求头
+
+|   Header  |                                         描述                                         | 是否必须 |
+|-----------|--------------------------------------------------------------------------------------|----------|
+| x-nos-acl | 设置桶的访问控制列表<br>类型：字符串<br>有效值：private/public-read<br>默认：private | No       |
+
+### 请求元素
+
+|           Header          |                                描述                                | 是否必须 |
+|---------------------------|--------------------------------------------------------------------|----------|
+| CreateBucketConfiguration | 建桶配置<br>类型：容器                                             | No       |
+| LocationConstraint        | 指定一个地理分区<br>类型：枚举<br>有效值：HZ / BJ / GZ<br>默认：HZ | No       |
+
+### 示例
 Request
 
     PUT / HTTP/1.1
@@ -43,7 +48,7 @@ Response
     Connection: close
     Server: NOS
 
-#### **细节描述**
+### 细节描述
 
 1.Bucket 命名请遵循命名规范，否则返回 400 Bad Request。错误码：InvalidBucketName。
 
@@ -59,9 +64,9 @@ Response
 
 7.如果 PutBucket 的时候发现已经超过 Bucket 最大创建数时，返回 400 Bad Request 消息。错误码：TooManyBuckets。
 
-8.如果没有指定访问权限，即 x-nos-acl，则默认使用『private』权限。
+8.如果没有指定访问权限，即 x-nos-acl，则默认使用「private」权限。
 
-9.如果没有指定 Location ，则默认使用『HZ』分区。
+9.如果没有指定 Location ，则默认使用「HZ」分区。
 
 10.如果 HTTP 请求的 BODY XML 格式有误，返回 400 Bad Request 消息。错误码：MalformedXML。
 
