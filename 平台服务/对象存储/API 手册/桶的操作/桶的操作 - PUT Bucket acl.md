@@ -1,10 +1,11 @@
 # 桶的操作
-### **PUT Bucket acl**
 
-#### **描述**
+## 设置桶的访问控制属性 - PUT Bucket acl
+
+### 描述
 设置桶的访问控制属性。
 
-#### **语法**
+### 语法
 
     PUT /?acl HTTP/1.1
     HOST: ${BucketName}.${endpoint}
@@ -13,11 +14,13 @@
     Authorization: ${signature}
     x-nos-acl: public-read
 
-#### **请求头**
-|**Header**|    **描述**      |
-|----------|------------------|
-|x-nos-acl |    public-read   |
-#### **示例**
+### 请求头
+
+|   Header  |                                  描述                                 |
+|-----------|-----------------------------------------------------------------------|
+| x-nos-acl | 设置桶的访问控制列表<br>类型：字符串<br>有效值：private / public-read |
+
+### 示例
 Request
 
     PUT /?acl HTTP/1.1
@@ -35,12 +38,12 @@ Response
     Connection: close
     Server: NOS
 
-#### **细节描述**
+### 细节描述
 
 
 1.如果 Bucket 存在，发送时带的权限和已有权限不一样，并且请求发送者是 Bucket 拥有者时，该请求不会改变 Bucket 内容，但是会更新权限。
 
-2.如果请求中没有『x-nos-acl』头，并且该 Bucket 已存在，并属于该请求发起者，则维持原 Bucket 权限不变。 
+2.如果请求中没有 `x-nos-acl` 头，并且该 Bucket 已存在，并属于该请求发起者，则维持原 Bucket 权限不变。 
 
 3.如果 Bucket 不存在，返回 404 no content 错误。错误码：NoSuchBucket。
 
