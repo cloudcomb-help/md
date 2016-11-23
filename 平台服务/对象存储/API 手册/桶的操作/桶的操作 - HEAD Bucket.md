@@ -1,17 +1,17 @@
 # 桶的操作
-### **HEAD Bucket**
+## 判断桶的状态 - HEAD Bucket
 
-#### **描述** 
-这个接口主要用于判断桶是否存在，以及是否有权限访问。
+### 描述 
+判断桶是否存在，以及是否有权限访问。
 
-#### **语法** 
+### 语法 
 
     HEAD / HTTP/1.1
     HOST: ${BucketName}.${endpoint}
     Date: ${date}
     Authorization: ${signature}
 
-#### **示例**
+### 示例
 Request
 
     HEAD / HTTP/1.1
@@ -28,7 +28,7 @@ Response
     Connection: close
     Server: NOS
 
-#### **细节描述**
+### 细节描述
 
 1.不论正常返回 200 OK 还是非正常返回，Head Bucket 都不返回消息体。所有桶相关信息都 包含在 HTTP 返回头中。
 
