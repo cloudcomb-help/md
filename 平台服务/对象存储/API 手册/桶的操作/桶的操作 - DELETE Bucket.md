@@ -1,18 +1,18 @@
 # 桶的操作
 
-### **DELETE Bucket**
+## DELETE Bucket
 
-#### **描述**
+### 描述
 删除一个桶，只能删除无对象的桶，如果桶非空，需要先删除桶内的对象。
 
-#### **语法**
+### 语法
 
     DELETE / HTTP/1.1
     HOST: ${BucketName}.${endpoint}
     Date: ${date}
     Authorization: ${signature}
 
-#### **示例**
+### 示例
 Request
 
     DELETE / HTTP/1.1
@@ -28,7 +28,7 @@ Response
     Connection: close
     Server: NOS
 
-#### **细节描述**
+### 细节描述
 
 1.如果 Bucket 不存在，返回 404 no content 错误。错误码：NoSuchBucket。
 
