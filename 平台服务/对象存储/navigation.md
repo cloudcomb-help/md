@@ -23,6 +23,7 @@
     * [错误响应格式](平台服务/对象存储/API 手册/REST API/REST API - 错误响应格式.md)
     * [文档约定](平台服务/对象存储/API 手册/REST API/REST API - 文档约定.md)
 
+  * [常用操作](平台服务/对象存储/API 手册/常用操作.md)
   * [桶的操作]()  
 
     * [PUT Bucket](平台服务/对象存储/API 手册/桶的操作/桶的操作 - PUT Bucket.md)  
