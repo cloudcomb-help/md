@@ -59,6 +59,8 @@
 
 [SDK 手册]()
 
+  * [常用 SDK](平台服务/对象存储/SDK 手册/常用 SDK.md)
+
   * [Java SDK 手册]()  
 
     * [安装](平台服务/对象存储/SDK 手册/Java SDK 手册/Java SDK 手册 - 安装.md)
