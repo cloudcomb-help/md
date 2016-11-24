@@ -42,7 +42,7 @@
     * [DELETE Object](平台服务/对象存储/API 手册/对象操作/对象操作 - DELETE Object.md)
     * [DELETE Multiple Objects](平台服务/对象存储/API 手册/对象操作/对象操作 - DELETE Multiple Objects.md)
     * [GET Object](平台服务/对象存储/API 手册/对象操作/对象操作 - GET Object.md)
-    * [LIST Object](平台服务/对象存储/API 手册/桶的操作/桶的操作 - LIST Object.md)
+    * [LIST Object](平台服务/对象存储/API 手册/对象操作/对象操作 - LIST Object.md)
     * [HEAD Object](平台服务/对象存储/API 手册/对象操作/对象操作 - HEAD Object.md)
     * [PUT Object Copy](平台服务/对象存储/API 手册/对象操作/对象操作 - PUT Object Copy.md)
     * [PUT Object Move](平台服务/对象存储/API 手册/对象操作/对象操作 - PUT Object Move.md)
