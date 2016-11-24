@@ -28,7 +28,7 @@
 | Expires             | 缓存的失效日期<br>类型：字符串<br>默认：无                                                                                                                                     | No       |
 | Content-Disposition | 对象的默认文件名<br>类型：字符串<br>默认：无                                                                                                                                   | No       |
 | Content-Language    | 对象内容所属语言<br>类型：字符串<br>默认：无                                                                                                                                   | No       |
-| x-nos-meta-         | 以该前缀开头的header都将被认为是用户自定义的元数据，比如：x-nos-meta-title: TITLE 这个 header 会把 title:TITLE 作为用户自定义元数据 key-value 对。<br>类型：字符串<br>默认：无 | NO       |
+| x-nos-meta-         | 以该前缀开头的header都将被认为是用户自定义的元数据，比如：x-nos-meta-title: TITLE 这个 header 会把 title:TITLE 作为用户自定义元数据 key-value 对。<br>类型：字符串<br>默认：无 | No       |
 
 ### 示例
 Request
