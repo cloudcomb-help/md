@@ -1,10 +1,10 @@
 # 对象操作
-### **PUT Obejct Meta**
+## 修改对象响应首部 - PUT Obejct Meta
 
-#### **描述**
+### 描述
 修改获取对象时的 HTTP 响应的响应首部。
 
-#### **语法**
+### 语法
 
     PUT /${ObjectKey}?meta HTTP/1.1
     HOST: ${BucketName}.${endpoint}
@@ -19,18 +19,18 @@
     Content-Disposition : ${disposition}
     Content-Language : ${language}
 
-#### **请求头**
-|**Header**|                       **描述**                        |**是否必须**|
-|----------|-------------------------------------------------------|------------|
-|Content-Type|  对象所属类型 类型：字符串 默认：application/octet-stream|  NO|
-|Content-Encoding|  对象编码格式 类型：字符串 默认：无| NO|
-|Cache-Control| 对象缓存控制 类型：字符串 默认：无| NO|
-|Expires|   缓存的失效日期 类型：字符串 默认：无|    NO|
-|Content-Disposition|   对象的默认文件名 类型：字符串 默认：无|   NO|
-|Content-Language|  对象内容所属语言 类型：字符串 默认：无|   NO|
-|x-nos-meta-|   以该前缀开头的header都将被认为是用户自定义的元数据，比如：x-nos-meta-title: TITLE 这个header会把title:TITLE作为用户自定义元数据key-value对。 类型：字符串 默认：无| NO|
+### 请求头
+|        Header       |                                                                                      描述                                                                                      | 是否必须 |
+|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
+| Content-Type        | 对象所属类型<br>类型：字符串<br>默认：application/octet-stream                                                                                                                 | No       |
+| Content-Encoding    | 对象编码格式<br>类型：字符串<br>默认：无                                                                                                                                       | No       |
+| Cache-Control       | 对象缓存控制<br>类型：字符串<br>默认：无                                                                                                                                       | No       |
+| Expires             | 缓存的失效日期<br>类型：字符串<br>默认：无                                                                                                                                     | No       |
+| Content-Disposition | 对象的默认文件名<br>类型：字符串<br>默认：无                                                                                                                                   | No       |
+| Content-Language    | 对象内容所属语言<br>类型：字符串<br>默认：无                                                                                                                                   | No       |
+| x-nos-meta-         | 以该前缀开头的header都将被认为是用户自定义的元数据，比如：x-nos-meta-title: TITLE 这个 header 会把 title:TITLE 作为用户自定义元数据 key-value 对。<br>类型：字符串<br>默认：无 | NO       |
 
-#### **示例**
+### 示例
 Request
 
     PUT /2.jpg?meta HTTP/1.1
@@ -51,7 +51,7 @@ Response
     Connection: close
     Server: NOS
 
-#### **细节描述**
+### 细节描述
 
 1.如果要修改的 Object 不存在，返回 404 Not Found。
 
@@ -59,6 +59,6 @@ Response
 
 3.如果用户使用 PutObjectMeta 接口中没有指定某项元数据，那么认为该元数据在本次修改中设置为空；如果 Content-Type 没有指定，统一把 Content-type 修改为 application/octet-stream。
 
-4.Content-Disposition 如果没有对应的记录，使用 GET Object 接口时通过默认的规则返回。默认的规则是根据对象的 objectname生成。
+4.Content-Disposition 如果没有对应的记录，使用 GET Object 接口时通过默认的规则返回。默认的规则是根据对象的 objectname 生成。
 
-5.本接口的权限控制类型与PUT Object一致。
+5.本接口的权限控制类型与 PUT Object 一致。
