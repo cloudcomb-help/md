@@ -1,10 +1,10 @@
 # 对象操作
-### **PUT Object - Copy**
+## 拷贝对象 - PUT Object Copy
 
-#### **描述**
+### 描述
 远程拷贝操作，生成一个新的对象，相当于”一次GET”+”一次PUT”。
 
-#### **语法**
+### 语法
 
     PUT /${DestinationObjectKey} HTTP/1.1
     HOST: ${DestinationBucketName}.${endpoint}
@@ -12,11 +12,13 @@
     x-nos-copy-source: /${SourceBucketName}/${SourceObjectKey}
     Authorization: ${signature}
 
-#### **请求头**
-|  **Header**   |                **描述**                   |**是否必须**|
-|---------------|-------------------------------------------|------------|
-|x-nos-copy-source| 拷贝的源对象 类型：字符串 默认：无 限制：该字符串必须做一下URL Encode，并且对该桶有读权限|    YES|
-#### **示例**
+### 请求头
+
+|       Header      |                                                 描述                                                | 是否必须 |
+|-------------------|-----------------------------------------------------------------------------------------------------|----------|
+| x-nos-copy-source | 拷贝的源对象<br>类型：字符串<br>默认：无<br>限制：该字符串必须做一下 URL Encode，并且对该桶有读权限 | YES      |
+
+### 示例
 Request
 
     PUT /2.jpg HTTP/1.1
