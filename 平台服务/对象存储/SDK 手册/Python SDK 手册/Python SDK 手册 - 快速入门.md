@@ -57,7 +57,7 @@
             e.message       # 客户端错误信息
         )
 
-<span>Note:</span><div class="alertContent">对象命名规则请参见 [API 手册 对象](http://support.c.163.com/md.html#!平台服务/对象存储/API 手册/对象操作.md)</div>
+<span>Note:</span><div class="alertContent">对象命名规则请参见 [API 手册 对象](http://support.c.163.com/md.html#!平台服务/对象存储/API 手册/对象操作/对象操作 - PUT Object.md)</div>
 
 #### 下载文件
 

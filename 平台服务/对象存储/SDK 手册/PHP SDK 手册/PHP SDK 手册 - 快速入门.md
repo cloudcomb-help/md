@@ -103,7 +103,7 @@
             print e->getMessage();
     }
 
-<span>Note:</span><div class="alertContent">上面的代码默认列举100个object<div>
+<span>Note:</span><div class="alertContent">上面的代码默认列举 100 个 object</div>
 
 #### 删除文件
 
