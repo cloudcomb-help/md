@@ -92,10 +92,10 @@ def add_spaces_to_string(string, code):
                 or (is_en_r_bracket(ch_lst[i]) and is_chinese(ch_lst[i + 1])):
                 ch_lst[i] += u" "
             #中文与英文符号之间需要增加空格
-            elif (is_chinese(ch_lst[i]) and is_en_symbol(ch_lst[i + 1])) \
-                or (is_en_symbol(ch_lst[i]) and is_chinese(ch_lst[i + 1])):
-                ch_lst[i] += u" "
-                flag = 1
+            #elif (is_chinese(ch_lst[i]) and is_en_symbol(ch_lst[i + 1])) \
+            #    or (is_en_symbol(ch_lst[i]) and is_chinese(ch_lst[i + 1])):
+            #    ch_lst[i] += u" "
+            #    flag = 1
             #中文(括号)与数字之间需要增加空格
             elif (is_chinese(ch_lst[i]) and isdigit(ch_lst[i + 1]))\
                 or (isdigit(ch_lst[i]) and is_chinese(ch_lst[i + 1])):
