@@ -2,11 +2,11 @@
 
 ## 文件管理
 
-在NOS中，用户可以通过一系列的接口管理桶(Bucket)中的文件(Object)，比如列举桶内文件、删除文件、拷贝文件等。
+在 NOS 中，用户可以通过一系列的接口管理桶 (Bucket) 中的文件 (Object)，比如列举桶内文件、删除文件、拷贝文件等。
 
 ### 列出桶中的文件
 
-你可以使用NosClient.list_objects列出存储在桶中的文件:
+你可以使用 NosClient.list_objects 列出存储在桶中的文件:
 
     var map = {
         bucket: 'bucketName' //桶名
@@ -31,16 +31,16 @@
         console.log("Failed with code:" + err.code);
     }
 
-上述代码中的map中的参数如下所示:
+上述代码中的 map 中的参数如下所示:
 
 |**参数**|	                    **说明**                      |
 |--------|----------------------------------------------------|
-|delimiter|	用于对Object名字进行分组的字符。所有名字包含指定的前缀且第一次出现delimiter字符之间的object作为一组元素|
-|prefix|	限定返回的Key必须以prefix作为前缀。注意使用prefix查询时，返回的Key中仍会包含prefix|
-|limit	|限定此次返回object的最大数，如果不设定，默认为100|
-|marker	|设定结果从marker之后按字母排序的第一个开始返回|
+|delimiter|	用于对 Object 名字进行分组的字符。所有名字包含指定的前缀且第一次出现 delimiter 字符之间的 object 作为一组元素|
+|prefix|	限定返回的 Key 必须以 prefix 作为前缀。注意使用 prefix 查询时，返回的 Key 中仍会包含 prefix|
+|limit	|限定此次返回 object 的最大数，如果不设定，默认为 100|
+|marker	|设定结果从 marker 之后按字母排序的第一个开始返回|
 
-回调函数的参数result中包含的内容示例:
+回调函数的参数 result 中包含的内容示例:
 
     statusCode: 200
     headers: {
@@ -56,7 +56,7 @@
      maxkeys:100,
      is_truncated:false,
      objectList:[{
-     //object-list是一个数组，每个数据元素都是一个map，包含key,lastmodify,etag,size,storageclass 5项信息，代表桶里面的对象
+     //object-list 是一个数组，每个数据元素都是一个 map，包含 key,lastmodify,etag,size,storageclass 5 项信息，代表桶里面的对象
       key:'a.txt',
       lastmodified:'2016-07-18T08:49:03 +0800',
       etag:'926d74ef88054b6586a5530c5c6606b3',
@@ -67,16 +67,16 @@
 
 ### 删除单个文件
 
-你可以使用NosClient.delete_object删除单个需要删除的文件:
+你可以使用 NosClient.delete_object 删除单个需要删除的文件:
 
     var map = {
         bucket:'bucketName', //桶名
         key:'objectName' //对象名
     };
     var cb = function(result) {
-        //打印statusCode
+        //打印 statusCode
         console.log(result['statusCode']);
-        //打印requestId
+        //打印 requestId
         console.log(result['headers']['x-nos-request-id'])
     }
     
@@ -87,7 +87,7 @@
         console.log("Failed with code:" + err.code);
     }
 
-回调函数的参数result中包含的内容示例:
+回调函数的参数 result 中包含的内容示例:
 
     statusCode: 200
     headers: {
@@ -99,16 +99,16 @@
 
 ### 删除多个文件
 
-你可以使用NosClient.delete_objects删除多个需要删除的文件:
+你可以使用 NosClient.delete_objects 删除多个需要删除的文件:
 
     var map = {
         bucket: 'bucketName', //桶名
         keys: [{Key: 'objectName1'},{Key: 'objectName2'},{Key: 'objectName3'},{Key: 'objectName4'}] //需要删除的对象名
     };
     var cb = function(result) {
-        //打印statusCode
+        //打印 statusCode
         console.log(result['statusCode']);
-        //打印requestId
+        //打印 requestId
         console.log(result['headers']['x-nos-request-id'])
         //打印所有删除成功的对象名
         var deleteSuccess = result['deleteSuccess']
@@ -130,7 +130,7 @@
         console.log("Failed with code:" + err.code);
     }
 
-回调函数的参数result中包含的内容示例:
+回调函数的参数 result 中包含的内容示例:
 
     statusCode: 200
     headers: {
@@ -144,7 +144,7 @@
 
 ### 拷贝文件
 
-你可以使用NosClient.copy_object拷贝文件:
+你可以使用 NosClient.copy_object 拷贝文件:
 
     var map = {
         src_bucket:'srcBucketName', //源桶名
@@ -163,7 +163,7 @@
         console.log("Failed with code:" + err.code);
     }
 
-回调函数的参数result中包含的内容示例:
+回调函数的参数 result 中包含的内容示例:
 
     statusCode: 200
     headers: {
@@ -172,11 +172,11 @@
     connection: 'close',
     server: 'Jetty(6.1.11)' }
 
-<span>Attention:</span><div class="alertContent">支持跨桶的文件copy</div>
+<span>Attention:</span><div class="alertContent">支持跨桶的文件 copy</div>
 
 ### 移动文件
 
-你可以使用NosClient.move_object移动文件:
+你可以使用 NosClient.move_object 移动文件:
 
     var map = {
         src_bucket: 'srcBucketName', //源桶名
@@ -195,7 +195,7 @@
         console.log("Failed with code:" + err.code);
     }
 
-回调函数的参数result中包含的内容示例:
+回调函数的参数 result 中包含的内容示例:
 
     statusCode: 200
     headers: {
@@ -204,7 +204,7 @@
      connection: 'close',
      server: 'Jetty(6.1.11)' }
 
-<span>Attention:</span><div class="alertContent">暂时不支持跨桶的文件move</div>
+<span>Attention:</span><div class="alertContent">暂时不支持跨桶的文件 move</div>
 
 ### 修改文件元信息
 
@@ -212,7 +212,7 @@
 
 ### 获取文件的文件元信息
 
-你可以使用NosClient.head_object获取文件元信息:
+你可以使用 NosClient.head_object 获取文件元信息:
 
     var map = {
         bucket: 'bucketName', //桶名
@@ -229,7 +229,7 @@
         console.log("Failed with code:" + err.code);
     }
 
-回调函数的参数result中包含的内容示例:
+回调函数的参数 result 中包含的内容示例:
 
     statusCode: 200
     headers: {

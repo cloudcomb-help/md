@@ -10,14 +10,14 @@
     <?php
     /**
      * 创建一个桶
-     * acl 指的是bucket的访问控制权限，有两种，私有读写，公共读私有写。
-     * 私有读写就是只有bucket的拥有者或授权用户才有权限操作
+     * acl 指的是 bucket 的访问控制权限，有两种，私有读写，公共读私有写。
+     * 私有读写就是只有 bucket 的拥有者或授权用户才有权限操作
      * 公共读私有写，任意用户可以读，只有授权用户才能写
-     * 两种权限分别对应NosClient::NOS_ACL_TYPE_PRIVATE，
+     * 两种权限分别对应 NosClient::NOS_ACL_TYPE_PRIVATE，
      *               NosClient::NOS_ACL_TYPE_PUBLIC_READ,
      *
-     * @param NosClient $nosClient NosClient实例
-     * @param string    $bucket 要创建的bucket名字
+     * @param NosClient $nosClient NosClient 实例
+     * @param string    $bucket 要创建的 bucket 名字
      * @return null
      */
     function createBucket($nosClient, $bucket)
@@ -44,9 +44,9 @@
 
     <?php
     /**
-     *  判断Bucket是否存在
+     *  判断 Bucket 是否存在
      *
-     * @param NosClient $nosClient NosClient实例
+     * @param NosClient $nosClient NosClient 实例
      * @param string $bucket 桶名称
      */
     function doesBucketExist($nosClient, $bucket)
@@ -71,9 +71,9 @@
 
     <?php
     /**
-     * 列出用户所有的Bucket
+     * 列出用户所有的 Bucket
      *
-     * @param NosClient $nosClient NosClient实例
+     * @param NosClient $nosClient NosClient 实例
      * @return null
      */
     function listBuckets($nosClient)
@@ -94,13 +94,13 @@
 
 ### 删除桶
 
-您可以使用NosClient::deleteBucket 删除空桶:
+您可以使用 NosClient::deleteBucket 删除空桶:
 
     <?php
     /**
      * 删除存储空间
      *
-     * @param NosClient $nosClient NosClient实例
+     * @param NosClient $nosClient NosClient 实例
      * @param string    $bucket 待删除的桶名称
      * @return null
      */
@@ -120,9 +120,9 @@
 如果存储空间不为空（存储空间中有文件或者分片上传的分片），则存储空间无法删除；
 必须先删除存储空间中的所有文件和分片后，存储空间才能成功删除。
 
-### 设置桶的ACL属性
+### 设置桶的 ACL 属性
 
-除了在创建桶的时候可以指定桶的ACL属性之外，也可以根据自己的业务需求对桶的ACL进行修改，这个操作只有桶的拥有者有权限修改，关于桶的权限修改请参考: 桶的属性修改
+除了在创建桶的时候可以指定桶的 ACL 属性之外，也可以根据自己的业务需求对桶的 ACL 进行修改，这个操作只有桶的拥有者有权限修改，关于桶的权限修改请参考: 桶的属性修改
 桶存在两种权限：
 
 |   **权限**  |              **备注**            |
@@ -134,9 +134,9 @@
 
     <?php
     /**
-     * 设置bucket的acl配置
+     * 设置 bucket 的 acl 配置
      *
-     * @param NosClient $nosClient NosClient实例
+     * @param NosClient $nosClient NosClient 实例
      * @param string $bucket 桶名称
      * @return null
      */
@@ -153,15 +153,15 @@
         print(__FUNCTION__ . ": OK" . "\n");
     }
 
-### 获取桶的ACL属性
+### 获取桶的 ACL 属性
 
 您可以使用 NosClient::getBucketAcl 获取桶的访问权限:
 
     <?php
     /**
-     * 获取bucket的acl配置
+     * 获取 bucket 的 acl 配置
      *
-     * @param NosClient $nosClient NosClient实例
+     * @param NosClient $nosClient NosClient 实例
      * @param string $bucket 桶名称
      * @return null
      */
@@ -185,9 +185,9 @@
 
     <?php
     /**
-     * 获取bucket的location配置
+     * 获取 bucket 的 location 配置
      *
-     * @param NosClient $nosClient NosClient实例
+     * @param NosClient $nosClient NosClient 实例
      * @param string $bucket 桶名称
      * @return null
      */

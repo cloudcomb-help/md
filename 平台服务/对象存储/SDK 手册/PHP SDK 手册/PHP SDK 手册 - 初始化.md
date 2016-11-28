@@ -7,7 +7,7 @@ EndPoint 是 NOS 各个区域的地址，目前支持以下形式
 
 |**EndPoint 类型**|                  **备注**                 |
 |-----------------|-----------------------------------------|
-|NOS区域域名地址| 使用桶所在的区域的NOS域名地址|
+|NOS 区域域名地址| 使用桶所在的区域的 NOS 域名地址|
 
 #### NOS 区域域名地址
 
@@ -15,7 +15,7 @@ EndPoint 是 NOS 各个区域的地址，目前支持以下形式
 
 ### 配置秘钥
 
-要接入 NOS 服务，您需要一对有效的 AccessKey（包括 AccessKeyId 与 AccessKeySecret）来进行 签名验证，开通服务与 AccessKey 请参考 访问控制
+要接入 NOS 服务，您需要一对有效的 AccessKey （包括 AccessKeyId 与 AccessKeySecret）来进行 签名验证，开通服务与 AccessKey 请参考 访问控制
 
 在获取到 AccessKeyId 与 AccessKeySecret 之后，可以按照以下的步骤进行初始化
 
@@ -29,8 +29,8 @@ EndPoint 是 NOS 各个区域的地址，目前支持以下形式
     use NOS\NosClient;
     use NOS\Core\NosException;
     
-    $accessKeyId = "您的accessKeyId";
-    $accessKeySecret = "您的accessKeySecret";
+    $accessKeyId = "您的 accessKeyId";
+    $accessKeySecret = "您的 accessKeySecret";
     $endPoint = "建桶时选择的的区域域名";
     
     try{
@@ -50,4 +50,4 @@ EndPoint 是 NOS 各个区域的地址，目前支持以下形式
 其中：
 
 * setTimeout 设置请求超时时间，单位秒，默认是 5184000 秒, 这里建议不要设置太小，如果上传文件很大，消耗的时间会比较长
-* setConnectTimeout 设置连接超时时间，单位秒，默认是10秒
+* setConnectTimeout 设置连接超时时间，单位秒，默认是 10 秒

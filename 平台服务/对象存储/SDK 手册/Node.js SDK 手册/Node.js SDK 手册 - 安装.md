@@ -8,15 +8,15 @@
 
 ### 环境要求
 
-建议node.js v4.4+ 使用以下命令显示当前的node.js版本:
+建议 node.js v4.4+ 使用以下命令显示当前的 node.js 版本:
 
     $ node -v
 
 ### 安装
 
-#### 使用NPM安装
+#### 使用 NPM 安装
 
-首先使用npm安装SDK的开发包:
+首先使用 npm 安装 SDK 的开发包:
 
     npm install nos-node-sdk
 

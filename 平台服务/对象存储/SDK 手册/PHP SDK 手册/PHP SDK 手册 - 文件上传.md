@@ -1,12 +1,12 @@
 # PHP SDK 手册
 ## 文件上传
 
-在 NOS 中用户的基本操作单元是对象，亦可以理解为文件，NOS PHP SDK提供了丰富的上传接口，可以通过以下的方式上传文件:
+在 NOS 中用户的基本操作单元是对象，亦可以理解为文件，NOS PHP SDK 提供了丰富的上传接口，可以通过以下的方式上传文件:
 
 * 字符串上传
 * 本地文件上传
 * 分片上传
-字符串上传、本地文件上传最大为100M，分片上传没有限制
+字符串上传、本地文件上传最大为 100M，分片上传没有限制
 
 ### 字符串上传
 
@@ -14,9 +14,9 @@
 
     <?php
     /**
-     * 上传字符串作为object的内容
+     * 上传字符串作为 object 的内容
      *
-     * @param NosClient $nosClient NosClient实例
+     * @param NosClient $nosClient NosClient 实例
      * @param string $bucket 存储空间名称
      * @return null
      */
@@ -42,7 +42,7 @@
     /**
      * 上传指定的本地文件内容
      *
-     * @param NosClient $nosClient NosClient实例
+     * @param NosClient $nosClient NosClient 实例
      * @param string $bucket 存储空间名称
      * @return null
      */
@@ -60,15 +60,15 @@
         print(__FUNCTION__ . ": OK" . "\n");
     }
 
-<span>Attention:</span><div class="alertContent">上传的文件内容不超过100M</div>
+<span>Attention:</span><div class="alertContent">上传的文件内容不超过 100M</div>
 
 ### 分片上传
 
-除了通过putObject接口上传文件到NOS之外，NOS还提供了另外一种上传模式-分片上传,用户可以在如下应用场景内（但不限于此），使用分片上传模式，如：
+除了通过 putObject 接口上传文件到 NOS 之外，NOS 还提供了另外一种上传模式-分片上传,用户可以在如下应用场景内（但不限于此），使用分片上传模式，如：
 
 * 需支持断点上传
-* 上传超过100M的文件
-* 网络条件较差，经常和NOS服务器断开连接
+* 上传超过 100M 的文件
+* 网络条件较差，经常和 NOS 服务器断开连接
 * 上传文件之前无法确定文件的大小
 #### 分片上传本地文件
 
@@ -76,9 +76,9 @@
 
     <?php
     /**
-     * 通过multipart上传文件
+     * 通过 multipart 上传文件
      *
-     * @param NosClient $nosClient NosClient实例
+     * @param NosClient $nosClient NosClient 实例
      * @param string $bucket 存储空间名称
      * @return null
      */
@@ -96,22 +96,22 @@
         print(__FUNCTION__ . ":  OK" . "\n");
     }
 
-<span>Attention:</span><div class="alertContent">默认的分片大小为5M</div>
+<span>Attention:</span><div class="alertContent">默认的分片大小为 5M</div>
 
 ### 原始接口分片上传
 
 您可以使用原始的分片上传接口进行分片上传，一般流程如下所示:
 
-* 初始化一个分片上传任务(InitiateMultipartUpload)
-* 逐个或并行上传分片(UploadPart)
-* 完成分片上传(CompleteMultipartUpload)或者取消分片上传(AbortMultipartUpload)
-下面通过一个完整的示例说明了如何通过原始的api接口一步一步的进行分片上传操作，如果用户需要做断点续传等高级操作，可以参考下面代码:
+* 初始化一个分片上传任务 (InitiateMultipartUpload)
+* 逐个或并行上传分片 (UploadPart)
+* 完成分片上传 (CompleteMultipartUpload) 或者取消分片上传 (AbortMultipartUpload)
+下面通过一个完整的示例说明了如何通过原始的 api 接口一步一步的进行分片上传操作，如果用户需要做断点续传等高级操作，可以参考下面代码:
 <pre><code>
      <?php
         /**
-         * 使用基本的api分阶段进行分片上传
+         * 使用基本的 api 分阶段进行分片上传
          *
-         * @param NosClient $nosClient NosClient实例
+         * @param NosClient $nosClient NosClient 实例
          * @param string $bucket 存储空间名称
          * @throws NosException
          */
@@ -119,7 +119,7 @@
         {
             $object = "test/multipart-test.txt";
             /**
-             *  step 1. 初始化一个分块上传事件, 也就是初始化上传Multipart, 获取upload id
+             *  step 1. 初始化一个分块上传事件, 也就是初始化上传 Multipart, 获取 upload id
              */
             try{
                 $uploadId = $nosClient->initiateMultipartUpload($bucket, $object);
@@ -132,7 +132,7 @@
             /*
              * step 2. 上传分片
              */
-            // 分片大小10M
+            // 分片大小 10M
             $partSize = 10 * 1024 * 1024;
             $uploadFile = __FILE__;
             $uploadFileSize = filesize($uploadFile);
@@ -187,22 +187,22 @@
 
 <span>Attention:</span>
 上面程序一共分为三个步骤：initiate ;uploadPart ;complete
-UploadPart 方法要求除最后一个Part以外，其他的Part大小都要大于或等于5M。但是Upload Part接口并不会立即校验上传Part的大小（因为不知道是否为最后一块）；只有当Complete Multipart Upload的时候才会校验。
-Part号码的范围是1~10000。如果超出这个范围，NOS 将返回InvalidArgument的错误码。
-每次上传Part时都要把流定位到此次上传块开头所对应的位置。
-分片上传任务初始化或上传部分分片后，可以使用abortMultipartUpload接口中止分片上传事件。当分片上传事件被中止后，就不能再使用这个Upload ID做任何操作，已经上传的分片数据也会被删除。
-每次上传Part之后，NOS 的返回结果会包含一个 PartETag 对象，它是上传块的ETag与块编号（PartNumber）的组合。在后续完成分片上传的步骤中会用到它，因此我们需要将其保存起来，然后在第三步complete的时候使用，具体操作参考上面代码。
+UploadPart 方法要求除最后一个 Part 以外，其他的 Part 大小都要大于或等于 5M。但是 Upload Part 接口并不会立即校验上传 Part 的大小（因为不知道是否为最后一块）；只有当 Complete Multipart Upload 的时候才会校验。
+Part 号码的范围是 1~10000。如果超出这个范围，NOS 将返回 InvalidArgument 的错误码。
+每次上传 Part 时都要把流定位到此次上传块开头所对应的位置。
+分片上传任务初始化或上传部分分片后，可以使用 abortMultipartUpload 接口中止分片上传事件。当分片上传事件被中止后，就不能再使用这个 Upload ID 做任何操作，已经上传的分片数据也会被删除。
+每次上传 Part 之后，NOS 的返回结果会包含一个 PartETag 对象，它是上传块的 ETag 与块编号（PartNumber）的组合。在后续完成分片上传的步骤中会用到它，因此我们需要将其保存起来，然后在第三步 complete 的时候使用，具体操作参考上面代码。
 
 #### 查看已经上传的分片
 
-查看已经上传的分片可以罗列出指定 Upload ID ( InitiateMultipartUpload 时获取)所属的所有已经上传成功的分片，您可以通过 NosClient::listParts 接口获取已经上传的分片，可以参考以下代码:
+查看已经上传的分片可以罗列出指定 Upload ID ( InitiateMultipartUpload 时获取) 所属的所有已经上传成功的分片，您可以通过 NosClient::listParts 接口获取已经上传的分片，可以参考以下代码:
 
  
 
     /**
         * 查看已上传的分片
         *
-        * @param NosClient $nosClient NosClient实例
+        * @param NosClient $nosClient NosClient 实例
         * @param string $bucket 存储空间名称
         * @param string $uploadId  upload Id
         * @return null
@@ -230,7 +230,7 @@ Part号码的范围是1~10000。如果超出这个范围，NOS 将返回InvalidA
 
 |  **参数**  |            **描述**               |
 |------------|-------------------------------------|
-|max-parts| 响应中的limit个数 类型：整型|
+|max-parts| 响应中的 limit 个数 类型：整型|
 |part-number-marker|    分块号的界限，只有更大的分块号会被列出来。 类型：字符串|
 
 #### 查看当前正在进行的分片上传任务
@@ -261,33 +261,33 @@ Part号码的范围是1~10000。如果超出这个范围，NOS 将返回InvalidA
         var_dump($listUploadInfo);
     }
 
-上述代码中使用的options参数如下:
+上述代码中使用的 options 参数如下:
 
 |**参数值**|               **描述**                |
 |----------|----------------------------------------|
-|key-marker|    指定某一uploads key，只有大于该key-marker的才会被列出|
-|max-uploads    |最多返回max-uploads条记录,默认1000|
+|key-marker|    指定某一 uploads key，只有大于该 key-marker 的才会被列出|
+|max-uploads    |最多返回 max-uploads 条记录,默认 1000|
 
 ### 设置文件元信息
 
-文件元数据( object meta )，是上传到 NOS 的文件属性描述信息:分为 http 标准属性和用户自定义元数据。文件元信息可以在各种上传方式(字符串上传、文件上传、分片上传)或 copy 文件时进行设置，元数据大小写不敏感。
+文件元数据 ( object meta )，是上传到 NOS 的文件属性描述信息:分为 http 标准属性和用户自定义元数据。文件元信息可以在各种上传方式 (字符串上传、文件上传、分片上传) 或 copy 文件时进行设置，元数据大小写不敏感。
 
-设定http header NOS 允许用户自定义http Header。http header相关信息请参考 RFC2616，几个常用的header说明如下:
+设定 http header NOS 允许用户自定义 http Header。http header 相关信息请参考 RFC2616，几个常用的 header 说明如下:
 
 |**名称**|                        **描述**                        |
 |--------|------------------------------------------------------|
-|Content-MD5|   文件数据校验，设置了该值后 NOS 会启用文件内容MD5校验，把您提供的MD5与文件的MD5比较，不一致会抛出错误|
-|Content-Type|  文件的MIME，定义文件的类型及网页编码，决定浏览器将以什么形式、什么编码读取文件。如果用户没有指定则根据Key或文件名的扩展名生成，如果没有扩展名则填默认值|
-|Content-Disposition|   指示MINME用户代理如何显示附加的文件，打开或下载，及文件名称|
+|Content-MD5|   文件数据校验，设置了该值后 NOS 会启用文件内容 MD5 校验，把您提供的 MD5 与文件的 MD5 比较，不一致会抛出错误|
+|Content-Type|  文件的 MIME，定义文件的类型及网页编码，决定浏览器将以什么形式、什么编码读取文件。如果用户没有指定则根据 Key 或文件名的扩展名生成，如果没有扩展名则填默认值|
+|Content-Disposition|   指示 MINME 用户代理如何显示附加的文件，打开或下载，及文件名称|
 |Content-Length|    上传的文件的长度，超过流/文件的长度会截断，不足为实际值|
 |Expires|   缓存过期时间，NOS 未使用，格式是格林威治时间（GMT）|
-|Cache-Control| 指定该Object被下载时的网页的缓存行为|
-下面的源代码实现了上传文件时设置Http header:
+|Cache-Control| 指定该 Object 被下载时的网页的缓存行为|
+下面的源代码实现了上传文件时设置 Http header:
 
     /**
      * 上传时设置文件的元数据
      *
-     * @param NosClient $nosClient NosClient实例
+     * @param NosClient $nosClient NosClient 实例
      * @param string $bucket 存储空间名称
      * @return null
      */
@@ -312,13 +312,13 @@ Part号码的范围是1~10000。如果超出这个范围，NOS 将返回InvalidA
 
 #### 用户自定义元数据
 
-NOS 支持用户自定义对象元数据，上传时可以指定对象自定义元数据，数据放在http头中传输，以 x-nos-meta-开头，以下源代码实现对象自定义元数据上传:
+NOS 支持用户自定义对象元数据，上传时可以指定对象自定义元数据，数据放在 http 头中传输，以 x-nos-meta-开头，以下源代码实现对象自定义元数据上传:
 
     <?php
     /**
      * 上传时设置文件的自定义元数据
      *
-     * @param NosClient $nosClient NosClient实例
+     * @param NosClient $nosClient NosClient 实例
      * @param string $bucket 存储空间名称
      * @return null
      */
@@ -339,17 +339,17 @@ NOS 支持用户自定义对象元数据，上传时可以指定对象自定义�
         print(__FUNCTION__ . ": OK" . "\n");
     }
 
-### 上传时校验MD5
+### 上传时校验 MD5
 
-为了确保 PHP SDK 发送的数 NOS 服务端接收到的数据一致，NOS 支持MD5校验。文件上传时（字符串上传、文件上传、分片上传）默认关闭 MD5，如果您需要打开 MD5 校验，请上传文件的 options 设置。
+为了确保 PHP SDK 发送的数 NOS 服务端接收到的数据一致，NOS 支持 MD5 校验。文件上传时（字符串上传、文件上传、分片上传）默认关闭 MD5，如果您需要打开 MD5 校验，请上传文件的 options 设置。
 
 下面的代码实现了上传时开启 MD5 校验:
 
     <?php
     /**
-     * 上传时开启MD5校验
+     * 上传时开启 MD5 校验
      *
-     * @param NosClient $nosClient NosClient实例
+     * @param NosClient $nosClient NosClient 实例
      * @param string $bucket 存储空间名称
      * @return null
      */
@@ -367,4 +367,4 @@ NOS 支持用户自定义对象元数据，上传时可以指定对象自定义�
         print(__FUNCTION__ . ": OK" . "\n");
     }
 
-<span>Attention:</span><div class="alertContent">校验MD5会有一定的性能损失</div>
+<span>Attention:</span><div class="alertContent">校验 MD5 会有一定的性能损失</div>

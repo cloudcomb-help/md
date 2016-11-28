@@ -19,11 +19,11 @@ cURL 扩展 使用以下命令查看 curl 扩展是否已经安装好:
 
     php -m
 
-Windows下用户，请参考 Windows下使用NOS PHP SDK
+Windows 下用户，请参考 Windows 下使用 NOS PHP SDK
 
 ### 安装
 
-#### composer方式
+#### composer 方式
 
 如果您通过 composer 管理您的项目依赖，可以在你的项目根目录运行:
 
@@ -66,13 +66,13 @@ Windows下用户，请参考 Windows下使用NOS PHP SDK
 ### 运行 Samples
 
 * 解压下载到的 sdk 包
-* 修改samples目录中的 Config.php 文件
-1. 修改 NOS_ACCESS_ID, 您从 NOS 获得的AccessKeyId
+* 修改 samples 目录中的 Config.php 文件
+1. 修改 NOS_ACCESS_ID, 您从 NOS 获得的 AccessKeyId
 
-2. 修改 NOS_ACCESS_KEY, 您从 NOS 获得的AccessKeySecret
+2. 修改 NOS_ACCESS_KEY, 您从 NOS 获得的 AccessKeySecret
 
 3. 修改 NOS_ENDPOINT, 您选定的 NOS 数据中心访问域名，例如: nos-eastchina1.126.net
 
-4. 修改 NOS_TEST_BUCKET, 您要用来运行 sample 使用的 bucket，sample 程序会在这个bucket中创建一些文件,注意不能用生产环境的 bucket，以 免污染用户数据
+4. 修改 NOS_TEST_BUCKET, 您要用来运行 sample 使用的 bucket，sample 程序会在这个 bucket 中创建一些文件,注意不能用生产环境的 bucket，以 免污染用户数据
 
 * 到 samples 目录中执行 php RunAll.php， 也可以单个运行某个 Sample 文件

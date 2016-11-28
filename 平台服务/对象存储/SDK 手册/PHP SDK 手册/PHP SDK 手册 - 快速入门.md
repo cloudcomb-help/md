@@ -7,8 +7,8 @@
 
 |**常用类**|                  **备注**                    |
 |----------|-----------------------------------------------|
-|NOSNosClient|  NOS 客户端类，用户通过NosClient调用服务|
-|NOSCoreNosException|   NOS异常，在调用过程中去捕获这个异常，查看失败原因|
+|NOSNosClient|  NOS 客户端类，用户通过 NosClient 调用服务|
+|NOSCoreNosException|   NOS 异常，在调用过程中去捕获这个异常，查看失败原因|
 ### 基本操作
 
 #### 创建桶
@@ -19,8 +19,8 @@
     use NOS\NosClient;
     use NOS\Core\NosException;
     
-    $accessKeyId = "您的accessKeyId";
-    $accessKeySecret = "您的accessKeySecret";
+    $accessKeyId = "您的 accessKeyId";
+    $accessKeySecret = "您的 accessKeySecret";
     $endPoint = "建桶时选择的的区域域名";
     $bucket = "使用的桶名，注意命名规则";
     
@@ -41,8 +41,8 @@
     use NOS\NosClient;
     use NOS\Core\NosException;
     
-    $accessKeyId = "您的accessKeyId";
-    $accessKeySecret = "您的accessKeySecret";
+    $accessKeyId = "您的 accessKeyId";
+    $accessKeySecret = "您的 accessKeySecret";
     $endPoint = "建桶时选择的的区域域名";
     $bucket = "使用的桶名，注意命名规则";
     $object = "使用的对象名，注意命名规则";
@@ -64,8 +64,8 @@
     use NOS\NosClient;
     use NOS\Core\NosException;
     
-    $accessKeyId = "您的accessKeyId";
-    $accessKeySecret = "您的accessKeySecret";
+    $accessKeyId = "您的 accessKeyId";
+    $accessKeySecret = "您的 accessKeySecret";
     $endPoint = "建桶时选择的的区域域名";
     $bucket = "使用的桶名，注意命名规则";
     $object = "使用的对象名，注意命名规则";
@@ -86,8 +86,8 @@
     use NOS\NosClient;
     use NOS\Core\NosException;
     
-    $accessKeyId = "您的accessKeyId";
-    $accessKeySecret = "您的accessKeySecret";
+    $accessKeyId = "您的 accessKeyId";
+    $accessKeySecret = "您的 accessKeySecret";
     $endPoint = "建桶时选择的的区域域名";
     $bucket = "使用的桶名，注意命名规则";
     
@@ -113,8 +113,8 @@
     use NOS\NosClient;
     use NOS\Core\NosException;
     
-    $accessKeyId = "您的accessKeyId";
-    $accessKeySecret = "您的accessKeySecret";
+    $accessKeyId = "您的 accessKeyId";
+    $accessKeySecret = "您的 accessKeySecret";
     $endPoint = "建桶时选择的的区域域名";
     $bucket = "使用的桶名，注意命名规则";
     $object = "使用的对象名，注意命名规则";
@@ -128,7 +128,7 @@
 
 #### 返回结果处理
 
-NosClient中的接口对应返回数据分为两类:
+NosClient 中的接口对应返回数据分为两类:
 
 * Put，Delete 类接口返回 null，如果没有 NosException，即可认为操作成功
 * Get，List 类接口返回对应的数据，如果没有 NosException，即可认为操作成功

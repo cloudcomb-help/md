@@ -4,7 +4,7 @@
 
 ### 异常处理
 
-调用Client类的相关接口时，如果抛出异常，则表明操作失败，否则操作成功。抛出异常时，方法返回的数据无效。SDK中所有异常均属于NOSException类，其下分为两个子类：ClientException、ServiceException。在调用PYTHON SDK接口的时候，捕捉这些异常并打印必要的信息有利于定位问题。
+调用 Client 类的相关接口时，如果抛出异常，则表明操作失败，否则操作成功。抛出异常时，方法返回的数据无效。SDK 中所有异常均属于 NOSException 类，其下分为两个子类：ClientException、ServiceException。在调用 PYTHON SDK 接口的时候，捕捉这些异常并打印必要的信息有利于定位问题。
 
 ### 异常处理实例
 
@@ -22,10 +22,10 @@
             "message: %s\n"
         ) % (
             e,
-            e.status_code,  # 错误http状态码
-            e.error_type,   # NOS服务器定义错误类型
-            e.error_code,   # NOS服务器定义错误码
-            e.request_id,   # 请求ID，有利于nos开发人员跟踪异常请求的错误原因
+            e.status_code,  # 错误 http 状态码
+            e.error_type,   # NOS 服务器定义错误类型
+            e.error_code,   # NOS 服务器定义错误码
+            e.request_id,   # 请求 ID，有利于 nos 开发人员跟踪异常请求的错误原因
             e.message       # 错误描述信息
         )
     except nos.exceptions.ClientException as e:
@@ -41,21 +41,21 @@
 
 #### ClientException
 
-ClientException包含SDK客户端的异常。比如，上传对象时对象名为空，就会抛出该异常。 ClientException类下有如下子类，用于细分客户端异常：
+ClientException 包含 SDK 客户端的异常。比如，上传对象时对象名为空，就会抛出该异常。 ClientException 类下有如下子类，用于细分客户端异常：
 
 |      **类名**      |              **抛出异常的原因**              |
 |--------------------|----------------------------------------------|
 | InvalidBucketName  | 传入的桶名为空                               |
 | InvalidObjectName  | 传入的对象名为空                             |
 | FileOpenModeError  | 出入的对象为文件且没有使用二进制文件方式打开 |
-| XmlParseError      | 解析服务端响应的XML内容失败                  |
+| XmlParseError      | 解析服务端响应的 XML 内容失败                  |
 | SerializationError | 上传对象序列化失败                           |
 | ConnectionError    | 连接服务端异常                               |
 | ConnectionTimeout  | 连接服务端超时                               |
 
 #### ServiceException
 
-ServiceException包含NOS服务器返回的异常。当NOS服务器返回4xx或5xx的HTTP错误码时，PYTHON SDK会将NOS Server的响应转换为ServiceException。 ServiceException类下有如下子类，用于细分NOS服务器返回的异常：
+ServiceException 包含 NOS 服务器返回的异常。当 NOS 服务器返回 4xx 或 5xx 的 HTTP 错误码时，PYTHON SDK 会将 NOS Server 的响应转换为 ServiceException。 ServiceException 类下有如下子类，用于细分 NOS 服务器返回的异常：
 
 |    **类名**    |	                  **抛出异常的原因**                      |
 |----------------|------------------------------------------------------------|

@@ -3,26 +3,26 @@
 
 ## 快速入门
 
-请确认你已经熟悉NOS的基本概念，如Bucket、Object、EndPoint、AccessKeyId和AccessKeySecret等。 本节你将看到如何快速的使用NOS PYTHON SDK，完成常用的操作，上传文件、下载文件等。
+请确认你已经熟悉 NOS 的基本概念，如 Bucket、Object、EndPoint、AccessKeyId 和 AccessKeySecret 等。 本节你将看到如何快速的使用 NOS PYTHON SDK，完成常用的操作，上传文件、下载文件等。
 
 ### 常用类
 
 |**常用类**|	           **备注**                |
 |----------|---------------------------------------|
-|nos.Client|	NOS客户端类，用户通过Client调用服务|
-|nos.exceptions.ServiceException|	NOS服务器返回的异常|
-|nos.exceptions.ClientException|	NOS客户端抛出的异常|
+|nos.Client|	NOS 客户端类，用户通过 Client 调用服务|
+|nos.exceptions.ServiceException|	NOS 服务器返回的异常|
+|nos.exceptions.ClientException|	NOS 客户端抛出的异常|
 
 ### 基本操作
 
 #### 上传文件
 
-对象（Object）是NOS中最基本的数据单元，你可以把它简单的理解为文件，以下代码可以实现简单的对象上传:
+对象（Object）是 NOS 中最基本的数据单元，你可以把它简单的理解为文件，以下代码可以实现简单的对象上传:
 
     import nos
     
-    access_key = "你的accessKeyId"
-    secret_key = "你的accessKeySecret"
+    access_key = "你的 accessKeyId"
+    secret_key = "你的 accessKeySecret"
     end_point = "建桶时选择的的区域域名"
     bucket = "使用的桶名，注意命名规则"
     object = "使用的对象名，注意命名规则"
@@ -42,10 +42,10 @@
             "message: %s\n"
         ) % (
             e,
-            e.status_code,  # 错误http状态码
-            e.error_type,   # NOS服务器定义错误类型
-            e.error_code,   # NOS服务器定义错误码
-            e.request_id,   # 请求ID，有利于nos开发人员跟踪异常请求的错误原因
+            e.status_code,  # 错误 http 状态码
+            e.error_type,   # NOS 服务器定义错误类型
+            e.error_code,   # NOS 服务器定义错误码
+            e.request_id,   # 请求 ID，有利于 nos 开发人员跟踪异常请求的错误原因
             e.message       # 错误描述信息
         )
     except nos.exceptions.ClientException as e:
@@ -65,8 +65,8 @@
 
     import nos
     
-    access_key = "你的accessKeyId"
-    secret_key = "你的accessKeySecret"
+    access_key = "你的 accessKeyId"
+    secret_key = "你的 accessKeySecret"
     end_point = "建桶时选择的的区域域名"
     bucket = "使用的桶名，注意命名规则"
     object = "使用的对象名，注意命名规则"
@@ -88,10 +88,10 @@
             "message: %s\n"
         ) % (
             e,
-            e.status_code,  # 错误http状态码
-            e.error_type,   # NOS服务器定义错误类型
-            e.error_code,   # NOS服务器定义错误码
-            e.request_id,   # 请求ID，有利于nos开发人员跟踪异常请求的错误原因
+            e.status_code,  # 错误 http 状态码
+            e.error_type,   # NOS 服务器定义错误类型
+            e.error_code,   # NOS 服务器定义错误码
+            e.request_id,   # 请求 ID，有利于 nos 开发人员跟踪异常请求的错误原因
             e.message       # 错误描述信息
         )
     except nos.exceptions.ClientException as e:
@@ -110,8 +110,8 @@
 
     import nos
     
-    access_key = "你的accessKeyId"
-    secret_key = "你的accessKeySecret"
+    access_key = "你的 accessKeyId"
+    secret_key = "你的 accessKeySecret"
     end_point = "建桶时选择的的区域域名"
     bucket = "使用的桶名，注意命名规则"
     
@@ -131,10 +131,10 @@
             "message: %s\n"
         ) % (
             e,
-            e.status_code,  # 错误http状态码
-            e.error_type,   # NOS服务器定义错误类型
-            e.error_code,   # NOS服务器定义错误码
-            e.request_id,   # 请求ID，有利于nos开发人员跟踪异常请求的错误原因
+            e.status_code,  # 错误 http 状态码
+            e.error_type,   # NOS 服务器定义错误类型
+            e.error_code,   # NOS 服务器定义错误码
+            e.request_id,   # 请求 ID，有利于 nos 开发人员跟踪异常请求的错误原因
             e.message       # 错误描述信息
         )
     except nos.exceptions.ClientException as e:
@@ -152,8 +152,8 @@
 
     import nos
     
-    access_key = "你的accessKeyId"
-    secret_key = "你的accessKeySecret"
+    access_key = "你的 accessKeyId"
+    secret_key = "你的 accessKeySecret"
     end_point = "建桶时选择的的区域域名"
     bucket = "使用的桶名，注意命名规则"
     object = "使用的对象名，注意命名规则"
@@ -172,10 +172,10 @@
             "message: %s\n"
         ) % (
             e,
-            e.status_code,  # 错误http状态码
-            e.error_type,   # NOS服务器定义错误类型
-            e.error_code,   # NOS服务器定义错误码
-            e.request_id,   # 请求ID，有利于nos开发人员跟踪异常请求的错误原因
+            e.status_code,  # 错误 http 状态码
+            e.error_type,   # NOS 服务器定义错误类型
+            e.error_code,   # NOS 服务器定义错误码
+            e.request_id,   # 请求 ID，有利于 nos 开发人员跟踪异常请求的错误原因
             e.message       # 错误描述信息
         )
     except nos.exceptions.ClientException as e:

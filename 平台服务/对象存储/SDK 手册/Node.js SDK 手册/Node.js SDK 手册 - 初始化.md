@@ -16,7 +16,7 @@ EndPoint 是 NOS 各个区域的地址，目前支持以下形式
 
 ### 配置秘钥
 
-要接入 NOS 服务，你需要一对有效的 AccessKey（包括 AccessKeyId 与 AccessKeySecret）来进行 签名验证，开通服务与 AccessKey 请参考 [访问控制](http://support.c.163.com/md.html#!平台服务/对象存储/API 手册/访问控制.md)
+要接入 NOS 服务，你需要一对有效的 AccessKey （包括 AccessKeyId 与 AccessKeySecret）来进行 签名验证，开通服务与 AccessKey 请参考 [访问控制](http://support.c.163.com/md.html#!平台服务/对象存储/API 手册/访问控制.md)
 
 在获取到 AccessKeyId 与 AccessKeySecret 之后，可以按照以下的步骤进行初始化
 
@@ -35,8 +35,8 @@ EndPoint 是 NOS 各个区域的地址，目前支持以下形式
 3.初始化 NosClient:
 
     var nosclient = new NosClient();
-    nosclient.setAccessId('你的accessKeyId');
-    nosclient.setSecretKey('你的accessKeySecret');
+    nosclient.setAccessId('你的 accessKeyId');
+    nosclient.setSecretKey('你的 accessKeySecret');
     nosclient.setEndpoint('建桶时选择的的区域域名');
     nosclient.setPort('80');
 
@@ -64,4 +64,4 @@ EndPoint 是 NOS 各个区域的地址，目前支持以下形式
 * 第二个参数是回调函数 cb，cb 中的操作由用户自行定义，在收到响应的时候由 sdk 自动调用，并传入一个 result 参数，该参数提供的内容在不同的 api 中有所不同。用户可以在自定义 cb 的时候利用该参数获取响应的内容，如 uploadid，etag 等等。
 
 2、使用 sdk 时，用户只需要按照文档要求提供合法的 map 参数和定义 cb，就能方便调用 nos 接口通过 node 管理资源。NOS Node.js SDK 主要描述各个 api 的 map 参数和 cb 函数的 result 参数的内容，并提供使用示例。
-3、当接口调用失败，返回状态码不在[200,400)范围时，sdk 会抛出异常，异常包含的信息请参考 [异常信息](http://support.c.163.com/md.html#!平台服务/对象存储/SDK 手册/Node.js SDK 手册/Node.js SDK 手册 - 错误处理.md)。
+3、当接口调用失败，返回状态码不在 [200,400) 范围时，sdk 会抛出异常，异常包含的信息请参考 [异常信息](http://support.c.163.com/md.html#!平台服务/对象存储/SDK 手册/Node.js SDK 手册/Node.js SDK 手册 - 错误处理.md)。

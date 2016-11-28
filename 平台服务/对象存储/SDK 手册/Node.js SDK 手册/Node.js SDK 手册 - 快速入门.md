@@ -2,13 +2,13 @@
 
 ## 快速入门
 
-使用NOS Node SDK前，你可以先参照 [API 手册](http://support.c.163.com/md.html#!平台服务/对象存储/API 手册/基本概念.md) 熟悉NOS的基本概念，如Bucket、Object、EndPoint、AccessKeyId和AccessKeySecret等。 本节你将看到如何快速的使用NOS Node SDK，完成常用的操作，上传文件、下载文件等。
+使用 NOS Node SDK 前，你可以先参照 [API 手册](http://support.c.163.com/md.html#!平台服务/对象存储/API 手册/基本概念.md) 熟悉 NOS 的基本概念，如 Bucket、Object、EndPoint、AccessKeyId 和 AccessKeySecret 等。 本节你将看到如何快速的使用 NOS Node SDK，完成常用的操作，上传文件、下载文件等。
 
 ### 基本操作
 
 #### 上传文件
 
-对象（Object）是NOS中最基本的数据单元，你可以把它简单的理解为文件，以下代码可以实现简单的对象上传:
+对象（Object）是 NOS 中最基本的数据单元，你可以把它简单的理解为文件，以下代码可以实现简单的对象上传:
 
     var map = {
         bucket: 'bucketName', //桶名
@@ -42,7 +42,7 @@
     }
     
     try {
-        nosclient.get_object_file(map, cb) //这里的destpath包括了文件名
+        nosclient.get_object_file(map, cb) //这里的 destpath 包括了文件名
     }
         catch(err) {
         console.log("Failed with code: " + err.code);
@@ -75,7 +75,7 @@
         console.log("Failed with code:" + err.code);
     }
 
-上面的代码默认列举100个object
+上面的代码默认列举 100 个 object
 
 #### 删除文件
 
@@ -86,9 +86,9 @@
         key: 'objectName' //对象名
     };
     var cb = function(result) {
-        //打印statusCode
+        //打印 statusCode
         console.log(result['statusCode']);
-        //打印requestId
+        //打印 requestId
         console.log(result['headers']['x-nos-request-id'])
     }
     
@@ -101,8 +101,8 @@
 
 #### 返回结果处理
 
-* api接口的第二个参数回调函数cb，cb中的操作由用户自行定义，在收到响应的时候由sdk自动调用，并传入一个result参数，该参数是调用api接口返回的结果对象，所有的返回参数都在这个result对象中。
-* 用户可以在自定义cb的时候利用该参数获取响应的内容，如uploadid，etag等等
+* api 接口的第二个参数回调函数 cb，cb 中的操作由用户自行定义，在收到响应的时候由 sdk 自动调用，并传入一个 result 参数，该参数是调用 api 接口返回的结果对象，所有的返回参数都在这个 result 对象中。
+* 用户可以在自定义 cb 的时候利用该参数获取响应的内容，如 uploadid，etag 等等
 例如:
 
 <pre><code>
