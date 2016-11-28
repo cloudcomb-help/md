@@ -1,4 +1,4 @@
 git add .
-git commit -m "Enhanment:Update NOS SDK"
+git commit -m "Enhanment:Update dockerfile cmd"
 git push
 r.bat
