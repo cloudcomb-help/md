@@ -2,7 +2,7 @@
 
 ## 错误处理
 
-返回的错误类型一共有两种，分别是客户端错误和服务端错误，分别都实现了error方法。
+返回的错误类型一共有两种，分别是客户端错误和服务端错误，分别都实现了 error 方法。
 
     type ClientError struct {
         StatusCode int
@@ -20,7 +20,7 @@
         Code         string
         Message      string
         Resource     string
-        NosRequestId string  //请求ID,非常重要，有利于nos开发人员跟踪异常请求的错误原因
+        NosRequestId string  //请求 ID,非常重要，有利于 nos 开发人员跟踪异常请求的错误原因
     }
     Next  Previous
 

@@ -5,20 +5,20 @@
 
 #### 快速入门
 
-请确认您已经熟悉NOS的基本概念，如Bucket、Object、EndPoint、AccessKeyId和AccessKeySecret等。 本节您将看到如何快速的使用NOS GOLANG SDK,完成常用的操作，上传文件、下载文件等
+请确认您已经熟悉 NOS 的基本概念，如 Bucket、Object、EndPoint、AccessKeyId 和 AccessKeySecret 等。 本节您将看到如何快速的使用 NOS GOLANG SDK,完成常用的操作，上传文件、下载文件等
 
 常用包
 
 |**常用类型**|	     **备注**        |
 |------------|-----------------------|
-|nosclient|	包含了主要的对象操作API|
-|model	|包含了对象操作API的请求和响应的结构类型|
+|nosclient|	包含了主要的对象操作 API|
+|model	|包含了对象操作 API 的请求和响应的结构类型|
 
 #### 基本操作
 
 ### 上传文件
 
-对象（Object）是NOS中最基本的数据单元，您可以把它简单的理解为文件，以下代码可以实现简单的对象上传:
+对象（Object）是 NOS 中最基本的数据单元，您可以把它简单的理解为文件，以下代码可以实现简单的对象上传:
 
   
 
@@ -108,7 +108,7 @@
         }
     }
 
-<span>Note:</span><div class="alertContent">上面的代码默认列举100个object</div>
+<span>Note:</span><div class="alertContent">上面的代码默认列举 100 个 object</div>
 
 
 ### 删除文件
