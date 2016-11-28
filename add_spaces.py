@@ -123,7 +123,7 @@ def add_space_betw_digit_and_unit(string):
     units = ['bps', 'Kbps', 'Mbps', 'Gbps',
             'B', 'KB', 'MB', 'GB', 'TB', 'PB',
             'g', 'Kg', 't',
-            'h', 'm', 's']
+            'h', 'm', 's','m','k']
     for unit in units:
         pattern = '(?<=\d)' + unit #positive lookbehind assertion,
                                     #如果前面是括号中 '=' 后面的字符串，则匹配成功
