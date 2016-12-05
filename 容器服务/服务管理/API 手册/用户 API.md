@@ -2,6 +2,8 @@
 
 ## 生成 API Token
 
+<span>Note:</span><div class="alertContent">Token 有效期为 24 小时。</div>
+
 ### 请求 header
  
 	POST /api/v1/token 
