@@ -42,8 +42,3 @@
 
 1. 将 CanonicalizedResource 置成空字符串""；
 2. 放入要访问的日志订阅资源，如：/get_subscription_position；
-3. 如请求包含查询字符串（QUERY_STRING），则在 CanonicalizedResource 字符串尾部添加 "?" 和查询字符串。
-
-其中 QUERY_STRING 是 URL 中请求参数按字典序排序后的字符串，其中参数名和值之间用 "=" （等号）相隔组成字符串，并对参数名-值对按照字典序升序排序，然后以 "&" 符号连接构成字符串。其公式化描述如下：
-
-    QUERY_STRING = "KEY1=VALUE1" + "&" + "KEY2=VALUE2"
