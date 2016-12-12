@@ -30,7 +30,7 @@
 * [自定义 Dockerfile 填写方法](容器服务/镜像仓库V2/使用技巧/自定义Dockerfile填写方法.md)
 * [项目示例](容器服务/镜像仓库V2/使用技巧/项目示例.md)
 * [默认 Dockerfile](容器服务/镜像仓库V2/使用技巧/默认 Dockerfile.md)
-* [DockerHub镜像加速](容器服务V2/镜像仓库/使用技巧/DockerHub 镜像加速.md)
+* [DockerHub镜像加速](容器服务/镜像仓库V2/使用技巧/DockerHub 镜像加速.md)
 
 [常见问题]()
 
