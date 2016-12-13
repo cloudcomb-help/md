@@ -71,6 +71,9 @@
 
 1.  打开对应容器 Console，输入以下命令生成新密钥对：<pre>ssh-keygen</pre>
 2.  生成过程，默认全部回车即可，生成完毕输入以下命令将公钥导入授权文件：<pre>cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys</pre>
-3.  再输入以下命令输出「私钥」，将输出内容复制（**复制后注意删除多余空格**）或下载到本地，保存为任意文件名。<pre>cat ~/.ssh/id_rsa</pre>
+3.  再输入以下命令输出「私钥」，将输出内容复制或下载到本地，保存为任意文件名。<pre>cat ~/.ssh/id_rsa</pre>
+
+<span>Attention:</span><div class="alertContent">复制后注意删除多余空格和换行符</div>
+
 ![](../image/如何使用SSH密钥登录-重新注入密钥.png)
 4.  在原生 SHH 客户端导入该私钥即可。
