@@ -2,17 +2,18 @@
 
 创建容器过程中，启动容器失败的可能原因如下：
 
+
 #### ContainerCannotRun
 错误场景：
 
 * 自定义命令找不到， 如：`oci runtime error: exec: \"/bin/xxx\": stat /bin/xxx: no such file or directory"`；
 * 设置了错误的 CMD/ENTRYPOINT 命令；
-* 数据盘挂载到系统路径，导致系统无法正常运行，如：挂载日志目录路径问题导致无法运行。
+* 数据盘挂载到系统路径或日志目录设置错误，导致系统无法正常运行。
 
 #### Completed
 错误场景：
 
-* 用户命令一启动就退出，如：使用了 `bash` 等交互式启动命令。
+* 容器一启动就退出，如：使用了 `bash` 等交互式启动命令。
 
 #### Error
 错误场景：
@@ -22,7 +23,7 @@
 		database is uninitialized and password option is not specified 
 		You need to specify one of MYSQL_ROOT_PASSWORD, MYSQL_ALLOW_EMPTY_PASSWORD and MYSQL_RANDOM_ROOT_PASSWORD
 
-* 服务启动使用的配置文件问题，如: nginx.conf 格式不合法。
+* 服务启动使用的配置文件问题，如：nginx.conf 格式不合法。
 
 #### OOMKilled
 错误场景：
