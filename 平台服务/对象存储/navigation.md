@@ -60,6 +60,13 @@
     * [List Parts](平台服务/对象存储/API 手册/大对象分块接口/大对象分块接口 - List Parts.md)
     * [List Multipart Uploads](平台服务/对象存储/API 手册/大对象分块接口/大对象分块接口 - List Multipart Uploads.md)
 
+  * [跨域资源共享]()  
+
+    * [Put Bucket cors](平台服务/对象存储/API 手册/跨域资源共享/跨域资源共享 - Put Bucket cors.md)
+    * [Get Bucket cors](平台服务/对象存储/API 手册/跨域资源共享/跨域资源共享 - Get Bucket cors.md)    
+    * [Delete Bucket cors](平台服务/对象存储/API 手册/跨域资源共享/跨域资源共享 - Delete Bucket cors.md)
+    * [OPTIONS Object](平台服务/对象存储/API 手册/跨域资源共享/跨域资源共享 - OPTIONS Object.md)
+
 [SDK 手册]()
 
   * [常用 SDK](平台服务/对象存储/SDK 手册/常用 SDK.md)
