@@ -16,6 +16,33 @@
 
     4000001     Invalid parameters.
     4000002     Missing parameters.
+    4000111     fail.
+    4000112     Missing param.
+    4000113     Param invalid.
+    4000115     Param microservice name format invalid.
+    4000117     Param replicas size invalid.
+    4000119     Param spec info invalid.
+    4000120     Param container desc length out of range.
+    4000121     Param container name format invalid.
+    4000123     Param env size out of limit.
+    4000124     Param env key format invalid.
+    4000125     Param env value format invalid.
+    4000126     Param cmd lengh out of range.
+    4000127     Param log dir size out of limit.
+    4000128     Param log dir too long.
+    4000130     Param CPU weight invalid.
+    4000131     Param memory weight invalid.
+    4000133     Param volue info invalid.
+    4000134     Param port map invalid.
+    4000135     Param public network info invalid.
+    4000136     Param ssh key invalid.
+    4000137     Param disk type invalid.
+    4000139     Port map size already up to limit.
+    4000145     Update microservice fail.
+    4000146     Update volume info fail.
+    4000149     Exist container doesn't belong to microservice in given param.
+    4000150     Param minReadySeconds out of range, 1-600s.
+    4000199     System busy, please try again later.
 
 401 Unauthorized 
 
@@ -36,6 +63,19 @@
     4030011     App status abnormal.
     4030012     Image status abnormal.
     4030013     Secret key count limit.
+    4030140     Favoriate repository changed to be private.
+    4030142     Stateful microservice can't update.
+    4030143     Nothing to update.
+    4030144     Microservice can't update in current state.
+    4030147     Frozen fee fail.
+    4030148     Account balance is insufficient.
+    4030151     Microservice can't be changed between repository.
+    4030152     Stateless microservice can't be restarted.
+    4030153     Microservice can't operate in current state.
+    4040114     No such namespace.
+    4040118     No such spec.
+    4040129     No such image.
+    4040141     No such microservice.
 
 404 Not Found
 
@@ -63,6 +103,10 @@
     4090003     Duplicate app name.
     4090004     Duplicate secret key name.
     4090005     Duplicate repository name.
+    4090132     Duplicate volume info.
+    4090138     Duplicate log directory.
+    4090116     Duplicate microservice name.
+    4090122     Duplicate container name.
 
 415 Unsupported Media Type 
 
