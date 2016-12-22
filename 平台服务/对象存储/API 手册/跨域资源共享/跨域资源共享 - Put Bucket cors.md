@@ -38,7 +38,7 @@ Put Bucket cors 操作将在指定的 bucket 上设定一个跨域资源共享�
 | AllowedOrigin     | 指定允许的跨域请求的来源，多个则以逗号分隔。每个来源字符串中允许使用最多一个‘\*’通配符。如果来源指定为‘\*’则表示允许所有的来源的跨域请求。<br>类型：非空字符串                                                                                                                                        | Yes      |
 | AllowedMethod     | 指定允许的跨域请求方法。<br>类型：枚举（GET、PUT、DELETE、POST、HEAD），多个则以逗号分隔<br>默认：无                                                                                                                                                                                                | Yes      |
 | AllowedHeader     | 逗号分隔的 header 列表，控制在 OPTIONS 预取指令中 Access-Control-Request-Headers 头中指定的 header 是否允许。在 Access-Control-Request-Headers 中指定的每个 header 都必须在 AllowedHeader 中有一条对应的项。AllowedHeader 中的 header 值允许使用最多一个‘*’通配符。<br>类型：非空字符串<br>默认：无 | No       |
-| ExposeHeader      | 指定允许用户从应用程序中访问的响应头（例如一个 Javascript 的 XMLHttpRequest 对象。）不允许使用‘*’通配符。<br>类型：非空字符串<br>默认：无                                                                                                                                                           | No       |
+| ExposeHeader      | 指定允许用户从应用程序中访问的响应头（例如一个 Javascript 的 XMLHttpRequest 对象）。不允许使用‘*’通配符。<br>类型：非空字符串<br>默认：无                                                                                                                                                           | No       |
 | MaxAgeSeconds     | 指定浏览器对特定资源的预取（OPTIONS）请求返回结果的缓存时间，单位为秒。<br>类型：整型 <br>默认：无                                                                                                                                                                                                  | No       |
 
 ### 示例
