@@ -49,13 +49,13 @@
         String secretKey = "your-secretKey ";
         Credentials credentials = new BasicCredentials(accessKey, secretKey);
         ClientConfiguration conf = new ClientConfiguration();
-        // 设置NosClient使用的最大连接数
+        // 设置 NosClient 使用的最大连接数
         conf.setMaxConnections(200);
-        // 设置socket超时时间
+        // 设置 socket 超时时间
         conf.setSocketTimeout(10000);
         // 设置失败请求重试次数
         conf.setMaxErrorRetry(2);
-        // 如果要用https协议，请加上下面语句
+        // 如果要用 https 协议，请加上下面语句
         conf.setProtocol(Protocol.HTTPS);
 
         NosClient nosClient = new NosClient(credentials,conf);
