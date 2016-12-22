@@ -16,11 +16,11 @@ NOS Node.js SDK 默认使用 http 协议，若需使用 https 协议，只需在
 	nosclient.setPort('443');
 
 <span>Attention:</span>
-客户端也可不配置证书，NOS Node.js SDK 会忽略客户端证书验证。
+客户端也可不配置证书，NOS Node.js SDK 会忽略客户端证书验证；
 NOS Node.js SDK 默认使用 http 协议，也可以通过 nosclient.setProtocol(‘http’); 设置 http 协议。
 
 ### 实例
-以下代码实现以 https 的方式上传本地文件，具体实现如下:
+以下代码实现以 https 的方式上传本地文件，具体实现如下：
 
 	var nosclient = new NosClient();
 	nosclient.setAccessId('你的 accessKeyId');

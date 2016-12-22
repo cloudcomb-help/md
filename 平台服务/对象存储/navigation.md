@@ -100,6 +100,7 @@
     * [文件上传](平台服务/对象存储/SDK 手册/PHP SDK 手册/PHP SDK 手册 - 文件上传.md)
     * [文件下载](平台服务/对象存储/SDK 手册/PHP SDK 手册/PHP SDK 手册 - 文件下载.md)
     * [文件管理](平台服务/对象存储/SDK 手册/PHP SDK 手册/PHP SDK 手册 - 文件管理.md)
+    * [使用 https](平台服务/对象存储/SDK 手册/PHP SDK 手册/PHP SDK 手册 - 使用https.md)    
     * [授权访问](平台服务/对象存储/SDK 手册/PHP SDK 手册/PHP SDK 手册 - 授权访问.md)  
 
   * [.NET SDK 手册]()  
