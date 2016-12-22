@@ -1,43 +1,47 @@
 # 用户 API
 
-## 生成 API Token
+## 生成 API Token - /api/v1/token
 
+通过 Access Key 和 Access Secret 获取 Token。[点我查看 APP Key 及 APP Secret](https://c.163.com/dashboard#/m/account/accesskey/)
 <span>Note:</span><div class="alertContent">Token 有效期为 24 小时。</div>
 
-### 请求 header
- 
-	POST /api/v1/token 
-	
-	Content-Type:application/json
 
-### 请求 payload
+### 请求示例
 
-    {
-      "app_key":"xxxxxx",
-      "app_secret":"yyyyyy"
-    }
+	POST /api/v1/token HTTP/1.1
+	Host: open.c.163.com
+	Content-Type: application/json
+	Cache-Control: no-cache
+	Postman-Token: 4b8fc05b-9466-508c-a852-29b97f3cec0e
 
-|  参数说明  |        描述        |  类型  | 是否必填 |
-|------------|--------------------|--------|----------|
-| app_key    | 用户 Access Key    | string | 必填     |
-| app_secret | 用户 Access Secret | string | 必填     |
-[点我查看 APP Key 及 APP Secret](https://c.163.com/dashboard#/m/account/accesskey/)
+	{
+	    "app_key": "19275e8b113f48e1b0c5ce0d6f1647a8", 
+	    "app_secret": "e9846f12c8e44edc8b0d4df065e5cd89"
+	}
 
-### 响应
-#### 成功响应
+### 请求参数
+
+|    名称    |  类型  | 是否必填 |        描述        |              示例值              |
+|------------|--------|----------|--------------------|----------------------------------|
+| app_key    | String | 必填     | 用户 Access Key    | 19275e8b113f48e1b0c5ce0d6f1647a8 |
+| app_secret | String | 必填     | 用户 Access Secret | e9846f12c8e44edc8b0d4df065e5cd89 |
+
+
+
+### 响应示例
 
 	201 Created
 	{
-	    "token":"zzzzzz",
-	    "expires_in":"86400"
+	  "token": "48e6b1bdb5fb4a28a680a97adffb3c30",
+	  "expires_in": "86399"
 	}
 
+### 响应参数
 
-|  参数说明  |             描述             |  类型  |
-|------------|------------------------------|--------|
-| token      | 访问 API 的授权码            | string |
-| expires_in | API 授权码的失效时间，单位秒 | string |
+|  参数说明  |  类型  |              示例值              |             描述             |
+|------------|--------|----------------------------------|------------------------------|
+| token      | String | 48e6b1bdb5fb4a28a680a97adffb3c30 | 访问 API 的授权码            |
+| expires_in | String | 86399                            | API 授权码的失效时间，单位秒 |
 
-#### 失败响应
+### 失败响应
 详情请参见 [错误返回码](http://support.c.163.com/md.html#!容器服务/镜像仓库/API 手册/OpenAPI 错误响应.md)。
-
