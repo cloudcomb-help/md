@@ -121,6 +121,7 @@
     * [文件上传](平台服务/对象存储/SDK 手册/Node.js SDK 手册/Node.js SDK 手册 - 文件上传.md)
     * [文件下载](平台服务/对象存储/SDK 手册/Node.js SDK 手册/Node.js SDK 手册 - 文件下载.md)
     * [文件管理](平台服务/对象存储/SDK 手册/Node.js SDK 手册/Node.js SDK 手册 - 文件管理.md)
+    * [使用 https](平台服务/对象存储/SDK 手册/Node.js SDK 手册/Node.js SDK 手册 - 使用https.md)
     * [错误处理](平台服务/对象存储/SDK 手册/Node.js SDK 手册/Node.js SDK 手册 - 错误处理.md)   
 
 [小工具手册](平台服务/对象存储/小工具手册.md)
