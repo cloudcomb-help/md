@@ -30,7 +30,7 @@
 
 	201 Created
 	{
-	  "token": "48e6b1bdb5fb4a28a680a97adffb3c30",
+	  "token": "48e6b1bdb5fb4a28a680a977dffb3c30",
 	  "expires_in": "86399"
 	}
 
@@ -38,7 +38,7 @@
 
 |    参数    |  类型  |             描述             |              示例值              |
 |------------|--------|------------------------------|----------------------------------|
-| token      | String | 访问 API 的授权码            | 48e6b1bdb5fb4a28a680a97adffb3c30 |
+| token      | String | 访问 API 的授权码            | 48e6b1bdb5fb4a28a680a977dffb3c30 |
 | expires_in | String | API 授权码的失效时间，单位秒 | 86399                            |
 
 ### 失败响应

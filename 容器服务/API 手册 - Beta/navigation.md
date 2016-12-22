@@ -12,8 +12,8 @@
 * [密钥 API]()
 
   * [创建密钥](容器服务/API 手册 - Beta/API 手册/密钥 API/密钥 API - 创建密钥.md)
-  * [获取私钥文件](容器服务/API 手册 - Beta/API 手册/密钥 API/密钥 API - 获取私钥文件.md)
   * [查看密钥列表](容器服务/API 手册 - Beta/API 手册/密钥 API/密钥 API - 查看密钥列表.md)
+  * [获取私钥文件](容器服务/API 手册 - Beta/API 手册/密钥 API/密钥 API - 获取私钥文件.md)
   * [删除密钥](容器服务/API 手册 - Beta/API 手册/密钥 API/密钥 API - 删除密钥.md)
 
 * [镜像 API]()

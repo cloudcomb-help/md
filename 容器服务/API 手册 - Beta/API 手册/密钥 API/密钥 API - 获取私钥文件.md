@@ -4,6 +4,25 @@
 
 <span>Note:</span><div class="alertContent">此接口每用户每秒访问次数为 300 次。</div>
 
+### 请求示例
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### 请求 header
 
     GET /api/v1/secret-keys/{id}
