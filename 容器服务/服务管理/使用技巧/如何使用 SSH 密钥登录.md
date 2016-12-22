@@ -16,7 +16,7 @@
 
 若使用原生 SSH 客户端登录，需在创建时，注入 SSH 密钥。
 
-<span>Attention:</span><div class="alertContent">无状态服务不支持注入密钥，可以在镜像中写入密钥</div>
+<span>Attention:</span><div class="alertContent">无状态服务本身不建议在容器内部做改动，所以无状态服务不支持在控制台注入密钥。</div>
 
 * 注入已有密钥<br>添加容器时，选择已有 SSH 密钥：![](../image/创建服务-创建有状态服务-注入已有密钥.png)
 	* 创建容器时，最多支持注入五个密钥；
