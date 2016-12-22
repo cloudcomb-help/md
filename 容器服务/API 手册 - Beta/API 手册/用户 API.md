@@ -23,8 +23,8 @@
 
 |    名称    |  类型  | 是否必填 |        描述        |              示例值              |
 |------------|--------|----------|--------------------|----------------------------------|
-| app_key    | String | 必填     | 用户 Access Key    | 19275e8b113f48e1b0c5ce0d6f1647a8 |
-| app_secret | String | 必填     | 用户 Access Secret | e9846f12c8e44edc8b0d4df065e5cd89 |
+| app_key    | String | 是       | 用户 Access Key    | 19275e8b113f48e1b0c5ce0d6f1647a8 |
+| app_secret | String | 是       | 用户 Access Secret | e9846f12c8e44edc8b0d4df065e5cd89 |
 
 
 
