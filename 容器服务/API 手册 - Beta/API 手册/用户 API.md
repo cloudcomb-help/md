@@ -3,6 +3,7 @@
 ## 生成 API Token - /api/v1/token
 
 通过 Access Key 和 Access Secret 获取 Token。[点我查看 APP Key 及 APP Secret](https://c.163.com/dashboard#/m/account/accesskey/)
+
 <span>Note:</span><div class="alertContent">Token 有效期为 24 小时。</div>
 
 
@@ -38,10 +39,10 @@
 
 ### 响应参数
 
-|  参数说明  |  类型  |              示例值              |             描述             |
-|------------|--------|----------------------------------|------------------------------|
-| token      | String | 48e6b1bdb5fb4a28a680a97adffb3c30 | 访问 API 的授权码            |
-| expires_in | String | 86399                            | API 授权码的失效时间，单位秒 |
+|  参数说明  |  类型  |             描述             |              示例值              |
+|------------|--------|------------------------------|----------------------------------|
+| token      | String | 访问 API 的授权码            | 48e6b1bdb5fb4a28a680a97adffb3c30 |
+| expires_in | String | API 授权码的失效时间，单位秒 | 86399                            |
 
 ### 失败响应
 详情请参见 [错误返回码](http://support.c.163.com/md.html#!容器服务/镜像仓库/API 手册/OpenAPI 错误响应.md)。
