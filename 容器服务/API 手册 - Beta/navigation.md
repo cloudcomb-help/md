@@ -2,19 +2,19 @@
 
 [API 手册]()
 
-* [OpenAPI 介绍](容器服务/服务管理/API 手册/OpenAPI 介绍.md)
-* [OpenAPI 错误响应](容器服务/服务管理/API 手册/OpenAPI 错误响应.md)
-* [用户 API](容器服务/服务管理/API 手册/用户 API.md)
+* [OpenAPI 介绍](容器服务/API 手册 - Beta/API 手册/OpenAPI 介绍.md)
+* [OpenAPI 错误响应](容器服务/API 手册 - Beta/API 手册/OpenAPI 错误响应.md)
+* [用户 API](容器服务/API 手册 - Beta/API 手册/用户 API.md)
 * [密钥 API]()
 
-  * [创建密钥](容器服务/服务管理/API 手册/密钥 API/密钥 API - 创建密钥.md)
-  * [获取私钥文件](容器服务/服务管理/API 手册/密钥 API/密钥 API - 获取私钥文件.md)
-  * [查看密钥列表](容器服务/服务管理/API 手册/密钥 API/密钥 API - 查看密钥列表.md)
-  * [删除密钥](容器服务/服务管理/API 手册/密钥 API/密钥 API - 删除密钥.md)
+  * [创建密钥](容器服务/API 手册 - Beta/API 手册/密钥 API/密钥 API - 创建密钥.md)
+  * [获取私钥文件](容器服务/API 手册 - Beta/API 手册/密钥 API/密钥 API - 获取私钥文件.md)
+  * [查看密钥列表](容器服务/API 手册 - Beta/API 手册/密钥 API/密钥 API - 查看密钥列表.md)
+  * [删除密钥](容器服务/API 手册 - Beta/API 手册/密钥 API/密钥 API - 删除密钥.md)
 
 * [镜像 API]()
 
-  * [查看镜像仓库列表](容器服务/服务管理/API 手册/镜像 API/镜像 API - 查看镜像仓库列表.md)
-  * [查看镜像仓库](容器服务/服务管理/API 手册/镜像 API/镜像 API - 查看镜像仓库.md)
-  * [构建镜像](容器服务/服务管理/API 手册/镜像 API/镜像 API - 构建镜像.md)
-  * [删除镜像](容器服务/服务管理/API 手册/镜像 API/镜像 API - 删除镜像.md)
+  * [查看镜像仓库列表](容器服务/API 手册 - Beta/API 手册/镜像 API/镜像 API - 查看镜像仓库列表.md)
+  * [查看镜像仓库](容器服务/API 手册 - Beta/API 手册/镜像 API/镜像 API - 查看镜像仓库.md)
+  * [构建镜像](容器服务/API 手册 - Beta/API 手册/镜像 API/镜像 API - 构建镜像.md)
+  * [删除镜像](容器服务/API 手册 - Beta/API 手册/镜像 API/镜像 API - 删除镜像.md)
