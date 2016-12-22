@@ -36,6 +36,7 @@
     * [PUT Bucket Deafult 404](平台服务/对象存储/API 手册/桶的操作/桶的操作 - PUT Bucket Deafult 404.md)  
     * [GET Bucket Default 404](平台服务/对象存储/API 手册/桶的操作/桶的操作 - GET Bucket Default 404.md)  
     * [Put Bucket Website](平台服务/对象存储/API 手册/桶的操作/桶的操作 - Put Bucket Website.md) 
+    * [GET Bucket Website](平台服务/对象存储/API 手册/桶的操作/桶的操作 - GET Bucket Website.md) 
 
   * [对象操作]()  
 

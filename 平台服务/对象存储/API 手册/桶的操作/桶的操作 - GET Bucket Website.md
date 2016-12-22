@@ -1,28 +1,16 @@
 # 桶的操作
 
-## Put Bucket Website
+## GET Bucket Website
 
 ### 描述
-将一个 bucket 设置成静态网站托管模式。
+查看 bucket 的静态网站托管状态。
 
 ### 语法
 
-    PUT /?website HTTP/1.1
-    Host: ${BucketName}.${endpoint}
-    Content-Length: ${length}
+    GET /?website HTTP/1.1
+    Host: ${BucketName}.{endpoint}
     Date: ${date}
     Authorization: ${signature}
-    Content-MD5: ${md5}
-
-    <?xml version="1.0" encoding="UTF-8"?>
-    <WebsiteConfiguration>
-        <IndexDocument>
-            <Suffix>{suffix}</Suffix>
-        </IndexDocument>
-        <ErrorDocument>
-            <Key>{key}</Key>
-        </ErrorDocument>
-    </WebsiteConfiguration>
 
 ### 请求元素
 
@@ -36,22 +24,10 @@
 ### 示例
 Request
 
-    PUT /?website HTTP/1.1
-    Host: dream.nos-eastchina1.126.net
-    Content-Length: length
-    Date: date
+    GET /?websiteHTTP/1.1
+    HOST: dream.nos-eastchina1.126.net
+    Date: Fri, 10 Feb 2012 21:34:55 GMT
     Authorization: NOS I_AM_ACCESS_ID:I_AM_SIGNATURE
-    Content-MD5: md5
-
-    <?xml version="1.0" encoding="UTF-8"?>
-    <WebsiteConfiguration>
-            <IndexDocument>
-                 <Suffix>index.html</Suffix>
-            </IndexDocument>
-            <ErrorDocument>
-                 <Key>error.html</Key>
-            </ErrorDocument>
-    </WebsiteConfiguration>
 
 Response
 
@@ -61,10 +37,17 @@ Response
     Connection: close
     Server: NOS
 
+    <?xml version="1.0" encoding="UTF-8"?>
+    <WebsiteConfiguration>
+        <IndexDocument>
+            <Suffix>{suffix}</Suffix>
+        </IndexDocument>
+        <ErrorDocument>
+            <Key>{key}</Key>
+        </ErrorDocument>
+    </WebsiteConfiguration>
+
 ### 细节描述
 
 
-1. 若请求的 http body 中 xml 格式不合法，则返回 400 Bad Request。错误码：MalformedXML；
-2. Suffix 和 Key 的值必须是桶内的已存在对象。否则返回 400 Bad Request。错误码：InvalidArgument
-3. 如果此前没有设置过 Website，此操作会创建一个新的 Website 配置；否则，就覆写先前的配置。
-4. 在将一个 bucket 设置成静态网站托管模式后，对静态网站根域名的匿名访问，NOS 将返回索引页面；对静态网站根域名的签名访问，NOS 将返回 Get Bucket 结果。
+1. 如果 Bucket 或 Website 不存在，返回 404 Not Found 错误，错误码：NoSuchBucket或NoSuchWebsiteConfiguration。
