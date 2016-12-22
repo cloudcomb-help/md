@@ -8,7 +8,7 @@
 
 * [用户 API]()
 
-  * [生成 API Token](容器服务/API 手册 - Beta/API 手册/生成 API Token.md)
+  * [生成 API Token](容器服务/API 手册 - Beta/API 手册/用户 API/用户 API - 生成 API Token.md)
 
 * [密钥 API]()
 
