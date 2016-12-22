@@ -1,11 +1,10 @@
 # 用户 API
 
-## 生成 API Token - /api/v1/token
+## 生成 API Token
 
 通过 Access Key 和 Access Secret 获取 Token。[点我查看 APP Key 及 APP Secret](https://c.163.com/dashboard#/m/account/accesskey/)
 
 <span>Note:</span><div class="alertContent">Token 有效期为 24 小时。</div>
-
 
 ### 请求示例
 
