@@ -8,8 +8,6 @@
     Host: open.c.163.com
     Authorization: Token 48e6b1bdb5fb4a23a680a977dffb3c30
     Content-Type: application/json
-    Cache-Control: no-cache
-    Postman-Token: 4631f118-462a-61da-0e6c-cf76fe963b98
 
     {
       "key_name": "mykey"

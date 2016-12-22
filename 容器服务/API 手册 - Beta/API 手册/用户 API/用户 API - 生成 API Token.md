@@ -11,8 +11,6 @@
 	POST /api/v1/token HTTP/1.1
 	Host: open.c.163.com
 	Content-Type: application/json
-	Cache-Control: no-cache
-	Postman-Token: 4b8fc05b-9466-508c-a852-29b97f3cec0e
 
 	{
 	    "app_key": "19275e8b113f48e1b0c5ce0d6f1647a8", 
