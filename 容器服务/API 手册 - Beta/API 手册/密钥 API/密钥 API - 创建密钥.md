@@ -2,19 +2,11 @@
 
 ## 创建密钥
 
-### 请求 header
-
-    POST /api/v1/secret-keys
-
-    Authorization:Token xxxxxxxxxxxxxx
-    Content-Type:application/json
+### 请求示例
 
 
-### 请求 payload
 
-    {
-      "key_name": "name"
-    }
+### 请求参数
 
 | 参数说明 |   描述   |  类型  | 是否必填 |
 |----------|----------|--------|----------|
