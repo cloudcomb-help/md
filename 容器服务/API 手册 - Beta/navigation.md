@@ -5,7 +5,6 @@
 * [OpenAPI 介绍](容器服务/API 手册 - Beta/API 手册/OpenAPI 介绍.md)
 * [OpenAPI 使用](容器服务/API 手册 - Beta/API 手册/OpenAPI 使用.md)
 * [OpenAPI 错误响应](容器服务/API 手册 - Beta/API 手册/OpenAPI 错误响应.md)
-
 * [用户 API]()
 
   * [生成 API Token](容器服务/API 手册 - Beta/API 手册/用户 API/用户 API - 生成 API Token.md)

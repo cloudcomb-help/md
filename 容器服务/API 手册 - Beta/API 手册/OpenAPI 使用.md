@@ -6,7 +6,7 @@
 
 ## 2、获取 Token
 
-使用 Access Key 和 App Secret，调用 OpenAPI 中的 [Token 生成接口](http://support.c.163.com/md.html#!容器服务/API 手册 - Beta/API 手册/用户 API.md)，获取授权 Token。
+使用 Access Key 和 App Secret，调用 OpenAPI 中的 [Token 生成接口](http://support.c.163.com/md.html#!容器服务/API 手册 - Beta/API 手册/用户 API/用户 API - 生成 API Token.md)，获取授权 Token。
 
 ## 3、开始使用
 
