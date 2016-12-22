@@ -37,7 +37,7 @@ Request
 
 Response
 
-HTTP/1.1 200
+	HTTP/1.1 200
 
 	<CORSConfiguration>
 	   <CORSRule>
