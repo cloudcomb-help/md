@@ -53,4 +53,4 @@ Response
 
 ### 细节描述
 
-桶不存在时，返回 404，错误码 NOSuchBucket。
+1. 桶不存在时，返回 404，错误码 NOSuchBucket。
