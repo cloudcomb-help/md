@@ -9,7 +9,7 @@
 2.获取密钥对：使用 NOS-Java-SDK 前，你需要拥有一个有效的 Access Key (包括 Access Key 和 Access Secret )用来进行签名认证。可以通过如下步骤获得：
 
 * 登录 https://c.163.com/ 注册用户
-* 注册后，蜂巢会颁发 Access Key 和 Secret Key 给客户，你可以在蜂巢“用户中心”的“Access Key”查看并管理你的Access Key
+* 注册后，蜂巢会颁发 Access Key 和 Secret Key 给客户，你可以在蜂巢「用户中心」的「Access Key」查看并管理你的 Access Key
 
 3.在代码中实例化 NosClient
 
@@ -23,7 +23,7 @@
         NosClient nosClient = new NosClient(credentials);
         nosClient.setEndpoint(endPoint);
 
-<span>Note:</span><div class="alertContent">NosClient是线程安全的，可以并发使用</div>
+<span>Note:</span><div class="alertContent">NosClient 是线程安全的，可以并发使用</div>
 
 4.配置 NosClient 如果你需要修改 NosClient 的默认参数，可以在实例化 NosClient 时传入 ClientConfiguration 实例。 ClientConfiguration 是 NosClient 的配置类，可配置连接超时、最大连接数等参数。通过 ClientConfiguration 可以设置的参数见下表：
 
