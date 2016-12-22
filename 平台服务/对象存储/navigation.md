@@ -64,6 +64,7 @@
 
     * [安装](平台服务/对象存储/SDK 手册/Java SDK 手册/Java SDK 手册 - 安装.md)
     * [前言](平台服务/对象存储/SDK 手册/Java SDK 手册/Java SDK 手册 - 前言.md)
+    * [初始化](平台服务/对象存储/SDK 手册/Java SDK 手册/Java SDK 手册 - 初始化.md)  
     * [桶管理](平台服务/对象存储/SDK 手册/Java SDK 手册/Java SDK 手册 - 桶管理.md)
     * [文件上传](平台服务/对象存储/SDK 手册/Java SDK 手册/Java SDK 手册 - 文件上传.md)
     * [文件下载](平台服务/对象存储/SDK 手册/Java SDK 手册/Java SDK 手册 - 文件下载.md)
