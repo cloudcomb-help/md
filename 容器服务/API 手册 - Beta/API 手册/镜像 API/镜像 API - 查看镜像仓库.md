@@ -2,7 +2,7 @@
 
 ## 查看镜像仓库
 
-通过[查看镜像仓库列表](http://support.c.163.com/md.html#!容器服务/API 手册 - Beta/API 手册/镜像 API/镜像 API - 查看镜像仓库列表.md)获取的镜像仓库 id 获取某个镜像仓库的具体信息。
+通过[获取镜像仓库列表](http://support.c.163.com/md.html#!容器服务/API 手册 - Beta/API 手册/镜像 API/镜像 API - 查看镜像仓库列表.md)获取的镜像仓库 id 查看某个镜像仓库的具体信息。
 
 
 ### 请求示例
