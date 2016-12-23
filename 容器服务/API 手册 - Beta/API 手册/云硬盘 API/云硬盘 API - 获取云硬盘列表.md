@@ -4,7 +4,7 @@
 
 ### 请求示例
 
-    GET /api/v1/cloud-volumes?limit=10&amp;offset=0 HTTP/1.1
+    GET /api/v1/cloud-volumes?limit=10&offset=0 HTTP/1.1
     Host: open.c.163.com
     Authorization: Token 48e6b1bdb5fb4a28a680a977dffb3c30
     Content-Type: application/json
@@ -58,21 +58,21 @@
 
 ### 响应参数
 
-|         参数         |  类型  |                                    描述                                   |                示例值                |
-|----------------------|--------|---------------------------------------------------------------------------|--------------------------------------|
-| id                   | long   | 云硬盘 id                                                                 | 19894                                |
-| name                 | String | 云硬盘名称                                                                | myvolume2                            |
-| size                 | int    | 云硬盘大小，单位为 G                                                      | 10                                   |
-| status               | String | 云硬盘当前状态                                                            | mount_succ                           |
-| volume_uuid          | String | 云硬盘 uuid                                                               | 3df611c0-cfda-4c0c-aeda-304ef3a49d8f |
-| service_name         | String | 云硬盘所属空间和服务名称                                                  | myspace/myservice                    |
-| file_system_type     | String | 云硬盘格式类型                                                            | Ext4                                 |
-| created_at           | String | 云硬盘创建时间，使用 UTC（世界标准时间）时间，用 ISO8601 进行格式化       | 2016-12-23T08:05:22Z                 |
-| updated_at           | String | 云硬盘上一次修改时间，使用 UTC（世界标准时间）时间，用 ISO8601 进行格式化 | 2016-12-23T08:05:22Z                 |
-| from_snapshot_id     | long   | 云硬盘来源的快照 id，0 表示不是由快照创建                                 | 0                                    |
-| volume_mappings      | List   | 云硬盘的挂载信息列表                                                      | 详见示例                             |
-| service_container_id | long   | 云硬盘所属容器 id                                                         | 49927                                |
-| mount_path           | String | 云硬盘挂载路径                                                            | /data/                               |
+|         参数         |  类型  |                              描述                             |                示例值                |
+|----------------------|--------|---------------------------------------------------------------|--------------------------------------|
+| id                   | long   | 云硬盘 id                                                     | 19894                                |
+| name                 | String | 云硬盘名称                                                    | myvolume2                            |
+| size                 | int    | 云硬盘大小，单位为 G                                          | 10                                   |
+| status               | String | 云硬盘当前状态                                                | mount_succ                           |
+| volume_uuid          | String | 云硬盘 uuid                                                   | 3df611c0-cfda-4c0c-aeda-304ef3a49d8f |
+| service_name         | String | 云硬盘所属空间和服务名称                                      | myspace/myservice                    |
+| file_system_type     | String | 云硬盘格式类型                                                | Ext4                                 |
+| created_at           | String | 创建时间，使用 UTC（世界标准时间）时间，用 ISO8601 进行格式化 | 2016-12-23T08:05:22Z                 |
+| updated_at           | String | 修改时间，使用 UTC（世界标准时间）时间，用 ISO8601 进行格式化 | 2016-12-23T08:05:22Z                 |
+| from_snapshot_id     | long   | 云硬盘来源的快照 id，0 表示不是由快照创建                     | 0                                    |
+| volume_mappings      | List   | 云硬盘的挂载信息列表                                          | 详见示例                             |
+| service_container_id | long   | 云硬盘所属容器 id                                             | 49927                                |
+| mount_path           | String | 云硬盘挂载路径                                                | /data/                               |
 
 ### 失败响应
 详情请参见 [错误返回码](http://support.c.163.com/md.html#!容器服务/API 手册 - Beta/API 手册/OpenAPI 错误响应.md)。
