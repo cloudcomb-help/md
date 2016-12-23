@@ -22,3 +22,7 @@
   * [获取镜像仓库列表](容器服务/API 手册 - Beta/API 手册/镜像 API/镜像 API - 获取镜像仓库列表.md)
   * [查看镜像仓库](容器服务/API 手册 - Beta/API 手册/镜像 API/镜像 API - 查看镜像仓库.md)
   * [删除镜像](容器服务/API 手册 - Beta/API 手册/镜像 API/镜像 API - 删除镜像.md)
+
+* [云硬盘 API]()
+
+  * [创建云硬盘](容器服务/API 手册 - Beta/API 手册/云硬盘 API/云硬盘 API - 创建云硬盘.md)
