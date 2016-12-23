@@ -18,7 +18,7 @@
 
 * [镜像 API]()
 
+  * [构建镜像](容器服务/API 手册 - Beta/API 手册/镜像 API/镜像 API - 构建镜像.md)
   * [查看镜像仓库列表](容器服务/API 手册 - Beta/API 手册/镜像 API/镜像 API - 查看镜像仓库列表.md)
   * [查看镜像仓库](容器服务/API 手册 - Beta/API 手册/镜像 API/镜像 API - 查看镜像仓库.md)
-  * [构建镜像](容器服务/API 手册 - Beta/API 手册/镜像 API/镜像 API - 构建镜像.md)
   * [删除镜像](容器服务/API 手册 - Beta/API 手册/镜像 API/镜像 API - 删除镜像.md)
