@@ -4,7 +4,7 @@
 
 ### 请求示例
 
-    POST //api/v1/cloud-volumes HTTP/1.1
+    POST /api/v1/cloud-volumes HTTP/1.1
     Host: open.c.163.com
     Authorization: Token 48e6b1bdb5fb4a28a680a977dffb3c30
     Content-Type: application/json
@@ -19,7 +19,7 @@
 |     参数    |  类型  | 是否必填 |                                         描述                                         |  示例值  |
 |-------------|--------|----------|--------------------------------------------------------------------------------------|----------|
 | volume_name | String | 是       | 所要创建的云硬盘名称（1~32为字母、数字或者中划线，并且以字母开头，以数字或字母结尾） | myvolume |
-| size        | int    | 是       | 创建的云硬盘大小,单位为 G，大于 10 并且必需是 10 的整数倍                            | 10       |
+| size        | int    | 是       | 创建的云硬盘大小，单位为 G，大于 10 并且必需是 10 的整数倍                            | 10       |
 
 
 ### 响应示例
