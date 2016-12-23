@@ -2,6 +2,8 @@
 
 ## 获取私钥文件
 
+通过[查看密钥列表](http://support.c.163.com/md.html#!容器服务/API 手册 - Beta/API 手册/密钥 API/密钥 API - 查看密钥列表.md)获取的密钥 id 获取私钥文件内容。
+
 <span>Note:</span><div class="alertContent">此接口每用户每秒访问次数为 300 次。</div>
 
 ### 请求示例
