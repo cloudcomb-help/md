@@ -2,7 +2,7 @@
 
 ## 删除密钥
 
-通过[查看密钥列表](http://support.c.163.com/md.html#!容器服务/API 手册 - Beta/API 手册/密钥 API/密钥 API - 查看密钥列表.md)获取的密钥 id 删除密钥。
+通过[获取密钥列表](http://support.c.163.com/md.html#!容器服务/API 手册 - Beta/API 手册/密钥 API/密钥 API - 获取密钥列表.md)获取的密钥 id 删除密钥。
 ### 请求示例
 
 	DELETE /api/v1/secret-keys/{id} HTTP/1.1

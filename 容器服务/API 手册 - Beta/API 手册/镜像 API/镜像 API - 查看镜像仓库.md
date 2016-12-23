@@ -2,14 +2,14 @@
 
 ## 查看镜像仓库
 
-通过[获取镜像仓库列表](http://support.c.163.com/md.html#!容器服务/API 手册 - Beta/API 手册/镜像 API/镜像 API - 查看镜像仓库列表.md)获取的镜像仓库 id 查看某个镜像仓库的具体信息。
+通过[获取镜像仓库列表](http://support.c.163.com/md.html#!容器服务/API 手册 - Beta/API 手册/镜像 API/镜像 API - 获取镜像仓库列表.md)获取的镜像仓库 id 查看某个镜像仓库的具体信息。
 
 
 ### 请求示例
 
     GET /api/v1/repositories/{id} HTTP/1.1
     Host: open.c.163.com
-    Authorization: Token 48e6b1bdb5fb4a28a6
+    Authorization: Token 48e6b1bdb5fb4a28a680a977dffb3c30
 
 ### 请求参数
 
