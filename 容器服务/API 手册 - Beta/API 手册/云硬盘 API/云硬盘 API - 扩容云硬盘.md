@@ -6,17 +6,17 @@
 
 ### 请求示例
 
-	PUT /api/v1/cloud-volumes/{volumeId}/actions/resize?size={size} HTTP/1.1
+	PUT /api/v1/cloud-volumes/{id}/actions/resize?size={size} HTTP/1.1
 	Host: open.c.163.com
 	Authorization: Token c98dfae9c6cd405f95da15219e908643
 	Content-Type: application/json
 
 ### 请求参数
 
-|   参数   | 类型 | 是否必填 |                                描述                               |
-|----------|------|----------|-------------------------------------------------------------------|
-| volumeId | long | 是       | 云硬盘 id                                                         |
-| size     | int  | 是       | 扩容大小，单位为 G（大于原容量小于 1000，且必需是 10 的整数倍） |
+| 参数 | 类型 | 是否必填 |                               描述                              |
+|------|------|----------|-----------------------------------------------------------------|
+| id   | long | 是       | 云硬盘 id                                                       |
+| size | int  | 是       | 扩容大小，单位为 G（大于原容量小于 1000，且必需是 10 的整数倍） |
 
 ### 响应示例
 

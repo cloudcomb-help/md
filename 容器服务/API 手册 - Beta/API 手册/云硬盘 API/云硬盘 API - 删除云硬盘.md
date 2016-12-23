@@ -6,15 +6,15 @@
 
 ### 请求示例
 
-    DELETE /api/v1/cloud-volumes/{volumeId} HTTP/1.1
+    DELETE /api/v1/cloud-volumes/{id} HTTP/1.1
     Host: open.c.163.com
     Authorization: Token 48e6b1bdb5fb4a28a680a977dffb3c30
 
 ### 请求参数
 
-|   参数   | 类型 | 是否必填 |    描述   |
-|----------|------|----------|-----------|
-| volumeId | long | 是       | 云硬盘 id |
+| 参数 | 类型 | 是否必填 |    描述   |
+|------|------|----------|-----------|
+| id   | long | 是       | 云硬盘 id |
 
 
 ### 响应示例
