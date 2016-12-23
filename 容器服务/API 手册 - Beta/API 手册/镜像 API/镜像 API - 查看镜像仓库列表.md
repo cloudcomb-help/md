@@ -30,7 +30,7 @@
           "open_level": 0,
           "base_desc": "基本描述",
           "detail_desc": "详细描述",
-          "tag_count": 1,
+          "tag_count": 2,
           "created_at": "2016-12-21T02:27:12Z",
           "updated_at": "2016-12-21T02:27:12Z"
         },
@@ -58,7 +58,7 @@
 | open_level  | int    | 开放级别，0 （私有）/1（公有）                                | 0                    |
 | base_desc   | String | 基本描述                                                      | 基本描述             |
 | detail_desc | String | 详细描述                                                      | 详细描述             |
-| tag_count   | int    | 版本数量                                                      | 1                    |
+| tag_count   | int    | 版本数量                                                      | 2                    |
 | created_at  | String | 创建时间，使用 UTC（世界标准时间）时间，用 ISO8601 进行格式化 | 2016-12-21T02:27:12Z |
 | updated_at  | String | 修改时间，使用 UTC（世界标准时间）时间，用 ISO8601 进行格式化 | 2016-12-21T02:27:12Z |
 
