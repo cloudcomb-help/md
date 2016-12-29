@@ -89,7 +89,9 @@
 
 
 响应参数
-|| {color:#666666}名称{color}\\ || {color:#666666}类型{color}\\ || {color:#666666}描述{color}\\ || {color:#666666}示例值{color}\\ ||
+
+|名称\\ |类型\\ |描述\\ |示例值\\ |
+|-------|-------|-------|---------|
 | code \\ | INT \\ | 操作响应码 \\ | 200 |
 | message \\ | STRING \\ | 操作结果附加消息 \\ | OK |
 | result \\ | JSON OBJECT \\ | 结果信息 \\ | |
@@ -123,8 +125,8 @@
 
 请求参数包括logsPosition, limit和subscriptionName
 
-|名称| 类型|   是否必填  | 描述|示例值|
-|----|-----|-------------|-----|------|
+|名称| 类型| 是否必填| 描述|示例值|
+|----|-----|---------|-----|------|
 | logsPosition | String|     是   | 日志订阅的起始位置信息，由获取订阅日志起始位置接口返回。 | dGVzdDIwMTYxMjEyMTAxMC5zdGF0ZXRlc3QtY29tYmxvZ2h6eDow |
 | limit | Int  | 是 | 获取订阅日志条数限制，目前小于等于1000 | 100 |
 | subscriptionName| String| 是 | 日志订阅的主题，命名规则：服务名.空间名  | test201612121010.statetest-combloghzx |
