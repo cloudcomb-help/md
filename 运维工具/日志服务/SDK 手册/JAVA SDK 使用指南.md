@@ -68,7 +68,7 @@
 请求参数包括positionType和subscriptionName
 
 
-|| {color:#666666}名称{color} || {color:#666666}类型{color}\\ || {color:#666666}是否必填{color}\\ || {color:#666666}描述{color}\\ || {color:#666666}示例值{color}\\ ||
+|名称|类型|是否必填|| {color:#666666}描述{color}\\ || {color:#666666}示例值{color}\\ ||
 | {color:#666666}positionType{color}\\ | {color:#666666}String{color}\\ | {color:#666666}是{color}\\ | 日志订阅的起始位置类型，共有三种类型： \\
 1、EARLIEST - 从能获取到的最前面位置开始读取日志（已删除的除外） \\
 2、LATEST - 从最末尾开始读取日志（最新日志） \\
@@ -125,8 +125,8 @@
 
 |名称| 类型| 是否必填| 描述|示例值|
 |----|-----|---------|-----|------|
-| logsPosition | {color:#666666}String{color}| 是 | 日志订阅的起始位置信息，由获取订阅日志起始位置接口返回。 | dGVzdDIwMTYxMjEyMTAxMC5zdGF0ZXRlc3QtY29tYmxvZ2h6eDow |
-| limit | Int  是 | 获取订阅日志条数限制，目前小于等于1000 | 100 |
+| logsPosition | String| 是 | 日志订阅的起始位置信息，由获取订阅日志起始位置接口返回。 | dGVzdDIwMTYxMjEyMTAxMC5zdGF0ZXRlc3QtY29tYmxvZ2h6eDow |
+| limit | Int  | 是 | 获取订阅日志条数限制，目前小于等于1000 | 100 |
 | subscriptionName| String| 是 | 日志订阅的主题，命名规则：服务名.空间名  | test201612121010.statetest-combloghzx |
 
 #### 3.2.2 响应
@@ -162,8 +162,8 @@
 |----|----|----|------|
 |code | INT | 操作响应码 | 200 |
 |message | STRING | 操作结果附加消息 | OK |
-|result | JSON OBJECT | 结果信息 | |
-|subscription_logs | JSON ARRAY | 订阅日志 | |
+|result | JSON OBJECT | 结果信息 | 
+|subscription_logs | JSON ARRAY | 订阅日志 | 
 |timestamp | TIMESTAMP | 日志时间戳 | 1481521668314 |
 |message | STRING | 日志信息 | slfjkasjfas |
 |hostname | STRING | 主机名 | yanlian-20-nce-963214757b77-1476845634424-b120f197 |
