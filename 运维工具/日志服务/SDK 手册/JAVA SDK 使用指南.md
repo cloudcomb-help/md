@@ -125,7 +125,7 @@
 
 |名称| 类型|   是否必填  | 描述|示例值|
 |----|-----|-------------|-----|------|
-| logsPosition | String| 是 | 日志订阅的起始位置信息，由获取订阅日志起始位置接口返回。 | dGVzdDIwMTYxMjEyMTAxMC5zdGF0ZXRlc3QtY29tYmxvZ2h6eDow |
+| logsPosition | String|     是   | 日志订阅的起始位置信息，由获取订阅日志起始位置接口返回。 | dGVzdDIwMTYxMjEyMTAxMC5zdGF0ZXRlc3QtY29tYmxvZ2h6eDow |
 | limit | Int  | 是 | 获取订阅日志条数限制，目前小于等于1000 | 100 |
 | subscriptionName| String| 是 | 日志订阅的主题，命名规则：服务名.空间名  | test201612121010.statetest-combloghzx |
 
