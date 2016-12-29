@@ -122,60 +122,61 @@
 #### 3.2.1&nbsp;请求
 
 请求参数包括logsPosition, limit和subscriptionName
-|| {color:#666666}{*}名称{*}{color}\\ || {color:#666666}{*}类型{*}{color}\\ || {color:#666666}{*}是否必填{*}{color}\\ || {color:#666666}{*}描述{*}{color}\\ || {color:#666666}{*}示例值{*}{color}\\ ||
-| logsPosition \\ | {color:#666666}String{color}\\ | 是 | 日志订阅的起始位置信息，由获取订阅日志起始位置接口返回。 \\ | dGVzdDIwMTYxMjEyMTAxMC5zdGF0ZXRlc3QtY29tYmxvZ2h6eDow \\ |
-| limit \\ | Int \\ | 是 | 获取订阅日志条数限制，目前小于等于1000 | 100 |
-| subscriptionName \\ | {color:#666666}String{color}\\ | 是 | 日志订阅的主题，命名规则：服务名.空间名 \\ | test201612121010.statetest-combloghzx \\ |
+
+|名称| 类型| 是否必填| 描述|示例值|
+|----|-----|---------|-----|------|
+| logsPosition | {color:#666666}String{color}| 是 | 日志订阅的起始位置信息，由获取订阅日志起始位置接口返回。 | dGVzdDIwMTYxMjEyMTAxMC5zdGF0ZXRlc3QtY29tYmxvZ2h6eDow |
+| limit | Int  是 | 获取订阅日志条数限制，目前小于等于1000 | 100 |
+| subscriptionName| String| 是 | 日志订阅的主题，命名规则：服务名.空间名  | test201612121010.statetest-combloghzx |
 
 #### 3.2.2 响应
 
 响应示例
-<pre>
-{
-    "code": 200,
-    "message": "OK",
-    "result": {
-        "subscription_logs": [
-            {
-                "timestamp": 1481521668314,
-                "message": "slfjkasjfas",
-                "hostname": "yanlian-20-nce-963214757b77-1476845634424-b120f197",
-                "type": "logs",
-                "filename": "z",
-                "target_dir": "/container/logs/statetest-combloghzx/test201612121010-3855-3020510058-wrbb0/test201612121010/test/",
-                "name_space": "statetest-combloghzx",
-                "service_name": "test201612121010",
-                "container_name": "test201612121010",
-                "seq_id": 0
-            }
-        ],
-        "count": 1,
-        "next_position": "dGVzdDIwMTYxMjEyMTAxMC5zdGF0ZXRlc3QtY29tYmxvZ2h6eDox",
-        "reached_ending": false
+
+    {
+        "code": 200,
+        "message": "OK",
+        "result": {
+            "subscription_logs": [
+                {
+                    "timestamp": 1481521668314,
+                    "message": "slfjkasjfas",
+                    "hostname": "yanlian-20-nce-963214757b77-1476845634424-b120f197",
+                    "type": "logs",
+                    "filename": "z",
+                    "target_dir": "/container/logs/statetest-combloghzx/test201612121010-3855-3020510058-wrbb0/test201612121010/test/",
+                    "name_space": "statetest-combloghzx",
+                    "service_name": "test201612121010",
+                    "container_name": "test201612121010",
+                    "seq_id": 0
+                }
+            ],
+            "count": 1,
+            "next_position": "dGVzdDIwMTYxMjEyMTAxMC5zdGF0ZXRlc3QtY29tYmxvZ2h6eDox",
+            "reached_ending": false
+        }
     }
-}
-</pre>
+
 响应参数
-|| {color:#666666}名称{color}\\ || {color:#666666}类型{color}\\ || {color:#666666}描述{color}\\ || {color:#666666}示例值{color}\\ ||
-| code | INT | 操作响应码 | 200 |
-| message | STRING | 操作结果附加消息 | OK |
-| result | JSON OBJECT | 结果信息 | |
-| &nbsp; subscription_logs | JSON ARRAY | 订阅日志 | |
-| &nbsp; &nbsp; &nbsp; timestamp | TIMESTAMP | 日志时间戳 | 1481521668314 |
-| &nbsp; &nbsp; &nbsp; message | STRING | 日志信息 | slfjkasjfas |
-| &nbsp; &nbsp; &nbsp; hostname | STRING | 主机名 | yanlian-20-nce-963214757b77-1476845634424-b120f197 |
-| &nbsp; &nbsp; &nbsp; type | STRING | 日志类型 | logs |
-| &nbsp; &nbsp; &nbsp; filename | STRING | 日志文件名 | z |
-| &nbsp; &nbsp; &nbsp; target_dir | STRING | 日记文件目录 | /container/logs/statetest-combloghzx/test201612121010-3855-3020510058-wrbb0/test201612121010/test/ |
-| &nbsp; &nbsp; &nbsp; name_space | STRING | 空间名称 | statetest-combloghzx |
-| &nbsp; &nbsp; &nbsp; service_name | STRING | 服务名称 | test201612121010 |
-| &nbsp; &nbsp; &nbsp; container_name | STRING | 容器名称 | test201612121010 |
-| &nbsp; &nbsp; &nbsp; seq_id | INT | 序列号 | 0 |
-| &nbsp; count | INT | 返回日志条数， 小于等于limit \\ | 1 |
-| &nbsp; next_position | STRING | 日志数据下个位置信息 \\ | dGVzdDIwMTYxMjEyMTAxMC5zdGF0ZXRlc3QtY29tYmxvZ2h6eDox |
-| &nbsp; reached_ending \\ | BOOLEAN \\ | 是否已到订阅日志末尾的标记 \\
-true：已到末尾 \\
-false：未到末尾。 \\ | false \\ |
+|名称|类型|描述|示例值|
+|----|----|----|------|
+|code | INT | 操作响应码 | 200 |
+|message | STRING | 操作结果附加消息 | OK |
+|result | JSON OBJECT | 结果信息 | |
+|subscription_logs | JSON ARRAY | 订阅日志 | |
+|timestamp | TIMESTAMP | 日志时间戳 | 1481521668314 |
+|message | STRING | 日志信息 | slfjkasjfas |
+|hostname | STRING | 主机名 | yanlian-20-nce-963214757b77-1476845634424-b120f197 |
+|type | STRING | 日志类型 | logs |
+|filename | STRING | 日志文件名 | z |
+|target_dir | STRING | 日记文件目录 | /container/logs/statetest-combloghzx/test201612121010-3855-3020510058-wrbb0/test201612121010/test/ |
+|name_space | STRING | 空间名称 | statetest-combloghzx |
+|service_name | STRING | 服务名称 | test201612121010 |
+|container_name | STRING | 容器名称 | test201612121010 |
+|seq_id | INT | 序列号 | 0 |
+|count | INT | 返回日志条数， 小于等于limit| 1 |
+|next_position | STRING | 日志数据下个位置信息| dGVzdDIwMTYxMjEyMTAxMC5zdGF0ZXRlc3QtY29tYmxvZ2h6eDox |
+|reached_ending | BOOLEAN | 是否已到订阅日志末尾的标记 true：已到末尾 false：未到末尾。 | false  |
 
 #### 3.2.3 代码示例
 
