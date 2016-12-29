@@ -1,6 +1,6 @@
 ## 1 环境准备
 
-安装maven插件：[The Maven Integration for Eclipse|http://www.eclipse.org/m2e/]
+安装maven插件：[The Maven Integration for Eclipse](http://www.eclipse.org/m2e/)
 添加pom依赖
 
     <dependency>
@@ -9,7 +9,7 @@
       <version>0.1</version>
     </dependency>
 
-[SDK直接下载地址|http://cloudcomb-wiki.nos-eastchina1.126.net/stream-java-sdk-0.1.tar.gz]
+[SDK直接下载地址](http://cloudcomb-wiki.nos-eastchina1.126.net/stream-java-sdk-0.1.tar.gz)
 
 
 ## 2 接入
@@ -18,24 +18,22 @@
 
 在获取到Access key 和 Secretkey之后，可以通过以下方式进行密钥设置：
 
-<pre>
 
-import com.netease.stream.client.StreamClient;
+    import com.netease.stream.client.StreamClient;
 
-String accessKey = "your-accesskey";
-String secretKey = "your-secretKey ";
+    String accessKey = "your-accesskey";
+    String secretKey = "your-secretKey ";
 
-StreamClient client = null;
-try {
+    StreamClient client = null;
+    try {
     client = new StreamClient(accessKey, secretKey);
-} catch (Exception e) {
+        } catch (Exception e) {
     System.out.println("Execute error " + e.getMessage());
-} finally {
+        } finally {
     if (client != null) {
         client.shutdown();
-    }
-}     
-</pre>
+        }
+    }     
 
 ## 3 使用
 
@@ -50,17 +48,16 @@ try {
 
 实时传输的所有错误异常包装在两个异常类型中，在调用实时传输接口的时候，捕捉这些异常并打印必要的信息有利于定位问题(ps:在JAVA SDK使用指南的简单示例代码没有重复熬述，使用时注意添加)。
 
-<pre>
-try{
-     StreamClient.XXX("XXX");
-}catch (ServiceException e1){
-     //捕捉实时传输服务器异常错误
-     System.out.println("Error Message:    " + e1.getMessage());    //错误描述信息
-}catch(ClientException e2){
-     //捕捉客户端错误
-     System.out.println("Error Message: " + e2.getMessage());       //客户端错误信息
-}
-</pre>
+
+    try{
+         StreamClient.XXX("XXX");
+    }catch (ServiceException e1){
+         //捕捉实时传输服务器异常错误
+         System.out.println("Error Message:    " + e1.getMessage());    //错误描述信息
+    }catch(ClientException e2){
+         //捕捉客户端错误
+         System.out.println("Error Message: " + e2.getMessage());       //客户端错误信息
+    }
 
 ### 3.1 获取订阅起始位置
 
@@ -81,15 +78,15 @@ try{
 #### 3.1.2 响应
 
 响应示例
-<pre>
+
 	{
     "code": 200,
     "message": "OK",
     "result": {
         "position": "dGVzdDIwMTYxMjEyMTAxMC5zdGF0ZXRlc3QtY29tYmxvZ2h6eDow"
+              }
     }
-}
-</pre>
+
 
 响应参数
 || {color:#666666}名称{color}\\ || {color:#666666}类型{color}\\ || {color:#666666}描述{color}\\ || {color:#666666}示例值{color}\\ ||
@@ -100,23 +97,22 @@ try{
 
 
 #### 3.1.3 代码示例
-<pre>
+
 	String subscriptionName = "test201612121010.statetest-combloghzx";
-String positionType = "EARLIEST";
-StreamClient client = null;
-try {
-    // get subscription position
-    client = new StreamClient(accessKey, secretKey);
-    String ret = client.getSubscriptionPosition(positionType, subscriptionName);
-    System.out.println(ret);
-} catch (Exception e) {
-    System.out.println("Execute error " + e.getMessage());
-} finally {
-    if (client != null) {
-        client.shutdown();
-    }
-}
-</pre>
+	String positionType = "EARLIEST";
+	StreamClient client = null;
+	try {
+    	// get subscription position
+    	client = new StreamClient(accessKey, secretKey);
+    	String ret = client.getSubscriptionPosition(positionType, subscriptionName);
+    	System.out.println(ret);
+	} catch (Exception e) {
+    	System.out.println("Execute error " + e.getMessage());
+	} finally {
+    	if (client != null) {
+        	client.shutdown();
+    	}
+	}
 
 ### 3.2 获取订阅日志
 
@@ -182,27 +178,28 @@ true：已到末尾 \\
 false：未到末尾。 \\ | false \\ |
 
 #### 3.2.3 代码示例
-<pre>
-String subscriptionName = "test201612121010.statetest-combloghzx";
-String positionType = "EARLIEST";
-StreamClient client = null;
-try {
-    // get subscription position
-    client = new StreamClient(accessKey, secretKey);
-    String ret = client.getSubscriptionPosition(positionType, subscriptionName);
-    System.out.println(ret);
 
-    // get subscription logs
-    JSONObject retObject = new JSONObject(ret);
-    String logsPosition = retObject.getJSONObject("result").getString("position");
-    long limit = 1;
+    String subscriptionName = "test201612121010.statetest-combloghzx";
+    String positionType = "EARLIEST";
+    StreamClient client = null;
+    try {
+        // get subscription position
+        client = new StreamClient(accessKey, secretKey);
+        String ret = client.getSubscriptionPosition(positionType, subscriptionName);
+        System.out.println(ret);
+
+        // get subscription logs
+        JSONObject retObject = new JSONObject(ret);
+        String logsPosition = retObject.getJSONObject("result").getString("position");
+        long limit = 1;
     String logs = client.getLogs(logsPosition, limit, subscriptionName);
-    System.out.println(logs);
-} catch (Exception e) {
-    System.out.println("Execute error " + e.getMessage());
-} finally {
-    if (client != null) {
-        client.shutdown();
+    String logs = client.getLogs(logsPosition, limit, subscriptionName);
+        System.out.println(logs);
+    } catch (Exception e) {
+        System.out.println("Execute error " + e.getMessage());
+    } finally {
+        if (client != null) {
+            client.shutdown();
+        }
     }
-}
-</pre>
+
