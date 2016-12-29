@@ -72,10 +72,7 @@
 
 |名称|类型|&nbsp;是否必填&nbsp;|描述|示例值|
 |----|----|--------------------|----|------|
-|positionType|String|是| 日志订阅的起始位置类型，共有三种类型：
-1、EARLIEST - 从能获取到的最前面位置开始读取日志（已删除的除外）
-2、LATEST - 从最末尾开始读取日志（最新日志）
-3、STORED - 从保存的位置开始读取日志（上次读取过的位置） | EARLIEST|
+|positionType|String|是| 日志订阅的起始位置类型，共有三种类型：1、EARLIEST - 从能获取到的最前面位置开始读取日志（已删除的除外）2、LATEST - 从最末尾开始读取日志（最新日志）3、STORED -从保存的位置开始读取日志（上次读取过的位置） | EARLIEST|
 | subscriptionName  | String| 是| 日志订阅的主题，命名规则：服务名.空间名| test201612121010.statetest-combloghzx |
 
 #### 3.1.2 响应
@@ -94,7 +91,7 @@
 响应参数
 
 |名称 |类型 |描述|示例值|
-|-------|-------|-------|---------|
+|-----|-----|----|------|
 | code | INT | 操作响应码 | 200 |
 | message | STRING | 操作结果附加消息 | OK |
 | result | JSON OBJECT | 结果信息 | |
@@ -128,7 +125,7 @@
 
 请求参数包括logsPosition, limit和subscriptionName
 
-|名称| 类型| &nbsp;是否必填&nbsp;| 描述|示例值|
+|名称| 类型|&nbsp; 是否必填 &nbsp;| 描述|示例值|
 |----|-----|---------------------|-----|------|
 | logsPosition | String|&nbsp;是&nbsp; | 日志订阅的起始位置信息，由获取订阅日志起始位置接口返回。 | dGVzdDIwMTYxMjEyMTAxMC5zdGF0ZXRlc3QtY29tYmxvZ2h6eDow |
 | limit | Int  | 是 | 获取订阅日志条数限制，目前小于等于1000 | 100 |
