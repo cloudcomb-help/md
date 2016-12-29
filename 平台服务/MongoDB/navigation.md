@@ -2,9 +2,9 @@
 
 [产品简介]()
  
-* [产品简介](平台服务/MongoDB/产品简介/产品简介.md)
+* [产品简介](平台服务/MongoDB/产品简介/MongoDB产品简介.md)
 
 [使用指南]()
 
-* [使用指南](平台服务/MongoDB/使用指南/创建MongoDB实例.md)
-* [使用指南](平台服务/MongoDB/使用指南/数据库实例管理.md)
+* [创建MongoDB实例](平台服务/MongoDB/使用指南/创建MongoDB实例.md)
+* [数据库实例管理](平台服务/MongoDB/使用指南/MongoDB实例管理.md)
