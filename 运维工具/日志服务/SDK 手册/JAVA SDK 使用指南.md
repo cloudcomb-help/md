@@ -46,7 +46,9 @@
 
 #### 3.0.2 关于异常
 
-实时传输的所有错误异常包装在两个异常类型中，在调用实时传输接口的时候，捕捉这些异常并打印必要的信息有利于定位问题(ps:在JAVA SDK使用指南的简单示例代码没有重复熬述，使用时注意添加)。
+实时传输的所有错误异常包装在两个异常类型中，在调用实时传输接口的时候，捕捉这些异常并打印必要的信息有利于定位问题
+
+注:在JAVA SDK使用指南的简单示例代码没有重复熬述，使用时注意添加。
 
 
     try{
@@ -128,7 +130,7 @@
 
 |名称| 类型| &nbsp;是否必填&nbsp;| 描述|示例值|
 |----|-----|---------------------|-----|------|
-| logsPosition | String| 是 | 日志订阅的起始位置信息，由获取订阅日志起始位置接口返回。 | dGVzdDIwMTYxMjEyMTAxMC5zdGF0ZXRlc3QtY29tYmxvZ2h6eDow |
+| logsPosition | String|&nbsp;是&nbsp; | 日志订阅的起始位置信息，由获取订阅日志起始位置接口返回。 | dGVzdDIwMTYxMjEyMTAxMC5zdGF0ZXRlc3QtY29tYmxvZ2h6eDow |
 | limit | Int  | 是 | 获取订阅日志条数限制，目前小于等于1000 | 100 |
 | subscriptionName| String| 是 | 日志订阅的主题，命名规则：服务名.空间名  | test201612121010.statetest-combloghzx |
 
