@@ -12,3 +12,4 @@
 [常见问题]()
 
 * [MongoDB常见问题](平台服务/MongoDB/常见问题/MongoDB常见问题.md)
+* [数据迁移](平台服务/MongoDB/常见问题/数据迁移.md)
