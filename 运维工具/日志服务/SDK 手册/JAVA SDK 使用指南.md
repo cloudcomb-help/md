@@ -9,7 +9,7 @@
       <version>0.1</version>
     </dependency>
 
-[SDK直接下载地址](http://cloudcomb-wiki.nos-eastchina1.126.net/stream-java-sdk-0.1.tar.gz)
+[SDK直接下载地址](http://sunwandi.nos-eastchina1.126.net/streamproxy-sdk-java-0.1.tar.gz)
 
 
 ## 2 接入
