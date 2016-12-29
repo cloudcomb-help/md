@@ -126,9 +126,9 @@
 
 请求参数包括logsPosition, limit和subscriptionName
 
-|名称| 类型| 是否必填| 描述|示例值|
+|名称| 类型| &nbsp;是否必填&nbsp;| 描述|示例值|
 |----|-----|---------|-----|------|
-| logsPosition | String|     是   | 日志订阅的起始位置信息，由获取订阅日志起始位置接口返回。 | dGVzdDIwMTYxMjEyMTAxMC5zdGF0ZXRlc3QtY29tYmxvZ2h6eDow |
+| logsPosition | String| 是 | 日志订阅的起始位置信息，由获取订阅日志起始位置接口返回。 | dGVzdDIwMTYxMjEyMTAxMC5zdGF0ZXRlc3QtY29tYmxvZ2h6eDow |
 | limit | Int  | 是 | 获取订阅日志条数限制，目前小于等于1000 | 100 |
 | subscriptionName| String| 是 | 日志订阅的主题，命名规则：服务名.空间名  | test201612121010.statetest-combloghzx |
 
@@ -180,7 +180,7 @@
 |seq_id | INT | 序列号 | 0 |
 |count | INT | 返回日志条数， 小于等于limit| 1 |
 |next_position | STRING | 日志数据下个位置信息| dGVzdDIwMTYxMjEyMTAxMC5zdGF0ZXRlc3QtY29tYmxvZ2h6eDox |
-|reached_ending | BOOLEAN | 是否已到订阅日志末尾的标记 true：已到末尾 false：未到末尾。 | false  |
+|reached_ending | BOOLEAN | 是否已到订阅日志末尾的标记 &nbsp;true：已到末尾 &nbsp;false：未到末尾。 | false  |
 
 #### 3.2.3 代码示例
 
