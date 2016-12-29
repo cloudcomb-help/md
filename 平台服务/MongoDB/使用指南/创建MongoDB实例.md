@@ -1,3 +1,4 @@
+# 创建MongoDB实例
 MongoDB服务管理入口位于蜂巢首页的MongoDB选项，点击「MongoDB」，即可显示你的所有MongoDB实例列表。你可以在该界面进行实例的创建、修改实例设置等操作。
 
 ![](../image/MongoDB实例列表.png)
