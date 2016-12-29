@@ -8,3 +8,6 @@
 
 * [创建MongoDB实例](平台服务/MongoDB/使用指南/创建MongoDB实例.md)
 * [数据库实例管理](平台服务/MongoDB/使用指南/MongoDB实例管理.md)
+
+[常见问题]()
+* [MongoDB常见问题](平台服务/MognoDB/常见问题/MognoDB常见问题.md)
