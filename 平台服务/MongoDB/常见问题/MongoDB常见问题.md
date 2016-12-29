@@ -11,4 +11,5 @@ MongoDB实例目前为私网实例，需要先连上 VPN 后才能进行访问�
 数据库导入、导出命令举例:
 
     mongodump -h IP --port 端口 -u 用户名 -p 密码 -d 数据库 -o 文件存在路径 
+    
     mongorestore -h IP --port 27017 -u 'admin' -p '密码' --authenticationDatabase admin -d 数据库名 --drop 导出数据库路径
