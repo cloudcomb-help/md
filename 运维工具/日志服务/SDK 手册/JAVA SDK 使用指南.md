@@ -2,13 +2,13 @@
 
 安装maven插件：[The Maven Integration for Eclipse|http://www.eclipse.org/m2e/]
 添加pom依赖
-<code>
-<dependency>
-  <groupId>com.netease.stream</groupId>
-  <artifactId>stream-java-sdk</artifactId>
-  <version>0.1</version>
-</dependency>
-</code>
+
+    <dependency>
+      <groupId>com.netease.stream</groupId>
+      <artifactId>stream-java-sdk</artifactId>
+      <version>0.1</version>
+    </dependency>
+
 [SDK直接下载地址|http://cloudcomb-wiki.nos-eastchina1.126.net/stream-java-sdk-0.1.tar.gz]
 
 
