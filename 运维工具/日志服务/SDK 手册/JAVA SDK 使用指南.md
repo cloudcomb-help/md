@@ -2,13 +2,13 @@
 
 安装maven插件：[The Maven Integration for Eclipse|http://www.eclipse.org/m2e/]
 添加pom依赖
-<pre>
+<code>
 <dependency>
   <groupId>com.netease.stream</groupId>
   <artifactId>stream-java-sdk</artifactId>
   <version>0.1</version>
 </dependency>
-</pre>
+</code>
 [SDK直接下载地址|http://cloudcomb-wiki.nos-eastchina1.126.net/stream-java-sdk-0.1.tar.gz]
 
 
@@ -19,6 +19,7 @@
 在获取到Access key 和 Secretkey之后，可以通过以下方式进行密钥设置：
 
 <pre>
+
 import com.netease.stream.client.StreamClient;
 
 String accessKey = "your-accesskey";
