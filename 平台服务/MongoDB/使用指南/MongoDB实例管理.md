@@ -1,5 +1,5 @@
-# MongoDB实例管理
-在MongoDB首页，点击「实例名称」进入实例的详情页面。该页面包含了实例的性能监控、备份管理、详细信息、运行日志和操作日志。
+# MongoDB 实例管理
+在 MongoDB 首页，点击「实例名称」进入实例的详情页面。该页面包含了实例的性能监控、备份管理、详细信息、运行日志和操作日志。
 
 ## 实例配置详情
 实例的详情页面顶部展示了实例名称、规格和运行状态等基本信息，将鼠标移至详情处可查看实例的基本信息、连接信息、备份信息和计费信息。
@@ -11,7 +11,7 @@
 
     ”mongodb://username:password@192.168.0.1:27017/admin?replicaSet=comb-set&key=value"
 
-MongoDB Driver通过URI来连接MongoDB服务，URI格式适用于所有官方提供的各种语言驱动，包括Java、Python等，URI格式如上所示。其中username和password为在MongoDB上创建的账号和密码，admin表示进行该账户鉴权的数据库，MongoDB的鉴权数据库必须是创建该账号时所在的数据库。蜂巢MongoDB服务统一在admin库上为用户创建账号。192.168.0.1:27017表示提供给驱动连接MongoDB的种子，蜂巢MongoDB提供实例浮动IP作为种子。comb-set为MongoDB实例的复制集名称。&号后的key和value对表示其他可设置的连接参数，可指定多个。下面是使用Java驱动连接MongoDB的例子：
+MongoDB Driver 通过 URI 来连接 MongoDB 服务，URI 格式适用于所有官方提供的各种语言驱动，包括 Java、Python 等，URI 格式如上所示。其中 username 和 password 为在 MongoDB 上创建的账号和密码，admin 表示进行该账户鉴权的数据库，MongoDB 的鉴权数据库必须是创建该账号时所在的数据库。蜂巢 MongoDB 服务统一在 admin 库上为用户创建账号。192.168.0.1:27017 表示提供给驱动连接 MongoDB 的种子，蜂巢 MongoDB 提供实例浮动 IP 作为种子。comb-set 为 MongoDB 实例的复制集名称。&号后的 key 和 value 对表示其他可设置的连接参数，可指定多个。下面是使用 Java 驱动连接 MongoDB 的例子：
 
 
     public static String mongoConnStr = "59.111.96.48:27017";
@@ -35,7 +35,7 @@ MongoDB Driver通过URI来连接MongoDB服务，URI格式适用于所有官方�
     }
 
 ## 账号管理
-账号默认为root，目前仅支持使用root作为账号名称，设置密码并确认密码之后点击「立即创建」账号root即新建完成。
+账号默认为 root，目前仅支持使用 root 作为账号名称，设置密码并确认密码之后点击「立即创建」账号 root 即新建完成。
 
 ![](../image/创建账号.png)
 
@@ -44,7 +44,7 @@ MongoDB Driver通过URI来连接MongoDB服务，URI格式适用于所有官方�
 
 ## 性能监控
 
-在实例详情界面，点击「性能监控」标签进入到MongoDB实例性能监控界面，该页面默认展示了CPU利用率、数据盘空间利用率、IO利用率、可用存储空间、CRUD、慢查询数、连接数、待处理请求队列、断言、复制延迟的监控数据，可以基于用户指定的时间范围，提供不同聚合区间和实时监控功能。
+在实例详情界面，点击「性能监控」标签进入到 MongoDB 实例性能监控界面，该页面默认展示了 CPU 利用率、数据盘空间利用率、IO 利用率、可用存储空间、CRUD、慢查询数、连接数、待处理请求队列、断言、复制延迟的监控数据，可以基于用户指定的时间范围，提供不同聚合区间和实时监控功能。
 
 ![](../image/性能监控.png)
 
@@ -77,7 +77,7 @@ MongoDB Driver通过URI来连接MongoDB服务，URI格式适用于所有官方�
 ![](../image/删除备份.png)
 
 ## 日志管理
-### MongoDB运行日志
+### MongoDB 运行日志
 在实例详情页面中，点击「运行日志」，可查看该实例的运行日志；点击「查看更多运行日志」，可以加载更多的运行日志，如下图所示：
 ![](../image/运行日志.png)
 
