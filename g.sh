@@ -1,5 +1,5 @@
-set /p commitString=
+read commit
 git add .
-git commit -m "Enhanment:%commitString%"
+git commit -m "Enhanment:$commit%"
 git push
-r.bat
+sh g.sh
