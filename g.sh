@@ -1,5 +1,6 @@
+echo "commit:"
 read commit
 git add .
-git commit -m "Enhanment:$commit%"
+git commit -m "Enhanment:$commit"
 git push
-sh g.sh
+sh r.sh
