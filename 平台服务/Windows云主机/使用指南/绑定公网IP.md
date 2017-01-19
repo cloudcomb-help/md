@@ -1,16 +1,16 @@
-# �󶨹���IP
+# 绑定公网IP
 
-�������������ҳ���ϵġ��󶨹���IP��������Ϊ�����������һ������IP��
+点击云主机详情页面上的【绑定公网IP】，可以为你的云主机绑定一个公网IP。
 
-![](../image/Win����_ʹ��ָ��_�󶨹���IP1.png)
+![](../image/Win主机_使用指南_绑定公网IP1.png)
 
-������Ѿ��п��õĹ���IP������ֱ��ѡ����Ҫ�󶨵�IP��ַ��
+如果你已经有可用的公网IP，可以直接选择需要绑定的IP地址。
 
-![](../image/Win����_ʹ��ָ��_�󶨹���IP2.png)
+![](../image/Win主机_使用指南_绑定公网IP2.png)
 
-����㻹û�й���IP��������󶨹���IP����ϵͳ����ʾ����Ҫ�´���һ������IP��
+如果你还没有公网IP，点击【绑定公网IP】后，系统会提示你需要新创建一个公网IP。
 
-![](../image/Win����_ʹ��ָ��_�󶨹���IP3.png)
+![](../image/Win主机_使用指南_绑定公网IP3.png)
 
-���ڹ���IP�ĸ���������˵�����Բμ�[IP ����ʹ��ָ��.md](http://support.c.163.com/md.html#!ƽ̨����/IP ����/ʹ��ָ��/IP ����ʹ��ָ��.md)
+关于公网IP的更多具体操作说明可以参见[IP 管理使用指南.md](http://support.c.163.com/md.html#!平台服务/IP 管理/使用指南/IP 管理使用指南.md)
 
