@@ -55,13 +55,14 @@ http://lbs-eastchina1.126.net/lbs?version=1.0&bucketname=test
 #### 接口
 
 	POST /${bucketName}/${objectName}?offset=${offset}&complete=${complete}&context={context}&version=1.0 HTTP/1.1
-	    Host: $(host)
-	            Content-Length: ${length}
-	            Content-Type: ${contentType}
-	            Content-MD5: ${md5}
-	            x-nos-token: ${token}
+	Host: $(host)
+	Content-Length: ${length}
+	Content-Type: ${contentType}
+	Content-MD5: ${md5}
+	x-nos-token: ${token}
 
-	            <data of body>
+	<data of body>
+
 #### 参数
 |      名称      |  类型  | 是否必须 |                                                                                                   描述                                                                                                   |
 |----------------|--------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -152,7 +153,9 @@ HTTP/1.1 200 OK
 	Host: ${host}
 	x-nos-token: ${token}
 #### 参数
-| 名称        | 类型   | 是否必须 | 描述                                                                                                                                                                                                     |
+
+|     名称    |  类型  | 是否必须 |                                                                                                   描述                                                                                                   |
+|-------------|--------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | host        | string | 是       | 查询的域名，为：nos-eastchina1.126.net                                                                                                                                                                   |
 | bucketName  | string | 是       | 上传的桶名                                                                                                                                                                                               |
 | objectName  | string | 是       | 上传的对象名                                                                                                                                                                                             |
