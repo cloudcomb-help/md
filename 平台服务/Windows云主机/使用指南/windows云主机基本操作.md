@@ -1,163 +1,163 @@
-# »ù±¾²Ù×÷
+# åŸºæœ¬æ“ä½œ
 
-WindowsÔÆÖ÷»ú¹ÜÀíÈë¿ÚÎ»ÓÚ·ä³²Ê×Ò³µÄWindowsÖ÷»ú·þÎñÑ¡Ïî¡£µã»÷¡¸WindowsÖ÷»ú¡¹£¬¼´¿ÉÏÔÊ¾ÄãËùÓÐµÄWindowsÖ÷»ú¡£Äã¿ÉÒÔÔÚ¸Ã½çÃæ¶ÔWindowsÖ÷»ú½øÐÐ´´½¨¡¢É¾³ý¡¢Æô¶¯¡¢ÖØÆôÒÔ¼°Í£Ö¹µÈÒ»ÏµÁÐ²Ù×÷£¬´ËÍâ»¹¿ÉÒÔ¶ÔÔÆÖ÷»úÏà¹ØÊý¾Ý½øÐÐÉèÖÃ£¬»ñÈ¡ÔÆÖ÷»úVNC£¬ÒÔ¼°½øÐÐ´Ó¾µÏñ»Ö¸´£¬¹Ò/Ð¶ÔØÔÆÓ²ÅÌ£¬¹Ò/Ð¶ÔØÍâÍø¶Ë¿ÚµÈ²Ù×÷¡£
+Windowsäº‘ä¸»æœºç®¡ç†å…¥å£ä½äºŽèœ‚å·¢é¦–é¡µçš„Windowsä¸»æœºæœåŠ¡é€‰é¡¹ã€‚ç‚¹å‡»ã€ŒWindowsä¸»æœºã€ï¼Œå³å¯æ˜¾ç¤ºä½ æ‰€æœ‰çš„Windowsä¸»æœºã€‚ä½ å¯ä»¥åœ¨è¯¥ç•Œé¢å¯¹Windowsä¸»æœºè¿›è¡Œåˆ›å»ºã€åˆ é™¤ã€å¯åŠ¨ã€é‡å¯ä»¥åŠåœæ­¢ç­‰ä¸€ç³»åˆ—æ“ä½œï¼Œæ­¤å¤–è¿˜å¯ä»¥å¯¹äº‘ä¸»æœºç›¸å…³æ•°æ®è¿›è¡Œè®¾ç½®ï¼ŒèŽ·å–äº‘ä¸»æœºVNCï¼Œä»¥åŠè¿›è¡Œä»Žé•œåƒæ¢å¤ï¼ŒæŒ‚/å¸è½½äº‘ç¡¬ç›˜ï¼ŒæŒ‚/å¸è½½å¤–ç½‘ç«¯å£ç­‰æ“ä½œã€‚
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_×ÜÀÀ.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_æ€»è§ˆ.png)
 
-## ´´½¨WindowsÔÆÖ÷»ú
+## åˆ›å»ºWindowsäº‘ä¸»æœº
 
-ÔÚWindowsÔÆÖ÷»úÖ÷½çÃæ£¬µã»÷¡¸´´½¨WindowsÔÆÖ÷»ú¡¹¾Í¿É´´½¨Ò»Ì¨ÐÂµÄWindowsÔÆÖ÷»ú¡£´´½¨ÔÆÖ÷»úµÄ½çÃæÈçÏÂÍ¼ËùÊ¾£ºÊ×ÏÈÑ¡ÔñÊ¹ÓÃµÄ¾µÏñ£¬Ñ¡ÔñÔÆÖ÷»úCPU¡¢ÄÚ´æ¡¢ÏµÍ³ÅÌ´óÐ¡£¬È»ºóÌîÐ´ÔÆÖ÷»úÃû³ÆºÍÃèÊö£¬µã»÷¡¸Á¢¼´´´½¨¡¹°´Å¥£¬¿ªÊ¼´´½¨ÔÆÖ÷»ú¡£
+åœ¨Windowsäº‘ä¸»æœºä¸»ç•Œé¢ï¼Œç‚¹å‡»ã€Œåˆ›å»ºWindowsäº‘ä¸»æœºã€å°±å¯åˆ›å»ºä¸€å°æ–°çš„Windowsäº‘ä¸»æœºã€‚åˆ›å»ºäº‘ä¸»æœºçš„ç•Œé¢å¦‚ä¸‹å›¾æ‰€ç¤ºï¼šé¦–å…ˆé€‰æ‹©ä½¿ç”¨çš„é•œåƒï¼Œé€‰æ‹©äº‘ä¸»æœºCPUã€å†…å­˜ã€ç³»ç»Ÿç›˜å¤§å°ï¼Œç„¶åŽå¡«å†™äº‘ä¸»æœºåç§°å’Œæè¿°ï¼Œç‚¹å‡»ã€Œç«‹å³åˆ›å»ºã€æŒ‰é’®ï¼Œå¼€å§‹åˆ›å»ºäº‘ä¸»æœºã€‚
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_´´½¨windowsÔÆÖ÷»ú1.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_åˆ›å»ºwindowsäº‘ä¸»æœº1.png)
 
-<span>Attention:</span><div class="alertContent">ÔÆÖ÷»ú´´½¨Ä¬ÈÏ²»¿ªÆô¹«Íø£¬²»¹ÒÔØÔÆÓ²ÅÌ£¬´´½¨Íê³Éºó£¬¿ÉÒÔÔÙÔÚÔÆÖ÷»úÏêÇéÒ³ÃæÔÚÏß°ó¶¨¹«Íø¶Ë¿ÚºÍ¹ÒÔØÔÆÓ²ÅÌ¡£</div>
+<span>Attention:</span><div class="alertContent">äº‘ä¸»æœºåˆ›å»ºé»˜è®¤ä¸å¼€å¯å…¬ç½‘ï¼Œä¸æŒ‚è½½äº‘ç¡¬ç›˜ï¼Œåˆ›å»ºå®ŒæˆåŽï¼Œå¯ä»¥å†åœ¨äº‘ä¸»æœºè¯¦æƒ…é¡µé¢åœ¨çº¿ç»‘å®šå…¬ç½‘ç«¯å£å’ŒæŒ‚è½½äº‘ç¡¬ç›˜ã€‚</div>
 
-´´½¨¹ý³ÌÖÐ£¬ÔÆÖ÷»úµÄ×´Ì¬ÏÔÊ¾Îª£º´´½¨ÖÐ¡£µ±´´½¨Íê³Éºó£¬ÔÆÖ÷»úµÄ×´Ì¬»áÏÔÊ¾Îª£ºÔËÐÐÖÐ£¬ÕâÊ±ºò¾Í¿ÉÒÔ¶ÔÔÆÖ÷»ú½øÐÐÆäËû²Ù×÷ÁË¡£
+åˆ›å»ºè¿‡ç¨‹ä¸­ï¼Œäº‘ä¸»æœºçš„çŠ¶æ€æ˜¾ç¤ºä¸ºï¼šåˆ›å»ºä¸­ã€‚å½“åˆ›å»ºå®ŒæˆåŽï¼Œäº‘ä¸»æœºçš„çŠ¶æ€ä¼šæ˜¾ç¤ºä¸ºï¼šè¿è¡Œä¸­ï¼Œè¿™æ—¶å€™å°±å¯ä»¥å¯¹äº‘ä¸»æœºè¿›è¡Œå…¶ä»–æ“ä½œäº†ã€‚
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_´´½¨windowsÔÆÖ÷»ú2.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_åˆ›å»ºwindowsäº‘ä¸»æœº2.png)
 
-µã»÷¡¸Ö÷»úÃû³Æ¡¹£¬¼´¿É½øÈëÔÆÖ÷»ú¡¸ÏêÏ¸ÐÅÏ¢¡¹½çÃæ£¬ÈçÏÂÍ¼ËùÊ¾£º
+ç‚¹å‡»ã€Œä¸»æœºåç§°ã€ï¼Œå³å¯è¿›å…¥äº‘ä¸»æœºã€Œè¯¦ç»†ä¿¡æ¯ã€ç•Œé¢ï¼Œå¦‚ä¸‹å›¾æ‰€ç¤ºï¼š
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_´´½¨windowsÔÆÖ÷»ú3.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_åˆ›å»ºwindowsäº‘ä¸»æœº3.png)
 
 <span id = "firstlogin"></span>
 
-## µÇÂ¼WindowsÔÆÖ÷»ú
+## ç™»å½•Windowsäº‘ä¸»æœº
 
-### ³õ´ÎµÇÂ¼ÔÆÖ÷»ú
+### åˆæ¬¡ç™»å½•äº‘ä¸»æœº
 
 
-Èç¹ûÊÇ´ÓÍøÒ×·ä³²Ìá¹©µÄ»ù´¡¾µÏñÐÂ´´½¨µÄÔÆÖ÷»ú£¬Ê×´ÎµÇÂ¼µ½¸ÃÔÆÖ÷»ú£¬ÐèÒªÊ¹ÓÃVNC¿ØÖÆÌ¨µÇÂ¼ÔÆÖ÷»ú½øÐÐÏµÍ³³õÊ¼»¯£¬ÉèÖÃ¹ÜÀíÔ±ÓÃ»§ÃûºÍÃÜÂë£¬Ö®ºó²Å¿ÉÒÔµÇÂ¼ÔÆÖ÷»úÄÚ²¿¡£
+å¦‚æžœæ˜¯ä»Žç½‘æ˜“èœ‚å·¢æä¾›çš„åŸºç¡€é•œåƒæ–°åˆ›å»ºçš„äº‘ä¸»æœºï¼Œé¦–æ¬¡ç™»å½•åˆ°è¯¥äº‘ä¸»æœºï¼Œéœ€è¦ä½¿ç”¨VNCæŽ§åˆ¶å°ç™»å½•äº‘ä¸»æœºè¿›è¡Œç³»ç»Ÿåˆå§‹åŒ–ï¼Œè®¾ç½®ç®¡ç†å‘˜ç”¨æˆ·åå’Œå¯†ç ï¼Œä¹‹åŽæ‰å¯ä»¥ç™»å½•äº‘ä¸»æœºå†…éƒ¨ã€‚
 
-ÒÔWindows Server 2012R2¾µÏñ´´½¨µÄÒ»Ì¨ÔÆÖ÷»úÎªÀý£º
+ä»¥Windows Server 2012R2é•œåƒåˆ›å»ºçš„ä¸€å°äº‘ä¸»æœºä¸ºä¾‹ï¼š
 
-µã»÷ÔÆÖ÷»úÏêÇéÒ³ÃæÉÏµÄ¡¸VNC¡¹¡£
+ç‚¹å‡»äº‘ä¸»æœºè¯¦æƒ…é¡µé¢ä¸Šçš„ã€ŒVNCã€ã€‚
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_µÇÂ¼ÔÆÖ÷»ú1.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_ç™»å½•äº‘ä¸»æœº1.png)
 
-ÔÚµ¯³öµÄÒ³ÃæÉÏ·½ÊäÈëVNCÃÜÂë£¬°´»Ø³µ¡£
+åœ¨å¼¹å‡ºçš„é¡µé¢ä¸Šæ–¹è¾“å…¥VNCå¯†ç ï¼ŒæŒ‰å›žè½¦ã€‚
 
-<span>Attention:</span><div class="alertContent">VNCÃÜÂë½öÔÚµÚÒ»´Î½øÐÐVNCµÇÂ½µÄÊ±ºòÏÔÊ¾£¬ÒÔºó½«²»ÔÙÏÔÊ¾£¬ÇëÀÎ¼Ç¡£</div>
+<span>Attention:</span><div class="alertContent">VNCå¯†ç ä»…åœ¨ç¬¬ä¸€æ¬¡è¿›è¡ŒVNCç™»é™†çš„æ—¶å€™æ˜¾ç¤ºï¼Œä»¥åŽå°†ä¸å†æ˜¾ç¤ºï¼Œè¯·ç‰¢è®°ã€‚</div>
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_µÇÂ¼ÔÆÖ÷»ú2.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_ç™»å½•äº‘ä¸»æœº2.png)
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_µÇÂ¼ÔÆÖ÷»ú3.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_ç™»å½•äº‘ä¸»æœº3.png)
 
-Èç¹û¿´µ½ÉÏÊöÆÁ±£Ò³Ãæ£¬Çëµã»÷Ò³ÃæÓÒÉÏ·½µÄ¡¾Send CtrlAltDel¡¿
+å¦‚æžœçœ‹åˆ°ä¸Šè¿°å±ä¿é¡µé¢ï¼Œè¯·ç‚¹å‡»é¡µé¢å³ä¸Šæ–¹çš„ã€Send CtrlAltDelã€‘
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_µÇÂ¼ÔÆÖ÷»ú4.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_ç™»å½•äº‘ä¸»æœº4.png)
 
-½øÈëµÇÂ¼Ò³Ãæ¡£¿ªÊ¼ÎªÄãµÄÔÆÖ÷»úÉèÖÃ¹ÜÀíÔ±ÃÜÂë¡£ÃÜÂëÐèÒªÂú×ãÒ»¶¨µÄ¸´ÔÓ¶È²Å¿ÉÍ¨¹ý¡£
+è¿›å…¥ç™»å½•é¡µé¢ã€‚å¼€å§‹ä¸ºä½ çš„äº‘ä¸»æœºè®¾ç½®ç®¡ç†å‘˜å¯†ç ã€‚å¯†ç éœ€è¦æ»¡è¶³ä¸€å®šçš„å¤æ‚åº¦æ‰å¯é€šè¿‡ã€‚
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_µÇÂ¼ÔÆÖ÷»ú5.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_ç™»å½•äº‘ä¸»æœº5.png)
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_µÇÂ¼ÔÆÖ÷»ú6.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_ç™»å½•äº‘ä¸»æœº6.png)
 
-µã»÷È·¶¨Ö®ºó£¬¼´¿ÉµÇÂ¼½øÔÆÖ÷»úÄÚ²¿£º
+ç‚¹å‡»ç¡®å®šä¹‹åŽï¼Œå³å¯ç™»å½•è¿›äº‘ä¸»æœºå†…éƒ¨ï¼š
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_µÇÂ¼ÔÆÖ÷»ú7.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_ç™»å½•äº‘ä¸»æœº7.png)
 
-<span>Attention:</span><div class="alertContent">ÎÒÃÇÌá¹©µÄWindows²Ù×÷ÏµÍ³ÔÆÖ÷»ú¶¼ÊÇÎ´¼¤»îµÄ°æ±¾£¬ÄãÐèÒª×ÔÐÐ¹ºÂòÐòÁÐºÅ²¢ÔÚ³õÊ¼»¯¹ý³ÌÖÐ½øÐÐÉèÖÃºÍ¼¤»î£¬·ñÔò¿ÉÄÜµ¼ÖÂÄãµÄÔÆÖ÷»úÎÞ·¨Õý³£Ê¹ÓÃ¡£</div>
+<span>Attention:</span><div class="alertContent">æˆ‘ä»¬æä¾›çš„Windowsæ“ä½œç³»ç»Ÿäº‘ä¸»æœºéƒ½æ˜¯æœªæ¿€æ´»çš„ç‰ˆæœ¬ï¼Œä½ éœ€è¦è‡ªè¡Œè´­ä¹°åºåˆ—å·å¹¶åœ¨åˆå§‹åŒ–è¿‡ç¨‹ä¸­è¿›è¡Œè®¾ç½®å’Œæ¿€æ´»ï¼Œå¦åˆ™å¯èƒ½å¯¼è‡´ä½ çš„äº‘ä¸»æœºæ— æ³•æ­£å¸¸ä½¿ç”¨ã€‚</div>
 
-### ·Ç³õ´ÎµÇÂ¼
+### éžåˆæ¬¡ç™»å½•
 
-Èç¹ûÊÇ·ÇÊ×´ÎµÇÂ¼£¬³ýÉÏÊöÍ¨¹ýVNC¿ØÖÆÌ¨ + ÃÜÂëµÇÂ¼µÄ·½·¨Ö®Íâ£¬»¹¿ÉÒÔÍ¨¹ýÔ¶³ÌÁ¬½ÓµÄ·½Ê½µÇÂ¼ÔÆÖ÷»ú¡£
+å¦‚æžœæ˜¯éžé¦–æ¬¡ç™»å½•ï¼Œé™¤ä¸Šè¿°é€šè¿‡VNCæŽ§åˆ¶å° + å¯†ç ç™»å½•çš„æ–¹æ³•ä¹‹å¤–ï¼Œè¿˜å¯ä»¥é€šè¿‡è¿œç¨‹è¿žæŽ¥çš„æ–¹å¼ç™»å½•äº‘ä¸»æœºã€‚
 
-<span>Attention:</span><div class="alertContent">ÎªÁË·½±ãÄúµÄÊ¹ÓÃ£¬ÎÒÃÇÒÑ¾­Ä¬ÈÏ´ò¿ªÁËÔ¶³Ì×ÀÃæµÇÂ¼¹¦ÄÜ£¬Èç¹ûÄú²»ÐèÒª¸Ã¹¦ÄÜ£¬½¨Òé½øÐÐ¹Ø±Õ¡£</div>
+<span>Attention:</span><div class="alertContent">ä¸ºäº†æ–¹ä¾¿æ‚¨çš„ä½¿ç”¨ï¼Œæˆ‘ä»¬å·²ç»é»˜è®¤æ‰“å¼€äº†è¿œç¨‹æ¡Œé¢ç™»å½•åŠŸèƒ½ï¼Œå¦‚æžœæ‚¨ä¸éœ€è¦è¯¥åŠŸèƒ½ï¼Œå»ºè®®è¿›è¡Œå…³é—­ã€‚</div>
 
-Èç¹ûÄãÓÐ¸øÔÆÖ÷»ú°ó¶¨¹ý¹«ÍøIP£¬¿ÉÒÔÖ±½ÓÊ¹ÓÃÔ¶³ÌÁ¬½Óµ½´Ë¹«ÍøIP·ÃÎÊÔÆÖ÷»ú¡£
+å¦‚æžœä½ æœ‰ç»™äº‘ä¸»æœºç»‘å®šè¿‡å…¬ç½‘IPï¼Œå¯ä»¥ç›´æŽ¥ä½¿ç”¨è¿œç¨‹è¿žæŽ¥åˆ°æ­¤å…¬ç½‘IPè®¿é—®äº‘ä¸»æœºã€‚
 
-Èç¹ûÃ»ÓÐ¸øÔÆÖ÷»ú°ó¶¨¹ý¹«ÍøIP£¬¿ÉÒÔÊ¹ÓÃVPNÁ¬½Ó + ÔÆÖ÷»úË½ÓÐÍøIPµÄ·½Ê½·ÃÎÊÔÆÖ÷»ú¡£
+å¦‚æžœæ²¡æœ‰ç»™äº‘ä¸»æœºç»‘å®šè¿‡å…¬ç½‘IPï¼Œå¯ä»¥ä½¿ç”¨VPNè¿žæŽ¥ + äº‘ä¸»æœºç§æœ‰ç½‘IPçš„æ–¹å¼è®¿é—®äº‘ä¸»æœºã€‚
 
-¹ØÓÚÈçºÎÊ¹ÓÃVPN£¬¿ÉÒÔ²Î¿¼ [ÈçºÎÊ¹ÓÃ·ä³²OpenVPN](https://c.163.com/wiki/index.php?title=%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%9C%82%E5%B7%A2OpenVPN£©
+å…³äºŽå¦‚ä½•ä½¿ç”¨VPNï¼Œå¯ä»¥å‚è€ƒ [å¦‚ä½•ä½¿ç”¨èœ‚å·¢OpenVPN](https://c.163.com/wiki/index.php?title=%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%9C%82%E5%B7%A2OpenVPNï¼‰
 
-Á¬½ÓÉÏÁË·ä³²VPNÖ®ºó£¬´ò¿ªwindowsÔ¶³Ì×ÀÃæÁ¬½Ó£¬ÊäÈëÔÆÖ÷»úIPµØÖ·£¨¿ÉÒÔÔÚÔÆÖ÷»úÏêÇéÒ³ÃæÉÏ²é¿´£©
+è¿žæŽ¥ä¸Šäº†èœ‚å·¢VPNä¹‹åŽï¼Œæ‰“å¼€windowsè¿œç¨‹æ¡Œé¢è¿žæŽ¥ï¼Œè¾“å…¥äº‘ä¸»æœºIPåœ°å€ï¼ˆå¯ä»¥åœ¨äº‘ä¸»æœºè¯¦æƒ…é¡µé¢ä¸ŠæŸ¥çœ‹ï¼‰
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_·Ç³õ´ÎµÇÂ¼1.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_éžåˆæ¬¡ç™»å½•1.png)
 
-µã»÷[ÏÔÊ¾Ñ¡Ïî]£¬ÊäÈëÓÃ»§Ãû
+ç‚¹å‡»[æ˜¾ç¤ºé€‰é¡¹]ï¼Œè¾“å…¥ç”¨æˆ·å
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_·Ç³õ´ÎµÇÂ¼2.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_éžåˆæ¬¡ç™»å½•2.png)
 
-ÊäÈëÕË»§ÃÜÂë£¬µã»÷¡¾Á¬½Ó¡¿£¬
+è¾“å…¥è´¦æˆ·å¯†ç ï¼Œç‚¹å‡»ã€è¿žæŽ¥ã€‘ï¼Œ
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_·Ç³õ´ÎµÇÂ¼3.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_éžåˆæ¬¡ç™»å½•3.png)
 
-ÔÚµ¯³öµÄÒ³ÃæÖÐÑ¡Ôñ¡¾ÊÇ¡¿£¬¼´¿ÉÍ¨¹ýÔ¶³ÌÁ¬½ÓµÇÂ¼µ½ÔÆÖ÷»ú£¬
+åœ¨å¼¹å‡ºçš„é¡µé¢ä¸­é€‰æ‹©ã€æ˜¯ã€‘ï¼Œå³å¯é€šè¿‡è¿œç¨‹è¿žæŽ¥ç™»å½•åˆ°äº‘ä¸»æœºï¼Œ
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_·Ç³õ´ÎµÇÂ¼4.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_éžåˆæ¬¡ç™»å½•4.png)
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_·Ç³õ´ÎµÇÂ¼5.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_éžåˆæ¬¡ç™»å½•5.png)
 
 
-## ±£´æÎª¾µÏñ
+## ä¿å­˜ä¸ºé•œåƒ
 
-Äã¿ÉÒÔ½«µ±Ç°ÔÆÖ÷»ú±£´æÎª×Ô¶¨Òå¾µÏñ£¬ÔÚÔÆÖ÷»úÏêÇé½çÃæÉÏµã»÷¡°±£´æÎª¾µÏñ¡±£¬ÌîÐ´Ïà¹ØÐÅÏ¢£¬¼´¿É½«µ±Ç°ÔÆÖ÷»ú±£´æÎª×Ô¶¨Òå¾µÏñ¡£
+ä½ å¯ä»¥å°†å½“å‰äº‘ä¸»æœºä¿å­˜ä¸ºè‡ªå®šä¹‰é•œåƒï¼Œåœ¨äº‘ä¸»æœºè¯¦æƒ…ç•Œé¢ä¸Šç‚¹å‡»â€œä¿å­˜ä¸ºé•œåƒâ€ï¼Œå¡«å†™ç›¸å…³ä¿¡æ¯ï¼Œå³å¯å°†å½“å‰äº‘ä¸»æœºä¿å­˜ä¸ºè‡ªå®šä¹‰é•œåƒã€‚
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_±£´æÎª¾µÏñ1.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_ä¿å­˜ä¸ºé•œåƒ1.png)
 
-±£´æÁË×Ô¶¨Òå¾µÏñÖ®ºó£¬¿ÉÒÔÔÚÔÆÖ÷»úÏêÇéÒ³ÃæÓÒÉÏ½Ç£¬µã»÷¡¾WindowsÖ÷»ú¾µÏñ¡¿£¬²é¿´×Ô¶¨ÒåWindowsÖ÷»ú¾µÏñÐÅÏ¢£¬²¢½øÐÐÏà¹Ø¹ÜÀí²Ù×÷¡£
+ä¿å­˜äº†è‡ªå®šä¹‰é•œåƒä¹‹åŽï¼Œå¯ä»¥åœ¨äº‘ä¸»æœºè¯¦æƒ…é¡µé¢å³ä¸Šè§’ï¼Œç‚¹å‡»ã€Windowsä¸»æœºé•œåƒã€‘ï¼ŒæŸ¥çœ‹è‡ªå®šä¹‰Windowsä¸»æœºé•œåƒä¿¡æ¯ï¼Œå¹¶è¿›è¡Œç›¸å…³ç®¡ç†æ“ä½œã€‚
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_±£´æÎª¾µÏñ2.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_ä¿å­˜ä¸ºé•œåƒ2.png)
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_±£´æÎª¾µÏñ3.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_ä¿å­˜ä¸ºé•œåƒ3.png)
 
-½ñºó¿ÉÒÔÊ¹ÓÃÕâÐ©¾µÏñÀ´´´½¨ºÍ»Ö¸´ÔÆÖ÷»ú¡£
+ä»ŠåŽå¯ä»¥ä½¿ç”¨è¿™äº›é•œåƒæ¥åˆ›å»ºå’Œæ¢å¤äº‘ä¸»æœºã€‚
 
-<span>Attention:</span><div class="alertContent">½¨ÒéÏÈ¹Ø±ÕÔÆÖ÷»úÖ®ºóÔÙ½øÐÐ×Ô¶¨Òå¾µÏñµÄ´´½¨£¬ÒÔ±£Ö¤ËùÓÐ»º´æÊý¾Ý¶¼Ð´Èë´ÅÅÌ¡£</div>
+<span>Attention:</span><div class="alertContent">å»ºè®®å…ˆå…³é—­äº‘ä¸»æœºä¹‹åŽå†è¿›è¡Œè‡ªå®šä¹‰é•œåƒçš„åˆ›å»ºï¼Œä»¥ä¿è¯æ‰€æœ‰ç¼“å­˜æ•°æ®éƒ½å†™å…¥ç£ç›˜ã€‚</div>
 
 
-## ÉèÖÃÔÆÖ÷»ú
+## è®¾ç½®äº‘ä¸»æœº
 
-µã»÷ÔÆÖ÷»úÏêÇéÒ³ÃæÉÏµÄ¡¾ÉèÖÃ¡¿£¬ÉèÖÃÒ³ÃæÌá¹©ÁË¶ÔÔÆÖ÷»úÏà¹ØÐÅÏ¢µÄÐÞ¸Ä¹¦ÄÜ¡£
+ç‚¹å‡»äº‘ä¸»æœºè¯¦æƒ…é¡µé¢ä¸Šçš„ã€è®¾ç½®ã€‘ï¼Œè®¾ç½®é¡µé¢æä¾›äº†å¯¹äº‘ä¸»æœºç›¸å…³ä¿¡æ¯çš„ä¿®æ”¹åŠŸèƒ½ã€‚
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_ÉèÖÃÔÆÖ÷»ú1.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_è®¾ç½®äº‘ä¸»æœº1.png)
 
 
-## ´Ó¾µÏñ»Ö¸´
+## ä»Žé•œåƒæ¢å¤
 
-µã»÷ÔÆÖ÷»úÏêÇéÒ³ÃæÉÏµÄ ¡¾´Ó¾µÏñ»Ö¸´¡¿£¬¼´¿ÉÊ¹ÓÃ½«µ±Ç°ÔÆÖ÷»úÏµÍ³ÅÌ´Ó¾µÏñ»Ö¸´µÄ¹¦ÄÜ¡£
+ç‚¹å‡»äº‘ä¸»æœºè¯¦æƒ…é¡µé¢ä¸Šçš„ ã€ä»Žé•œåƒæ¢å¤ã€‘ï¼Œå³å¯ä½¿ç”¨å°†å½“å‰äº‘ä¸»æœºç³»ç»Ÿç›˜ä»Žé•œåƒæ¢å¤çš„åŠŸèƒ½ã€‚
 
-ÄãÑ¡ÔñÁËÄ¿±ê¾µÏñÖ®ºó£¬½«»áÁ¢¿Ì¿ªÊ¼´Ó¸Ã¾µÏñ»Ö¸´ÔÆÖ÷»ú¡£
+ä½ é€‰æ‹©äº†ç›®æ ‡é•œåƒä¹‹åŽï¼Œå°†ä¼šç«‹åˆ»å¼€å§‹ä»Žè¯¥é•œåƒæ¢å¤äº‘ä¸»æœºã€‚
 
-¸Ã²Ù×÷»á½«ÔÆÖ÷»úÔ­ÏµÍ³ÅÌÊý¾ÝÇå¿Õ£¬°´ÕÕËùÑ¡¾µÏñ½øÐÐ»Ö¸´£¬Çë½÷É÷Ê¹ÓÃ¸Ã²Ù×÷¡£
+è¯¥æ“ä½œä¼šå°†äº‘ä¸»æœºåŽŸç³»ç»Ÿç›˜æ•°æ®æ¸…ç©ºï¼ŒæŒ‰ç…§æ‰€é€‰é•œåƒè¿›è¡Œæ¢å¤ï¼Œè¯·è°¨æ…Žä½¿ç”¨è¯¥æ“ä½œã€‚
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_´Ó¾µÏñ»Ö¸´1.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_ä»Žé•œåƒæ¢å¤1.png)
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_´Ó¾µÏñ»Ö¸´2.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_ä»Žé•œåƒæ¢å¤2.png)
 
-<b>×¢Òâ: </b>
+<b>æ³¨æ„: </b>
 
-<b>´Ó¾µÏñ»Ö¸´ÔÆÖ÷»ú£¬ÔÆÖ÷»úµÄvncÃÜÂë²»±ä£¬Ô­ÔÆÖ÷»ú¹«Íø¶Ë¿ÚÈÔÈ»»á°ó¶¨ÔÚ¸ÃÔÆÖ÷»úÉÏ¡£</b>
+<b>ä»Žé•œåƒæ¢å¤äº‘ä¸»æœºï¼Œäº‘ä¸»æœºçš„vncå¯†ç ä¸å˜ï¼ŒåŽŸäº‘ä¸»æœºå…¬ç½‘ç«¯å£ä»ç„¶ä¼šç»‘å®šåœ¨è¯¥äº‘ä¸»æœºä¸Šã€‚</b>
 
-<b>ÔÆÓ²ÅÌÖÐµÄÊý¾ÝÈÔÈ»»á±£Áô£¬²¢ÇÒ¹ÒÔØÔÚ¸ÃÔÆÖ÷»úÉÏ£¬µ«ÊÇ¿ÉÄÜÐèÒª½øÈëÔÆÖ÷»úÖÐÖØÐÂ½øÐÐÔÆÓ²ÅÌ³õÊ¼»¯Áª»ú²Ù×÷£¨±ÈÈçÔÆÓ²ÅÌÎ´·ÖÅäÅÌ·ûµÄÇé¿ö£©£¬²Ù×÷·½·¨Çë²Î¿¼[³õÊ¼»¯ÔÆÓ²ÅÌ}(http://support.c.163.com/md.html#!Æ½Ì¨·þÎñ/WindowsÔÆÖ÷»ú/Ê¹ÓÃÖ¸ÄÏ/windowsÔÆÖ÷»ú¹ÒÔØÔÆÓ²ÅÌ.md/#formatvolume) ¡£</b>
+<b>äº‘ç¡¬ç›˜ä¸­çš„æ•°æ®ä»ç„¶ä¼šä¿ç•™ï¼Œå¹¶ä¸”æŒ‚è½½åœ¨è¯¥äº‘ä¸»æœºä¸Šï¼Œä½†æ˜¯å¯èƒ½éœ€è¦è¿›å…¥äº‘ä¸»æœºä¸­é‡æ–°è¿›è¡Œäº‘ç¡¬ç›˜åˆå§‹åŒ–è”æœºæ“ä½œï¼ˆæ¯”å¦‚äº‘ç¡¬ç›˜æœªåˆ†é…ç›˜ç¬¦çš„æƒ…å†µï¼‰ï¼Œæ“ä½œæ–¹æ³•è¯·å‚è€ƒ[åˆå§‹åŒ–äº‘ç¡¬ç›˜}(http://support.c.163.com/md.html#!å¹³å°æœåŠ¡/Windowsäº‘ä¸»æœº/ä½¿ç”¨æŒ‡å—/windowsäº‘ä¸»æœºæŒ‚è½½äº‘ç¡¬ç›˜.md/#formatvolume) ã€‚</b>
 
-<b>Èç¹ûÄúÊÇ´ÓÍøÒ×·ä³²Ìá¹©µÄ»ù´¡¾µÏñ»Ö¸´µÄÔÆÖ÷»ú£¬ÔòWindowsÏµÍ³µÄ¹ÜÀíÔ±µÇÂ¼ÃÜÂë»á¸Ä±ä£¬ÐèÒªÖØÐÂÉèÖÃ£¬Çë²Î¿¼[³õ´ÎµÇÂ¼ÔÆÖ÷»ú](#firstlogin)¡£´´½¨ÔÆÖ÷»úµÄ½çÃæÈçÏÂÍ¼ËùÊ¾£ºÊ×ÏÈÑ¡ÔñÊ¹ÓÃµÄ¾µÏñ£¬Ñ¡ÔñÔÆÖ÷»úCPU¡¢ÄÚ´æ¡¢ÏµÍ³ÅÌ´óÐ¡£¬È»ºóÌîÐ´ÔÆÖ÷»úÃû³ÆºÍÃèÊö£¬µã»÷¡¸Á¢¼´´´½¨¡¹°´Å¥£¬¿ªÊ¼´´½¨ÔÆÖ÷»ú¡£</b>
+<b>å¦‚æžœæ‚¨æ˜¯ä»Žç½‘æ˜“èœ‚å·¢æä¾›çš„åŸºç¡€é•œåƒæ¢å¤çš„äº‘ä¸»æœºï¼Œåˆ™Windowsç³»ç»Ÿçš„ç®¡ç†å‘˜ç™»å½•å¯†ç ä¼šæ”¹å˜ï¼Œéœ€è¦é‡æ–°è®¾ç½®ï¼Œè¯·å‚è€ƒ[åˆæ¬¡ç™»å½•äº‘ä¸»æœº](#firstlogin)ã€‚åˆ›å»ºäº‘ä¸»æœºçš„ç•Œé¢å¦‚ä¸‹å›¾æ‰€ç¤ºï¼šé¦–å…ˆé€‰æ‹©ä½¿ç”¨çš„é•œåƒï¼Œé€‰æ‹©äº‘ä¸»æœºCPUã€å†…å­˜ã€ç³»ç»Ÿç›˜å¤§å°ï¼Œç„¶åŽå¡«å†™äº‘ä¸»æœºåç§°å’Œæè¿°ï¼Œç‚¹å‡»ã€Œç«‹å³åˆ›å»ºã€æŒ‰é’®ï¼Œå¼€å§‹åˆ›å»ºäº‘ä¸»æœºã€‚</b>
 
-<b> Èç¹ûÊÇ´ÓÄúµÄ×Ô¶¨Òå¾µÏñ»Ö¸´µÄÔÆÖ÷»ú£¬ÔòµÇÂ¼ÃÜÂëÓë×Ô¶¨Òå¾µÏñ±£³ÖÒ»ÖÂ¡£</b>
+<b> å¦‚æžœæ˜¯ä»Žæ‚¨çš„è‡ªå®šä¹‰é•œåƒæ¢å¤çš„äº‘ä¸»æœºï¼Œåˆ™ç™»å½•å¯†ç ä¸Žè‡ªå®šä¹‰é•œåƒä¿æŒä¸€è‡´ã€‚</b>
 
-## ÐÔÄÜ¼à¿Ø
+## æ€§èƒ½ç›‘æŽ§
 
-µã»÷¡¸ÐÔÄÜ¼à¿Ø¡¹°å¿é£¬¿ÉÒÔ²é¿´µ±Ç°ÔÆÖ÷»úµÄ×´Ì¬¼à¿ØÊý¾Ý£¬°üº¬ÓÐCPUÀûÓÃÂÊ¡¢ÄÚ´æÀûÓÃÂÊ¡¢ÍøÂçÁ÷ÈëÁ÷³öÁ¿¡¢´ÅÅÌ¶ÁÐ´²Ù×÷ÑÓÊ±¡¢´ÅÅÌÍÌÍÂÁ¿¡¢´ÅÅÌIOPSÁù¸ö¼à¿ØÏî¡£
+ç‚¹å‡»ã€Œæ€§èƒ½ç›‘æŽ§ã€æ¿å—ï¼Œå¯ä»¥æŸ¥çœ‹å½“å‰äº‘ä¸»æœºçš„çŠ¶æ€ç›‘æŽ§æ•°æ®ï¼ŒåŒ…å«æœ‰CPUåˆ©ç”¨çŽ‡ã€å†…å­˜åˆ©ç”¨çŽ‡ã€ç½‘ç»œæµå…¥æµå‡ºé‡ã€ç£ç›˜è¯»å†™æ“ä½œå»¶æ—¶ã€ç£ç›˜åžåé‡ã€ç£ç›˜IOPSå…­ä¸ªç›‘æŽ§é¡¹ã€‚
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_ÐÔÄÜ¼à¿Ø1.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_æ€§èƒ½ç›‘æŽ§1.png)
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_ÐÔÄÜ¼à¿Ø2.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_æ€§èƒ½ç›‘æŽ§2.png)
 
-## ²Ù×÷ÈÕÖ¾
+## æ“ä½œæ—¥å¿—
 
-µã»÷¡¸²Ù×÷ÈÕÖ¾¡¹°å¿é£¬¿ÉÒÔ²é¿´×î½ü¶ÔÔÆÖ÷»úµÄ²Ù×÷
+ç‚¹å‡»ã€Œæ“ä½œæ—¥å¿—ã€æ¿å—ï¼Œå¯ä»¥æŸ¥çœ‹æœ€è¿‘å¯¹äº‘ä¸»æœºçš„æ“ä½œ
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_²Ù×÷ÈÕÖ¾1.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_æ“ä½œæ—¥å¿—1.png)
 
-## ×Ô¶¨Òå¾µÏñÁÐ±í
+## è‡ªå®šä¹‰é•œåƒåˆ—è¡¨
 
-ÔÚÔÆÖ÷»úÁÐ±íÓÒÉÏ·½µã»÷¡¾Windows Ö÷»ú¾µÏñ¡¿
+åœ¨äº‘ä¸»æœºåˆ—è¡¨å³ä¸Šæ–¹ç‚¹å‡»ã€Windows ä¸»æœºé•œåƒã€‘
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_×Ô¶¨Òå¾µÏñÁÐ±í1.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_è‡ªå®šä¹‰é•œåƒåˆ—è¡¨1.png)
 
-¿ÉÒÔÔÚ¸ÃÒ³ÃæÉÏ²é¿´ËùÓÐµÄ×Ô¶¨ÒåwindowsÖ÷»ú¾µÏñ£¬²¢½øÐÐ¹ÜÀí²Ù×÷¡£
+å¯ä»¥åœ¨è¯¥é¡µé¢ä¸ŠæŸ¥çœ‹æ‰€æœ‰çš„è‡ªå®šä¹‰windowsä¸»æœºé•œåƒï¼Œå¹¶è¿›è¡Œç®¡ç†æ“ä½œã€‚
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_×Ô¶¨Òå¾µÏñÁÐ±í2.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_è‡ªå®šä¹‰é•œåƒåˆ—è¡¨2.png)
 
 
