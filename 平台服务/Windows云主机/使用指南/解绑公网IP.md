@@ -1,9 +1,9 @@
-# ½â°ó¹«ÍøIP
+# è§£ç»‘å…¬ç½‘IP
 
-°ó¶¨IPºó£¬Äã¿ÉÒÔÔÚÔÆÖ÷»úÏêÇéÒ³Ãæ£¬»òÕßIP¹ÜÀíÒ³Ãæ£¬Îª¸Ã¹«ÍøIPÖ´ÐÐ½â°ó²Ù×÷¡£
+ç»‘å®šIPåŽï¼Œä½ å¯ä»¥åœ¨äº‘ä¸»æœºè¯¦æƒ…é¡µé¢ï¼Œæˆ–è€…IPç®¡ç†é¡µé¢ï¼Œä¸ºè¯¥å…¬ç½‘IPæ‰§è¡Œè§£ç»‘æ“ä½œã€‚
 
-![](../image/WinÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_½â°ó¹«ÍøIP1.png)
+![](../image/Winä¸»æœº_ä½¿ç”¨æŒ‡å—_è§£ç»‘å…¬ç½‘IP1.png)
 
-×¢Òâ£ºÉ¾³ýÔÆÖ÷»ú£¬»á×Ô¶¯½«¹ÒÔØµ½¸ÃÔÆÖ÷»úµÄ¹«ÍøIP½â°óµô£¬µ«²»»áÊÍ·Å¸Ã¹«ÍøIP¡£
+æ³¨æ„ï¼šåˆ é™¤äº‘ä¸»æœºï¼Œä¼šè‡ªåŠ¨å°†æŒ‚è½½åˆ°è¯¥äº‘ä¸»æœºçš„å…¬ç½‘IPè§£ç»‘æŽ‰ï¼Œä½†ä¸ä¼šé‡Šæ”¾è¯¥å…¬ç½‘IPã€‚
 
-¹ØÓÚ¹«ÍøIPµÄ¸ü¶à¾ßÌå²Ù×÷ËµÃ÷¿ÉÒÔ²Î¼û[IP ¹ÜÀíÊ¹ÓÃÖ¸ÄÏ.md](http://support.c.163.com/md.html#!Æ½Ì¨·þÎñ/IP ¹ÜÀí/Ê¹ÓÃÖ¸ÄÏ/IP ¹ÜÀíÊ¹ÓÃÖ¸ÄÏ.md)
+å…³äºŽå…¬ç½‘IPçš„æ›´å¤šå…·ä½“æ“ä½œè¯´æ˜Žå¯ä»¥å‚è§[IP ç®¡ç†ä½¿ç”¨æŒ‡å—.md](http://support.c.163.com/md.html#!å¹³å°æœåŠ¡/IP ç®¡ç†/ä½¿ç”¨æŒ‡å—/IP ç®¡ç†ä½¿ç”¨æŒ‡å—.md)
