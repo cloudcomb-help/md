@@ -1,3 +1,4 @@
+git pull
 echo "commit:"
 read commit
 git add .
