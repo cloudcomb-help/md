@@ -22,3 +22,4 @@
 [SDK 手册]()  
 
 * [JAVA SDK 使用指南](运维工具/日志服务/SDK 手册/JAVA SDK 使用指南.md)
+* [Python SDK 使用指南](运维工具/日志服务/SDK 手册/Python SDK 使用指南.md)
