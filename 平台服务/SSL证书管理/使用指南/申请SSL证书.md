@@ -38,7 +38,7 @@
 
 也可以在此查看域名所有权的验证方式。
 
-<span>Attention:</span><div class="alertContent">请尽快于 24 小时内手动设置如下 DNS 解析记录，验证通过后 20 分钟内即可吊销该证书，超时将导致吊销失败。</div>
+<span>Attention:</span><div class="alertContent">请尽快于 24 小时内手动设置 DNS 解析记录，验证通过后 20 分钟内即可签发证书，超时将导致申请失败。</div>
 
 
 ## 添加 DNS 解析记录
