@@ -20,7 +20,7 @@
     try:
         object_lists = client.list_objects(bucket)
         for object_list in object_lists["response"].findall("Contents"):
-            print object_list.find("Key")
+            print object_list.find("Key").text
     except nos.exceptions.ServiceException as e:
         print (
             "ServiceException: %s\n"

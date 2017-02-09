@@ -120,7 +120,7 @@
     try:
         object_lists = client.list_objects(bucket)
         for object_list in object_lists["response"].findall("Contents"):
-            print object_list.find("Key"), object_list.find("Size"), object_list.find("LastModified")
+            print object_list.find("Key").text, object_list.find("Size").text, object_list.find("LastModified").text
     except nos.exceptions.ServiceException as e:
         print (
             "ServiceException: %s\n"
