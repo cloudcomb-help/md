@@ -53,7 +53,3 @@ OpenVPN 是一个功能齐全的 SSL VPN，它使用行业标准的 SSL/TLS 协�
 
 ![](../image/如何使用蜂巢OpenVPN-Ubuntu.png)
 5.最后通过 ping 各服务提供的私有 IP，即可和使用本地的网络一样直接通过私有网进行数据传输和操作。
-
-## iOS/Android 使用 OpenVPN
-
-详见：[如何使用手机 SSH 客户端](http://support.c.163.com/md.html#!容器服务/服务管理/使用技巧/如何使用手机 SSH 客户端.md)
