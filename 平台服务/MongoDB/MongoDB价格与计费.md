@@ -53,7 +53,8 @@ MongoDB 提供按量和包年包月付费的使用方式。
 
 ### 4.1. 收费方式
 
-4.1.1. 计费项：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MongoDB 按量付费价格 = 计算机资源价格 + 存储资源价格
+4.1.1. 计费项：
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MongoDB 按量付费价格 = 计算机资源价格 + 存储资源价格
 
 4.1.2. 用户购买按量付费资源时，账户余额必须大于等于 50 元或有可用代金券。
 
