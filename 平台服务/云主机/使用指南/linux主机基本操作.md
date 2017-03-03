@@ -11,17 +11,17 @@ linux云主机管理入口位于蜂巢首页的云主机服务选项。点击「
 
 点击「立即创建」按钮，开始创建云主机。
 
-![](../image/linux/linux主机_使用指南_创建linux云主机2.png)
+![](../image/linux/linux主机_使用指南_创建linux云主机2.PNG)
 
 <span>Attention:</span><div class="alertContent">云主机创建默认不开启公网，不挂载云硬盘，创建完成后，可以再在云主机详情页面在线绑定公网端口和挂载云硬盘。</div>
 
 创建过程中，云主机的状态显示为：创建中。当创建完成后，云主机的状态会显示为：运行中，这时候就可以对云主机进行其他操作了。
 
-![](../image/linux/linux主机_使用指南_创建linux云主机2.png)
+![](../image/linux/linux主机_使用指南_创建linux云主机2.PNG)
 
 点击「主机名称」，即可进入云主机「详细信息」界面，如下图所示:
 
-![](../image/linux/linux主机_使用指南_创建linux云主机3.png)
+![](../image/linux/linux主机_使用指南_创建linux云主机3.PNG)
 
 
 
@@ -47,7 +47,7 @@ SSH方式就是通过SSH客户端工具，连接到云主机的IP地址和相应
 
 VNC控制台方式就是直接在产品管理员界面上选择云主机之后点击“更多”中的“VNC”按钮，需要输入云主机的用户名密码进行登录，请注意云主机默认屏蔽了用户名密码的登录方式，如果你需要使用VNC登录，请在ssh登录后，手工修改密码后再使用VNC控制台登录，另外需要注意VNC页面上的提示信息。VNC密码将在第一次VNC控制台方式登录的时候提示，下次登录将不再提示。
 
-![](../image/linux/linux主机_使用指南_登录linux云主机2.png)
+![](../image/linux/linux主机_使用指南_登录linux云主机2.PNG)
 
 ssh方式需要网络支持才可以使用，VNC不需要网络支持也可以使用，你可以认为VNC就是云主机的显示器。
 
@@ -56,22 +56,22 @@ ssh方式需要网络支持才可以使用，VNC不需要网络支持也可以�
 
 连接上用户VPN之后，在云主机页面上可以看到该云主机的内网IP，如果绑定了外网IP可以使用外网IP
 
-![](../image/linux/linux主机_使用指南_登录linux云主机3.png)
+![](../image/linux/linux主机_使用指南_登录linux云主机3.PNG)
 
 这里以Xshell5为例，
 
 1、安装并运行 Xshell，点击「文件」-「新建」，在「连接」目录输入相关信息：
 
-![](../image/linux/linux主机_使用指南_登录linux云主机4.png)
+![](../image/linux/linux主机_使用指南_登录linux云主机4.PNG)
 
 
 2、在「连接」-「用户身份验证」目录输入相关信息，用户名输入「root」：
 
-![](../image/linux/linux主机_使用指南_登录linux云主机5.png)
+![](../image/linux/linux主机_使用指南_登录linux云主机5.PNG)
 
 3、点击「浏览」按钮，弹出「用户密钥」窗口。点击「导入」，选择并导入本地公钥，后续点击「确定」即可完成连接。
 
-![](../image/linux/linux主机_使用指南_登录linux云主机6.png)
+![](../image/linux/linux主机_使用指南_登录linux云主机6.PNG)
 
 
 
@@ -80,17 +80,17 @@ ssh方式需要网络支持才可以使用，VNC不需要网络支持也可以�
 
 你可以将当前云主机保存为自定义镜像，在云主机详情界面上点击“保存为镜像”，填写相关信息，即可将当前云主机保存为自定义镜像。
 
-![](../image/linux/linux主机_使用指南_保存为镜像1.png)
+![](../image/linux/linux主机_使用指南_保存为镜像1.PNG)
 
-![](../image/linux/linux主机_使用指南_保存为镜像2.png)
+![](../image/linux/linux主机_使用指南_保存为镜像2.PNG)
 
 保存了自定义镜像之后，可以在云主机列表页面右上角，点击【自定义云主机镜像】，查看自定义云主机镜像信息，并进行相关管理操作。
 
-![](../image/linux/linux主机_使用指南_保存为镜像3.png)
+![](../image/linux/linux主机_使用指南_保存为镜像3.PNG)
 
 今后可以使用这些镜像来创建和恢复云主机。
 
-![](../image/linux/linux主机_使用指南_保存为镜像4.png)
+![](../image/linux/linux主机_使用指南_保存为镜像4.PNG)
 
 <span>Attention:</span><div class="alertContent">建议先关闭云主机之后再进行自定义镜像的创建，以保证所有缓存数据都写入磁盘。</div>
 
@@ -99,7 +99,7 @@ ssh方式需要网络支持才可以使用，VNC不需要网络支持也可以�
 
 点击云主机详情页面上的【设置】，设置页面提供了对云主机相关信息的修改功能。
 
-![](../image/linux/linux主机_使用指南_设置云主机1.png)
+![](../image/linux/linux主机_使用指南_设置云主机1.PNG)
 
 
 ## 从镜像恢复
@@ -128,16 +128,16 @@ ssh方式需要网络支持才可以使用，VNC不需要网络支持也可以�
 
 点击「性能监控」板块，可以查看当前云主机的状态监控数据，包含有CPU利用率、内存利用率、网络流入流出量、磁盘读写操作延时、磁盘吞吐量、磁盘IOPS六个监控项。
 
-![](../image/linux/linux主机_使用指南_性能监控1.png)
+![](../image/linux/linux主机_使用指南_性能监控1.PNG)
 
-![](../image/linux/linux主机_使用指南_性能监控2.png)
+![](../image/linux/linux主机_使用指南_性能监控2.PNG)
 
 
 ## 操作日志
 
 点击「操作日志」板块，可以查看最近对云主机的操作
 
-![](../image/linux/linux主机_使用指南_日志.png)
+![](../image/linux/linux主机_使用指南_日志.PNG)
 
 
 
@@ -145,11 +145,11 @@ ssh方式需要网络支持才可以使用，VNC不需要网络支持也可以�
 
 在云主机列表右上方点击【自定义云主机镜像】
 
-![](../image/linux/linux主机_使用指南_保存为镜像3.png)
+![](../image/linux/linux主机_使用指南_保存为镜像3.PNG)
 
 可以在该页面上查看所有的自定义云主机镜像，并进行管理操作。
 
-![](../image/linux/linux主机_使用指南_保存为镜像4.png)
+![](../image/linux/linux主机_使用指南_保存为镜像4.PNG)
 
 
 
