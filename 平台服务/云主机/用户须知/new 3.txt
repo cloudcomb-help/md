@@ -1,0 +1,82 @@
+curl -i 'http://localhost:8774/v2/17a256989aff4c8aaa4b9eb7cd41e590/servers/14ba8477-f434-4726-851a-43450554d233/action' -X POST -H "X-Auth-Project-Id: Project_hzluodan" -H "User-Agent: python-novaclient" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-Auth-Token: 452193d812ae499a8bcdcd3f21bbf68c" -d '{"transferInstance": {"tenant_id": "9651062b50644c83adf46643791dab9c","user_id":"d8cf012507f64826a5ce5ecf9c2a2e9f"}}'
+
+
+self._memcached.get(vm_value_key)
+
+            import cProfile, pstats, StringIO
+            pr = cProfile.Profile()
+            pr.enable()
+
+
+
+
+
+            pr.disable()
+            s = StringIO.StringIO()
+            sortby = 'cumulative'
+            ps = pstats.Stats(pr, stream=s).sort_stats(sortby)
+            ps.print_stats() 
+            print s.getvalue()
+
+转王盼
+
+curl -i 'http://netbetaapi.beta.server.163.org:8774/v2/6db0dde8b5704f60b5fb21f12da52b45/servers/f2d117ca-b46b-4535-907b-6a43e3caed70/action' -X POST -H "X-Auth-Project-Id: Project_hzluodan" -H "User-Agent: python-novaclient" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-Auth-Token: 00dc2fafbb6243a69d3f3ea907ad6357" -d '{"transferInstance": {"tenant_id": "981f3e7cdba14f0ab769d3325b931838","user_id":"2d0bc491612d4701ab24e3df862ca9ab"}}'
+
+转回
+
+curl -i 'http://netbetaapi.beta.server.163.org:8774/v2/981f3e7cdba14f0ab769d3325b931838/servers/f2d117ca-b46b-4535-907b-6a43e3caed70/action' -X POST -H "X-Auth-Project-Id: Project_hzluodan" -H "User-Agent: python-novaclient" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-Auth-Token: 302228b3f55c4283b8fc21293fc5c643" -d '{"transferInstance": {"tenant_id": "6db0dde8b5704f60b5fb21f12da52b45","user_id":"2d0bc491612d4701ab24e3df862ca9ab"}}'
+ 
+ 
+转admin
+curl -i 'http://localhost:8774/v2/17a256989aff4c8aaa4b9eb7cd41e590/servers/14ba8477-f434-4726-851a-43450554d233/action' -X POST -H "X-Auth-Project-Id: Project_hzluodan" -H "User-Agent: python-novaclient" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-Auth-Token: 096b791f70fc47c2b863c3eab1a6c85b" -d '{"transferInstance": {"tenant_id": "9651062b50644c83adf46643791dab9c","user_id":"d8cf012507f64826a5ce5ecf9c2a2e9f"}}'
+
+转user1
+curl -i 'http://localhost:8774/v2/9651062b50644c83adf46643791dab9c/servers/14ba8477-f434-4726-851a-43450554d233/action' -X POST -H "X-Auth-Project-Id: Project_hzluodan" -H "User-Agent: python-novaclient" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-Auth-Token: b32c42b58dce45cfb0e6a71ccd068384" -d '{"transferInstance": {"tenant_id": "17a256989aff4c8aaa4b9eb7cd41e590","user_id":"f3037f32df0946feaa0c4b0055f07adb"}}'
+
+
+	   
+	   
+	   
+
+
+
+
+
+
+
+
+2016-04-20 12:26:24.731 136015 INFO nova.osapi_compute.wsgi.server [req-3d49c135-f8e5-495f-a28c-68df8f78488a 8d8a3c7d985b4abd81ba7eb94521d70e 60dee09d28a948598b09bb6ee0c6d90b] 10.176.10.23 "POST /v2/60dee09d28a948598b09bb6ee0c6d90b/servers/a0c05726-1603-4a2f-8c39-8164ba794d62/action HTTP/1.1" status: 200 len: 179 time: 2.0034211
+
+
+您好，我们无法进入到您的容器中操作，容器本身的安全性需要您自己的来保证。
+打个比方就是您自己家里不关门，别人做再多事情都无法保证您家的安全。
+
+您可以直接在蜂巢控制台页面删除容器。
+
+vpn的使用可以参考这个页面的说明：
+https://c.163.com/wiki/index.php?title=%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8VPN
+
+
+
+
+
+
+
+
+grep -A 40 -B 16 transferInstance ./nova-api-os-compute.log.1|grep POST|grep actio|grep time
+
+
+
+grep 8d8a3c7d985b4abd81ba7eb94521d70e ./nova-api-os-compute.log|grep 60dee09d28a948598b09bb6ee0c6d90b|grep POST|grep time|grep action|
+
+
+
+在转移的前后需要对配额进行修改：
+
+对老租户要减配额使用量，对新租户要加配额使用量，又要防止转移后超了新租户配额限制（对老租户貌似没什么超限的影响）。
+
+如果转移之后，配额超限的话，转移会失败，原租户和新租户的配额使用量不变。
+
+云主机名称、虚拟化类型、网络信息、规格（这个主要）、云主机状态、任务、电源状态、操作系统状态、uuid
+
+
