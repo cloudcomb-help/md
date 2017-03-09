@@ -2,6 +2,8 @@
 
 网易蜂巢负载均衡在将请求转发给后端时，会将请求头插入 X-Forwarded-For 请求头，后端服务可以通过查询该 HTTP 头来获取原始 IP 地址。
 
+
+
 ##  1. Nginx 配置方案
 ### 1.1. 确认 http_realip_module 模块已安装
 
@@ -40,6 +42,7 @@ set_real_ip_from 的 IP 来自 1.2.中获取的负载均衡内网 IP；
 	service nginx restart	
 
 更多该模块的说明，详见 [http_realip_module](http://nginx.org/en/docs/http/ngx_http_realip_module.html) 。
+
 
 
 ## 2. Apache 配置方案
@@ -92,5 +95,20 @@ RPAF_ProxyIPs 的 IP 来自 2.2.中获取的负载均衡内网 IP；
 
 更多该模块的说明，详见 [mod_rpaf](https://github.com/gnif/mod_rpaf)。
 
+
+
+## 3. Tomcat7 配置方案
+### 3.1. 修改 server.xml 配置文件
+
+	vi /etc/tomcat7/server.xml
+
+在配置文件底部 pattern 中插入 `%{X-Forwarded-For}i` 字段（即：将 pattern 字段修改为 `pattern="%{X-Forwarded-For}i %h %l %u %t "%r" %s %b" />`）
+
+![](../image/运维指南-获取真实IP-修改配置文件-tomcat7.png)
+
+
+### 3.2. 重启 Tomcat7
+
+	service tomcat7 restart
 
 
