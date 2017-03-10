@@ -11,7 +11,7 @@ pypi地址:   [https://pypi.python.org/pypi/stream-python-sdk/](https://pypi.pyt
 
 ### 1.3 安装
 
-####　1.3.1 pip方式
+#### 1.3.1 pip方式
 
 如果您通过pip管理您的项目依赖，可以在你的控制台运行:sudo pip install stream-python-sdk
 
