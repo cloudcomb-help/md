@@ -167,6 +167,7 @@
   * [API 接口](平台服务/对象存储/直传相关文档/API接口.md)
   * [Android SDK](平台服务/对象存储/直传相关文档/Android-SDK.md)
   * [iOS SDK](平台服务/对象存储/直传相关文档/iOS-SDK.md)
+  * [JS SDK](平台服务/对象存储/直传相关文档/JS-SDK.md)
 
 
 [常见问题]()
