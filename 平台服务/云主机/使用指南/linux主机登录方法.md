@@ -1,49 +1,49 @@
-## µÇÂ¼linuxÔÆÖ÷»ú
+## ç™»å½•linuxäº‘ä¸»æœº
 
-### ³õ´ÎµÇÂ¼ÔÆÖ÷»ú
+### åˆæ¬¡ç™»å½•äº‘ä¸»æœº
 
-Ä¿Ç°Ìá¹©Á½ÖÖ·ÃÎÊlinuxÔÆÖ÷»úµÄ·½Ê½£¬µÚÒ»ÖÖÊÇÍ¨¹ýSSH½øÐÐµÇÂ¼£¬µÚ¶þÖÖÊÇÍ¨¹ýVNC¿ØÖÆÌ¨½øÐÐµÇÂ¼¡£
+ç›®å‰æä¾›ä¸¤ç§è®¿é—®linuxäº‘ä¸»æœºçš„æ–¹å¼ï¼Œç¬¬ä¸€ç§æ˜¯é€šè¿‡SSHè¿›è¡Œç™»å½•ï¼Œç¬¬äºŒç§æ˜¯é€šè¿‡VNCæŽ§åˆ¶å°è¿›è¡Œç™»å½•ã€‚
 
-####1.SSH·½Ê½
+####1.SSHæ–¹å¼
 
-SSH·½Ê½¾ÍÊÇÍ¨¹ýSSH¿Í»§¶Ë¹¤¾ß£¬Á¬½Óµ½ÔÆÖ÷»úµÄIPµØÖ·ºÍÏàÓ¦µÄ¶Ë¿Ú½øÐÐµÇÂ¼£¬IPÍ¨³£ÐèÒªÊ¹ÓÃÍâÍøIP£¬Èç¹ûÃ»ÓÐ°ó¶¨ÍâÍø¶Ë¿Ú£¬¿ÉÒÔÊ¹ÓÃ·ä³²VPNÀ´Í¨¹ýÔÆÖ÷»úµÄË½ÓÐÍøIPµÇÂ¼£¬ÈÏÖ¤·½Ê½Ò»°ãÎªÃÜÔ¿·½Ê½¡£
+SSHæ–¹å¼å°±æ˜¯é€šè¿‡SSHå®¢æˆ·ç«¯å·¥å…·ï¼Œè¿žæŽ¥åˆ°äº‘ä¸»æœºçš„IPåœ°å€å’Œç›¸åº”çš„ç«¯å£è¿›è¡Œç™»å½•ï¼ŒIPé€šå¸¸éœ€è¦ä½¿ç”¨å¤–ç½‘IPï¼Œå¦‚æžœæ²¡æœ‰ç»‘å®šå¤–ç½‘ç«¯å£ï¼Œå¯ä»¥ä½¿ç”¨èœ‚å·¢VPNæ¥é€šè¿‡äº‘ä¸»æœºçš„ç§æœ‰ç½‘IPç™»å½•ï¼Œè®¤è¯æ–¹å¼ä¸€èˆ¬ä¸ºå¯†é’¥æ–¹å¼ã€‚
 
-¹ØÓÚÈçºÎÊ¹ÓÃ·ä³²VPN£¬Çë²Î¿¼[ÈçºÎÊ¹ÓÃ·ä³²OpenVPN](http://support.c.163.com/md.html#!ÈÝÆ÷·þÎñ/·þÎñ¹ÜÀí/Ê¹ÓÃ¼¼ÇÉ/ÈçºÎÊ¹ÓÃ·ä³² OpenVPN.md)
+å…³äºŽå¦‚ä½•ä½¿ç”¨èœ‚å·¢VPNï¼Œè¯·å‚è€ƒ[å¦‚ä½•ä½¿ç”¨èœ‚å·¢OpenVPN](http://support.c.163.com/md.html#!å®¹å™¨æœåŠ¡/æœåŠ¡ç®¡ç†/ä½¿ç”¨æŠ€å·§/å¦‚ä½•ä½¿ç”¨èœ‚å·¢ OpenVPN.md)
 
-¹ØÓÚÈçºÎÊ¹ÓÃSSHÃÜÔ¿µÇÂ¼£¬Çë²Î¿¼[ÈçºÎÊ¹ÓÃSSHÃÜÔ¿µÇÂ¼](http://support.c.163.com/md.html#!ÈÝÆ÷·þÎñ/·þÎñ¹ÜÀí/Ê¹ÓÃ¼¼ÇÉ/ÈçºÎÊ¹ÓÃ SSH ÃÜÔ¿µÇÂ¼.md)
+å…³äºŽå¦‚ä½•ä½¿ç”¨SSHå¯†é’¥ç™»å½•ï¼Œè¯·å‚è€ƒ[å¦‚ä½•ä½¿ç”¨SSHå¯†é’¥ç™»å½•](http://support.c.163.com/md.html#!å®¹å™¨æœåŠ¡/æœåŠ¡ç®¡ç†/ä½¿ç”¨æŠ€å·§/å¦‚ä½•ä½¿ç”¨ SSH å¯†é’¥ç™»å½•.md)
 
-<span>Attention:</span><div class="alertContent">ÔÆÖ÷»úÄ¬ÈÏµÇÂ¼ÓÃ»§ÃûÎªroot¡£</div>
+<span>Attention:</span><div class="alertContent">äº‘ä¸»æœºé»˜è®¤ç™»å½•ç”¨æˆ·åä¸ºrootã€‚</div>
 
-####2.VNC¿ØÖÆÌ¨·½Ê½
+####2.VNCæŽ§åˆ¶å°æ–¹å¼
 
-VNC¿ØÖÆÌ¨·½Ê½¾ÍÊÇÖ±½ÓÔÚ²úÆ·¹ÜÀíÔ±½çÃæÉÏÑ¡ÔñÔÆÖ÷»úÖ®ºóµã»÷¡°¸ü¶à¡±ÖÐµÄ¡°VNC¡±°´Å¥£¬ÐèÒªÊäÈëÔÆÖ÷»úµÄÓÃ»§ÃûÃÜÂë½øÐÐµÇÂ¼£¬Çë×¢ÒâÔÆÖ÷»úÄ¬ÈÏÆÁ±ÎÁËÓÃ»§ÃûÃÜÂëµÄµÇÂ¼·½Ê½£¬Èç¹ûÄãÐèÒªÊ¹ÓÃVNCµÇÂ¼£¬ÇëÔÚsshµÇÂ¼ºó£¬ÊÖ¹¤ÐÞ¸ÄÃÜÂëºóÔÙÊ¹ÓÃVNC¿ØÖÆÌ¨µÇÂ¼£¬ÁíÍâÐèÒª×¢ÒâVNCÒ³ÃæÉÏµÄÌáÊ¾ÐÅÏ¢¡£VNCÃÜÂë½«ÔÚµÚÒ»´ÎVNC¿ØÖÆÌ¨·½Ê½µÇÂ¼µÄÊ±ºòÌáÊ¾£¬ÏÂ´ÎµÇÂ¼½«²»ÔÙÌáÊ¾¡£
+VNCæŽ§åˆ¶å°æ–¹å¼å°±æ˜¯ç›´æŽ¥åœ¨äº§å“ç®¡ç†å‘˜ç•Œé¢ä¸Šé€‰æ‹©äº‘ä¸»æœºä¹‹åŽç‚¹å‡»â€œæ›´å¤šâ€ä¸­çš„â€œVNCâ€æŒ‰é’®ï¼Œéœ€è¦è¾“å…¥äº‘ä¸»æœºçš„ç”¨æˆ·åå¯†ç è¿›è¡Œç™»å½•ï¼Œè¯·æ³¨æ„äº‘ä¸»æœºé»˜è®¤å±è”½äº†ç”¨æˆ·åå¯†ç çš„ç™»å½•æ–¹å¼ï¼Œå¦‚æžœä½ éœ€è¦ä½¿ç”¨VNCç™»å½•ï¼Œè¯·åœ¨sshç™»å½•åŽï¼Œæ‰‹å·¥ä¿®æ”¹å¯†ç åŽå†ä½¿ç”¨VNCæŽ§åˆ¶å°ç™»å½•ï¼Œå¦å¤–éœ€è¦æ³¨æ„VNCé¡µé¢ä¸Šçš„æç¤ºä¿¡æ¯ã€‚VNCå¯†ç å°†åœ¨ç¬¬ä¸€æ¬¡VNCæŽ§åˆ¶å°æ–¹å¼ç™»å½•çš„æ—¶å€™æç¤ºï¼Œä¸‹æ¬¡ç™»å½•å°†ä¸å†æç¤ºã€‚
 
-![](../image/linux/linuxÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_µÇÂ¼linuxÔÆÖ÷»ú2.PNG)
+![](../image/linux/linuxä¸»æœº_ä½¿ç”¨æŒ‡å—_ç™»å½•linuxäº‘ä¸»æœº2.PNG)
 
-<span>Attention:</span><div class="alertContent">Èç¹ûÒªÔÚVNC¿ØÖÆÌ¨Í¨¹ýÓÃ»§ÃûÃÜÂëµÇÂ¼£¬ÐèÒªÏÈÍ¨¹ýSSHÃÜÔ¿µÇÂ¼½øÔÆÖ÷»ú£¬ÉèÖÃÓÃ»§ÃûÃÜÂëÖ®ºó²Å¿ÉÒÔÊ¹ÓÃ¡£</div>
+<span>Attention:</span><div class="alertContent">å¦‚æžœè¦åœ¨VNCæŽ§åˆ¶å°é€šè¿‡ç”¨æˆ·åå¯†ç ç™»å½•ï¼Œéœ€è¦å…ˆé€šè¿‡SSHå¯†é’¥ç™»å½•è¿›äº‘ä¸»æœºï¼Œè®¾ç½®ç”¨æˆ·åå¯†ç ä¹‹åŽæ‰å¯ä»¥ä½¿ç”¨ã€‚</div>
 
-* ssh·½Ê½ÐèÒªÍøÂçÖ§³Ö²Å¿ÉÒÔÊ¹ÓÃ£¬VNC²»ÐèÒªÍøÂçÖ§³ÖÒ²¿ÉÒÔÊ¹ÓÃ£¬Äã¿ÉÒÔÈÏÎªVNC¾ÍÊÇÔÆÖ÷»úµÄÏÔÊ¾Æ÷¡£
-
-
-#### ÒÔ Ubuntu 14.04 64Î» ¾µÏñ´´½¨µÄÒ»Ì¨ÔÆÖ÷»úÎªÀý£º
-
-Á¬½ÓÉÏÓÃ»§VPNÖ®ºó£¬¿ÉÒÔÊ¹ÓÃÔÆÖ÷»úµÄÄÚÍøIP£¬¸ÃIP¿ÉÒÔÔÚÔÆÖ÷»úÒ³ÃæÉÏÕÒµ½¡£Èç¹û°ó¶¨ÁËÍâÍøIP¿ÉÒÔÊ¹ÓÃÍâÍøIP
-
-![](../image/linux/linuxÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_µÇÂ¼linuxÔÆÖ÷»ú3.PNG)
-
-Ñ¡ÔñÒ»¿îSSHÖÕ¶Ë£¬ÕâÀïÒÔXshell5ÎªÀý£¬
-
-1¡¢°²×°²¢ÔËÐÐ Xshell£¬µã»÷¡¸ÎÄ¼þ¡¹-¡¸ÐÂ½¨¡¹£¬ÔÚ¡¸Á¬½Ó¡¹Ä¿Â¼ÊäÈëÏà¹ØÐÅÏ¢£º
-
-![](../image/linux/linuxÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_µÇÂ¼linuxÔÆÖ÷»ú4.PNG)
+* sshæ–¹å¼éœ€è¦ç½‘ç»œæ”¯æŒæ‰å¯ä»¥ä½¿ç”¨ï¼ŒVNCä¸éœ€è¦ç½‘ç»œæ”¯æŒä¹Ÿå¯ä»¥ä½¿ç”¨ï¼Œä½ å¯ä»¥è®¤ä¸ºVNCå°±æ˜¯äº‘ä¸»æœºçš„æ˜¾ç¤ºå™¨ã€‚
 
 
-2¡¢ÔÚ¡¸Á¬½Ó¡¹-¡¸ÓÃ»§Éí·ÝÑéÖ¤¡¹Ä¿Â¼ÊäÈëÏà¹ØÐÅÏ¢£¬ÓÃ»§ÃûÊäÈë¡¸root¡¹£º
+#### ä»¥ Ubuntu 14.04 64ä½ é•œåƒåˆ›å»ºçš„ä¸€å°äº‘ä¸»æœºä¸ºä¾‹ï¼š
 
-![](../image/linux/linuxÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_µÇÂ¼linuxÔÆÖ÷»ú5.PNG)
+è¿žæŽ¥ä¸Šç”¨æˆ·VPNä¹‹åŽï¼Œå¯ä»¥ä½¿ç”¨äº‘ä¸»æœºçš„å†…ç½‘IPï¼Œè¯¥IPå¯ä»¥åœ¨äº‘ä¸»æœºé¡µé¢ä¸Šæ‰¾åˆ°ã€‚å¦‚æžœç»‘å®šäº†å¤–ç½‘IPå¯ä»¥ä½¿ç”¨å¤–ç½‘IP
 
-3¡¢µã»÷¡¸ä¯ÀÀ¡¹°´Å¥£¬µ¯³ö¡¸ÓÃ»§ÃÜÔ¿¡¹´°¿Ú¡£µã»÷¡¸µ¼Èë¡¹£¬Ñ¡Ôñ²¢µ¼ÈëÖ®Ç°´´½¨ÔÆÖ÷»úµÄ¹«Ô¿¶ÔÓ¦µÄË½Ô¿£¬ºóÐøµã»÷¡¸È·¶¨¡¹¼´¿ÉÍê³ÉÁ¬½Ó¡£
+![](../image/linux/linuxä¸»æœº_ä½¿ç”¨æŒ‡å—_ç™»å½•linuxäº‘ä¸»æœº3.PNG)
 
-![](../image/linux/linuxÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_µÇÂ¼linuxÔÆÖ÷»ú7.PNG)
+é€‰æ‹©ä¸€æ¬¾SSHç»ˆç«¯ï¼Œè¿™é‡Œä»¥Xshell5ä¸ºä¾‹ï¼Œ
 
-![](../image/linux/linuxÖ÷»ú_Ê¹ÓÃÖ¸ÄÏ_µÇÂ¼linuxÔÆÖ÷»ú6.PNG)
+1ã€å®‰è£…å¹¶è¿è¡Œ Xshellï¼Œç‚¹å‡»ã€Œæ–‡ä»¶ã€-ã€Œæ–°å»ºã€ï¼Œåœ¨ã€Œè¿žæŽ¥ã€ç›®å½•è¾“å…¥ç›¸å…³ä¿¡æ¯ï¼š
+
+![](../image/linux/linuxä¸»æœº_ä½¿ç”¨æŒ‡å—_ç™»å½•linuxäº‘ä¸»æœº4.PNG)
+
+
+2ã€åœ¨ã€Œè¿žæŽ¥ã€-ã€Œç”¨æˆ·èº«ä»½éªŒè¯ã€ç›®å½•è¾“å…¥ç›¸å…³ä¿¡æ¯ï¼Œç”¨æˆ·åè¾“å…¥ã€Œrootã€ï¼š
+
+![](../image/linux/linuxä¸»æœº_ä½¿ç”¨æŒ‡å—_ç™»å½•linuxäº‘ä¸»æœº5.PNG)
+
+3ã€ç‚¹å‡»ã€Œæµè§ˆã€æŒ‰é’®ï¼Œå¼¹å‡ºã€Œç”¨æˆ·å¯†é’¥ã€çª—å£ã€‚ç‚¹å‡»ã€Œå¯¼å…¥ã€ï¼Œé€‰æ‹©å¹¶å¯¼å…¥ä¹‹å‰åˆ›å»ºäº‘ä¸»æœºçš„å…¬é’¥å¯¹åº”çš„ç§é’¥ï¼ŒåŽç»­ç‚¹å‡»ã€Œç¡®å®šã€å³å¯å®Œæˆè¿žæŽ¥ã€‚
+
+![](../image/linux/linuxä¸»æœº_ä½¿ç”¨æŒ‡å—_ç™»å½•linuxäº‘ä¸»æœº7.PNG)
+
+![](../image/linux/linuxä¸»æœº_ä½¿ç”¨æŒ‡å—_ç™»å½•linuxäº‘ä¸»æœº6.PNG)
