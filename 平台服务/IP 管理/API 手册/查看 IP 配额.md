@@ -1,26 +1,48 @@
-#  云硬盘
-## 扩容云硬盘
+# IP 管理
 
-通过 [获取云硬盘列表](http://59.111.120.124/?http#7-2) 获取的云硬盘 id 扩容该云硬盘。
+## 查看 IP 配额
 
-<span>Note:</span><div class="alertContent">暂不支持在线扩容</div>
+### 请求 URL
 
-> 请求示例
+`GET https://open.c.163.com/api/v1/ips/quota`
+
+### 请求示例
 
 ```http
-PUT /api/v1/cloud-volumes/19893/actions/resize?size=1000 HTTP/1.1
+GET /api/v1/ips/quota HTTP/1.1
 Host: open.c.163.com
-Authorization: Token c98dfae9c6cd405f95da15219e908643
+Authorization: Token 93cb02be6a83447a8dfd83221e8d4a96
 Content-Type: application/json
 ```
 
-### HTTP Request
+### 响应示例
 
-`PUT https://open.c.163.com/api/v1/cloud-volumes/{id}/actions/resize?size={size}`
+```json
+{
+  "total": 20,
+  "used": 5,
+  "quotas": [
+    {
+      "type": "nce",
+      "quota": 10,
+      "used": 2
+    },
+    {
+      "type": "nlb",
+      "quota": 10,
+      "used": 3
+    }
+  ]
+}
+```
 
-### URL Parameters
+### 响应参数
 
-| 参数 | 类型 |               是否必填               |                               描述                              |
-|------|------|--------------------------------------|-----------------------------------------------------------------|
-| id   | long | 是（[获取云硬盘列表](http://59.111.120.124/?http#7-2)） | 云硬盘 id                                                       |
-| size | int  | 是                                   | 扩容大小，单位为 G（大于原容量小于 1000，且必需是 10 的整数倍） |
+
+|  参数  |    类型   |        描述        |  示例值  |
+|--------|-----------|--------------------|----------|
+| total  | Number    | 总配额             | 20       |
+| used   | Number    | 已使用配额         | 5        |
+| quotas | JSONArray | 不同类型的配额详情 | 详见示例 |
+| type   | String    | IP 类型            | nce      |
+| quota  | String    | 对应类型的配额     | 10       |

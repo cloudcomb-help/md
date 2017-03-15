@@ -1,26 +1,42 @@
-#  云硬盘
-## 扩容云硬盘
+# IP 管理
 
-通过 [获取云硬盘列表](http://59.111.120.124/?http#7-2) 获取的云硬盘 id 扩容该云硬盘。
+## 查看 IP 费用
 
-<span>Note:</span><div class="alertContent">暂不支持在线扩容</div>
+查看某 IP 实例创建至今产生的所有费用。
 
-> 请求示例
+### 请求 URL
+
+`GET https://open.c.163.com/api/v1/ips/{id}/cost`
+
+### 请求示例
 
 ```http
-PUT /api/v1/cloud-volumes/19893/actions/resize?size=1000 HTTP/1.1
+GET /api/v1/ips/163/cost HTTP/1.1
 Host: open.c.163.com
-Authorization: Token c98dfae9c6cd405f95da15219e908643
+Authorization: Token 93cb02be6a83447a8dfd83221e8d4a96
 Content-Type: application/json
 ```
 
-### HTTP Request
+### 请求参数
 
-`PUT https://open.c.163.com/api/v1/cloud-volumes/{id}/actions/resize?size={size}`
 
-### URL Parameters
+| 参数 |  类型  | 是否必填 |                       描述                       | 示例值 |
+|------|--------|----------|--------------------------------------------------|--------|
+| id   | String | 是       | IP 的唯一标识符（[获取 IP 列表](http://59.111.120.124/?http#8-2-ip)） |    163 |
 
-| 参数 | 类型 |               是否必填               |                               描述                              |
-|------|------|--------------------------------------|-----------------------------------------------------------------|
-| id   | long | 是（[获取云硬盘列表](http://59.111.120.124/?http#7-2)） | 云硬盘 id                                                       |
-| size | int  | 是                                   | 扩容大小，单位为 G（大于原容量小于 1000，且必需是 10 的整数倍） |
+
+### 响应示例
+
+```json
+{
+  "id": "163",
+  "cost": 1.26
+}
+```
+
+### 响应参数
+
+| 参数 |  类型  |       描述      | 示例值 |
+|------|--------|-----------------|--------|
+| id   | String | IP 的唯一标识符 |    163 |
+| cost | Number | 费用，单位：元  |   1.26 |
