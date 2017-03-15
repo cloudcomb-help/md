@@ -1,31 +1,32 @@
-# 镜像 API
+# 镜像
 
 ## 构建镜像
 
-### 请求 header
+### 请求 URL
 
-    POST /api/v1/repositories/{repo_name}/tags/{tag}/actions/build
+`POST https://open.c.163.com/api/v1/repositories/{repo_name}/tags/{tag}/actions/build/`
 
-    Authorization:Token xxxxxxxxxxxxxx
-    Content-Type:multipart/form-data
+### 请求示例
 
-### 请求payload
+```http
+POST /api/v1/repositories/myrepo/tags/v1/actions/build HTTP/1.1
+Host: open.c.163.com
+Authorization: Token 48e6b1bdb5fb4a28a680a977dffb3c30
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
-    form表单
-    docker_file:docker file 文件
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="docker_file"; filename=""
+Content-Type: 
 
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+```
+### 请求参数
 
 |   参数说明  |               描述              |  类型  | 是否必填 |
 |-------------|---------------------------------|--------|----------|
-| repo_name   | 镜像仓库名称                    | string | 必填     |
-| tag         | 镜像 tag                        | string | 必填     |
+| repo_name   | 镜像仓库名称                    | String | 必填     |
+| tag         | 镜像 tag                        | String | 必填     |
 | docker_file | docker xml 文件，大小限制在 1 M | file   | 必填     |
 
-### 响应
-
-#### 成功响应
-
-    200 Ok
-
-#### 失败响应
-详情请参见 [错误返回码](http://support.c.163.com/md.html#!容器服务/镜像仓库/API 手册/OpenAPI 错误响应.md)。
+<span>Note:</span><div class="alertContent">其他构建方式待更新。</div>

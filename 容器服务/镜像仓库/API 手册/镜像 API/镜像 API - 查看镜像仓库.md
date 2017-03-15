@@ -1,62 +1,70 @@
-# 镜像 API
+# 镜像 
 
 ## 查看镜像仓库
 
-### 请求 header
+通过 [获取镜像仓库列表](http://59.111.120.124/?http#5-2) 获取的镜像仓库 id 查看某个镜像仓库的具体信息。
 
-    GET /api/v1/repositories/{id}
+### 请求 URL
 
-    Authorization:Token xxxxxxxxxxxxxx
-    Content-Type:application/json
+`GET https://open.c.163.com/api/v1/repositories/{id}`
 
-| 参数说明 |     描述    | 类型 | 是否必填 |
-|----------|-------------|------|----------|
-| id       | 镜像仓库 id | long | 必填     |
+### 请求示例
 
-### 响应
+```http
+GET /api/v1/repositories/45433 HTTP/1.1
+Host: open.c.163.com
+Authorization: Token 48e6b1bdb5fb4a28a680a977dffb3c30
+```
 
-#### 成功响应
+### 请求参数
 
-    200 Ok
+| 参数 | 类型 |                是否必填                |     描述    |
+|------|------|----------------------------------------|-------------|
+| id   | long | 是（[获取镜像仓库列表](../?http#5-2)） | 镜像仓库 id |
+
+### 响应示例
+
+```json
+{
+  "tags": [
     {
-        "tags": [
-            {
-                "name": "430",
-                "size": 190425418,
-                "status": 2
-            },
-            {
-                "name": "latest",
-                "size": 190425418,
-                "status": 2
-            }
-        ],
-        "repo_id": 399,
-        "user_name": "wutaigong",
-        "repo_name": "fafafa",
-        "open_level": 0,
-        "base_desc": "base_desc",
-        "detail_desc": "desc",
-        "tag_count": 2,
-        "download_url": null,
-        "created_at": "2016-03-15T02:43:01Z",
-        "updated_at": "2016-03-24T07:05:37Z"
+      "name": "master20161215042831791",
+      "size": 190425418,
+      "status": 2
+    },
+    {
+      "name": "master20161215034013640",
+      "size": 0,
+      "status": 2
     }
+  ],
+  "repo_id": 45433,
+  "user_name": "admin",
+  "repo_name": "mysql",
+  "open_level": 0,
+  "base_desc": "基本描述",
+  "detail_desc": "详细描述",
+  "tag_count": 2,
+  "download_url": "hub.c.163.com/admin/mysql:master20161215042831791",
+  "created_at": "2016-12-15T06:50:20Z",
+  "updated_at": "2016-12-15T08:28:44Z"
+}
+```
 
-|   参数说明  |                               描述                              |  类型  |
-|-------------|-----------------------------------------------------------------|--------|
-| repo_id     | 镜像仓库 id                                                     | long   |
-| user_name   | 用户名                                                          | string |
-| repo_name   | 镜像仓库名                                                      | string |
-| open_level  | 开放级别，0 (私有) / 1 (公有)                                   | int    |
-| base_desc   | 基本描述                                                        | string |
-| detail_desc | 详细描述                                                        | string |
-| tag_count   | 版本数量                                                        | int    |
-| created_at  | 创建时间，使用 UTC（世界标准时间）时间，用 ISO8601 进行格式化   | string |
-| updated_at  | 修改时间，使用 UTC（世界标准时间）时间，用 ISO8601 进行格式化   | string |
-| name        | 镜像 tag                                                        | string |
-| size        | 镜像大小，单位 B                                                | long   |
-| status      | 镜像状态，0 (初始化) / 1 (构建中) / 2 (构建成功) / 3 (构建失败) | int    |
+### 响应参数
 
-#### 失败响应
-详情请参见 [错误返回码](http://support.c.163.com/md.html#!容器服务/服务管理/API 手册/OpenAPI 错误响应.md)。
+|   参数说明   |  类型  |                               描述                              |                      示例值                       |
+|--------------|--------|-----------------------------------------------------------------|---------------------------------------------------|
+| name         | String | 镜像 tag                                                        | master20161215042831791                           |
+| size         | long   | 镜像大小，单位 B                                                | 190425418                                         |
+| status       | int    | 镜像状态，0 (初始化) / 1 (构建中) / 2 (构建成功) / 3 (构建失败) | 2                                                 |
+| repo_id      | long   | 镜像仓库 id                                                     | 45433                                             |
+| user_name    | String | 用户名                                                          | admin                                             |
+| repo_name    | String | 镜像仓库名                                                      | mysql                                             |
+| open_level   | int    | 开放级别，0（私有）/1（公有）                                   | 0                                                 |
+| base_desc    | String | 基本描述                                                        | 基本描述                                          |
+| detail_desc  | String | 详细描述                                                        | 详细描述                                          |
+| tag_count    | int    | 版本数量                                                        | 2                                                 |
+| download_url | String | docker pull 地址                                                | hub.c.163.com/admin/mysql:master20161215042831791 |
+| created_at   | String | 创建时间，使用 UTC（世界标准时间）时间，用 ISO8601 进行格式化   | 2016-12-15T06:50:20Z                              |
+| updated_at   | String | 修改时间，使用 UTC（世界标准时间）时间，用 ISO8601 进行格式化   | 2016-12-15T08:28:44Z                              |

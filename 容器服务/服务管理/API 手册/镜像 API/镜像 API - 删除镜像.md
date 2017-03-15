@@ -2,23 +2,24 @@
 
 ## 删除镜像
 
-### 请求 header
+删除某个镜像仓库内的某个镜像。
 
-    DELETE /api/v1/repositories/{repo_name}/tags/{tag}
+### 请求 URL
 
-    Authorization:Token xxxxxxxxxxxxxx
-    Content-Type:application/json
+`DELETE https://open.c.163.com/api/v1/repositories/{mysql}/tags/{tag}`
 
+### 请求示例
 
-|  参数说明 |     描述     |  类型  | 是否必填 |
-|-----------|--------------|--------|----------|
-| repo_name | 镜像仓库名称 | string | 必填     |
-| tag       | 镜像 tag     | string | 必填     |
+```http
+DELETE /api/v1/repositories/mysql/tags/v1 HTTP/1.1
+Host: open.c.163.com
+Authorization: Token 48e6b1bdb5fb4a28a680a977dffb3c30
+Content-Type:application/json
+```
 
-### 响应
-#### 成功响应
-    
-    200 OK
+### 请求参数
 
-#### 失败响应
-详情请参见 [错误返回码](http://support.c.163.com/md.html#!容器服务/镜像仓库/API 手册/OpenAPI 错误响应.md)。
+|    参数   |  类型  | 是否必填 |     描述     |
+|-----------|--------|----------|--------------|
+| repo_name | String | 是       | 镜像仓库名称 |
+| tag       | String | 是       | 镜像 tag     |
