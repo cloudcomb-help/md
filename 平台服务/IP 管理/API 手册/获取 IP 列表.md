@@ -23,8 +23,8 @@ Content-Type: application/json
 
 |  参数  |  类型  | 是否必填 |  默认值  |                    描述                    |  示例值   |
 |--------|--------|----------|----------|--------------------------------------------|-----------|
-| status | String | 否       | 所有状态 | IP 状态（[IP 状态及类型](http://59.111.120.124/?http#8-0-ip)）  | available |
-| type   | String | 否       | 所有类型 | IP 类型 （[IP 状态及类型](http://59.111.120.124/?http#8-0-ip)） | nlb       |
+| status | String | 否       | 所有状态 | IP 状态（[IP 状态及类型](http://support.c.163.com/md.html#!平台服务/IP 管理/API 手册/IP 状态及类型.md)）  | available |
+| type   | String | 否       | 所有类型 | IP 类型 （[IP 状态及类型](http://support.c.163.com/md.html#!平台服务/IP 管理/API 手册/IP 状态及类型.md)） | nlb       |
 | offset | Number | 否       | 0        | 获取列表的起始位置                         | 0         |
 | limit  | Number | 否       | 20       | 每次获取的 IP 数量                         | 20        |
 

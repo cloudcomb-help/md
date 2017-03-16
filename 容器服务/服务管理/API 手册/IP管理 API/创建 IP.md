@@ -66,8 +66,8 @@ Content-Type: application/json
 | ips          | JSONArray | 返回的 IP 列表                                                | 详见示例             |
 | id           | String    | IP 的唯一标识符                                               | 896                  |
 | ip           | String    | IP                                                            | 59.111.109.202       |
-| status       | String    | IP 状态（[IP 状态及类型](http://59.111.120.124/?http#8-0-ip)）| available            |
-| type         | String    | IP 类型（[IP 状态及类型](http://59.111.120.124/?http#8-0-ip)）| nlb                  |
+| status       | String    | IP 状态（[IP 状态及类型](http://support.c.163.com/md.html#!容器服务/服务管理/API 手册/IP管理 API/IP 状态及类型.md)）| available            |
+| type         | String    | IP 类型（[IP 状态及类型](http://support.c.163.com/md.html#!容器服务/服务管理/API 手册/IP管理 API/IP 状态及类型.md)）| nlb                  |
 | service_id   | String    | 绑定的实例 id                                                 |                      |
 | service_name | String    | 绑定的实例名称                                                |                      |
 | create_at    | String    | 创建时间，使用 UTC（世界标准时间）时间，用 ISO8601 进行格式化 | 2016-12-28T13:13:12Z |
