@@ -25,8 +25,12 @@
 * [帐号管理](平台服务/MongoDB/使用指南/MongoDB.md)
 * [连接实例](平台服务/MongoDB/使用指南/MongoDB.md)
 * [数据迁移](平台服务/MongoDB/使用指南/MongoDB.md)
-* [备份与恢复](平台服务/MongoDB/使用指南/MongoDB备份与恢复.md)
-* [监控与报警](平台服务/MongoDB/使用指南/MongoDB.md)
+* [备份与恢复]()
+
+  * [备份数据](平台服务/MongoDB/使用指南/备份与恢复/MongoDB备份数据.md)
+  * [恢复数据](平台服务/MongoDB/使用指南/备份与恢复/MongoDB恢复数据.md)
+  * [删除备份](平台服务/MongoDB/使用指南/备份与恢复/MongoDB删除备份.md)
+* [监控与报警](平台服务/MongoDB/使用指南/MongoDB监控与报警.md)
 * [日志管理](平台服务/MongoDB/使用指南/MongoDB.md)
 
 [价格与计费](平台服务/MongoDB/MongoDB价格与计费.md)
