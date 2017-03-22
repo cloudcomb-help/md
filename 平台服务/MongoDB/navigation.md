@@ -30,8 +30,11 @@
   * [备份数据](平台服务/MongoDB/使用指南/备份与恢复/MongoDB备份数据.md)
   * [恢复数据](平台服务/MongoDB/使用指南/备份与恢复/MongoDB恢复数据.md)
   * [删除备份](平台服务/MongoDB/使用指南/备份与恢复/MongoDB删除备份.md)
-* [监控与报警](平台服务/MongoDB/使用指南/MongoDB监控与报警.md)
-* [日志管理](平台服务/MongoDB/使用指南/MongoDB.md)
+* [监控与报警]()
+
+  * [性能监控](平台服务/MongoDB/使用指南/监控与报警/MongoDB性能监控.md)
+  * [性能监控视图管理](平台服务/MongoDB/使用指南/监控与报警/MongoDB性能监控视图管理.md)
+* [日志管理](平台服务/MongoDB/使用指南/MongoDB日志管理.md)
 
 [价格与计费](平台服务/MongoDB/MongoDB价格与计费.md)
 
