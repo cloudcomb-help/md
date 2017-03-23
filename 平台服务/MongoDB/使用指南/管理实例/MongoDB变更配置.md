@@ -8,15 +8,17 @@
 
 ## 按量付费实例变更配置
 
-➡ 登录 [控制台](https://c.163.com/dashboard#/m/mongodb/)，定位到目标实例
+➡ 登录 [控制台](https://c.163.com/dashboard#/m/mongodb/)
+➡ 在侧边栏点击「MongoDB」标签
+➡ 定位目标实例
 ➡ 在其右侧操作栏，点击「设置」
 
-![](../image/购买指南-变配-设置.png)
+![](../../image/购买指南-变配-设置.png)
 
 ➡ 选择所需规格、存储空间
 ➡ 提交设置
 
-![](../image/购买指南-变配-提交设置.png)
+![](../../image/购买指南-变配-提交设置.png)
 
 <span>Note:</span>
 修改规格后，cacheSizeGB 参数也会调整，支持手动修改；

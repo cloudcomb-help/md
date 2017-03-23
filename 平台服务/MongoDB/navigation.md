@@ -19,9 +19,9 @@
 * [创建实例](平台服务/MongoDB/使用指南/创建MongoDB实例.md)
 * [管理实例]()
 
-  * [变更配置](平台服务/MongoDB/使用指南/MongoDB.md)
-  * [修改参数](平台服务/MongoDB/使用指南/MongoDB.md)
-  * [删除实例](平台服务/MongoDB/使用指南/MongoDB.md)
+  * [变更配置](平台服务/MongoDB/使用指南/管理实例/MongoDB变更配置.md)
+  * [管理参数](平台服务/MongoDB/使用指南/管理实例/MongoDB管理参数.md)
+  * [删除实例](平台服务/MongoDB/使用指南/管理实例/MongoDB删除实例.md)
 * [管理账号]()
 
   * [创建账号](平台服务/MongoDB/使用指南/管理账号/MongoDB创建账号.md)
