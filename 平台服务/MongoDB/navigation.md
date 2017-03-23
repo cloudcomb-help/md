@@ -26,7 +26,11 @@
 
   * [创建账号](平台服务/MongoDB/使用指南/管理账号/MongoDB创建账号.md)
   * [重置密码](平台服务/MongoDB/使用指南/管理账号/MongoDB重置密码.md)
-* [连接实例](平台服务/MongoDB/使用指南/MongoDB.md)
+* [连接实例]()
+
+  * [获取连接信息](平台服务/MongoDB/使用指南/连接实例/MongoDB获取连接信息.md)
+  * [mongo shell 连接](平台服务/MongoDB/使用指南/连接实例/mongoshell连接MongoDB实例.md)
+  * [程序连接](平台服务/MongoDB/使用指南/连接实例/程序连接MongoDB实例.md)
 * [迁移数据](平台服务/MongoDB/使用指南/MongoDB迁移数据.md)
 * [备份与恢复]()
 
