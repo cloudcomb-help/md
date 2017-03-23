@@ -22,9 +22,12 @@
   * [变更配置](平台服务/MongoDB/使用指南/MongoDB.md)
   * [修改参数](平台服务/MongoDB/使用指南/MongoDB.md)
   * [删除实例](平台服务/MongoDB/使用指南/MongoDB.md)
-* [帐号管理](平台服务/MongoDB/使用指南/MongoDB.md)
+* [管理账号]()
+
+  * [创建账号](平台服务/MongoDB/使用指南/管理账号/MongoDB创建账号.md)
+  * [重置密码](平台服务/MongoDB/使用指南/管理账号/MongoDB重置密码.md)
 * [连接实例](平台服务/MongoDB/使用指南/MongoDB.md)
-* [数据迁移](平台服务/MongoDB/使用指南/MongoDB.md)
+* [迁移数据](平台服务/MongoDB/使用指南/MongoDB迁移数据.md)
 * [备份与恢复]()
 
   * [备份数据](平台服务/MongoDB/使用指南/备份与恢复/MongoDB备份数据.md)
@@ -40,8 +43,7 @@
 
 [常见问题]()
 
-* [MongoDB 常见问题](平台服务/MongoDB/常见问题/MongoDB常见问题.md)
-* [数据迁移](平台服务/MongoDB/常见问题/数据迁移.md)
+* [常见问题](平台服务/MongoDB/常见问题/MongoDB常见问题.md)
 
 
 
