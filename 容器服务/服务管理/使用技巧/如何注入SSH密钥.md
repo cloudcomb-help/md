@@ -59,7 +59,7 @@
 
 2.1. 打开 Web Console（[如何使用蜂巢 WebConsole](http://support.c.163.com/md.html#!容器服务/服务管理/使用技巧/如何使用蜂巢WebConsole.md)），输入以下命令创建 .ssh 文件夹并调整权限：
 
-	mdkir ~/.ssh
+	mkdir ~/.ssh
 	chmod 700 ~/.ssh
 
 2.2. 输入以下命令将本地公钥内容（.pub 文件）导入授权文件：
