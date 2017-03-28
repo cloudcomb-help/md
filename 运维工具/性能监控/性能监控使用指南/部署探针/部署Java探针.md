@@ -32,7 +32,9 @@
 
 ### 1.4. 使用保存的镜像，更改无状态服务的镜像版本或重新创建服务
 
-服务启动后，在性能监测模块可以看到数据展示的变化。
+服务启动后，在性能监测模块可以看到全链路数据展示的变化。
+
+![](../../image/性能监控使用指南-部署Java探针-效果.png)
 
 
 ## 2. 通过 Dockerfile 部署Java探针 
@@ -44,9 +46,8 @@
 请确保安装了 wget 和 tar。
 
 	...
-	mkdir /root/java/ && cd /root/java/
-	wget http://nos.netease.com/agent/napm-java-agent.tar.gz
-	tar zxvf napm-java-agent.tar.gz
+	wget -P /root/java/ http://nos.netease.com/agent/napm-java-agent.tar.gz  
+	tar zxvf /root/java/napm-java-agent.tar.gz
 	...
 
 ### 2.2. 修改启动脚本
@@ -66,4 +67,13 @@
 
 ### 2.5. 使用构建镜像，更改无状态服务的镜像版本或重新创建服务
 
-服务启动后，在性能监测模块可以看到数据展示的变化。
+服务启动后，在性能监测模块可以看到全链路数据展示的变化。
+
+![](../../image/性能监控使用指南-部署Java探针-效果.png)
+
+
+
+
+
+
+
