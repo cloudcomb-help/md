@@ -8,6 +8,8 @@ MongoDB 有两种计费方式：包年包月和按量付费。建议你使用 [�
 ➡ 登录 [控制台](https://c.163.com/dashboard#/m/mongodb/)，定位 MongoDB 标签
 ➡ 点击 MongoDB 列表，左上角的「创建实例」按钮
 
+<span>Attention:</span><div class="alertContent">出于安全考虑，建议不要使用默认 27017 端口 </div>
 ![](../image/使用指南-创建实例.png)
+
 
 

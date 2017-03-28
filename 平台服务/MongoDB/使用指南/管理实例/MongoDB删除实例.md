@@ -7,4 +7,6 @@
 
 ➡ 在「设置 MongoDB」页面，点击「删除实例」
 
+<span>Attention:</span><div class="alertContent">删除实例，也将删除备份且无法恢复</div>
+
 ![](../../image/使用指南-管理实例-删除实例.png)
