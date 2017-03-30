@@ -28,7 +28,7 @@ linux云主机管理入口位于蜂巢首页的云主机服务选项。点击「
 
 ## 登录linux云主机
 
-请参考[linux主机登录方法](http://support.c.163.com/md.html#!平台服务/云主机/使用指南/linux主机登录方法.md)
+请参考[linux主机登录方法](http://support.c.163.com/md.html#!容器服务/云主机/使用指南/linux主机登录方法.md)
 
 ## 保存为镜像
 
