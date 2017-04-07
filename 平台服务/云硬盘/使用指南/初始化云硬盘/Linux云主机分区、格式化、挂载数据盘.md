@@ -1,4 +1,4 @@
-# Linux 云主机分区、格式化、挂载新分区
+# Linux 云主机分区、格式化、挂载数据盘
 
 在控制台挂载云硬盘后，系统需要先格式化，再挂载数据盘
 您还可以根据业务需要，对数据盘进行多分区配置。建议使用系统自带的工具进行分区操作。
@@ -22,7 +22,7 @@
 
 	fdisk -l
 
-下方示例中可以看到刚挂载的数据盘 `/dev/vdc` 大小为是 10 GB，以下示例中，块设备名称为 `/dev/vdc` 。
+下方示例中可以看到刚挂载的数据盘 `/dev/vdc` 大小为是 10 GB。以下内容都将以块设备 `/dev/vdc` 作为示例。
 
 ![](../../image/初始化云硬盘-linux-确认挂载.png)
 
@@ -30,12 +30,9 @@
 
 使用如下命令对数据盘分区：
 
-	fdisk /dev/vdc
+	fdisk {disk} #本示例中为 fdisk /dev/vdc 
 
 根据提示，依次输入 n（新建分区）、p（新建扩展分区）、1（使用第 1 个主分区），两次回车（使用默认配置），输入 wq（保存分区表），再回车开始分区。
-
-<span>Note:</span><div class="alertContent">如果要分多个区，请参考 fdisk 命令的其他用法。</div>
-
 
 ![](../../image/初始化云硬盘-linux-分区.png)
 
@@ -43,14 +40,19 @@
 
 使用如下命令对新分区格式化：
 
-	mkfs.ext3 /dev/vdc1
+	mkfs.{fstype} {device} #本示例中为 mkfs.ext3 /dev/vdc1
 
 格式化时间取决于数据盘大小，也可以按需选择其他如 ext4 等文件格式。
 
 ![](../../image/初始化云硬盘-linux-格式化.png)
 
 ### 5. 挂载
-mount /dev/vdc /mnt
+
+使用如下命令将新分区挂载至云主机文件夹：
+
+	mount {device} {dir} #本示例中为 mount /dev/vdc1 /mnt
+
+使用 `df -h` 命令确认挂载成功。
 
 ![](../../image/初始化云硬盘-linux-mount.png)
 
