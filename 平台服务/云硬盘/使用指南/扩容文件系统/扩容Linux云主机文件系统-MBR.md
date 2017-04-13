@@ -4,11 +4,7 @@
 
 ## 确认分区形式
 
-不同的分区表操作不同，请 [确认分区表](http://support.c.163.com/md.html#!平台服务/云硬盘/运维指南/Linux云主机/Linux云主机查看数据盘分区信息.md) 后，再选择对应指引进行后续操作：
-
-* [GPT 分区操作指引](http://support.c.163.com/md.html#!平台服务/云硬盘/使用指南/扩容文件系统/扩容Linux云主机文件系统-GPT.md)
-* [MBR 分区操作指引](http://support.c.163.com/md.html#!平台服务/云硬盘/使用指南/扩容文件系统/扩容Linux云主机文件系统-MBR.md)
-
+<span>Attention:</span><div class="alertContent">不同的分区表操作不同，请 [确认分区表](http://support.c.163.com/md.html#!平台服务/云硬盘/运维指南/Linux云主机/Linux云主机查看数据盘分区信息.md) 后，再选择对应指引进行后续操作：<br>➡ [Linux 云主机 GPT 分区操作指引](http://support.c.163.com/md.html#!平台服务/云硬盘/使用指南/扩容文件系统/扩容Linux云主机文件系统-GPT.md)<br>➡ [Linux 云主机 MBR 分区操作指引](http://support.c.163.com/md.html#!平台服务/云硬盘/使用指南/扩容文件系统/扩容Linux云主机文件系统-MBR.md)</div>
 
 ## MBR 分区操作指引
 
@@ -29,8 +25,9 @@
 
 下方示例中可以看到挂载数据盘 `/dev/vdc` 的信息：
 * 容量：160 GB（扩容前 100 GB）
-* 分区：`/dev/vdc1`（100 GB）
-* 挂载点：`/data1`
+* 分区：/dev/vdc1（100 GB）
+* 挂载点：/data1
+* 分区表：MBR
 
 以下内容都将以该数据盘 `/dev/vdc` 作为示例。
 
@@ -97,8 +94,9 @@
 
 下方示例中可以看到挂载数据盘 `/dev/vdc` 的信息：
 * 容量：160 GB（扩容前 100 GB）
-* 分区：`/dev/vdc1`（100 GB）
-* 挂载点：`/data1`
+* 分区：/dev/vdc1（100 GB）
+* 挂载点：/data1
+* 分区表：MBR
 
 以下内容都将以该数据盘 `/dev/vdc` 作为示例。
 
