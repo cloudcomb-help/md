@@ -32,7 +32,7 @@ Windows 下用户，请参考 Windows 下使用 NOS PHP SDK
 或者在你的 composer.json 中声明对 NOS SDK for PHP 的依赖:
 
     "require": {
-    "netease/nos-php-sdk": "1.0.0"
+    "netease/nos-php-sdk": "1.0.1"
     }
 
 然后通过 conposer install 安装依赖，安装完成后形成如下目录结构:
