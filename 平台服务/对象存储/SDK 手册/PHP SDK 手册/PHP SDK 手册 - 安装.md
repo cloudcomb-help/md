@@ -35,7 +35,7 @@ Windows 下用户，请参考 Windows 下使用 NOS PHP SDK
     "netease/nos-php-sdk": "1.0.1"
     }
 
-然后通过 conposer install 安装依赖，安装完成后形成如下目录结构:
+然后通过 composer install 安装依赖，安装完成后形成如下目录结构:
 
     .
     ├── app.php
