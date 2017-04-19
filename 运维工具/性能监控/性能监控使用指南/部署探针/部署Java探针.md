@@ -21,7 +21,7 @@
 
 ### 1.2. 增加 Java 启动参数
 
-以 Tomcat8 为例，修改 `/taomcat8/bin/catalina.sh` 脚本，在 JAVA_OPTS 内添加 `-javaagent:<user_agent_dir>/napm-java-rewriter-2.0.0.jar` 启动参数。
+以 Tomcat8 为例，修改 `/taomcat8/bin/catalina.sh` 脚本，在 JAVA_OPTS 内添加 `-javaagent:<user_agent_dir>/napm-java-rewriter.jar` 启动参数。
 
 ![](../../image/性能监控使用指南-部署Java探针-增加启动参数.png)
 
@@ -52,7 +52,7 @@
 
 ### 2.2. 修改启动脚本
 
-建议将启动脚本复制一份放到项目中（或放到桶里），修改启动脚本，添加参数 `--java-agent:<user_agent_dir>/napm-java-rewriter-2.0.0.jar`
+建议将启动脚本复制一份放到项目中（或放到桶里），修改启动脚本，添加参数 `--java-agent:<user_agent_dir>/napm-java-rewriter.jar`
 
 ### 2.3. Dockerfile 中 ADD 脚本
 
