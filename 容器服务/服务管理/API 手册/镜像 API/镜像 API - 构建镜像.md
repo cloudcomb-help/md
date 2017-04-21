@@ -12,7 +12,6 @@
 
 ```http
 POST /api/v1/repositories/v2/image?repo_name=a/b/c&amp;tag=v1 HTTP/1.1
-Host: open.c.163.com
 Authorization: Token 344957249da34e17925c2bbd531f6fdf
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
@@ -49,7 +48,6 @@ Content-Type:
 
 ```http
 POST /api/v1/repositories/myrepo/tags/v1/actions/build HTTP/1.1
-Host: open.c.163.com
 Authorization: Token 48e6b1bdb5fb4a28a680a977dffb3c30
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 

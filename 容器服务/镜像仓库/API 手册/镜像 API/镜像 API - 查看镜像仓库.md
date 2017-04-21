@@ -12,7 +12,6 @@
 
 ```http
 GET /api/v1/repositories/45433 HTTP/1.1
-Host: open.c.163.com
 Authorization: Token 48e6b1bdb5fb4a28a680a977dffb3c30
 ```
 

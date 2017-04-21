@@ -10,7 +10,6 @@
 
 ```http
 POST /api/v1/repositories HTTP/1.1
-Host: open.c.163.com
 Authorization: Token 344957249da34e17925c2bbd531f6fdf
 Content-Type: application/json
 

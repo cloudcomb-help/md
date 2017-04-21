@@ -12,7 +12,6 @@
 
 ```http
 DELETE /api/v1/repositories/mysql/tags/v1 HTTP/1.1
-Host: open.c.163.com
 Authorization: Token 48e6b1bdb5fb4a28a680a977dffb3c30
 Content-Type:application/json
 ```
