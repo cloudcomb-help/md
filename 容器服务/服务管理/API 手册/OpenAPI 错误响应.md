@@ -74,6 +74,16 @@
     4000413 Cert num exceed limit       
     4000414 Invalid cert name       
     4000511 fail.
+    4000601 Invalid projectId
+    4000602 Invalid service name
+    4000603 Invalid metric
+    4000604 Malformatted JSON string
+    4000605 Metric list too long
+    4000606 Unsupported statistics
+    4000607 Unsupported metricName
+    4000608 Unsupported period
+    4000609 Invalid dimension
+    4000610 Unsupported dimensionName
 
 401 Unauthorized 
 
