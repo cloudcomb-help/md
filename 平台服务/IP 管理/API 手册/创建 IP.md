@@ -20,10 +20,10 @@ Content-Type: application/json
 ```
 ### 请求参数
 
-| 参数 |  类型  | 是否必填 | 默认值 |              描述              | 示例值 |
-|------|--------|----------|--------|--------------------------------|--------|
-| nlb  | Number | 否       |      0 | 创建指定数量的负载均衡 IP 实例 |      1 |
-| nce  | Number | 否       |      0 | 创建指定数量的服务 IP 实例     |      1 |
+| 参数 |  类型  | 是否必填 | 默认值 |                描述                | 示例值 |
+|------|--------|----------|--------|------------------------------------|--------|
+| nlb  | Number | 否       |      0 | 创建指定数量的负载均衡 IP 实例     |      1 |
+| nce  | Number | 否       |      0 | 创建指定数量的服务或云主机 IP 实例 |      1 |
 
 
 ### 响应示例
@@ -34,9 +34,10 @@ Content-Type: application/json
   "ips": [
     {
       "id": "896",
-      "ip": "59.111.109.202",
+      "ip": "59.111.163.163",
       "status": "available",
       "type": "nlb",
+      "service_type":"",
       "service_id": "",
       "service_name": "",
       "create_at": "2016-12-28T13:13:11Z",
@@ -44,9 +45,10 @@ Content-Type: application/json
     },
     {
       "id": "7f7a9f12-035f-401b-ace0-7926b4a518b4",
-      "ip": "59.111.120.200",
+      "ip": "59.111.126.126",
       "status": "available",
       "type": "nce",
+      "service_type":"",
       "service_id": "",
       "service_name": "",
       "create_at": "2016-12-28T13:13:12Z",
@@ -59,15 +61,16 @@ Content-Type: application/json
 ### 响应参数
 
 
-|     参数     |    类型   |                              描述                             |        示例值        |
-|--------------|-----------|---------------------------------------------------------------|----------------------|
-| total        | Number    | 创建成功的 IP 实例数                                          | 2                    |
-| ips          | JSONArray | 返回的 IP 列表                                                | 详见示例             |
-| id           | String    | IP 的唯一标识符                                               | 896                  |
-| ip           | String    | IP                                                            | 59.111.109.202       |
-| status       | String    | IP 状态（[IP 状态及类型](http://support.c.163.com/md.html#!平台服务/IP 管理/API 手册/IP 状态及类型.md)）| available            |
-| type         | String    | IP 类型（[IP 状态及类型](http://support.c.163.com/md.html#!平台服务/IP 管理/API 手册/IP 状态及类型.md)）| nlb                  |
-| service_id   | String    | 绑定的实例 id                                                 |                      |
-| service_name | String    | 绑定的实例名称                                                |                      |
-| create_at    | String    | 创建时间，使用 UTC（世界标准时间）时间，用 ISO8601 进行格式化 | 2016-12-28T13:13:12Z |
-| update_at    | String    | 更新时间，使用 UTC（世界标准时间）时间，用 ISO8601 进行格式化 | 2016-12-28T13:13:12Z |
+|     参数     |    类型   |                                                   描述                                                   |        示例值        |
+|--------------|-----------|----------------------------------------------------------------------------------------------------------|----------------------|
+| total        | Number    | 创建成功的 IP 实例数                                                                                     | 2                    |
+| ips          | JSONArray | 返回的 IP 列表                                                                                           | 详见示例             |
+| id           | String    | IP 的唯一标识符                                                                                          | 896                  |
+| ip           | String    | IP                                                                                                       | 59.111.163.163       |
+| status       | String    | IP 状态（[IP 状态及类型](http://support.c.163.com/md.html#!平台服务/IP 管理/API 手册/IP 状态及类型.md)） | available            |
+| type         | String    | IP 类型（[IP 状态及类型](http://support.c.163.com/md.html#!平台服务/IP 管理/API 手册/IP 状态及类型.md)） | nlb                  |
+| service_type | String    | 绑定的实例类型                                                                                           |                      |
+| service_id   | String    | 绑定的实例 id                                                                                            |                      |
+| service_name | String    | 绑定的实例名称                                                                                           |                      |
+| create_at    | String    | 创建时间，使用 UTC（世界标准时间）时间，用 ISO8601 进行格式化                                            | 2016-12-28T13:13:12Z |
+| update_at    | String    | 更新时间，使用 UTC（世界标准时间）时间，用 ISO8601 进行格式化                                            | 2016-12-28T13:13:12Z |

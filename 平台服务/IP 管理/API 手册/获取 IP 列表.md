@@ -39,6 +39,7 @@ Content-Type: application/json
       "ip": "59.111.109.202",
       "status": "available",
       "type": "nlb",
+      "service_type": "",
       "service_id": "",
       "service_name": "",
       "create_at": "2016-12-28T13:13:11Z",
@@ -49,6 +50,7 @@ Content-Type: application/json
       "ip": "59.111.109.232",
       "status": "available",
       "type": "nlb",
+      "service_type": "",
       "service_id": "",
       "service_name": "",
       "create_at": "2016-12-28T13:13:03Z",
@@ -69,6 +71,7 @@ Content-Type: application/json
 | ip           | String    | IP                                                            | 59.111.109.202       |
 | status       | String    | IP 状态                                                       | available            |
 | type         | String    | IP 类型                                                       | nlb                  |
+| service_type | String    | 绑定的实例类型                                                |                      |
 | service_id   | String    | 绑定的实例 id                                                 |                      |
 | service_name | String    | 绑定的实例名称                                                |                      |
 | create_at    | String    | 创建时间，使用 UTC（世界标准时间）时间，用 ISO8601 进行格式化 | 2016-12-28T13:13:11Z |

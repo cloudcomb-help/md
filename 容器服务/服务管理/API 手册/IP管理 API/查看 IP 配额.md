@@ -18,12 +18,12 @@ Content-Type: application/json
 
 ```json
 {
-  "total": 20,
+  "total": 30,
   "used": 5,
   "quotas": [
     {
       "type": "nce",
-      "quota": 10,
+      "quota": 20,
       "used": 2
     },
     {
@@ -40,8 +40,8 @@ Content-Type: application/json
 
 |  参数  |    类型   |        描述        |  示例值  |
 |--------|-----------|--------------------|----------|
-| total  | Number    | 总配额             | 20       |
+| total  | Number    | 总配额             | 30       |
 | used   | Number    | 已使用配额         | 5        |
 | quotas | JSONArray | 不同类型的配额详情 | 详见示例 |
 | type   | String    | IP 类型            | nce      |
-| quota  | String    | 对应类型的配额     | 10       |
+| quota  | String    | 对应类型的配额     | 20       |

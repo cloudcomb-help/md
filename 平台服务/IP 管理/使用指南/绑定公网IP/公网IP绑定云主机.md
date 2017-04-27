@@ -1,12 +1,14 @@
 # 绑定云主机
 
-1. 登录 [控制台](https://c.163.com/dashboard#/m/net/)，定位「**IP 管理**」标签；
-2. 在 IP 管理列表，定位到需要班定云主机的 IP：
-3. 在右侧操作栏，点击「**绑定**」按钮；
-4. 在弹出的菜单中，选择需要绑定的云主机名称即可：
+## 云主机创建完成后绑定
 
-![](../../image/IP管理使用指南-绑定云主机.gif)
+1. 登录 [控制台](https://c.163.com/dashboard#/m/ingress/)，定位到「云主机」标签；
 
+2. 定位到目标实例，点击实例名称，进入云主机详情页；
 
-<span>Note:</span><div class="alertContent">云主机端操作详见：[云主机绑定公网 IP](http://support.c.163.com/md.html#!容器服务/云主机/使用指南/linux主机绑定公网IP.md) 。</div>
+3. 在「配置信息」内绑定公网 IP：
+
+![](../../image/IP管理使用指南-绑定云主机.png)
+
+详见：[云主机绑定公网 IP](http://support.c.163.com/md.html#!容器服务/云主机/使用指南/linux主机绑定公网IP.md) 。
 
