@@ -19,7 +19,7 @@ Content-Type: application/json
 
 | 参数 |  类型  | 是否必填 |                       描述                       | 示例值 |
 |------|--------|----------|--------------------------------------------------|--------|
-| id   | String | 是       | IP 的唯一标识符（[获取 IP 列表](http://support.c.163.com/md.html#!容器服务/服务管理/API 手册/IP管理 API/获取 IP 列表.md)） |    163 |
+| id   | String | 是       | IP 的唯一标识符（[获取 IP 列表](http://support.c.163.com/md.html#!平台服务/IP 管理/API 手册/获取 IP 列表.md)） |    163 |
 
 ### 响应示例
 
@@ -28,6 +28,7 @@ Content-Type: application/json
   "id": "163",
   "ip": "59.111.163.163",
   "status": "binded",
+  "service_type":"负载均衡",
   "type": "nlb",
   "service_id": "e2cc21da-9bb9-4db8-ae54-10b358a3a7aa",
   "service_name": "mysql",
@@ -44,6 +45,7 @@ Content-Type: application/json
 | ip           | String | IP                                                            | 59.111.163.163       |
 | status       | String | IP 状态                                                       | binded               |
 | type         | String | IP 类型                                                       | nlb                  |
+| service_type | String | 绑定的实例类型                                                | 负载均衡             |
 | service_id   | String | 绑定的实例 id                                                 | binded               |
 | service_name | String | 绑定的实例名称                                                | mysql                |
 | create_at    | String | 创建时间，使用 UTC（世界标准时间）时间，用 ISO8601 进行格式化 | 2016-12-28T13:13:11Z |
