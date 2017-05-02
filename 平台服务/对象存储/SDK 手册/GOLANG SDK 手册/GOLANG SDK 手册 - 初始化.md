@@ -46,6 +46,9 @@ NosClient 中的方法采用对象方式进行传参：
             DestObject : "CopiedTest",
         }
         err := nosClient.CopyObject(copyObjectRequest)
+        if err != nil {
+            fmt.Printf(err.Error())
+        }
     }
 
 #### 实例化 NosClient
@@ -92,7 +95,7 @@ NosClient 中的方法采用对象方式进行传参：
     
          nosClient, err := nosclient.New(conf)
          if err != nil {
-             fmt.Println(err.ERROR())
+             fmt.Println(err.Error())
              return
          }
     }

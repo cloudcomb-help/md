@@ -19,7 +19,6 @@
     
     import (
         "fmt"
-        "os"
     
         "github.com/NetEase-Object-Storage/nos-golang-sdk/nosclient"
         "github.com/NetEase-Object-Storage/nos-golang-sdk/model"
@@ -28,8 +27,7 @@
     
     func main() {
     
-        file, err := os.Open(Path)
-    
+   
         metadata := &model.ObjectMetadata{
                 ContentLength: contentLength,
                 Metadata: map[string]string{
@@ -41,7 +39,7 @@
         putObjectRequest := &model.PutObjectRequest{
                 Bucket:   "使用的桶名，注意命名规则",
                 Object:   "使用的对象名，注意命名规则",
-                Body:     file,
+                Body:     "stream, io.ReadCloser",
                 Metadata: metadata,
         }
     
@@ -286,7 +284,7 @@ PartNumberMarker	分块号的界限，只有更大的分块号会被列出来
     )
     
     func main() {
-        listMultiUploadsRequest = &model.ListMultiUploadsRequest{
+        listMultiUploadsRequest := &model.ListMultiUploadsRequest{
                 Bucket:     "使用的桶名，注意命名规则",
                 KeyMarker:  KEYMARKER,
                 MaxUploads: 20,
