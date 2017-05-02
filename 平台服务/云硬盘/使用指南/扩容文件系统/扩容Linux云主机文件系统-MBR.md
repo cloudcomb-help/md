@@ -1,7 +1,8 @@
 # 扩容 Linux 云主机文件系统（MBR 分区表）
 
-<span>Note:</span><div class="alertContent">1. 面向云主机的云硬盘，扩容后需要扩容文件系统，以便云主机可以使用扩容的空间；<br>2. 面向服务的云硬盘，扩容后将自动生效，无需手动扩容文件系统；<br>3. 操作前请确保已经扩容了云硬盘，详见 [扩容云硬盘](http://support.c.163.com/md.html#!平台服务/云硬盘/使用指南/扩容云硬盘.md)；<br>4. 以下指引在正常操作的情况下不会丢失数据；<br>5. 适用于所有蜂巢官方 Linux 镜像（CentOS/Ubuntu/Debian）创建的云主机。</div>
+<span>Note:</span><div class="alertContent">1. 面向云主机的云硬盘，扩容后需要扩容文件系统，以便云主机可以使用扩容的空间；<br>2. 面向服务的云硬盘，扩容后将自动生效，无需手动扩容文件系统；<br>3. 操作前请确保已经扩容了云硬盘，详见 [扩容云硬盘](http://support.c.163.com/md.html#!平台服务/云硬盘/使用指南/扩容云硬盘.md)；<br>4. 适用于所有蜂巢官方 Linux 镜像（CentOS/Ubuntu/Debian）创建的云主机。</div>
 
+<span>Attention:</span><div class="alertContent">在扩容前，建议做好数据备份（如创建快照等）</div>
 ## 确认分区形式
 
 <span>Attention:</span><div class="alertContent">不同的分区表操作不同，请 [确认分区表](http://support.c.163.com/md.html#!平台服务/云硬盘/运维指南/Linux云主机/Linux云主机查看数据盘分区信息.md) 后，再选择对应指引进行后续操作：<br>➡ [Linux 云主机 GPT 分区操作指引](http://support.c.163.com/md.html#!平台服务/云硬盘/使用指南/扩容文件系统/扩容Linux云主机文件系统-GPT.md)<br>➡ [Linux 云主机 MBR 分区操作指引](http://support.c.163.com/md.html#!平台服务/云硬盘/使用指南/扩容文件系统/扩容Linux云主机文件系统-MBR.md)</div>
@@ -40,6 +41,8 @@
 	umount {dir} #示例中为 umount /data1
 
 #### 1.4. 删除原分区再新建分区
+
+<span>Attention:</span><div class="alertContent">在删除原分区时，建议做好数据备份（如创建快照等），若之前为多分区等情况下可能导致数据丢失。</div>
 
 使用如下命令删除原分区：
 
