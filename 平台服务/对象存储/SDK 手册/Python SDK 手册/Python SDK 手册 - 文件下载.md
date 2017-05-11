@@ -18,7 +18,7 @@
         bucket = "使用的桶名，注意命名规则"
         object = "使用的对象名，注意命名规则"
         
-        client = nos.Client(access_key, secret_key, end_point)
+        client = nos.Client(access_key, secret_key, end_point=end_point)
         
         try:
             result = client.get_object(bucket, object)
