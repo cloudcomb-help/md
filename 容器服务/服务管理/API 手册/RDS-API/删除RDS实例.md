@@ -6,7 +6,7 @@
 
 ### 请求 URL
 
-`DELETE /api/v1/rds/instances/{instance_name}`
+`DELETE https://open.c.163.com/api/v1/rds/instances/{instance_name}`
 
 ### 请求示例
 
