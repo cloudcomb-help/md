@@ -31,7 +31,7 @@
     access_key = "你的 accessKeyId"
     secret_key = "你的 accessKeySecret"
     end_point = "建桶时选择的的区域域名"
-    client = nos.Client(access_key, secret_key, end_point)
+    client = nos.Client(access_key, secret_key, end_point=end_point)
 
 ### 设置额外参数
 
@@ -45,7 +45,7 @@
     client = nos.Client(
         access_key,
         secret_key,
-        end_point,
+        end_point=end_point,
         num_pools=10,
         timeout=5,
         max_retries=4,

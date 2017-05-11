@@ -15,7 +15,7 @@
     end_point = "建桶时选择的的区域域名"
     bucket = "使用的桶名，注意命名规则"
     
-    client = nos.Client(access_key, secret_key, end_point)
+    client = nos.Client(access_key, secret_key, end_point=end_point)
     
     try:
         object_lists = client.list_objects(bucket)
@@ -67,7 +67,7 @@ list_objects 可以指定的可选参数如下所示:
     bucket = "使用的桶名，注意命名规则"
     object = "使用的对象名，注意命名规则"
     
-    client = nos.Client(access_key, secret_key, end_point)
+    client = nos.Client(access_key, secret_key, end_point=end_point)
     
     try:
         client.delete_object(bucket, object)
@@ -108,7 +108,7 @@ list_objects 可以指定的可选参数如下所示:
     bucket = "使用的桶名，注意命名规则"
     keys=["your-objectname1", "your-objectname2", "your-objectname3"]
     
-    client = nos.Client(access_key, secret_key, end_point)
+    client = nos.Client(access_key, secret_key, end_point=end_point)
     
     try:
         client.delete_objects(bucket, keys)
@@ -150,7 +150,7 @@ list_objects 可以指定的可选参数如下所示:
     src_object = "拷贝来源的对象名，注意命名规则"
     dst_object = "拷贝目的的对象名，注意命名规则"
     
-    client = nos.Client(access_key, secret_key, end_point)
+    client = nos.Client(access_key, secret_key, end_point=end_point)
     
     try:
         client.copy_object(bucket, src_object, bucket, dst_object)
@@ -195,7 +195,7 @@ list_objects 可以指定的可选参数如下所示:
         src_object = "移动来源的对象名，注意命名规则"
         dst_object = "移动目的的对象名，注意命名规则"
         
-        client = nos.Client(access_key, secret_key, end_point)
+        client = nos.Client(access_key, secret_key, end_point=end_point)
         
         try:
             client.move_object(bucket, src_object, bucket, dst_object)
