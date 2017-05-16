@@ -39,5 +39,5 @@
 | expires_in | API 授权码的失效时间，单位秒 | string |
 
 #### 失败响应
-详情请参见 [错误返回码](http://support.c.163.com/md.html#!容器服务/镜像仓库/API 手册/OpenAPI 错误响应.md)。
+详情请参见 [错误返回码](http://support.c.163.com/md.html#!计算服务/镜像仓库/API 手册/OpenAPI 错误响应.md)。
 
