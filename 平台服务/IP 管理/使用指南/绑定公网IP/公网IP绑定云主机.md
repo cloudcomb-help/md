@@ -10,5 +10,5 @@
 
 ![](../../image/IP管理使用指南-绑定云主机.png)
 
-详见：[云主机绑定公网 IP](http://support.c.163.com/md.html#!容器服务/云主机/使用指南/linux主机绑定公网IP.md) 。
+详见：[云主机绑定公网 IP](http://support.c.163.com/md.html#!计算服务/云主机/使用指南/linux主机绑定公网IP.md) 。
 

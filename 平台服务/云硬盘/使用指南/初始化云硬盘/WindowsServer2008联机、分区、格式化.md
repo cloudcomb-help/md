@@ -15,7 +15,7 @@
 
 ### 1. 连接实例
 
-使用 **远程连接** 或 **VNC** 方式登录云主机，详请参见：[如何登录 Windows 云主机](http://support.c.163.com/md.html#!容器服务/云主机/使用指南/windows主机基本操作.md) 。
+使用 **远程连接** 或 **VNC** 方式登录云主机，详请参见：[如何登录 Windows 云主机](http://support.c.163.com/md.html#!计算服务/云主机/使用指南/windows主机基本操作.md) 。
 
 ### 2. 打开磁盘管理
 

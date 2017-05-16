@@ -14,7 +14,7 @@
 
 ### 1. 连接实例
 
-使用 SSH 或 VNC 方式登录云主机，详请参见：[如何登录 Linux 云主机](http://support.c.163.com/md.html#!容器服务/云主机/使用指南/linux主机登录方法.md) 。
+使用 SSH 或 VNC 方式登录云主机，详请参见：[如何登录 Linux 云主机](http://support.c.163.com/md.html#!计算服务/云主机/使用指南/linux主机登录方法.md) 。
 
 ### 2. 确认已挂载的数据盘
 
