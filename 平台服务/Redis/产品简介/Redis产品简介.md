@@ -1,6 +1,6 @@
 # **产品简介**
 
-蜂巢 Redis 目前支持 Redis 引擎（Netease Cloud Redis），是兼容开源 Redis 协议的 Key-Value 类型在线存储服务，提供单节点和分布式两种规格实例，支持主从热备自动容灾。
+蜂巢 Redis 目前支持 Redis 引擎，是兼容开源 Redis 协议的 Key-Value 类型在线存储服务，提供单节点和分布式两种规格实例，支持主从热备自动容灾。
 
 ### **功能特点**
 
