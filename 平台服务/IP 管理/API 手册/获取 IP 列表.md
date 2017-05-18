@@ -1,5 +1,4 @@
-
-# IP 管理
+# IP 管理 API
 
 ## 获取 IP 列表
 
@@ -20,12 +19,12 @@ Content-Type: application/json
 
 ### 请求参数
 
-|  参数  |  类型  | 是否必填 |  默认值  |                    描述                    |  示例值   |
-|--------|--------|----------|----------|--------------------------------------------|-----------|
+|  参数  |  类型  | 是否必填 |  默认值  |                                                    描述                                                   |  示例值   |
+|--------|--------|----------|----------|-----------------------------------------------------------------------------------------------------------|-----------|
 | status | String | 否       | 所有状态 | IP 状态（[IP 状态及类型](http://support.c.163.com/md.html#!平台服务/IP 管理/API 手册/IP 状态及类型.md)）  | available |
 | type   | String | 否       | 所有类型 | IP 类型 （[IP 状态及类型](http://support.c.163.com/md.html#!平台服务/IP 管理/API 手册/IP 状态及类型.md)） | nlb       |
-| offset | Number | 否       | 0        | 获取列表的起始位置                         | 0         |
-| limit  | Number | 否       | 20       | 每次获取的 IP 数量                         | 20        |
+| offset | Number | 否       | 0        | 获取列表的起始位置                                                                                        | 0         |
+| limit  | Number | 否       | 20       | 每次获取的 IP 数量                                                                                        | 20        |
 
 
 ### 响应示例
@@ -35,8 +34,8 @@ Content-Type: application/json
   "total": 2,
   "ips": [
     {
-      "id": "896",
-      "ip": "59.111.109.202",
+      "id": "163",
+      "ip": "59.111.163.163",
       "status": "available",
       "type": "nlb",
       "service_type": "",
@@ -46,10 +45,10 @@ Content-Type: application/json
       "update_at": "2016-12-28T13:13:11Z"
     },
     {
-      "id": "926",
-      "ip": "59.111.109.232",
+      "id": "7f7a9f12-035f-401b-ace0-7926b4a518b4",
+      "ip": "59.111.126.126",
       "status": "available",
-      "type": "nlb",
+      "type": "nce",
       "service_type": "",
       "service_id": "",
       "service_name": "",
@@ -67,8 +66,8 @@ Content-Type: application/json
 |--------------|-----------|---------------------------------------------------------------|----------------------|
 | total        | Number    | IP 总数                                                       | 详见示例             |
 | ips          | JSONArray | 返回的 IP 列表                                                | 详见示例             |
-| id           | String    | IP 的唯一标识符                                               | 896                  |
-| ip           | String    | IP                                                            | 59.111.109.202       |
+| id           | String    | IP 的唯一标识符                                               | 163                  |
+| ip           | String    | IP                                                            | 59.111.163.163       |
 | status       | String    | IP 状态                                                       | available            |
 | type         | String    | IP 类型                                                       | nlb                  |
 | service_type | String    | 绑定的实例类型                                                |                      |

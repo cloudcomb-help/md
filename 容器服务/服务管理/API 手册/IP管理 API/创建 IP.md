@@ -33,7 +33,7 @@ Content-Type: application/json
   "total": 2,
   "ips": [
     {
-      "id": "896",
+      "id": "163",
       "ip": "59.111.163.163",
       "status": "available",
       "type": "nlb",
@@ -65,7 +65,7 @@ Content-Type: application/json
 |--------------|-----------|----------------------------------------------------------------------------------------------------------|----------------------|
 | total        | Number    | 创建成功的 IP 实例数                                                                                     | 2                    |
 | ips          | JSONArray | 返回的 IP 列表                                                                                           | 详见示例             |
-| id           | String    | IP 的唯一标识符                                                                                          | 896                  |
+| id           | String    | IP 的唯一标识符                                                                                          | 163                  |
 | ip           | String    | IP                                                                                                       | 59.111.163.163       |
 | status       | String    | IP 状态（[IP 状态及类型](http://support.c.163.com/md.html#!平台服务/IP 管理/API 手册/IP 状态及类型.md)） | available            |
 | type         | String    | IP 类型（[IP 状态及类型](http://support.c.163.com/md.html#!平台服务/IP 管理/API 手册/IP 状态及类型.md)） | nlb                  |
