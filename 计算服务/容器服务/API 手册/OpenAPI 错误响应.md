@@ -12,8 +12,6 @@
 
 ## 错误码
 
-400 Bad Request 
-
     4000001 Invalid parameters.     
     4000002 Missing parameters.     
     4000111 fail.       
@@ -84,12 +82,30 @@
     4000608 Unsupported period
     4000609 Invalid dimension
     4000610 Unsupported dimensionName
-
-401 Unauthorized 
+    4000801 miss required parameter
+    4000802 calculate rds price error
+    4000803 invalid parameter value
+    4000804 request expired
+    4000805 invalid siginature
+    4000806 invalid db snapshot group state
+    4000807 get databases failed
+    4000808 dbinstance already exists
+    4000809 db snapshot already exists
+    4000810 db account already exists
+    4000811 database already exists
+    4000812 instance quota exceeded
+    4000813 storage quota exceeded
+    4000814 snapshot quota exceed
+    4000815 mem quota exceed
+    4000816 ecu quota exceed
+    4000817 database quota exceed
+    4000818 db account quota exceed
+    4000819 invalid dbinstance state
+    4000820 invalid db snapshot state
+    4000821 forbidden to delete monthly or yearly instance
+    4000822 forbidden operation before order confirm
 
     4010001     Unauthorized user.
-
-403 Forbidden 
 
     4030001 Api freq out of limit.      
     4030002 Container quota insufficient.       
@@ -123,9 +139,8 @@
     4030411 IP is using     
     4030432 User balance is not enough      
     4030462 Loadbalancer is creating
-
-
-404 Not Found
+    4030801 permission forbidden
+    4030802 missing authentication token
 
     4040114 No such namespace.      
     4040118 No such spec.       
@@ -145,16 +160,18 @@
     4040410 No such cert        
     4040456 No such listener        
     4040412 No such IP
-
-405 Method Not Allowed
+    4040801 dbinstance not found
+    4040802 dbinstance id not found
+    4040803 dbinstance duplicate
+    4040804 db security group not found
+    4040805 account name not found
+    4040806 database name not found
+    4040807 snapshot not found
+    4040808 standard not found
 
     4050001     Http method not allowed.
 
-408 Request Timeout
-
     4080001     Request timeout.
-
-409 Conflict
 
     4090001 Duplicate container name.       
     4090002 Duplicate replication size.     
@@ -174,15 +191,11 @@
     4090480 Duplicate listener      
     4090410 Duplicate cert name
 
-415 Unsupported Media Type 
-
     4150001     Unsupported media type.
 
-422 Unprocessable Entity 
-
     4220001     Unprocessable entity.
-
-500 Internal Server Error 
+ 
+    4330801 not certification
 
     5000001 Create container error.     
     5000002 Delete container error.     
@@ -210,3 +223,4 @@
     5000412 Update cert error       
     5000413 Delete cert error       
     5000500 create failed.
+    5000801 internal failure
