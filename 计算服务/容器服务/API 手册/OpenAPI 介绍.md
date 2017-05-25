@@ -40,7 +40,7 @@ OpenAPI 的设计采用了 Restful API 风格。下面将简要介绍 OpenAPI �
 
 ### 版本号
 
-OpenAPI 将 API 版本号放入了 URL 中。举个例子，当前使用 OpenAPI 创建镜像仓库的URL为 https://open.c.163.com/API/v1/repositories，其中 v1 指的是当前 API 版本为v1。
+OpenAPI 将 API 版本号放入了 URL 中。举个例子，当前使用 OpenAPI 创建镜像仓库的URL为 https://open.c.163.com/api/v1/repositories，其中 v1 指的是当前 API 版本为v1。
 
 ### 请求
 
