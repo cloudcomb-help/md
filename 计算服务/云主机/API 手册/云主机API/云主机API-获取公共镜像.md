@@ -9,7 +9,6 @@
 ### 请求示例
     GET /api/v1/vm/publicimages?pageSize=4&pageNum=1&keyword=os&Type=linux HTTP/1.1
     Authorization: Token 48e6b1bdb5fb4a28a680a977dffb3c30
-    Content-Type: application/json
 
 ### 请求参数
 

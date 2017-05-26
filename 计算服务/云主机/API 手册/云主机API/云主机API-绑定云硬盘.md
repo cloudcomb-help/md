@@ -11,7 +11,6 @@
 ### 请求示例
     PUT /api/v1/vm/d3fa21b7-16fd-421c-90ac-cd4df8f78353/action/mount_volume/3df611c0-cfda-4c0c-aeda-304ef3a49d8f HTTP/1.1
     Authorization: Token 48e6b1bdb5fb4a28a680a977dffb3c30
-    Content-Type: application/json
 
 ### 请求参数
 

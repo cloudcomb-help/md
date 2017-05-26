@@ -11,7 +11,6 @@
 ### 请求示例
     GET /api/v1/vm/d3fa21b7-16fd-421c-90ac-cd4df8f78353 HTTP/1.1
     Authorization: Token 48e6b1bdb5fb4a28a680a977dffb3c30
-    Content-Type: application/json
 
 ### 请求参数
 
@@ -33,7 +32,6 @@
     "vcpu": 4, #CPU 核数
     "memory_gb": 4, #内存大小
     "flavorId": 170, #规格 id
-    "loginTimes": 0, #云主机登录次数
     "vnet_port_id": "e55f0351-4d8f-4a44-8f5d-9cccaa261a1e", #云主机内网网络端口
     "OSType": "linux", #云主机操作系统类型
     "imageRef": "19b79122-d407-445f-8619-0ee5aa6c00bb", #镜像 id

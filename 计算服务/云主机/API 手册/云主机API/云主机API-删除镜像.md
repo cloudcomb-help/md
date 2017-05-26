@@ -8,7 +8,6 @@
 ### 请求示例
     DELETE /api/v1/vm/privateimage/309c75d2-a80a-4c05-86c8-8698c99255b9 HTTP/1.1
     Authorization: Token 48e6b1bdb5fb4a28a680a977dffb3c30
-    Content-Type: application/json
 
 ### 请求参数
 
