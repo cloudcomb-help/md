@@ -2,8 +2,6 @@
 
 ## 启动云主机
 
-同步接口。
-
 ### 请求 URL
 
     PUT https://open.c.163.com/api/v1/vm/{uuid}/action/start

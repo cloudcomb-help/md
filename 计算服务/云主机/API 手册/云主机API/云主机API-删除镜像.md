@@ -1,9 +1,6 @@
 # 云主机 API
 
 ## 删除镜像
-
-同步接口。
-
 ### 请求 URL
 
     DELETE https://open.c.163.com/api/v1/vm/privateimage/{image_id}
