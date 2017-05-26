@@ -1,6 +1,6 @@
 # 绑定关系型数据库
 
-<span>Note:</span><div class="alertContent">出于安全考虑不建议开启公网，可以通过 [蜂巢 OpenVPN](../md.html#!容器服务/服务管理/使用技巧/如何使用蜂巢 OpenVPN.md)，使用内网 IP 连接。</div>
+<span>Note:</span><div class="alertContent">出于安全考虑不建议开启公网，可以通过 [蜂巢 OpenVPN](../md.html#!计算服务/容器服务/使用技巧/如何使用蜂巢 OpenVPN.md)，使用内网 IP 连接。</div>
 
 ## 关系型数据库创建完成后绑定
 

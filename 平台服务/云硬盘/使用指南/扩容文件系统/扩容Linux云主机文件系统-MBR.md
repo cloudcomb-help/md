@@ -15,7 +15,7 @@
 
 #### 1.1. 连接云主机
 
-使用 SSH 或 VNC 方式登录云主机，详请参见：[如何登录 Linux 云主机](http://support.c.163.com/md.html#!容器服务/云主机/使用指南/linux主机登录方法.md) 。
+使用 SSH 或 VNC 方式登录云主机，详请参见：[如何登录 Linux 云主机](http://support.c.163.com/md.html#!计算服务/云主机/使用指南/linux主机登录方法.md) 。
 
 #### 1.2. 查看数据盘信息
 
@@ -85,7 +85,7 @@
 
 #### 2.1. 连接云主机
 
-使用 SSH 或 VNC 方式登录云主机，详请参见：[如何登录 Linux 云主机](http://support.c.163.com/md.html#!容器服务/云主机/使用指南/linux主机登录方法.md) 。
+使用 SSH 或 VNC 方式登录云主机，详请参见：[如何登录 Linux 云主机](http://support.c.163.com/md.html#!计算服务/云主机/使用指南/linux主机登录方法.md) 。
 
 
 #### 2.2. 查看数据盘信息
