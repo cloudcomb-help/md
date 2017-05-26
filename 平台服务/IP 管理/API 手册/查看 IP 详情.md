@@ -13,7 +13,6 @@
 ```http
 GET /api/v1/ips/163 HTTP/1.1
 Authorization: Token 93cb02be6a83447a8dfd83221e8d4a96
-Content-Type: application/json
 ```
 ### 请求参数
 
