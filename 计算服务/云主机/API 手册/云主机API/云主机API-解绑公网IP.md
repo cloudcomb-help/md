@@ -4,7 +4,8 @@
 
 ### 请求 URL
 
-    DELETE https://open.c.163.com/api/v1/vm/{uuid}/action/unmountPublicIp?pubIp={pubIp}&portId={portId}
+    DELETE https://open.c.163.com/api/v1/vm/{uuid}/action/unmountPublicIp?pubIp={pubIp}
+    &portId={portId}
 
 ### 请求示例
     DELETE /api/v1/vm/d3fa21b7-16fd-421c-90ac-cd4df8f78353/action/unmountPublicIp?pubIp=59.111.163.163&portId=ee1a2ab4-4fbb-4388-a205-27b777487fe4 HTTP/1.1

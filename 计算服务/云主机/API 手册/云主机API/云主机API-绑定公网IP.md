@@ -4,7 +4,10 @@
 
 ### 请求 URL
 
-    PUT https://open.c.163.com/api/v1/vm/{uuid}/action/mountPublicIp?pubIp={pubIp}&portId={portId}&qosMode={qosMode}&bandWidth={bandWidth}
+    PUT https://open.c.163.com/api/v1/vm/{uuid}/action/mountPublicIp?pubIp={pubIp}
+    &portId={portId}
+    &qosMode={qosMode}
+    &bandWidth={bandWidth}
 
 ### 请求示例
     PUT /api/v1/vm/d3fa21b7-16fd-421c-90ac-cd4df8f78353/action/mountPublicIp?pubIp=59.111.163.163&portId=ee1a2ab4-4fbb-4388-a205-27b777487fe4&qosMode=netflow&bandWidth=100 HTTP/1.1

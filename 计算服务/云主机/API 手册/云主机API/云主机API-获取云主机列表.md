@@ -6,7 +6,8 @@
 
 ### 请求 URL
 
-    GET https://open.c.163.com/api/v1/vm/allInstanceInfo?pageSize={pageSize}&pageNum={pageNum}
+    GET https://open.c.163.com/api/v1/vm/allInstanceInfo?pageSize={pageSize}
+    &pageNum={pageNum}
 
 ### 请求示例
     GET /api/v1/vm/allInstanceInfo?pageSize=4&pageNum=1 HTTP/1.1

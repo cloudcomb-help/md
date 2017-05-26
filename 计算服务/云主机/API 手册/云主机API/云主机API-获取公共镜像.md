@@ -4,7 +4,10 @@
 
 ### 请求 URL
 
-    GET https://open.c.163.com/api/v1/vm/publicimages?pageSize={pageSize}&pageNum={pageNum}&keyword={keyword}&osType={osType}
+    GET https://open.c.163.com/api/v1/vm/publicimages?pageSize={pageSize}
+    &pageNum={pageNum}
+    &keyword={keyword}
+    &osType={osType}
 
 ### 请求示例
     GET /api/v1/vm/publicimages?pageSize=4&pageNum=1&keyword=os&Type=linux HTTP/1.1
