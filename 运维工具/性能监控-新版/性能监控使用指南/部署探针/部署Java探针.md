@@ -94,10 +94,13 @@ tar zxvf napm-java-agent.tar.gz
 
 解压探针的安装包后，需要在 napm-java-agent-conf 目录下新建配置文件（命名可参考上图），此处创建 webserver.properties（建议配置文件名和文件中的服务名一致），文件中需配置下面的参数：
 
-	productId=46ba18075f004315908e0ec119b644cb-cloud-monitor-qaapm03
+	productId=租户id-空间-用户名 #如 productId=46ba18075f004315908e0ec119b644cb-cloud-monitor-qaapm03
 
 	# service为服务名（进程功能，如管理服务器，报警服务器等），为避免冲突，各模块以模块名开头命名，如：webServer，alertServer
 	service=webserver
+
+	# node为服务的具体部署的节点的名称，默认会获取主机的hostname，可以不填写。
+	//node=pubt1-lxc1-cm1.c.163.org
 
 
 在配置文件中所需的字段可通过如下方式获取：
@@ -144,6 +147,9 @@ Java 服务启动时直接加上以下参数即可
 -javaagent:/usr/local/apm/napm-java-agent/napm-java-rewriter.jar=conf=webserver.properties
 ```
 
+服务启动后，在性能监测模块可以看到全链路数据展示的变化。
+
+![](../../image/性能监控使用指南-部署Java探针-效果.png)
 
 
 
