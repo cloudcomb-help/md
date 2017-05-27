@@ -3,7 +3,7 @@
 通过部署探针，即可实现业务的全链路跟踪和异常捕获。
 
 * **适用版本：**Tomcat7 及其以上版本、JDK 1.6 及其以上版本部署的 Java 服务
-* **可监控协议：**HTTP、Redis、Memcached、DB、RabbitMQ
+* **可监控协议：**HTTP、Redis、Memcached、DB、RabbitMQ、Dubbo
 * **支持部署方式：**
 	* [直接在蜂巢容器中部署探针](../md.html#!运维工具/性能监控-新版/性能监控使用指南/部署探针/部署Java探针.md)
 		**使用场景：**在蜂巢已有运行中的容器，希望直接在容器中部署探针
@@ -57,22 +57,22 @@ productId 用于添加配置文件：
 
 #### 4.1. Tomcat 添加参数
 
-	export CATALINA_OPTS='-javaagent:/usr/local/apm/napm-java-agent/napm-java-rewriter.jar=conf=webserver.properties'
+	export CATALINA_OPTS='-javaagent:/root/java/napm-java-rewriter.jar=conf=webserver.properties'
 
 
 或者修改 `/tomcat/bin/catalina.sh` 脚本，在 JAVA_OPTS 内添加如下启动参数：
 
-    -javaagent:/usr/local/apm/napm-java-agent/napm-java-rewriter.jar=conf=webserver.properties
+    -javaagent:/root/java/napm-java-rewriter.jar=conf=webserver.properties
 
 
 #### 4.2. Java 服务添加参数
 
 Java 服务启动时直接加上以下参数：
 
-    -javaagent:/usr/local/apm/napm-java-agent/napm-java-rewriter.jar=conf=webserver.properties
+    -javaagent:/root/java/napm-java-rewriter.jar=conf=webserver.properties
 
 
-服务启动后，在 [应用监控模块](https://c.163.com/dashboard#/m/apm/monitor/graph/) 可以看到全链路数据展示的变化：
+服务启动后，在 [应用监控模块](https://c.163.com/dashboard#/m/apm/) 可以看到全链路数据展示的变化：
 
 ![](../../image/性能监控使用指南-部署Java探针-效果.png)
 
