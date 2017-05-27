@@ -1,4 +1,4 @@
-# 直接在容器中部署 Java 探针
+# 通过 Dockerfile 部署 Java 探针 
 
 通过部署探针，即可实现业务的全链路跟踪和异常捕获。
 
@@ -14,31 +14,32 @@
 
 ## 操作步骤
 
-### 1. 下载探针安装包
+### 1. 在项目 Dockerfile 中增加探针安装内容
 
-打开目标实例的 [WebConsle](../md.html#!计算服务/容器服务/使用技巧/如何使用蜂巢WebConsole.md)（或 [SSH](../md.html#!计算服务/容器服务/使用技巧/如何使用 SSH 密钥登录.md) 目标实例），下载 [Java探针安装包](http://nos.netease.com/agent/napm-java-agent.tar.gz)：
+	...
+	# 请确保安装了 wget 和 tar
+	wget -P /root/java/ http://nos.netease.com/agent/napm-java-agent.tar.gz  
+	tar zxvf /root/java/napm-java-agent.tar.gz
+	...
 
-	mkdir /root/java/
-	cd /root/java/
-	wget http://nos.netease.com/agent/napm-java-agent.tar.gz
-	tar zxvf napm-java-agent.tar.gz
+### 2. 修改启动脚本
 
-![](../../image/性能监控使用指南-部署Java探针-下载安装包.png)
+建议将启动脚本复制一份放到项目中（或放到桶里），修改启动脚本，添加如下启动参数：
 
-### 2. 增加 Java 启动参数
+	-java-agent:<user_agent_dir>/napm-java-rewriter.jar
 
-以 Tomcat8 为例，修改 `/tomcat8/bin/catalina.sh` 脚本，在 JAVA_OPTS 内添加如下启动参数：
+### 3. Dockerfile 中 ADD 脚本
 
-	-javaagent:<user_agent_dir>/napm-java-rewriter.jar
+	...
+	ADD catalina.sh /root/tomcat8/bin/
+	...
 
-![](../../image/性能监控使用指南-部署Java探针-增加启动参数.png)
+### 4. 构建镜像
 
+* 在蜂巢镜像仓库，通过 [代码构建镜像](http://support.c.163.com/md.html#!计算服务/镜像仓库/使用指南/创建自定义镜像.md)；
+* 或在本地构建镜像后，[推送到蜂巢镜像仓库](http://support.c.163.com/md.html#!计算服务/镜像仓库/使用指南/推送本地镜像.md)。
 
-### 3. 保存镜像
-
-详见：[如何保存镜像](http://support.c.163.com/md.html#!计算服务/容器服务/使用指南/如何保存镜像.md) 。
-
-### 4. 启用新镜像
+### 5. 启用新镜像
 
 无状态服务支持直接更改镜像版本；有状态服务需要使用保存的镜像重新创建服务。
 服务启动后，在 [应用监控模块](https://c.163.com/dashboard#/m/apm/monitor/graph/) 可以看到全链路数据展示的变化：
