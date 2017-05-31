@@ -4,10 +4,10 @@
 
 ### 请求 URL
 
-    DELETE https://open.c.163.com/api/v1/vm/{uuid}/action/mount_volume/{volume_uuid}
+    DELETE https://open.c.163.com/api/v1/vm/{uuid}/action/unmount_volume/{volume_uuid}
 
 ### 请求示例
-    DELETE /api/v1/vm/d3fa21b7-16fd-421c-90ac-cd4df8f78353/action/mount_volume/3df611c0-cfda-4c0c-aeda-304ef3a49d8f HTTP/1.1
+    DELETE /api/v1/vm/d3fa21b7-16fd-421c-90ac-cd4df8f78353/action/unmount_volume/3df611c0-cfda-4c0c-aeda-304ef3a49d8f HTTP/1.1
     Authorization: Token 48e6b1bdb5fb4a28a680a977dffb3c30
 
 ### 请求参数
