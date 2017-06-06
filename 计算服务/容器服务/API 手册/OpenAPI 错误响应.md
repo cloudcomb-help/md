@@ -141,6 +141,7 @@
     4030462 Loadbalancer is creating
     4030801 permission forbidden
     4030802 missing authentication token
+    4030102 Microservice abandoned due to arrearage.
 
     4040114 No such namespace.      
     4040118 No such spec.       
